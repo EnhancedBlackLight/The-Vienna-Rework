@@ -1,0 +1,67 @@
+﻿
+
+character_fire_support_add_modifers = {	
+	icon = gfx/interface/icons/commander_order_icons/raid_convoys.dds
+	character_battle_condition_fire_support_add = 1
+}
+#货币
+# Scales with country GDP / COUNTRY_GDP_MODIFIER_DIVISOR
+##通货膨胀
+national_inflation_modifers = {
+	icon = common/national_inflation.dds
+	country_government_wages_mult = 1
+	country_military_wages_mult = 1
+	state_tax_collection_mult = 1
+	state_tax_waste_add = 1
+}
+country_treasury_interest_modifers = {	
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_expenses_add = 1
+	country_interest_add = 1
+}
+
+country_national_debt_modifers = {	
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_national_debt_add = 1	
+}
+
+country_national_debt_rich_pop = {	
+	icon = gfx/interface/icons/pops_icons/sol_upper_icon_17.dds
+	state_rich_standard_of_living_add = 1
+}
+country_national_debt_middle_pop = {	
+	icon = gfx/interface/icons/pops_icons/sol_middle_icon_17.dds
+	state_middle_standard_of_living_add = 1
+}
+country_national_debt_poor_pop = {	
+	icon = gfx/interface/icons/pops_icons/sol_poor_icon_17.dds
+	state_poor_standard_of_living_add = 1
+}
+minting_modifier_very_low = {
+	icon = gfx/interface/icons/generic_icons/gdp.dds
+	country_minting_mult = -0.5
+}
+
+minting_modifier_low = {
+	icon = gfx/interface/icons/generic_icons/gdp.dds
+	country_minting_mult = -0.25
+}	
+
+minting_modifier_medium = {
+}	
+
+minting_modifier_high = {
+	icon = gfx/interface/icons/generic_icons/gdp.dds
+	country_minting_mult = 0.25
+	state_expected_sol_from_literacy = 2.5
+}	
+
+minting_modifier_very_high = {
+	icon = gfx/interface/icons/generic_icons/gdp.dds
+	country_minting_mult = 0.5
+	state_expected_sol_from_literacy = 5
+}	
+country_center_bank_level_modifers = {	
+	icon = gfx/interface/icons/sol_icons/affluent.dds
+	state_building_center_bank_max_level_add = 1
+}

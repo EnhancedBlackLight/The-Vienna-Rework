@@ -1,0 +1,168 @@
+﻿aver_rich_pop_wealth = {
+	every_scope_pop = {
+		limit = { strata = rich }
+		add = {
+			add = standard_of_living
+		}
+	}
+	divide = {
+		every_scope_pop = {
+			limit = { strata = rich }
+			add = 1
+		}
+	}
+}
+#与人均财富的比较
+rich_pop_wealth_modifier = {
+	add = aver_rich_pop_wealth
+	multiply = treasury_rates
+}
+aver_middle_pop_wealth = {
+	every_scope_pop = {
+		limit = { strata = middle }
+		add = {
+			add = standard_of_living
+		}
+	}
+	divide = {
+		every_scope_pop = {
+			limit = { strata = middle }
+			add = 1
+		}
+	}
+}
+middle_pop_wealth_modifier = {
+	add = aver_middle_pop_wealth
+	multiply = treasury_rates
+}
+aver_poor_pop_wealth = {
+	every_scope_pop = {
+		limit = { strata = poor }
+		add = {
+			add = standard_of_living
+		}
+	}
+	divide = {
+		every_scope_pop = {
+			limit = { strata = poor }
+			add = 1
+		}
+	}
+}
+poor_pop_wealth_modifier = {
+	add = aver_poor_pop_wealth
+	multiply = treasury_rates
+}
+#国债
+national_debt_value = {
+	add = credit
+	multiply = 0.25
+}
+national_debt_interest = {
+	add = national_debt_value
+	multiply = treasury_rates
+	divide = 48
+	min = 0
+}
+treasury_rates = {
+	add = modifier:country_loan_interest_rate_add
+	multiply = {
+		add = 1
+		add = modifier:country_loan_interest_rate_mult
+	}
+	multiply = 0.5
+}
+##逾期
+overdue_national_debts = {
+	add = var:national_debt_var
+	subtract = modifier:country_national_debt_add
+}
+##
+state_pollute = {
+	value = state_region.pollution_amount
+	multiply = 50
+}
+state_pollute_per_hospital = {
+	value = state_region.pollution_amount
+	multiply = 100
+}
+country_center_bank_level = {
+	value = 0
+	every_scope_state = {
+		every_scope_building = {
+			limit = { 
+				is_government_funded = no 
+				is_subsidized = no
+				is_subsistence_building = no
+			}
+			add = weekly_profit			
+		}
+	}
+	divide = 1000
+}
+national_inflation_value = {
+	if = {
+		limit = { has_variable = national_inflation }
+		add = root.var:national_inflation
+	}
+}
+
+country_inflation_level = {
+	value = { #铸币数量
+		if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						is_building_type = building_center_bank
+						has_active_production_method = pm_expansionary_monetary_policy
+					}
+				}
+			}
+			add = root.gdp
+			divide = 1000000
+			multiply = 750
+		}
+		if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						is_building_type = building_center_bank
+						has_active_production_method = pm_no_monetary_policy
+					}
+				}
+			}
+			add = root.gdp
+			divide = 1000000
+			multiply = 500
+		}
+		if = {
+			limit = {
+				capital = {
+					any_scope_building = {
+						is_building_type = building_center_bank
+						has_active_production_method = pm_tight_monetary_policy
+					}
+				}
+			}
+			add = root.gdp
+			divide = 1000000
+			multiply = 250
+		}
+	}
+	divide = {
+		add = root.income
+		multiply = 500
+		min = 1
+	}
+	if = {
+		limit = {
+			capital = {
+				any_scope_building = {
+					is_building_type = building_center_bank
+					has_active_production_method = pm_tight_monetary_policy
+				}
+			}
+		}
+		add = -0.0002
+	}
+}

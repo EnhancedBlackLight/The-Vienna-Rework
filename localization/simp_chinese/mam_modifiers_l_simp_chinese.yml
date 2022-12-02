@@ -1,0 +1,20 @@
+﻿l_simp_chinese:
+ 
+ modifier_country_interest_add:0 "国债利息支出"
+ modifier_country_inflation_rate:0 "通胀变化率"
+ modifier_country_inflation_rate_desc:0 "每月通胀变化率"
+ national_inflation_modifers:1 "通货膨胀"
+ 
+ country_treasury_interest_modifers:0 "国债利息"
+ country_national_debt_modifers:0 "发行国债"
+ modifier_country_national_debt_add:0 "额度"
+ 
+ country_national_debt_poor_pop:0 "$poor$利息收入"
+ country_national_debt_middle_pop:0 "$middle$利息收入"
+ country_national_debt_rich_pop:0 "$rich$利息收入"
+ 
+ minting_modifier_high:0 "扩张[concept_budget_minting]"
+ minting_modifier_very_high:0 "超扩张[concept_budget_minting]"
+ minting_modifier_low:0 "紧缩[concept_budget_minting]"
+ minting_modifier_very_low:0 "超紧缩[concept_budget_minting]"
+ 

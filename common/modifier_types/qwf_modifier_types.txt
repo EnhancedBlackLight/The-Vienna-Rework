@@ -1,0 +1,24 @@
+﻿state_building_fortifications_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+
+state_building_stuff_headquarters_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+
+state_building_local_stuff_headquarters_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+
+country_institution_qwf_conscription_max_investment_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+

@@ -1,0 +1,21 @@
+﻿l_simp_chinese:
+ 
+ 
+ NATIONAL_DEBT:0 "国债"
+ NATIONAL_DEBT_LIMIT:1 "国债：#variable [GetPlayer.GetMaxCredit|2*]#!"
+ NATIONAL_DEBT_INTEREST:0 " #variable @money![GetPlayer.GetModifier.GetValueFor('country_national_debt_add')|K]#! (利息[GetPlayer.GetModifier.GetValueFor('country_interest_add')|=-|K])"
+ NATIONAL_DEBT_INTEREST_RATE:0 "利率：#variable [Multiply_CFixedPoint(GetPlayer.GetYearlyInterestRate,'(CFixedPoint)0.5')|1%]#!"
+ NATIONAL_DEBT_TOOLTIP_INTEREST_RATE:0 "#header 国债利率#!\n上周，你按照#variable [Multiply_CFixedPoint(GetPlayer.GetYearlyInterestRate,'(CFixedPoint)0.5')|2%]#!年利率支付了@money!#variable [GetPlayer.GetModifier.GetValueFor('country_interest_add')|K]#!利息\n$TOOLTIP_DELIMITER$\n#header 因素#!\n[GetPlayer.GetYearlyInterestRate|=-|1%]来自基础利率\n#P -50%#!来自国债修正"
+ NATIONAL_DEBT_EFFECT:1 "#header 发行国债#!\n$TOOLTIP_DELIMITER$\n发行数额为#variable @money![Multiply_CFixedPoint(GetPlayer.GetMaxCredit,'(CFixedPoint)0.25')|2*]#!的国债，并获得为期#V 10#!年的支付额度[Multiply_CFixedPoint(Multiply_CFixedPoint(GetPlayer.GetMaxCredit,'(CFixedPoint)0.125'),Multiply_CFixedPoint(GetPlayer.GetYearlyInterestRate,'(CFixedPoint)0.02084'))|=-|2*]#V /周#!的利息阶段，你可以提前偿还本金，但是你仍然需要支付利息\n$TOOLTIP_DELIMITER$\n$NATIONAL_DEBT_DESC$"
+ NATIONAL_DEBT_EFFECT_POP:1 "[Multiply_CFixedPoint('(CFixedPoint)0.5',Multiply_CFixedPoint(GetPlayer.GetYearlyInterestRate,GetPlayer.GetAverageStandardOfLivingPoor))|=+|2*]$poor$[concept_sol]\n[Multiply_CFixedPoint('(CFixedPoint)0.5',Multiply_CFixedPoint(GetPlayer.GetYearlyInterestRate,GetPlayer.GetAverageStandardOfLivingMiddle))|=+|2*]$middle$[concept_sol]\n[Multiply_CFixedPoint('(CFixedPoint)0.5',Multiply_CFixedPoint(GetPlayer.GetYearlyInterestRate,GetPlayer.GetAverageStandardOfLivingRich))|=+|2*]$rich$[concept_sol]"
+ NATIONAL_DEBT_DESC:1 "#header 特点#!\n国债可以在[concept_gold_reserves]较多的情况下筹集更多资金，国债的利息相比[concept_loans]更低，这意味着在经济健康的情况下没有偿还风险。\n$TOOLTIP_DELIMITER$\n#header 利息#!\n国债利息会调整人口的[concept_sol]，会因为人口[concept_wealth]获得修正（基于平均[concept_wealth]）\n$NATIONAL_DEBT_EFFECT_POP$"
+ NATIONAL_DEBT_REPAYMENT_EFFECT:1 "#header 清偿国债#!\n$TOOLTIP_DELIMITER$\n清偿数额为#variable @money![GetPlayer.GetModifier.GetValueFor('country_national_debt_add')|2*]#!的国债\n但仍然支付利息"
+ NATIONAL_DEBT_REPAYMENT:0 "偿还所有本金"
+ NATIONAL_DEBT_ISSUANCE:0 "发行国债"
+ 
+ MINTING_LEVEL_1:0 "#header 超紧缩铸币#!\n当前收入：$TAB$ @money![GetPlayer.PredictMinting|V|K]\n$TOOLTIP_DELIMITER$\n#header 影响：#!\n#N -50%#![concept_budget_minting]\n#V -2.5#!$modifier_state_expected_sol_from_literacy$\n$TOOLTIP_DELIMITER$\n#header 当前影响：#!\n[GetPlayer.GetModifier.GetValueFor('country_minting_mult')|%+=][concept_budget_minting]"
+ MINTING_LEVEL_2:0 "#header 紧缩铸币#!\n当前收入：$TAB$ @money![GetPlayer.PredictMinting|V|K]\n$TOOLTIP_DELIMITER$\n#header 影响：#!\n#N -25%#![concept_budget_minting]\n#V -5#!$modifier_state_expected_sol_from_literacy$\n$TOOLTIP_DELIMITER$\n#header 当前影响：#!\n[GetPlayer.GetModifier.GetValueFor('country_minting_mult')|%+=][concept_budget_minting]"
+ MINTING_LEVEL_3:0 "#header 正常铸币#!\n当前收入：$TAB$ @money![GetPlayer.PredictMinting|V|K]\n$TOOLTIP_DELIMITER$\n#header 影响：#!\n#bold 无影响#!\n$TOOLTIP_DELIMITER$\n#header 当前影响：#!\n[GetPlayer.GetModifier.GetValueFor('country_minting_mult')|%+=][concept_budget_minting]"
+ MINTING_LEVEL_4:0 "#header 扩张铸币#!\n当前收入：$TAB$ @money![GetPlayer.PredictMinting|V|K]\n$TOOLTIP_DELIMITER$\n#header 影响：#!\n#P +25%#![concept_budget_minting]\n#V +2.5#!$modifier_state_expected_sol_from_literacy$\n$TOOLTIP_DELIMITER$\n#header 当前影响：#!\n[GetPlayer.GetModifier.GetValueFor('country_minting_mult')|%+=][concept_budget_minting]"
+ MINTING_LEVEL_5:0 "#header 超扩张铸币#!\n当前收入：$TAB$ @money![GetPlayer.PredictMinting|V|K]\n$TOOLTIP_DELIMITER$\n#header 影响：#!\n#P +50%#![concept_budget_minting]\n#V +5#!$modifier_state_expected_sol_from_literacy$\n$TOOLTIP_DELIMITER$\n#header 当前影响：#!\n[GetPlayer.GetModifier.GetValueFor('country_minting_mult')|%+=][concept_budget_minting]"
+ NATIONAL_INFLATION:0 ""
