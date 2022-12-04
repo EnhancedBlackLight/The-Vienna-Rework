@@ -1,0 +1,71 @@
+GLOBAL = {
+	c:USA = {
+		set_variable = initalized_usa_var
+		 c:USA = {every_scope_state = { 
+				save_scope_as = state_clout_adjust_scope
+			if = {limit = { is_incorporated = yes}
+				scope:state_clout_adjust_scope = {set_variable = american_state_variable }
+					} 
+				}
+			}
+			###Southern State Mods
+		s:STATE_LOUISIANA.region_state:USA = {
+			add_modifier = deep_south_state_mod
+		}
+		s:STATE_MISSISSIPPI.region_state:USA = {
+			add_modifier = deep_south_state_mod
+		}
+		s:STATE_ALABAMA.region_state:USA = {
+			add_modifier = deep_south_state_mod
+		}
+		s:STATE_GEORGIA.region_state:USA = {
+			add_modifier = deep_south_state_mod
+		}
+		s:STATE_FLORIDA.region_state:USA = {
+			add_modifier = deep_south_state_mod
+			add_modifier = {
+			name = seminole_war_mod
+			months = 60
+			is_decaying = yes
+		}
+		}
+		s:STATE_SOUTH_CAROLINA.region_state:USA = {
+			add_modifier = deep_south_state_mod
+		}
+		s:STATE_NORTH_CAROLINA.region_state:USA = {
+			add_modifier = south_state_mod
+		}
+		s:STATE_TENNESSEE.region_state:USA = {
+			add_modifier = south_state_mod
+		}
+		s:STATE_VIRGINIA.region_state:USA = {
+			add_modifier = south_state_mod
+		}
+		s:STATE_ARKANSAS.region_state:USA = {
+			add_modifier = south_state_mod
+		}
+		s:STATE_WEST_VIRGINIA.region_state:USA = {
+			add_modifier = border_state_mod
+		}
+		s:STATE_MARYLAND.region_state:USA = {
+			add_modifier = border_state_mod
+		}
+		s:STATE_DELAWARE.region_state:USA = {
+			add_modifier = border_state_mod
+		}
+		s:STATE_KENTUCKY.region_state:USA = {
+			add_modifier = border_state_mod
+		}
+		s:STATE_MISSOURI.region_state:USA = {
+			add_modifier = border_state_mod
+		}
+		s:STATE_TEXAS.region_state:TEX = {
+			add_modifier = south_state_mod
+		}
+		trigger_event = {
+			id = nfm_misc.6
+			days = 0
+			popup = yes
+		}
+	}
+}
