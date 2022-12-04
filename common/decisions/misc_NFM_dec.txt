@@ -204,7 +204,7 @@ csa_national_guard = {
 	possible = { 
 			exists = c:CSA
 				root = c:CSA
-				NOT = { csa_mob_var }
+				NOT = { has_variable = csa_mob_var }
 		}
 
 	when_taken = {
@@ -212,7 +212,7 @@ csa_national_guard = {
 		if = { limit = { c:USA = {has_law = law_type:law_national_guard}}
 			c:CSA = {activate_law = law_type:law_national_guard}
 		}
-			c:CSA = set_variable = csa_mob_var
+		c:CSA = {set_variable = csa_mob_var}
 	}
 
 	ai_chance = {
