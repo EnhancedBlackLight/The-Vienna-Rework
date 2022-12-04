@@ -15,7 +15,7 @@
     }
 
     modifier = {
-        character_attrition_risk_add = 0.4
+        character_attrition_risk_add = 0.08
         front_advancement_speed_add = 18
         unit_morale_damage_mult = 0.75
         unit_kill_rate_add = 0.75
