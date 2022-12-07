@@ -1,0 +1,12 @@
+﻿l_japanese:
+ rule_economy_scaling:0 "MEM：経済スケール [壊れた]"
+ setting_3x_scaling:0 "3倍スケール"
+ setting_3x_scaling_desc:0 "デフォルト：売買比率が「1対4」または「4対1」になったとき、経済活動における商品の価格変動が最大となる。"
+ setting_2x_scaling:0 "2倍スケール"
+ setting_2x_scaling_desc:0 "バニラ：売買比率が「1対3」または「3対1」になったとき、経済活動における商品の価格変動が最大となる。"
+ setting_1x_scaling:0 "1倍スケール"
+ setting_1x_scaling_desc:0 "難しい：売買比率が「1対2」または「2対1」になったとき、経済活動における商品の価格変動が最大となる。"
+ setting_10x_scaling:0 "10倍スケール"
+ setting_10x_scaling_desc:0 "簡単：売買比率が「1対11」または「11対1」になったとき、経済活動における商品の価格変動が最大となる。"
+ pm_gas_streetlights:0 "油燈"
+ pm_coal_streetlights:0 "石炭燈"

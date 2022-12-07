@@ -1,0 +1,12 @@
+﻿l_turkish:
+ rule_economy_scaling:0 "MEM: Ekonomi Ölçeği [BOZULDU]"
+ setting_3x_scaling:0 "3x Ekonomi Ölçeği"
+ setting_3x_scaling_desc:0 "VARSAYILAN: Ekonomideki mallar için maksimum fiyat değişimine, al:sat oranı 1:4 veya 4:1'e ulaştığında ulaşılacaktır."
+ setting_2x_scaling:0 "2x Ekonomi Ölçeği"
+ setting_2x_scaling_desc:0 "ORİJİNAL: Al:sat oranı 1:3 veya 3:1'e ulaştığında, ekonomideki mallar için maksimum fiyat değişimine ulaşılacaktır."
+ setting_1x_scaling:0 "1x Ekonomi Ölçeği"
+ setting_1x_scaling_desc:0 "ZOR: Al:sat oranı 1:2 veya 1:2'ye ulaştığında, ekonomideki mallar için maksimum fiyat değişimine ulaşılacaktır."
+ setting_10x_scaling:0 "10x Ekonomi Ölçeği"
+ setting_10x_scaling_desc:0 "KOLAY: Al:sat oranı 1:11 veya 11:1'e ulaştığında, ekonomideki mallar için maksimum fiyat değişimine ulaşılacaktır."
+ pm_gas_streetlights:0 "Yağ Sokak Lambaları"
+ pm_coal_streetlights:0 "Kömür Sokak Lambaları"

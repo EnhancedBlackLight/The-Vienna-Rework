@@ -1,0 +1,59 @@
+﻿economy_scaling = {
+    default = 3x_scaling
+
+    # slightly easier than vanilla
+    3x_scaling = {
+        defines = { 
+            NEconomy = {
+                BUY_SELL_DIFF_AT_MAX_FACTOR = 3  		    # the difference between buy/consumption and sell/production at min/max pricing, e.g. if set to 4 then if buy orders are 4x sell orders price is maxed   
+            }
+        }
+    }
+
+    # vanilla
+    2x_scaling = {
+        defines = { 
+            NEconomy = {
+                BUY_SELL_DIFF_AT_MAX_FACTOR = 2  		    # the difference between buy/consumption and sell/production at min/max pricing, e.g. if set to 4 then if buy orders are 4x sell orders price is maxed   
+            }
+        }
+    }
+
+    # more realistic, this makes prices scale *very* quickly
+    1x_scaling = {
+        defines = { 
+            NEconomy = {
+                BUY_SELL_DIFF_AT_MAX_FACTOR = 1  		    # the difference between buy/consumption and sell/production at min/max pricing, e.g. if set to 4 then if buy orders are 4x sell orders price is maxed   
+            }
+        }
+    }
+
+    # very easy, this will make prices only hit extremes when extreme price differences exist. with most PMs this will assure a working economy at all times
+    10x_scaling = {
+        defines = { 
+            NEconomy = {
+                BUY_SELL_DIFF_AT_MAX_FACTOR = 10  		    # the difference between buy/consumption and sell/production at min/max pricing, e.g. if set to 4 then if buy orders are 4x sell orders price is maxed   
+            }
+        }
+    }
+
+
+}
+
+# moved to a PM
+# gas_streetlights_use = {
+#     default = whale_oil
+
+#     # Realism Fix
+#     whale_oil = {
+
+#     }
+
+#     # vanilla
+#     coal_gas = {
+
+#     }
+
+#     # coal_gas_and_whale_oil = {
+#     # }
+# }

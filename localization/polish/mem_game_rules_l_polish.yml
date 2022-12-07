@@ -1,0 +1,12 @@
+﻿l_polish:
+ rule_economy_scaling:0 "MEM: Skalę Ekonomiczną [ZŁAMANY]"
+ setting_3x_scaling:0 "3x Skalę Ekonomiczną"
+ setting_3x_scaling_desc:0 "DOMYŚLNA: Maksymalne zróżnicowanie cen towarów w gospodarce zostanie osiągnięte, gdy stosunek kupna do sprzedaży osiągnie 1:4 lub 4:1."
+ setting_2x_scaling:0 "2x Skalę Ekonomiczną"
+ setting_2x_scaling_desc:0 "ORYGINAŁ: Maksymalne zróżnicowanie cen towarów w gospodarce zostanie osiągnięte, gdy stosunek kupna do sprzedaży osiągnie 1:3 lub 3:1."
+ setting_1x_scaling:0 "1x Skalę Ekonomiczną"
+ setting_1x_scaling_desc:0 "TRUDNY: Maksymalne zróżnicowanie cen towarów w gospodarce zostanie osiągnięte, gdy stosunek kupna do sprzedaży osiągnie 1:2 lub 2:1."
+ setting_10x_scaling:0 "10x Skalę Ekonomiczną"
+ setting_10x_scaling_desc:0 "ŁATWO: Maksymalne zróżnicowanie cen towarów w gospodarce zostanie osiągnięte, gdy stosunek kupna do sprzedaży osiągnie 1:11 lub 11:1."
+ pm_gas_streetlights:0 "Oświetlenie uliczne naftowe" 
+ pm_coal_streetlights:0 "Oświetlenie uliczne węglowe"

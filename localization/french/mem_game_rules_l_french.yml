@@ -1,0 +1,12 @@
+﻿l_french:
+ rule_economy_scaling:0 "MEM: Échelle économique [CASSÉ]"
+ setting_3x_scaling:0 "3x Échelle économique"
+ setting_3x_scaling_desc:0 "DÉFAUT: La variation maximale des prix des biens dans l'économie sera atteinte lorsque le ratio achat:vente atteindra 1:4 ou 4:1.
+ setting_2x_scaling:0 "2x Échelle économique"
+ setting_2x_scaling_desc:0 "ORIGINAL: La variation maximale des prix des biens dans l'économie sera atteinte lorsque le ratio achat:vente atteindra 1:3 ou 3:1.
+ setting_1x_scaling:0 "1x Échelle économique"
+ setting_1x_scaling_desc:0 "DIFFICILE: La variation maximale des prix des biens dans l'économie sera atteinte lorsque le ratio achat:vente atteindra 1:2 ou 2:1.
+ setting_10x_scaling:0 "10x Échelle économique"
+ setting_10x_scaling_desc:0 "FACILE: La variation maximale des prix des biens dans l'économie sera atteinte lorsque le ratio achat:vente atteindra 1:11 ou 11:1.
+ pm_gas_streetlights:0 "Lampadaires à pétrole"
+ pm_coal_streetlights:0 "Lampadaires à charbon"

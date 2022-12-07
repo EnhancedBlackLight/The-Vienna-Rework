@@ -1,0 +1,7 @@
+﻿NEconomy = {                                                                                                                              
+    COUNTRY_MIN_CREDIT_BASE = 0.0001			    # Added to the total Building Cash Reserves to determine credit limit (base)	                                                                         
+    COUNTRY_MIN_CREDIT_SCALED = 0.0001 			    # Added to the total Building Cash Reserves to determine credit limit (multiplied by GDP)	                                                             
+    GOLD_RESERVE_MIN = 1000						    # If Gold Reserves are computed to be lower than this, it's instead set to this                                                                          
+	GOLD_RESERVE_LIMIT_FACTOR = 1.0				    # The base factor of annual GDP that should be provided as a Gold Reserve                                                                                
+	GOLD_RESERVE_RETURNS_FACTOR = 0.75				# How rapidly diminishing returns will cause gold reserves to drop off after the limit has been reached (higher value increases penalty)                                                                           
+}

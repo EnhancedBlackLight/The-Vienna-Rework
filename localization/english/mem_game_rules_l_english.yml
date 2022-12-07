@@ -1,0 +1,22 @@
+﻿l_english:
+ rule_economy_scaling:0 "MEM: Economy Scale -BROKEN-"
+ setting_3x_scaling:0 "3x Economy Scale"
+ setting_3x_scaling_desc:0 "DEFAULT: The maximum price variation for goods in the economy will be reached when the buy:sell ratio reaches 1:4 or 4:1"
+ setting_2x_scaling:0 "2x Economy Scale"
+ setting_2x_scaling_desc:0 "VANILLA: The maximum price variation for goods in the economy will be reached when the buy:sell ratio reaches 1:3 or 3:1."
+ setting_1x_scaling:0 "1x Economy Scale"
+ setting_1x_scaling_desc:0 "HARD MODE: The maximum price variation for goods in the economy will be reached when the buy:sell ratio reaches 1:2 or 1:2."
+ setting_10x_scaling:0 "10x Economy Scale"
+ setting_10x_scaling_desc:0 "EASY MODE: The maximum price variation for goods in the economy will be reached when the buy:sell ratio reaches 1:11 or 11:1."
+ pm_gas_streetlights:0 "Oil Streelights"
+ pm_coal_streetlights:0 "Coal Streelights"
+
+
+# The following rule has been turned into a new production method
+#  rule_gas_streetlights_use:0 "MEM: Urban Center Lighting"
+#  setting_whale_oil:0 "Whale Oil & Kerosene"
+#  setting_whale_oil_desc:0 "DEFAULT: Urban centers use 0.1 oil scaled with workforce per level."
+#  setting_coal_gas:0 "Coal Gas"
+#  setting_coal_gas_desc:0 "VANILLA: Urban centers use 10 coal scaled with workforce per level."
+#  setting_coal_gas_and_whale_oil:0 "Coal Gas, Whale Oil, & Kerosene"
+#  setting_coal_gas_and_whale_oil_desc:0 "BROKEN: Shouldn't See This!"

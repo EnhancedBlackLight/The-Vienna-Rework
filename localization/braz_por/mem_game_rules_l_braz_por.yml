@@ -1,0 +1,12 @@
+﻿l_braz_por:
+ rule_economy_scaling:0 "MEM: Escala Econômica [QUEBRADO]"
+ setting_3x_scaling:0 "3x Escala Econômica"
+ setting_3x_scaling_desc:0 "PREDEFINIÇÃO: A variação máxima dos preços dos bens na economia será alcançada quando a relação compra:venda atingir 1:4 ou 4:1.
+ setting_2x_scaling:0 "2x Escala Econômica"
+ setting_2x_scaling_desc:0 "ORIGINAL: A variação máxima dos preços dos bens na economia será alcançada quando a relação compra:venda atingir 1:3 ou 3:1.
+ setting_1x_scaling:0 "1x Escala Econômica"
+ setting_1x_scaling_desc:0 "DIFÍCIL: A variação máxima dos preços dos bens na economia será alcançada quando a relação compra:venda atingir 1:2 ou 2:1.
+ setting_10x_scaling:0 "10x Escala Econômica"
+ setting_10x_scaling_desc:0 "FÁCIL: A variação máxima dos preços dos bens na economia será alcançada quando a relação compra:venda atingir 1:11 ou 11:1.
+ pm_gas_streetlights:0 "Iluminação Pública a Óleo"
+ pm_coal_streetlights:0 "Iluminação Pública a Carvão"
