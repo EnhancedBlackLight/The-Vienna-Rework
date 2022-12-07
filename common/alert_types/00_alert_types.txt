@@ -272,7 +272,7 @@ unhealthy_economy_alert = {
 
 wasted_construction = {
 	script_context = player_country
-	texture = "gfx/interface/icons/alert_icons/unused/wasted_construction.dds"
+	texture = "gfx/interface/icons/alert_icons/wasted_construction.dds"
 
 	valid = {
 		has_wasted_construction = yes
