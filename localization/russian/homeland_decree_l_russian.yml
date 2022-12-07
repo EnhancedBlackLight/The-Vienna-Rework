@@ -1,0 +1,62 @@
+﻿l_russian:
+ decree_homeland_removal: "Наша Родина!"
+ decree_homeland_removal_desc: "Медленно преобразует область в национальную."
+ homeland_decree.tt: "Область непринятой культуры"
+ homeland_decree.tt2: "Имеется хотя бы одна из принятых культур в области"
+
+ homeland_improvement.tt: "Прогресс по национализации области будет изменен"
+ remove_homeland_events.1.t:0 "Наша родина"
+ remove_homeland_events.1.d:0 "Союз нашего народа не только возможен, но теперь и реален. Все граждане [ROOT.GetState.GetCountry.GetName] теперь объединены под одним знаменем, под одним флагом"
+ remove_homeland_events.1.f:1 ""Древние легенды прошлого скоро найдут себе новое место в наших собственных и новых легендах. Наши национальные герои теперь смотрят на нас с улбыкой. Наш язык, наша культура всё, что нас объединяет, cыновей и дочерей общего прошлого, мы, наконец, будем чтить это""
+ remove_homeland_events.1.a:0 "Наша нация, наша культура!"
+
+ remove_homeland_events.4.d: "В престижную оранизацию[SCOPE.sBuilding('decree_building').GetName] из [SCOPE.sState('decree_state').GetName] был отправлен заказ, чтобы один из лучших композиторов написал национальую оперу, которая отражает величие [ROOT.GetState.GetCountry.GetName]."
+ remove_homeland_events.4.f: ""Даже самые суровые критики не смогут найти ни одного изъяна в гармонии, масштабе, ритме моей Magna Opera, [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_noun')] [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_genitive')]. История любви, смерти, бессмертных тем, которые касаются[ROOT.GetState.GetCountry.GetAdjectiveNoFormatting] легенд, их герои навсегда останутся в памяти, благодаря этим великолепным ариям!""
+ remove_homeland_events.4.b: "Неинтересное предложение."
+
+ remove_homeland_events.5.t: "Искажение истории"
+ remove_homeland_events.5.d: "Инвестиции в исследования были запрошены у[SCOPE.sBuilding('decree_building').GetName] в [SCOPE.sState('decree_state').GetName]. [SCOPE.sCulture('discriminated_culture').GetName] исторически принадлежит [ROOT.GetState.GetOwner.GetName] культуре."
+ remove_homeland_events.5.f: ""Первоначально [SCOPE.sCulture('discriminated_culture').GetName] является культурой с другим прошлым, в отличие от [ROOT.GetState.GetOwner.GetName]. Мы хотели бы создать группу Историчесого исследования, чтобы исправить данный факт"
+ remove_homeland_events.5.a: "Это хорошая идея!"
+ remove_homeland_events.5.b: "Сработает ли такая ложь?"
+
+ remove_homeland_events.6.t: "Террористы атаковали группу Исторического исследования"
+ remove_homeland_events.6.d: "Группа исследователей, изучающих историю [SCOPE.sCulture('discriminated_culture').GetName] подверлась нападению со стороны радикальных террористов.Они требуют прекратить исторические исследования, в случае же отказа, террор будет продолжаться вечность!"
+ remove_homeland_events.6.f: ""Культура [SCOPE.sCulture('discriminated_culture').GetName] принадлежит нам и никому иначе! [ROOT.GetState.GetOwner.GetName] должен незамедлитетльно прекратить искажать историю!""
+ remove_homeland_events.6.a: "Никаких переговоров с террористами."
+ remove_homeland_events.6.b: "Лучше было бы прекратить исследования."
+
+ remove_homeland_events.7.d: "[SCOPE.sCulture('discriminated_culture').GetName] учащиеся иногда используют свой родной язык в[ROOT.GetCountry.GetAdjectiveNoFormatting] школах. Некоторые личности призвали наказывать учителей за использование чужого языка и заставить их говорить на офицальном языке[ROOT.GetState.GetCountry.GetName]."
+
+ remove_homeland_events.8.d: "Предприятия в[SCOPE.sState('discrimination_state').GetName] отказываются нанимать [SCOPE.sCulture('discriminated_culture_pop').GetName] людей из-за их статуса граждан второго сорта в [ROOT.GetState.GetCountry.GetName]."
+ remove_homeland_events.8.a: "Если вы хотите работать на НАШЕМ предприятии, то вы должны следовать НАШЕЙ культуре."
+
+ remove_homeland_events.9.t: "Больше миграции"
+ remove_homeland_events.9.d: "По мере продвижения наших усилий по созданию родины в [ROOT.GetState.GetName] потребность в мигрантах возрастала. Жители выступают против нового прибытия мигрантов, но альтернатив мало."
+ remove_homeland_events.9.f: ""Культура [SCOPE.sCulture('discriminated_culture').GetName] заслуживает уважения. Неужели наплыв чужаков сможет уничтожить нашу прекрасную историю?"
+ remove_homeland_events.9.a: "Это всего лишь небольшой бунт."
+ remove_homeland_events.9.b: "У них есть своё мнение."
+
+ remove_homeland_events.10.t: "Полукровка"
+ remove_homeland_events.10.d: "В последнее время, когда жители[ROOT.GetState.GetName] начали смешиваться с чужими культурами, начали рождаться, так называемые, "Цветные". Некоторые люди из[ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] утверждают, что это необходимо остановить"
+ remove_homeland_events.10.f: ""Культурные различия[ROOT.GetState.GetOwner.GetName] и [SCOPE.sCulture('discriminated_culture').GetName] не могут быть легко преодолены. Я боюсь того хаоса, который принесет их смешение в наше общество."
+ remove_homeland_events.10.a: "Что ж, я думаю, что это следует скорее рекомендовать."
+ remove_homeland_events.10.b: "Я должен рассмотреть это."
+
+ remove_homeland_events.11.t: "Культурная сегрегация"
+ remove_homeland_events.11.d: "Конфликты на национальной почве между [ROOT.GetState.GetName] становятся куда масштабнее, а их отношения ухудшаются все больше. Интеллегенты из [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] предлагают в качестве решения внедрить культурную сегрегацию."
+ remove_homeland_events.11.f: ""[SCOPE.sCulture('discriminated_culture').GetName] и [ROOT.GetState.GetOwner.GetName] имеют много различий. Дело не в том, что их культура хуже, они лишь просто отличаются от нас. Поэтому было бы неплохо снизить трения друг с другом с помощью этой благородной сегрегации."
+ remove_homeland_events.11.a: "Мы дожны жить вместе. Сегрегации никогда не быть в нашем обществе!"
+ remove_homeland_events.11.b: "Это правильно."
+
+ remove_homeland_events.12.t: "Командный спорт"
+ remove_homeland_events.12.d: "По мере того, как командный спорт становится популярнее в[ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName], [SCOPE.sCulture('discriminated_culture').GetName] жители стали чаще проводить время с военными. Кто то даже предагал проводить регулярные матчи."
+ remove_homeland_events.12.f: ""Неважно как кто-то выглядит и говорит, пока вы играете хорошо, с этим всё просто! Эй ты! Дай мне этот мяч быстро! ""
+ remove_homeland_events.12.a: "Сделайте площадку немного лучше"
+ remove_homeland_events.12.b: "Солдаты должны быть верны своему делу."
+ 
+ remove_homeland_events.13.t: "Праздник"
+ remove_homeland_events.13.d: "Сообщается, что [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] фермеры собрались вмете на большой праздник. Среди них видна такая картина: [SCOPE.sCulture('discriminated_culture').GetName] и [ROOT.GetState.GetCountry.GetName] обнимаются вместе, это стало громко обсуждаемой темой заголовков газет."
+ remove_homeland_events.13.f: ""Иногда мы ссорились, а иногда злились. Нам иногда было грустно, иногда больно. Но сегодня, я надеюсь, что мы сможет позабыть обо всём и просто посмеяться и насладиться этим праздником. Если вы [ROOT.GetState.GetCountry.GetName] люди, давайте есть, пить и танцевать""
+ remove_homeland_events.13.a: "Поддержите их, чтобы они могли чаще праздновать."
+ remove_homeland_events.13.b: "У нас нет времени на такие пустяки."

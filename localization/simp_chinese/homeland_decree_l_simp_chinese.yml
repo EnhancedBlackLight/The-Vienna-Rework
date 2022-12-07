@@ -1,0 +1,62 @@
+﻿l_simp_chinese:
+ decree_homeland_removal: "我们的家乡"
+ decree_homeland_removal_desc: "缓慢将一块未整合的地区转换为主体民族的家乡"
+ homeland_decree.tt: "是国外文明的家乡"
+ homeland_decree.tt2: "有至少1个主体民族在这块地区"
+
+ homeland_improvement.tt: "增加家园化进程"
+ remove_homeland_events.1.t: "我们的家乡"
+ remove_homeland_events.1.d: "我们人民之间的联合已不仅仅只是一个可能而是现实。 现在所有[ROOT.GetCountry.GetName]的公民都集结在一个口号，一个旗帜下。"
+ remove_homeland_events.1.f: "那些古老的传说将很快在我们的新故事中找到他们自己的位置。我们的民族英雄现在对着我们微笑。我们的语言，我们的文化，所有的一切都使我们站在一起,我们将为此感到荣耀。"
+ remove_homeland_events.1.a: "一个国家，一个民族！"
+
+ remove_homeland_events.4.d: "已向 [SCOPE.sState('decree_state').GetName] 的著名 [SCOPE.sBuilding('decree_building').GetName] 发送委托，让他们最好的作曲家之一写一篇捕捉 [ROOT.GetState.GetCountry.GetName] 宏伟壮丽的民族歌剧。"
+ remove_homeland_events.4.f: ""即使是最严厉的批评家也无法在我的歌剧 magna [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_noun' )] [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_genitive')]。一个关于爱、死亡、与 [ROOT.GetState.GetCountry.GetAdjectiveNoFormatting] 传说有关的不朽主题的故事，由于这些宏伟的咏叹调，他们的英雄将被永远铭记！""
+ remove_homeland_events.4.b: "这不是一个非常有趣的提议。"
+
+ remove_homeland_events.5.t: "歪曲历史"
+ remove_homeland_events.5.d: "已向 [SCOPE.sState('decree_state').GetName] 中的 [SCOPE.sBuilding('decree_building').GetName] 请求研究投资。[SCOPE.sCulture('discriminated_culture')。 GetName] 历史上属于 [ROOT.GetState.GetOwner.GetName] 文化。"
+ remove_homeland_events.5.f: ""最初 [SCOPE.sCulture('discriminated_culture').GetName] 是一种与 [ROOT.GetState.GetOwner.GetName] 不同的单根文化。我们想成立一个历史研究团队来揭开这个不言而喻的事实。""
+ remove_homeland_events.5.a: "这是个好主意！"
+ remove_homeland_events.5.b: "这样的谎言有用吗？"
+
+ remove_homeland_events.6.t: "恐怖分子袭击了历史研究小组"
+ remove_homeland_events.6.d: "一群调查 [SCOPE.sCulture('discriminated_culture').GetName] 历史的研究人员遭到激进恐怖分子的袭击。恐怖分子要求结束历史研究，如果不这样做，恐怖分子就会永远持续下去。"
+ remove_homeland_events.6.f: ""[SCOPE.sCulture('discriminated_culture').GetName] 的文化是我们的！它不属于别人！ [ROOT.GetState.GetOwner.GetName] 应该立即停止歪曲历史！""
+ remove_homeland_events.6.a: "不与恐怖分子谈判。"
+ remove_homeland_events.6.b: "最好停止研究。"
+
+ remove_homeland_events.7.d: "[SCOPE.sCulture('discriminated_culture').GetName] 学生有时会在 [ROOT.GetCountry.GetAdjectiveNoFormatting] 学校使用他们的母语。一些人呼吁教师惩罚使用这些语言，迫使孩子们说 [ROOT.GetState.GetCountry.GetName] 的官方语言。"
+
+ remove_homeland_events.8.d: "[SCOPE.sState('discrimination_state').GetName] 的工厂拒绝雇用 [SCOPE.sCulture('discriminated_culture_pop').GetName] 人，因为他们在 [ROOT] 中是二等公民.GetState.GetCountry.GetName]。"
+ remove_homeland_events.8.a: "如果你想在我们工厂工作，你必须遵循我们的文化。"
+
+ remove_homeland_events.9.t: "更多迁移"
+ remove_homeland_events.9.d: "随着我们在 [ROOT.GetState.GetName] 建立家园的努力取得进展，对移民的需求增加了。居民反对新移民，但别无选择。"
+ remove_homeland_events.9.f: ""[SCOPE.sCulture('discriminated_culture').GetName] 的文化值得尊重。我们美好的文化不应该被外来者的涌入所破坏吗？""
+ remove_homeland_events.9.a: "这只是一个小的叛乱。"
+ remove_homeland_events.9.b: "他们有道理。"
+
+ remove_homeland_events.10.t: "混血"
+ remove_homeland_events.10.d: "最近，随着[ROOT.GetState.GetName]居民来自不同文化的混合，他们的混血也正在诞生。一些来自[ROOT.GetState.GetName] [SCOPE.sBuilding]的人('decree_building').GetName] 认为应该停止它。"
+ remove_homeland_events.10.f: ""[ROOT.GetState.GetOwner.GetName] 和 [SCOPE.sCulture('discriminated_culture').GetName] 的文化异质性不是可以轻易克服的。我怕他们的混血会给我们的社会带来什么样的混乱。""
+ remove_homeland_events.10.a: "好吧，我认为应该推荐它。"
+ remove_homeland_events.10.b: "我应该考虑一下。"
+
+ remove_homeland_events.11.t: "文化隔离"
+ remove_homeland_events.11.d: "[ROOT.GetState.GetName] 之间的文化冲突越来越广泛，他们的关系也越来越糟。来自 [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] 的知识分子建议实施文化隔离作为解决方案。"
+ remove_homeland_events.11.f: "[SCOPE.sCulture('discriminated_culture').GetName] 和 [ROOT.GetState.GetOwner.GetName] 具有不同的文化。不是他们的文化低劣，他们只是和我们不一样而已。因此，通过这种崇高的隔离来减少彼此之间的摩擦是件好事。"
+ remove_homeland_events.11.a: "我们必须生活在一起。隔离永远不会出现在我们的社会中。"
+ remove_homeland_events.11.b: "没错。"
+
+ remove_homeland_events.12.t: "团体运动"
+ remove_homeland_events.12.d: "随着集体运动在 [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] 中变得流行，[SCOPE.sCulture('discriminated_culture').GetName] 居民开始多和军人出去玩，有人甚至建议定期比赛。"
+ remove_homeland_events.12.f: ""无论某人长什么样或说什么，重要的是！只要你玩得好，就可以了！嘿！快把那个球给我！""
+ remove_homeland_events.12.a: "让游乐场好一点。"
+ remove_homeland_events.12.b: "士兵必须忠于他们的工作。"
+ 
+ remove_homeland_events.13.t: "节日"
+ remove_homeland_events.13.d: "据报道，[ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] 农民聚集在一起参加一个盛大的节日。其中，一张 [SCOPE.sCulture( 'discriminated_culture').GetName] 和 [ROOT.GetState.GetCountry.GetName] 人拥抱在一起传播开来，成为话题。"
+ remove_homeland_events.13.f: ""我们有时吵架，有时生气。我们有时难过，有时痛苦。但今天，我希望我们能忘记一切，笑着享受盛宴。如果你是 [ROOT.GetState.GetCountry.GetName] 人，让我们吃喝玩乐吧！""
+ remove_homeland_events.13.a: "给他们一些支持，这样他们就可以经常庆祝。"
+ remove_homeland_events.13.b: "我们没时间做这么小的生意。"

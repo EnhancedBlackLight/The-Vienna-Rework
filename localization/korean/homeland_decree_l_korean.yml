@@ -1,0 +1,62 @@
+﻿l_korean:
+ decree_homeland_removal: "민족의 생활권"
+ decree_homeland_removal_desc: "느린 속도로 해당 주를 본토화 합니다."
+ homeland_decree.tt: "다른 민족의 본토일 것"
+ homeland_decree.tt2: "주류 문화가 한 명이라도 있을 것"
+ 
+ homeland_improvement.tt: "본토화 진행도가 상승합니다"
+ remove_homeland_events.1.t:0 "민족의 생활권"
+ remove_homeland_events.1.d:0 "우리에게 국민 대통합은 가능성이 아닌 엄연한 현실이다. [ROOT.GetState.GetCountry.GetName]의 모든 시민이 하나의 사명 아래, 하나의 국기 아래 똘똘 뭉쳤다."
+ remove_homeland_events.1.f:1 ""이제 우리가 새롭게 써 내려갈 전설이 먼 옛날부터 전해져 내려오던 고대의 전설로부터 바통을 전달받을 것입니다. 민족의 영웅들께서 지금쯤 인자한 미소를 지으며 우릴 바라보고 있을 겁니다. 우리의 언어, 우리의 문화, 우리를 하나로 묶는 모든 것이, 같은 선조 아래에서 태어난 아들과 딸들이, 비로소 제자리를 찾아갈 것입니다.""
+ remove_homeland_events.1.a:0 "우리 민족, 우리 문화!"
+
+ remove_homeland_events.4.d: "지체 높은 [SCOPE.sState('decree_state').GetName]의 [SCOPE.sBuilding('decree_building').GetName]에 의뢰가 전해졌다. 최고의 작곡가를 고용해 [ROOT.GetState.GetCountry.GetName]의 위엄을 오롯이 담아낸 민족 오페라를 만들어 [ROOT.GetState.GetName]에서 공연하기 위함이다."
+ remove_homeland_events.4.f: ""아무리 독설만을 일삼는 비평가라도 제 필생의 역작 '[SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_genitive')] [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_noun')]'의 화음과 음계, 박자에서 어떤 흠결도 찾아내지는 못할 것입니다. 사랑, 죽음, 불멸을 다룬 [ROOT.GetState.GetCountry.GetAdjectiveNoFormatting] 설화의 영웅들은 이 찬연한 아리아를 통해 영원토록 기억될 겁니다!""
+ remove_homeland_events.4.b: "그다지 흥미로운 제안은 아니군."
+
+ remove_homeland_events.5.t: "역사 왜곡"
+ remove_homeland_events.5.d: "지체 높은 [SCOPE.sState('decree_state').GetName]의 [SCOPE.sBuilding('decree_building').GetName]에서 연구 투자를 의뢰했다. [SCOPE.sCulture('discriminated_culture').GetName]의 문화가 역사적으로 [ROOT.GetState.GetOwner.GetName]의 속해 있다는 것이다."
+ remove_homeland_events.5.f: ""본디 [SCOPE.sCulture('discriminated_culture').GetName]는 [ROOT.GetState.GetOwner.GetName]에서 갈라져나온 하나의 뿌리를 가진 문화입니다. 우리 연구단은 이를 밝히기 위해 역사 조사단을 만들고 싶습니다.""
+ remove_homeland_events.5.a: "그거 좋은 생각이군!"
+ remove_homeland_events.5.b: "그런 거짓말이 통하겠는가?"
+
+ remove_homeland_events.6.t: "역사 연구단 테러"
+ remove_homeland_events.6.d: "[SCOPE.sCulture('discriminated_culture').GetName]의 역사에 대해 조사하고 있던 연구단이 과격한 테러리스트에게 공격 당했다. 테러리스트들은 역사 연구를 중단할 것을 요구하고 있으며, 만약 멈추지 않을 시 무제한의 테러 행위를 예고하였다."
+ remove_homeland_events.6.f: ""[SCOPE.sCulture('discriminated_culture').GetName]의 문화는 우리의 것! 다른 누구에게도 속하지 않는다! [ROOT.GetState.GetOwner.GetName] 본국은 당장 역사 왜곡 행위를 중단하라!""
+ remove_homeland_events.6.a: "테러리스트와의 협상은 없다."
+ remove_homeland_events.6.b: "연구는 그만두는 것이 좋겠다."
+
+ remove_homeland_events.7.d: "[ROOT.GetCountry.GetAdjectiveNoFormatting] 학교에서 [SCOPE.sCulture('discriminated_culture').GetName]계 학생들이 간혹 자신들의 모어를 사용하는 사례가 확인되고 있다. 일각에서는 교사들에게 다른 언어를 쓰는 학생들을 처벌하여 [ROOT.GetState.GetCountry.GetName]의 공용어를 쓰도록 강제하라고 주장하고 있다."
+
+ remove_homeland_events.8.d: "[SCOPE.sState('discrimination_state').GetName] 공장들이 [SCOPE.sCulture('discriminated_culture_pop').GetName]계 주민 고용을 거부하고 있다. [ROOT.GetState.GetCountry.GetName]의 2등 시민이라는 이유에서였다."
+ remove_homeland_events.8.a: "우리 공장에서 일하고 싶으면 우리 문화에 따라야한다."
+
+ remove_homeland_events.9.t: "이주 유치"
+ remove_homeland_events.9.d: "[ROOT.GetState.GetName]의 본토화가 진행되면서 이주민에 대한 필요성이 늘어났다. 주민들은 새로운 이주민이 오는 것을 반대하고 있지만, 다른 대안은 그다지 없는 상황이다."
+ remove_homeland_events.9.f: ""[SCOPE.sCulture('discriminated_culture').GetName]의 문화는 존중 받아야 마땅합니다. 외부인들의 유입으로 우리의 아름다운 문화가 파괴되어서는 안되지 않겠습니까?""
+ remove_homeland_events.9.a: "작은 반항일 뿐이다."
+ remove_homeland_events.9.b: "그들의 말에도 일리가 있다."
+
+ remove_homeland_events.10.t: "혼혈"
+ remove_homeland_events.10.d: "최근 [ROOT.GetState.GetName]에 여러 문화의 주민들이 섞이면서 그들의 혼혈 또한 태어나고 있다. [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName]의 일부 관료들은 이 혼혈을 막아야만 한다고 주장하고 있다."
+ remove_homeland_events.10.f: ""[ROOT.GetState.GetOwner.GetName]의 문화와 [SCOPE.sCulture('discriminated_culture').GetName]의 문화적 이질성은 쉽게 극복 될 사항이 아닙니다. 저는 그들의 혼혈이 우리 사회에 어떤 혼란을 몰고 올지 몰라 두렵습니다.""
+ remove_homeland_events.10.a: "오히려 권장해야할 일이라고 본다."
+ remove_homeland_events.10.b: "한번 고려해봐야겠군."
+
+ remove_homeland_events.11.t: "문화적 격리"
+ remove_homeland_events.11.d: "[ROOT.GetState.GetName]의 문화적 갈등이 심해져 서로에 대한 다툼도 점점 늘어나고 있다. [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName]의 지식인들은 해법으로 문화적 격리를 실행할 것을 제시했다."
+ remove_homeland_events.11.f: ""[SCOPE.sCulture('discriminated_culture').GetName]와 [ROOT.GetState.GetOwner.GetName]의 문화는 다릅니다. 그들의 문화가 열등하다는 것이 아니라 그저 우리와 다를 뿐이니, 이 고귀한 격리로 서로의 마찰을 줄이는 것이 좋겠습니다.""
+ remove_homeland_events.11.a: "우리는 함께 살아가야 한다. 격리는 결단코 있을 수 없다."
+ remove_homeland_events.11.b: "그 말이 옳다."
+
+ remove_homeland_events.12.t: "단체 운동"
+ remove_homeland_events.12.d: "[ROOT.GetState.GetName]의 [SCOPE.sBuilding('decree_building').GetName]에서 단체 운동이 유행함에 따라, [SCOPE.sCulture('discriminated_culture').GetName]계 주민이 군인과 함께 어울리는 일이 잦아지고 있다. 일부 사람들은 아예 정기적인 단체 운동을 벌이자고 제안해왔다."
+ remove_homeland_events.12.f: ""누가 어떻게 생겼든, 무슨 말을 하든 뭐가 중요해! 경기만 잘 뛰면 그만이지! 어이 거기! 빨리 공 좀 줘봐!""
+ remove_homeland_events.12.a: "좀 더 제대로 된 운동장을 만들어주어라."
+ remove_homeland_events.12.b: "군인은 군인의 일에 충실해야 한다."
+ 
+ remove_homeland_events.13.t: "축제"
+ remove_homeland_events.13.d: "[ROOT.GetState.GetName]의 [SCOPE.sBuilding('decree_building').GetName] 농부들이 모여 큰 축제를 벌인 일이 보고되었다. 그 중 [SCOPE.sCulture('discriminated_culture').GetName]계 주민과 [ROOT.GetState.GetCountry.GetName]계 사람이 얼싸 안은 사진이 세간에 퍼져 화제가 되었다."
+ remove_homeland_events.13.f: ""우리는 때로는 다투고 때로는 노여워하였습니다. 때로는 슬퍼했고 때로는 고통에 허덕였습니다. 하지만 오늘은 그 모든 것을 잊고 그저 웃고 즐기는 잔치가 되었으면 좋겠습니다. 그저 [ROOT.GetState.GetCountry.GetName] 사람이라면 먹고 마시고 춤추며 지내봅시다!""
+ remove_homeland_events.13.a: "그들이 자주 축제를 열 수 있도록 보조금을 보내주어라."
+ remove_homeland_events.13.b: "알 게 뭐람."

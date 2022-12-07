@@ -1,0 +1,52 @@
+﻿
+decree_homeland_removal = {
+	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
+	unlocking_technologies = {
+		nationalism
+	}
+	valid = {
+		is_incorporated = yes
+		custom_tooltip = {
+			text = homeland_decree.tt
+			OR = {
+				any_scope_culture = { 
+					has_homeland = root
+					NOT = { is_primary_culture_of = root.owner }					
+				}
+				AND = {
+					NOT = {
+						any_scope_culture = { 
+							has_homeland = root
+							NOT = { is_primary_culture_of = root.owner }					
+						}
+					}
+					any_scope_culture = { 
+						NOT = { has_homeland = root }
+						is_primary_culture_of = root.owner					
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = homeland_decree.tt2
+			any_scope_culture = { 
+				is_primary_culture_of = root.owner				
+			}
+		}
+		is_split_state = no
+		owner = { is_player = yes }
+	}
+	modifier = {
+	    state_radicals_from_discrimination_mult = 1
+	    state_radicals_from_sol_change_mult = 0.25
+	    state_turmoil_effects_mult = 0.25
+	    state_tax_waste_add = 0.25
+		state_assimilation_mult = 1
+		state_conversion_mult = 1
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 0
+	}
+}
