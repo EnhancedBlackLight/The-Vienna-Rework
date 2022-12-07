@@ -1,0 +1,23 @@
+﻿country_and_subjects_gdp = {
+	value = gdp
+	
+	every_country = {
+		if = {
+			limit = {
+				is_subject_of = root
+			}
+			add = gdp
+		}
+	}
+}
+
+country_and_subjects_gdp_global_share = {
+	value = 0
+	if = {
+		limit = {
+			global_gdp > 0
+		}
+		value = country_and_subjects_gdp
+		divide = global_gdp
+	}
+}

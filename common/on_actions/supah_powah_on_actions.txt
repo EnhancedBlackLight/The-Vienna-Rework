@@ -1,0 +1,5 @@
+﻿on_monthly_pulse_country = {
+    events = {
+		super_power_events.98
+	}
+}

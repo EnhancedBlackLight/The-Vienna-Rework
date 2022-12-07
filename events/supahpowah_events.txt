@@ -1,0 +1,47 @@
+﻿namespace = super_power_events
+
+super_power_events.98 = {
+	type = country_event
+	placement = ROOT
+
+	title = super_power_events.98.t
+	desc = super_power_events.98.d
+	flavor = super_power_events.98.f
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	trigger = {
+		OR = {
+			AND = {
+				NOT = {
+					is_country_type = decentralized
+					is_country_type = ascending_great_power
+					is_country_type = unrecognized
+				}
+				prestige >= 4000
+				country_and_subjects_gdp_global_share > 0.07
+			}
+			AND = {
+				NOT = {
+					is_country_type = decentralized
+					is_country_type = ascending_great_power
+					is_country_type = unrecognized
+				}
+				year >= 1850
+				country_and_subjects_gdp_global_share >= 0.33
+			}
+		}
+	}
+	option = {
+		name = super_power_events.98.a
+		default_option = yes
+
+		ROOT = {
+			set_country_type = ascending_great_power
+		}
+	}
+}
