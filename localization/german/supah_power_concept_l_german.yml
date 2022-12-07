@@ -1,7 +1,0 @@
-﻿l_german:
-
-  super_power: "[Concept('concept_super_power', '$concept_super_power$')]" 
-  concept_super_power: "Super Power"
-  concept_super_powers: "Super Powers"
-  concept_super_power_desc: "The Era's leading [Concept('concept_country', '$concept_country$')] that is in a dominant position to exert influence or project power on a global scale anywhere in the world through economic, military, technological, political, and cultural strength along with diplomatic and soft power influence. This is what we consider a de facto #bold $super_power$#!. Consistently involving itself in world affairs the current #bold $super_power$#! intends to keep the current global order and maintain its position in the world keeping the [Concept('concept_great_power','$concept_great_powers$')] in line.[AddLocalizationIf(GetPlayer.IsValid,'concept_super_power_desc_added')]"
-  concept_super_power_desc_added: "\n\n$concept_super_powers$ gain the following benefits:\n[GetRankModifier('super_power').GetDesc]"

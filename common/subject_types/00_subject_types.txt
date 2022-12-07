@@ -25,7 +25,6 @@
 	}
 		
 	valid_overlord_country_types = {
-		ascending_great_power
 		recognized
 		colonial
 	}
@@ -37,7 +36,6 @@
 	}	
 
 	valid_overlord_ranks = {
-		super_power
 		great_power
 		major_power
 		minor_power
@@ -80,7 +78,6 @@ subject_type_puppet = {
 	}
 	
 	valid_overlord_country_types = {
-		ascending_great_power
 		recognized
 		colonial
 	}
@@ -92,7 +89,6 @@ subject_type_puppet = {
 	}		
 	
 	valid_overlord_ranks = {
-		super_power
 		great_power
 		major_power
 		minor_power
@@ -233,7 +229,6 @@ subject_type_dominion = {
 	}	
 	
 	valid_overlord_country_types = {
-		ascending_great_power
 		recognized
 		colonial
 	}
@@ -245,7 +240,6 @@ subject_type_dominion = {
 	}	
 	
 	valid_overlord_ranks = {
-		super_power
 		great_power
 		major_power
 		minor_power
@@ -279,7 +273,6 @@ subject_type_personal_union = {
 	diplomatic_action = personal_union
 	
 	valid_overlord_country_types = {
-		ascending_great_power
 		recognized
 		colonial
 		unrecognized
@@ -292,7 +285,6 @@ subject_type_personal_union = {
 	}	
 	
 	valid_overlord_ranks = {
-		super_power
 		great_power
 		major_power
 		minor_power
@@ -331,21 +323,18 @@ subject_type_customs_union = {
 	diplomatic_action = customs_union
 	
 	valid_overlord_country_types = {
-		ascending_great_power
 		recognized
 		colonial
 		unrecognized
 	}
 	
 	valid_subject_country_types = {
-		ascending_great_power
 		recognized
 		colonial
 		unrecognized
 	}	
 
 	valid_overlord_ranks = {
-		super_power
 		great_power
 		major_power
 		minor_power
