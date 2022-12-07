@@ -73,19 +73,6 @@
 		
 		relations_progress_per_day = 1 # At 100, +1 relations
 		relations_improvement_max = 80		
-		
-		is_about_to_auto_break = {
-            scope:target_country.relations:root < 23 # this is: cordial + 3
-        }
-
-		should_auto_break = {
-			custom_tooltip = {
-				text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER_NOT
-
-                # make sure to update is_about_to_auto_break when changing this:
-				scope:target_country.relations:root < relations_threshold:cordial
-			}		
-		}
 
 		should_invalidate = {
 			OR = {
@@ -341,7 +328,7 @@
 		}
 
 		propose_break_score = {
-			value = 10
+			value = 5
 		}
 		
 		use_obligation_chance = {
@@ -408,10 +395,6 @@ guarantee_another_country = {
 			}					
 		}		
 		has_diplomatic_relevance = scope:target_country	
-		custom_tooltip = {
-			text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
-			scope:target_country.relations:root >= relations_threshold:cordial
-		}			
 		is_revolutionary = no
 		scope:target_country = {
 			is_revolutionary = no
@@ -452,12 +435,6 @@ break_guarantee = {
 		NOT = { is_country_type = decentralized }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
-		}
-		scope:target_country = {
-			has_diplomatic_pact = {
-				who = scope:actor
-				type = ask_for_guarantee
-			}				
 		}
 	}
 	possible = {
