@@ -1,8 +1,8 @@
 {
   "name" : "The Vienna Rework",
-  "id" : "",
-  "version" : "",
-  "supported_game_version" : "",
+  "id" : "vr.base",
+  "version" : "0.1.0",
+  "supported_game_version" : "1.1.*",
   "short_description" : "",
   "tags" : [],
   "relationships" : [],
