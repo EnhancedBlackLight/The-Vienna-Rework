@@ -4,8 +4,11 @@ set_level_minting.1 = {
 	type = country_event
 	hidden = yes
 	immediate = {
-		add_modifier = {
-			name = minting_modifier_very_low
+		if = {
+			limit = {NOT = {has_modifier = minting_modifier_very_low}}
+			add_modifier = {
+				name = minting_modifier_very_low
+			}
 		}
 		remove_modifier = minting_modifier_low
 		remove_modifier = minting_modifier_high
@@ -16,8 +19,11 @@ set_level_minting.2 = {
 	type = country_event
 	hidden = yes
 	immediate = {
-		add_modifier = {
-			name = minting_modifier_low
+		if = {
+			limit = {NOT = {has_modifier = minting_modifier_low}}
+			add_modifier = {
+				name = minting_modifier_low
+			}
 		}
 		remove_modifier = minting_modifier_very_low
 		remove_modifier = minting_modifier_high
@@ -37,9 +43,12 @@ set_level_minting.3 = {
 set_level_minting.4 = { 
 	type = country_event
 	hidden = yes
-	immediate = {		
-		add_modifier = {
-			name = minting_modifier_high
+	immediate = {
+		if = {
+			limit = {NOT = {has_modifier = minting_modifier_high}}	
+			add_modifier = {
+				name = minting_modifier_high
+			}
 		}
 		remove_modifier = minting_modifier_low
 		remove_modifier = minting_modifier_very_low
@@ -50,8 +59,11 @@ set_level_minting.5 = {
 	type = country_event
 	hidden = yes
 	immediate = {
-		add_modifier = {
-			name = minting_modifier_very_high
+		if = {
+			limit = {NOT = {has_modifier = minting_modifier_very_high}}
+			add_modifier = {
+				name = minting_modifier_very_high
+			}
 		}
 		remove_modifier = minting_modifier_low
 		remove_modifier = minting_modifier_very_low
