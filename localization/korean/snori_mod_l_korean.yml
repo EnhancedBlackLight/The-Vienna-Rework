@@ -1,0 +1,18 @@
+﻿l_korean:
+ #TUTORIAL: Replace tutorial_education with your modifier's name
+ #TUTORIAL: Replace the text between the strings (" ") with the modifier's name, then the modifier's description
+
+ snori_kor_clothes_modifier:0 "서양식 의복"
+ snori_kor_clothes_modifier_desc:0 "서양식 의복을 도입 했습니다"
+  
+ snori_clothes_decision:0 "서양식 복식을 채용"
+ snori_clothes_decision_desc:0 "산업과 학문 뿐만 아니라 복식까지 서양식을 채용합니다"
+ 
+   #TUTORIAL: t means the title of the decision
+ snori_C_events.1.t:0 "서양식 복식을 채용합니다"
+ #TUTORIAL: d means the description of the decision
+ snori_C_events.1.d:0 "산업과 학문, 문화 등 모든 면에서 서양이 세계를 선도하고 있습니다. 일찍이 우리가 알던 세계관은 무너지고 있으며 점차 구시대의 유물로 도태되고 있습니다. 우선 서양식 의복을 도입하여 변화하는 세계에 발맞춰 나갈 것입니다!"
+ #TUTORIAL: a,b,c,d,e refer to the options available to the decision, maximum 5 (a,b,c,d,e)
+ snori_C_events.1.a:0 "이로써 세계 무대에 설 준비가 되었다!"
+ #TUTORIAL: f means the flavor of the decision, which is the text that is below the description, mostly used for quotes
+ snori_C_events.1.f:0 "“모든 인물과 인구의 의상이 서양식 의복으로 변경 됩니다”"

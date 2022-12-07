@@ -1,0 +1,10 @@
+﻿l_japanese:
+
+ snori_kor_clothes_modifier:0 "洋服を導入"
+ snori_kor_clothes_modifier_desc:0 "洋服を導入しました"
+ snori_clothes_decision:0 "洋服を導入"
+ snori_clothes_decision_desc:0 "産業や学問だけでなく、衣服まで西洋式を採用します"
+ snori_C_events.1.t:0 "社会全般に洋服を採用します"
+ snori_C_events.1.d:0 "産業や学問、文化などあらゆる面で西洋が世界をリードしています。かつて私たちが知っていた世界観は崩れており、徐々に旧時代の遺物は淘汰されています。まず西洋式の衣服を取り入れ、変化する世界に合わせていきます！"
+ snori_C_events.1.a:0 "これで世界の舞台に立つ準備ができました！"
+ snori_C_events.1.f:0 "“すべての人物と民衆の衣装が洋服に変わります”"

@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+
+ snori_kor_clothes_modifier:0 "西洋服饰"
+ snori_kor_clothes_modifier_desc:0 "西洋服饰"
+ snori_clothes_decision:0 "采用西洋样式服装"
+ snori_clothes_decision_desc:0 "不仅适用于工业与学术界，还适用于普通服装。"
+ snori_C_events.1.t:0 "采用西洋样式服装"
+ snori_C_events.1.d:0 "西洋人在世界上主导着工业、学术和文化，我们所知的旧世界正在崩塌。首先，我们将会引入西洋样式的服装，以跟上这个变化的世界！"
+ snori_C_events.1.a:0 "现在我们已经准备好站立在世界舞台上了！"
+ snori_C_events.1.f:0 "“所有人物与民众的服饰将会转换成西洋样式服装。”"
