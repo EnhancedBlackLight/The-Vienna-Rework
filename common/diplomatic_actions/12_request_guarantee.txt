@@ -456,4 +456,12 @@ break_guarantee = {
 			}
 		}		
 	}
+	ai = {
+		will_propose = {
+			always = no
+		}
+		will_break = {
+			always = no
+		}
+	}
 }
