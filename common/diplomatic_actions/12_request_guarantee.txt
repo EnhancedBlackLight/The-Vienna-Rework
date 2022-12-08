@@ -98,7 +98,9 @@
 		}
 	}
 	ai = {
-		check_acceptance_for_will_break = yes
+		will_break = {
+			always = no
+		}
 		will_propose = {
 			always = no
 		}
