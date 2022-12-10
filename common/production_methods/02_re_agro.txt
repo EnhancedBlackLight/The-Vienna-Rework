@@ -1,0 +1,25 @@
+﻿pm_government_run = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+	
+	unlocking_laws = {
+		law_command_economy
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 150
+		}
+		unscaled = {
+			building_bureaucrats_shares_add = 5
+		}
+	}
+
+	country_modifiers = {
+		unscaled = {
+			country_bureaucracy_add = -10
+		}
+		level_scaled = {
+			country_bureaucracy_add = -8
+		}
+	}
+}

@@ -1,0 +1,27 @@
+﻿pm_government_run_building_railway = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	unlocking_laws = {
+		law_command_economy
+		law_interventionism
+		law_agrarianism
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_bureaucrats_add = 400
+		}
+		unscaled = {
+			building_bureaucrats_shares_add = 5
+		}
+	}
+	
+	country_modifiers = {
+		unscaled = {
+			country_bureaucracy_add = -8
+		}
+		level_scaled = {
+			country_bureaucracy_add = -5
+		}
+	}
+}
