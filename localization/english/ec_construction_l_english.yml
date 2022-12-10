@@ -1,0 +1,10 @@
+﻿l_english:
+ pmg_mode_building_construction_sector:0 "Industry mode"
+ pm_balanced_construction:0 "Balanced Industry"
+ pm_decentralized_construction:0 "Decentralized Industry"
+ pm_centralized_construction:0 "Centralized Industry"
+
+ pmg_automation_building_construction_sector:0 "Construction Automation"
+ pm_automation_disabled:0 "Manual Construction"
+ pm_steam_powered_building_construction_sector:0 "Steam-Powered Construction Mechine"
+ pm_electrical_powered_building_construction_sector:0 "Electrical Construction Mechine"

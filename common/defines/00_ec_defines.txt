@@ -1,0 +1,3 @@
+﻿NEconomy = {
+	MAX_WEEKLY_CONSTRUCTION_PROGRESS = 25
+}

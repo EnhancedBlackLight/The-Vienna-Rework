@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+ pmg_mode_building_construction_sector:0 "建造部门生产模式"
+ pm_balanced_construction:0 "平衡型建造部门"
+ pm_decentralized_construction:0 "离散型建造部门"
+ pm_centralized_construction:0 "集中型建造部门"
+
+ pmg_automation_building_construction_sector:0 "建造部门自动化"
+ pm_automation_disabled:0 "手工建造"
+ pm_steam_powered_building_construction_sector:0 "蒸汽动力工程机械"
+ pm_electrical_powered_building_construction_sector:0 "电力工程机械"
