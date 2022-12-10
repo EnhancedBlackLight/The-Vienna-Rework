@@ -220,11 +220,6 @@ law_dual_federalism_desc:0 "In a dual federalist state, power is delegated and s
 law_regionalism:0 "Regionalism"
 law_regionalism_desc:0 "In a regionalist state, power fundementally rests with local regional authorities, with the central government having limited power to enact policy."
 
-nfm_misc.5.t:0 "Election Campaign - Clout Increases Momentum"
-nfm_misc.5.d:0 "Every 10% of Clout -> 10% Momentum"
-nfm_misc.5.f:0 "This text is lonely- its fleating existence will soon disappear, gone, turned to ashes."
-nfm_misc.5.a:0 "BEGONE TEXT"
-
 
 ## Clout Adjustment
 9_enormous_state_clout_adjustment:0 "Enormous State"
