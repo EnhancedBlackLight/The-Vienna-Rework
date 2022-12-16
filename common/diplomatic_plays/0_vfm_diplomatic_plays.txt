@@ -82,7 +82,7 @@ dp_unify_china = {
 }
 
 dp_native_uprising_new = {
-	war_goal = humiliation
+	war_goal = annex_country
 	
 	requires_interest_marker = no
 	mirror_war_goal = yes
