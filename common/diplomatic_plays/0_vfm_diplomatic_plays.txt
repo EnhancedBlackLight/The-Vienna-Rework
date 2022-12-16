@@ -82,11 +82,9 @@ dp_unify_china = {
 }
 
 dp_native_uprising_new = {
-	war_goal = annex_country
+	war_goal = annex_native
 	
 	requires_interest_marker = no
-	mirror_war_goal = yes
-	allow_negotiated_peace = no
 	
 	texture = "gfx/interface/icons/war_goals/annex_country.dds"
 	
