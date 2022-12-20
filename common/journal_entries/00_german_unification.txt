@@ -8,9 +8,8 @@
 			country_tier = hegemony
 		}
 	}
-
-	possible =
-	country_rank >= rank_value:major_power
+	possible = {
+		country_rank >= rank_value:major_power
 		has_technology_researched = nationalism
 		is_subject = no
 	}

@@ -449,7 +449,7 @@ acw_events.5 = {
 			value = 0.003
 			culture = cu:dixie
 		}}
-		c: USA = { add_modifier = {
+		c:USA = { add_modifier = {
 			name = abolitionist_win
 			months = 98
 			is_decaying = yes
