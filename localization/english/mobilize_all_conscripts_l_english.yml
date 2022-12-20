@@ -1,0 +1,3 @@
+﻿l_english:
+ MILITARY_PANEL_ACTIVATE_ALL_CONSCRIPTS:0 "Activate all [Concept('concept_conscript_battalion', '$concept_conscript_battalions_short$')]"
+ MILITARY_PANEL_ACTIVATE_CONSCRIPTS:0 "Activate [Concept('concept_conscript_battalion', '$concept_conscript_battalions_short$')]"

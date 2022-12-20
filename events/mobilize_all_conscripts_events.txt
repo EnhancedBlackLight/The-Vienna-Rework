@@ -1,0 +1,13 @@
+﻿namespace = activate_all_conscripts
+
+activate_all_conscripts.1 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		every_scope_state = {
+			activate_building = {
+				building = building_conscription_center
+			}
+		}
+	}
+}
