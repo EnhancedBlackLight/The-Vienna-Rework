@@ -31,7 +31,7 @@
  pm_market_squares:0 "Market Squares (@wood!#N 5#!@glass!#N 5#! @arrow_right! @services!#P 40#!)"
  pm_covered_markets:0 "Covered Markets (@glass!#N 8#!@steel!#N 8#! @arrow_right! @services!#P 60#!)"
  pm_arcades:0 "Arcades (@glass!#N 10#!@steel!#N 10#! @arrow_right! @services!#P 80#!)"
- pm_coal_streetlights:0 "Gas Streetlights (@coal!#N 10#! @arrow_right! @services!#P 30#!)"
+ pm_coal_streetlights:0 "Coal Streetlights (@coal!#N 10#! @arrow_right! @services!#P 30#!)"
  pm_gas_streetlights:0 "Gas Streetlights (@oil!#N .10#! @arrow_right! @services!#P 30#!)"
  pm_electric_streetlights:0 "Electric Streetlights (@electricity!#N 10#! @arrow_right! @services!#P 50#!)"
  pm_public_trams:0 "Public Trams (@transportation!#N 5#!)"
