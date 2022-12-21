@@ -252,17 +252,6 @@ ideology_agrarian = {
 		law_graduated_taxation = neutral
 		law_land_based_taxation = disapprove
 	}	
-
-	lawgroup_ce_monetary_system = {
-		law_ce_no_monetary_system = neutral
-		law_ce_goods_standard = approve
-		law_ce_coins = approve
-		law_ce_silver_standard = neutral
-		law_ce_gold_standard = neutral
-		law_ce_credit_standard = disapprove
-		law_ce_labour_standard = disapprove
-		law_ce_advanced_labour_standard = strongly_disapprove
-	}
 }
 
 ideology_particularist = {
