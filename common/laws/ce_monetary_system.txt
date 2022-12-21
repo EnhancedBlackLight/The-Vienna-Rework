@@ -27,7 +27,7 @@ law_ce_coins = {
 	
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 1
-		state_poor_standard_of_living_add = -3
+		state_poor_expected_sol = -1.5
 		building_group_bg_mining_throughput_mult = 0.15
 		state_construction_mult = -0.5
 	}
@@ -74,7 +74,6 @@ law_ce_silver_standard = {
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 3
 		state_construction_mult = -0.25
-		state_poor_standard_of_living_add = -2
 		state_farmers_investment_pool_contribution_add = 0.001
 	}
 	
@@ -185,7 +184,6 @@ law_ce_gold_standard = {
 	
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 3
-		state_poor_standard_of_living_add = -2
 		state_machinists_investment_pool_contribution_add = 0.005
 		state_farmers_investment_pool_contribution_add = 0.005
 	}
@@ -277,7 +275,7 @@ law_ce_goods_standard = {
 	
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 2
-		state_poor_standard_of_living_add = -2.5
+		state_poor_expected_sol = 1
 		state_peasants_investment_pool_contribution_add = 0.005
 	}
 	
@@ -444,7 +442,7 @@ law_ce_no_monetary_system = {
 
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 2
-		state_poor_standard_of_living_add = -1
+		state_poor_expected_sol = -1
 	}
 	
 	institution = institution_ce_treasury
@@ -574,8 +572,9 @@ law_ce_credit_standard = {
 	}
 	
 	modifier = {
+		
 		country_institution_ce_treasury_max_investment_add = 5
-		state_poor_standard_of_living_add = 1
+		state_poor_expected_sol = 2.5
 		state_machinists_investment_pool_contribution_add = 0.01
 		country_capitalists_pol_str_mult = 0.15
 		country_academics_pol_str_mult = 0.15
@@ -591,6 +590,7 @@ law_ce_credit_standard = {
 		country_machinists_pol_str_mult = -0.1
 		country_farmers_pol_str_mult = -0.1
 		state_construction_mult = -0.05
+		country_loan_interest_rate_mult = 0.2
 	}
 	
 	build_from_investment_pool = {
@@ -693,7 +693,7 @@ law_ce_labour_standard = {
 	
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 4
-		state_poor_standard_of_living_add = 1.5
+		state_poor_expected_sol = 3
 		country_aristocrats_pol_str_mult = -0.1
 		country_capitalists_pol_str_mult = -0.1
 		country_farmers_pol_str_mult = -0.1
@@ -856,7 +856,7 @@ law_ce_advanced_labour_standard = {
 	
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 5
-		state_poor_standard_of_living_add = 1.5
+		state_poor_expected_sol = 3
 		building_employment_machinists_mult = 0.1
 		building_employment_farmers_mult = 0.1
 		building_employment_engineers_mult = 0.1
