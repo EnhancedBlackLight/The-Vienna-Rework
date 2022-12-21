@@ -565,7 +565,7 @@ law_ce_credit_standard = {
 	}
 	
 	unlocking_technologies = {
-		modern_financial_instruments
+		mutual_funds
 	}
 	
 	on_activate = {
