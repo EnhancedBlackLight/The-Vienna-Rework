@@ -1,0 +1,50 @@
+l_french:
+ ff_construction_subsidies:0 "Programme bâtiments"
+ ff_construction_subsidies_action_name:0 "Programme bâtiments"
+ ff_construction_subsidies_action_propose_name:0 "Programme bâtiments"
+ ff_construction_subsidies_desc:0 "Donne de la [concept_construction] à un [concept_subject]."
+
+ ff_construction_subsides_give:0 "Subventionnement de Construction"
+ ff_construction_subsides_give_desc:0 "Nous avons un Programme bâtiment en cours avec un [concept_subject]."
+
+ ff_construction_subsides_receive:0 "Programme Bâtiments"
+ ff_construction_subsides_receive_desc:0 "Nous recevons de la [concept_construction] de notre [concept_overlord]."
+
+ ff_forced_strategy:0 "Demande Stratégique"
+ ff_forced_strategy_action_name:0 "Demande Stratégique"
+ ff_forced_strategy_desc:0 "Demande un [concept_subject] d'adopter une [concept_ai_strategy] spécifique."
+
+ ai_strategy_agricultural_expansion_forced:0 "Investissements agricoles forcés"
+ ai_strategy_agricultural_expansion_forced_desc:0 "[COUNTRY.GetAltNameNoFormatting('Le')|U][COUNTRY.GetName] est forcé d' étendre son secteur agricole et de devenir un exportateur net de produits alimentaires."
+ ff_agricultural_expansion_forced:0 "Investissements agricoles forcés"
+
+ ai_strategy_plantation_economy_forced:0 "Économie de plantation forcée"
+ ai_strategy_plantation_economy_forced_desc:0 "[COUNTRY.GetAltNameNoFormatting('Le')|U][COUNTRY.GetName] est forcé de se concentrer sur la production et l’exportation de cultures marchandes."
+ ff_plantation_economy_forced:0 "Économie de plantation forcée"
+
+ ai_strategy_resource_expansion_forced:0 "Extraction de ressources forcée"
+ ai_strategy_resource_expansion_forced_desc:0 "[COUNTRY.GetAltNameNoFormatting('Le')|U][COUNTRY.GetName] est forcé d'investir dans l’extraction des ressources naturelles."
+ ff_resource_expansion_forced:0 "Extraction de ressources forcée"
+
+ ai_strategy_industrial_expansion_forced:0 "Industrialision forcée"
+ ai_strategy_industrial_expansion_forced_desc:0 "[COUNTRY.GetAltNameNoFormatting('Le')|U][COUNTRY.GetName] est forcé de développer ses industries urbaines."
+
+ ai_strategy_placate_population_forced:0 "Apaiser les masses forcée"
+ ai_strategy_placate_population_forced_desc:0 "[COUNTRY.GetAltNameNoFormatting('Le')|U][COUNTRY.GetName] est forcé de maintenir la stabilité en gardant les impôts bas et en s’assurant qu’il y a assez de nourriture pour le peuple."
+ ff_placate_population_forced:0 "Forced to Placate the Masses"
+
+ ff_forcing_strategy:0 "Demande Stratégique"
+ ff_forcing_strategy_desc:0 "Demander à un [concept_subject] de pousser son économie dans une [concept_ai_strategy] spécifique."
+
+ ff_no_forced_strategy:0 "Enlève notre Demande Stratégique"
+
+ ff_forcing_strategy_event.1.t:0 "Demande Stratégique 'suggérée'"
+ ff_forcing_strategy_event.1.d:0 "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFullName], que voulez-Vous de nous?"
+
+ ff_forcing_strategy.agriculture:0 "Des poulardes, des rotis, des fèves et des cignes bien poivrés! J'ai faim!"
+ ff_forcing_strategy.plantation:0 "Sucre, tabac, soie. Mais surtout, du thé."
+ ff_forcing_strategy.resource:0 "Minerais, bois et plein de bonne choses."
+ ff_forcing_strategy.industrial:0 "Plus d'industrie!"
+ ff_forcing_strategy.placate:0 "Prend soin de ton peuple."
+ ff_forcing_strategy.remove:0 "Surprends-moi."
+
