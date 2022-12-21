@@ -1,0 +1,67 @@
+﻿WGR = {
+	states = {
+		STATE_TARTARIA
+	}
+
+	ai_will_do = { always = no }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+STP = {
+	provinces = { xB64167 x607A9E xCD164E xE97616 x01A0E0 xBB73A3}
+
+	ai_will_do = { always = no }
+
+}
+PAI = {
+	states = {
+		STATE_ILE_DE_FRANCE
+	}
+	ai_will_do = { always = no }
+}
+
+CNW = {
+	provinces = { xEB9862 xA2DD9E xC900EF x63EF7E x1E38F8 }
+
+	ai_will_do = { always = no }
+}
+
+LMV = {
+	states = {
+		STATE_VENETIA 
+		STATE_LOMBARDY 
+	}
+	ai_will_do = { always = no }	
+}
+
+BAN = { #Banat Native
+	states = {
+		STATE_BANAT
+		STATE_DELVIDEK
+	}
+
+	ai_will_do = { always = no }
+}
+
+BAA = { #Banat German
+	states = {
+		STATE_BANAT
+		STATE_DELVIDEK
+	}
+
+	ai_will_do = { always = no }
+}
+
+ILY = { #Illyria
+	use_culture_states = yes
+
+	ai_will_do = { always = no }
+}
+
+BKV = {
+	provinces = { x7E6263 x31A0A0 xFFCCDA x067DF0 x00A7F4 }
+
+	ai_will_do = { always = no }
+}

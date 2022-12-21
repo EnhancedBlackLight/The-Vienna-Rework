@@ -1,0 +1,272 @@
+﻿HRE = { #HRE
+	dynamic_country_name = {
+		name =  dyn_c_holy_roman_republic
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_holy_socialist_republics
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name =  dyn_c_holy_commune
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_holiest_roman_empire
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+}
+
+CRB = { #Caribbean
+	dynamic_country_name = {
+		name =  dyn_c_kingdom_of_the_caribbean
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_caribbean_socialist_republics
+		
+		is_main_tag_only = yes
+		priority = 2
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name =  dyn_c_caribbean_free_states
+		
+		is_main_tag_only = yes
+		priority = 3
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_caribbean_state
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_republic_flag_trigger = yes
+				country_has_voting_franchise = no
+			}
+		}
+	}
+}
+
+EUR = { #Europe
+	dynamic_country_name = {
+		name =  dyn_c_european_empire
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_socialist_republic_of_europe
+		
+		is_main_tag_only = yes
+		priority = 2
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name =  dyn_c_free_europe
+		
+		is_main_tag_only = yes
+		priority = 3
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_european_state
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_republic_flag_trigger = yes
+				country_has_voting_franchise = no
+			}
+		}
+	}
+		dynamic_country_name = {
+		name = dyn_c_holy_european_order
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+}
+
+WGR = { # Volga Germany
+	dynamic_country_name = {
+		name =  dyn_c_volga_socialist_republic
+		
+		is_main_tag_only = yes
+		priority = 1000
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_far_east_german_state
+		
+		is_main_tag_only = yes
+		priority = 2
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				coa_def_republic_flag_trigger = yes
+				country_has_voting_franchise = no
+			}
+		}
+	}
+}
+IFR = { #IFR
+	dynamic_country_name = {
+		name =  dyn_c_global_socialist_federation
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name =  dyn_c_global_anarchist_society
+		
+		is_main_tag_only = yes
+		priority = 2
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+	dynamic_country_name = {
+		name =  dyn_c_holy_global_federation
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+}
+
+RMA = { # Volga Germany
+	dynamic_country_name = {
+		name =  dyn_c_roman_republic
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_free_roman_lands
+		
+		is_main_tag_only = yes
+		priority = 2
+		
+	trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+#BOH = { # Bohemia
+	dynamic_country_name = {
+		name = dyn_c_elbian_confederation
+		adjective = dyn_c_elbian_confederation_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				country_has_primary_culture = cu:north_german
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:north_german
+					}
+				}
+			}
+		}
+	}
+#}
