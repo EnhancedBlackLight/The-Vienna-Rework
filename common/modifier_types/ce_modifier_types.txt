@@ -1,0 +1,69 @@
+﻿country_institution_ce_judicial_court_max_investment_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+country_institution_ce_treasury_max_investment_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+country_institution_ce_national_church_max_investment_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+
+state_laborers_investment_pool_contribution_add = {
+	good = yes
+	percent = yes
+	num_decimals = 1
+}
+
+state_machinists_investment_pool_contribution_add = {
+	good = yes
+	percent = yes
+	num_decimals = 1
+}
+
+state_engineers_investment_pool_contribution_add = {
+	good = yes
+	percent = yes
+	num_decimals = 1
+}
+
+state_clerks_investment_pool_contribution_add = {
+	good = yes
+	percent = yes
+	num_decimals = 1
+}
+
+state_shopkeepers_investment_pool_contribution_add = {
+	good = yes
+	percent = yes
+	num_decimals = 1
+}
+
+state_farmers_investment_pool_contribution_add = {
+	good = yes
+	percent = yes
+	num_decimals = 3
+}
+
+building_capitalists_shares_mult = {
+	good = no
+	percent = yes
+	num_decimals = 1
+}
+
+building_aristocrats_shares_mult = {
+	good = no
+	percent = yes
+	num_decimals = 1
+}
+
+building_bureaucrats_shares_mult = {
+	good = no
+	percent = yes
+	num_decimals = 1
+}

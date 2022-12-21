@@ -1,0 +1,985 @@
+﻿# group = this is the law_group a law belongs to
+# icon = graphical icon shown in-game
+# modifier = {} modifier on country for having adopted this law
+law_ce_natural_law = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_natural_law_icon.dds"
+	
+	progressiveness = 0
+
+	unlocking_technologies = {
+		centralization
+	}
+	
+	disallowing_laws = {
+		
+	}
+	
+	on_activate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					year < 1837
+					NOT = { is_country_type = decentralized }
+					NOT = {
+						has_variable = ce_legal_system_setup
+					}
+					any_primary_culture = {
+						has_discrimination_trait = european_heritage
+					}
+				}
+				activate_law = law_type:law_ce_civil_law
+				set_variable = ce_legal_system_setup
+			}
+			if = {
+				limit = {
+					year < 1837
+					is_country_type = decentralized
+				}
+				activate_law = law_type:law_ce_customary_law
+				set_variable = ce_legal_system_setup
+			}
+		}
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	modifier = {
+		# Important Factors
+		country_bureaucracy_investment_cost_factor_mult = -0.1
+		country_authority_add = 150
+	}
+	
+	possible_political_movements = {
+		
+	}
+	
+	ai_will_do = {
+		always = no
+	}
+	
+	pop_support = {
+		value = 0
+
+		add = {
+			desc = "POP_CAPITALISTS"		
+			if = {
+				limit = { 
+					is_pop_type = capitalists
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_morale_code
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_ACADEMICS"		
+			if = {
+				limit = { 
+					is_pop_type = academics
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_morale_code
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 4
+				}
+			}		
+		}
+		add = {
+			desc = "POP_CLERGYMEN"		
+			if = {
+				limit = { 
+					is_pop_type = clergymen
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+	}	
+}
+
+law_ce_civil_law = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_civil_law_icon.dds"
+	
+	progressiveness = 75
+	
+	unlocking_technologies = {
+		academia
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	disallowing_laws = {
+		
+	}
+	
+	modifier = {
+		# Important Factors
+		country_legitimacy_headofstate_add = 5
+		country_legitimacy_base_add = 10
+		country_bureaucracy_investment_cost_factor_mult = -0.2
+		country_institution_size_change_speed_mult = 0.1
+		country_authority_add = 150
+	}
+	
+	on_activate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					year < 1837
+					NOT = {
+						has_variable = ce_legal_system_setup_1
+					}
+					this = c:GBR
+				}
+				activate_law = law_type:law_ce_common_law
+				set_variable = ce_legal_system_setup_1
+				every_subject_or_below = {
+					limit = {
+						OR = {
+							NOT = {
+								is_country_type = unrecognized
+							}
+							is_subject_type = subject_type_protectorate
+							is_subject_type = subject_type_dominion
+							is_subject_type = subject_type_puppet
+						}
+					}
+					activate_law = law_type:law_ce_common_law
+				}
+			}
+		}
+	}
+	
+	possible_political_movements = {
+		law_ce_peoples_law
+	}
+	
+	ai_will_do = {
+		
+	}
+	
+	pop_support = {
+		value = 0
+		
+		add = {
+			desc = "POP_DISCRIMINATED"
+			if = {
+				limit = { 
+					religion_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+				}
+				value = 0.5				
+			}
+			if = {
+				limit = { 
+					religion_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+					standard_of_living <= 10 
+				}
+				value = 0.5				
+			}			
+		}
+		
+		add = {
+			desc = "POP_DISCRIMINATED"
+			if = {
+				limit = { 
+					culture_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+				}
+				value = 0.5				
+			}
+			if = {
+				limit = { 
+					culture_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+					standard_of_living <= 10 
+				}
+				value = 0.5				
+			}			
+		}
+		
+		add = {
+			desc = "POP_CAPITALISTS"		
+			if = {
+				limit = { 
+					is_pop_type = capitalists
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_morale_code
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_ACADEMICS"		
+			if = {
+				limit = { 
+					is_pop_type = academics
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_morale_code
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_CLERGYMEN"		
+			if = {
+				limit = { 
+					is_pop_type = clergymen
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 4
+				}
+			}		
+		}
+	}	
+}
+
+law_ce_common_law = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_common_law_icon.dds"
+	
+	progressiveness = 75
+	
+	unlocking_technologies = {
+		empiricism
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	disallowing_laws = {
+
+	}
+	
+	modifier = {
+		# Important Factors
+		country_legitimacy_base_add = 20
+		#country_bureaucracy_investment_cost_factor_mult = -0.1
+		country_institution_size_change_speed_mult = 0.2
+		country_authority_add = 100
+	}
+	
+	possible_political_movements = {
+		law_ce_peoples_law
+	}
+	
+	ai_will_do = {
+		has_law = law_type:law_theocracy
+	}
+	
+	pop_support = {
+		value = 0
+		
+		add = {
+			desc = "POP_DISCRIMINATED"
+			if = {
+				limit = { 
+					religion_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+				}
+				value = 0.5				
+			}
+			if = {
+				limit = { 
+					religion_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+					standard_of_living <= 10 
+				}
+				value = 0.5				
+			}			
+		}
+		
+		add = {
+			desc = "POP_DISCRIMINATED"
+			if = {
+				limit = { 
+					culture_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+				}
+				value = 0.5				
+			}
+			if = {
+				limit = { 
+					culture_accepted = no
+					owner = { 
+						NOR = {
+							has_law = law_type:law_ce_civil_law
+							has_law = law_type:law_ce_common_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+					standard_of_living <= 10 
+				}
+				value = 0.5				
+			}			
+		}
+		
+		add = {
+			desc = "POP_CAPITALISTS"		
+			if = {
+				limit = { 
+					is_pop_type = capitalists
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_morale_code
+							has_law = law_type:law_ce_militaized_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_ACADEMICS"		
+			if = {
+				limit = { 
+					is_pop_type = academics
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_morale_code
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_CLERGYMEN"		
+			if = {
+				limit = { 
+					is_pop_type = clergymen
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_morale_code
+							has_law = law_type:law_ce_militaized_law
+							has_law = law_type:law_ce_peoples_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 4
+				}
+			}		
+		}
+	}	
+}
+
+law_ce_customary_law = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_customary_law_icon.dds"
+	
+	progressiveness = -50
+	
+	unlocking_technologies = {
+		
+	}
+	
+	is_visible = {
+		is_country_type = decentralized
+	}
+	
+	disallowing_laws = {
+		
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	modifier = {
+		country_legitimacy_base_add = 15
+		country_bureaucracy_investment_cost_factor_mult = -0.2
+		state_bureaucracy_population_base_cost_factor_mult = -0.1
+	}
+	
+	possible_political_movements = {
+		law_ce_natural_law
+		law_ce_morale_code
+		law_ce_no_legal_system
+	}
+	
+	ai_will_do = {
+		always = no
+	}
+	
+	pop_support = {
+		value = 0
+
+		add = {
+			desc = "POP_PEASANTS"		
+			if = {
+				limit = { 
+					is_pop_type = peasants
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_FARMERS"		
+			if = {
+				limit = { 
+					is_pop_type = farmers
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 4
+				}
+			}		
+		}
+		add = {
+			desc = "POP_ARISTOCRATS"		
+			if = {
+				limit = { 
+					is_pop_type = aristocrats
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 4
+				}
+			}		
+		}
+	}	
+}
+
+law_ce_morale_code = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_moral_code_icon.dds"
+	
+	progressiveness = -25
+	
+	unlocking_technologies = {
+		
+	}
+	
+	disallowing_laws = {
+		law_total_separation
+	}
+	
+	is_visible = {
+		OR = {
+			is_country_type = decentralized
+			has_law = law_type:law_theocracy
+			AND = {
+				exists = c:TIB
+				this = c:TIB
+			}
+			AND = {
+				exists = c:PAP
+				this = c:PAP
+			}
+			year > 1936
+		}
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	modifier = {
+		country_institution_ce_national_church_max_investment_add = 2
+		country_institution_size_change_speed_mult = -0.25
+	}
+	
+	institution = institution_ce_national_church
+	institution_modifier = {
+		country_legitimacy_headofstate_add = 5
+		country_bureaucracy_investment_cost_factor_mult = -0.1
+	}
+	
+	possible_political_movements = {
+		law_ce_civil_law
+		law_ce_common_law
+		law_ce_natural_law
+		law_ce_peoples_law
+	}
+	
+	ai_will_do = {
+		has_law = law_type:law_theocracy
+	}
+	
+	pop_support = {
+		value = 0
+
+		add = {
+			desc = "POP_PEASANTS"		
+			if = {
+				limit = { 
+					is_pop_type = peasants
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+				}
+			}		
+		}
+		add = {
+			desc = "POP_FARMERS"		
+			if = {
+				limit = { 
+					is_pop_type = farmers
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_CLERGYMEN"		
+			if = {
+				limit = { 
+					is_pop_type = clergymen
+					owner = { 
+						OR = {
+							has_law = law_type:law_ce_no_legal_system
+							has_law = law_type:law_ce_militaized_law
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+				}
+			}		
+		}
+	}	
+}
+
+law_ce_no_legal_system = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_no_legal_system_icon.dds"
+	
+	progressiveness = -75
+	
+	unlocking_technologies = {
+		anarchism 
+	}
+	
+	disallowing_laws = {
+		
+	}
+
+	on_activate = {
+		
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	is_visible = {
+		
+	}
+
+	modifier = {
+		country_legitimacy_headofstate_add = -15
+		country_bureaucracy_investment_cost_factor_mult = 0.5
+		state_bureaucracy_population_base_cost_factor_mult = -0.2
+	}
+	
+	# When your currency can't be counted, goods consumption become a more efficient way of taxation.
+	
+	pop_support = {
+		value = 0
+
+		add = {
+			desc = "POP_LITERACY"
+			
+			if = {
+				limit = { 
+					wealth < 10
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}
+		}			
+	}
+	
+	possible_political_movements = {
+		law_ce_civil_law
+		law_ce_morale_code
+		law_ce_common_law
+		law_ce_no_legal_system
+		law_ce_peoples_law
+	}
+	
+	# AI should never switch back to no money
+	ai_will_do = {
+		has_law = law_type:law_anarchy
+	}
+}
+
+law_ce_militaized_law = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_militaized_law_icon.dds"
+	
+	progressiveness = 25
+	
+	unlocking_technologies = {
+		pan-nationalism
+	}
+	
+	unlocking_laws = {
+		has_law = law_type: law_council_republic
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	disallowing_laws = {
+
+	}
+	
+	modifier = {
+		country_legitimacy_base_add = -10
+		country_bureaucracy_investment_cost_factor_mult = -0.25
+		country_institution_size_change_speed_mult = 0.5
+		country_institution_ce_judicial_court_max_investment_add = 2
+	}
+	
+	institution = institution_ce_judicial_court
+	institution_modifier = {
+		country_authority_add = 50
+		country_legitimacy_headofstate_add = 5
+		state_radicals_from_discrimination_mult = -0.05
+		state_migration_pull_mult = -0.2
+	}
+	
+	possible_political_movements = {
+		law_ce_civil_law
+		law_ce_common_law
+		law_ce_no_legal_system
+		law_ce_peoples_law
+	}
+	
+	ai_will_do = {
+		exists = ruler
+		ruler = {
+			has_ideology = ideology_fascist
+		}
+	}
+
+}
+
+law_ce_peoples_law = {
+	group = lawgroup_ce_legal_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_peoples_law_icon.dds"
+	
+	progressiveness = 100
+	
+	unlocking_technologies = {
+		socialism
+	}
+	
+	unlocking_laws = {
+		has_law = law_type: law_council_republic
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	disallowing_laws = {
+
+	}
+	
+	modifier = {
+		country_legitimacy_base_add = 25
+		country_bureaucracy_investment_cost_factor_mult = -0.1
+		country_institution_ce_judicial_court_max_investment_add = 2
+	}
+	
+	institution = institution_ce_judicial_court
+	institution_modifier = {
+		country_authority_add = -30
+		political_movement_radicalism_mult = -0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.1
+	}
+	
+	possible_political_movements = {
+		law_ce_common_law
+		law_ce_civil_law
+	}
+	
+	ai_will_do = {
+		OR = {
+			has_law = law_type:law_council_republic
+			AND = {
+				exists = ruler
+				ruler = {
+					has_ideology = ideology_vanguardist
+				}
+			}
+		}
+	}
+	
+	pop_support = {
+		value = 0
+		
+		add = {
+			desc = "POP_LABORERS"		
+			if = {
+				limit = { 
+					is_pop_type = laborers
+					owner = {
+						has_law = law_type:law_worker_protections
+						OR = {
+							has_law = law_type:law_command_economy
+							has_law = law_type:law_council_republic
+						}		
+						NOR = {
+							has_law = law_type:law_ce_labour_standard
+							has_law = law_type:law_ce_advanced_labour_standard
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		add = {
+			desc = "POP_MACHINISTS"		
+			if = {
+				limit = { 
+					is_pop_type = machinists
+					owner = { 
+						#has_law = law_type:law_worker_protections
+						NOR = {
+							has_law = law_type:law_ce_labour_standard
+							has_law = law_type:law_ce_advanced_labour_standard
+						}
+					}
+				}
+				add = {
+					value = literacy_rate
+					divide = 2
+				}
+			}		
+		}
+		
+		add = {
+			desc = "POP_POVERTY"		
+			if = {
+				limit = { 
+					standard_of_living <= 14
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 13
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 12
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}	
+			if = {
+				limit = { 
+					standard_of_living <= 11
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}				
+			if = {
+				limit = { 
+					standard_of_living <= 10
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}			
+			if = {
+				limit = { 
+					standard_of_living <= 9
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 8
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 7
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}	
+			if = {
+				limit = { 
+					standard_of_living <= 6
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}	
+			if = {
+				limit = { 
+					standard_of_living <= 5
+					owner = { NOT = { has_law = law_type:law_old_age_pension } }
+				}
+				value = 0.1
+			}				
+		}	
+	}	
+}

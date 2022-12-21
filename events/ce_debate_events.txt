@@ -1,0 +1,3590 @@
+﻿namespace = ce_debate_events
+
+ce_debate_events.1 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.1.t
+	desc = ce_debate_events.1.d
+	flavor = ce_debate_events.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_labour_standard
+			is_enacting_law = law_type:law_ce_advanced_labour_standard
+		}
+		bureaucracy > 0 # the state bureaucracy is not overworked
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.1.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = projected_growth_models_econ
+		}
+	}
+
+	option = {
+		name = ce_debate_events.1.b
+		add_modifier = {
+			name = projected_growth_models_bureau
+			months = short_modifier_time
+		}
+	}
+}
+
+# Party Disputes
+ce_debate_events.2 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.2.t
+	desc = ce_debate_events.2.d
+	flavor = ce_debate_events.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_labour_standard
+			is_enacting_law = law_type:law_ce_advanced_labour_standard
+		}
+		NOT = {
+			has_variable = command_economy_law_debate_timer
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = command_economy_law_debate_timer
+			days = 730 # two years
+		}
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	# Let party members debate the issue
+	option = {
+		name = ce_debate_events.2.a
+        default_option = yes
+
+		add_enactment_modifier = {
+			name = command_economy_debate
+		}
+	}
+
+	option = { # Push the issue at the party conference
+		name = ce_debate_events.2.b
+
+		random_list = {
+			1 = {
+				add_enactment_modifier = {
+					name = command_economy_debate_success
+				}
+			}
+			3 = {
+				add_enactment_modifier = {
+					name = command_economy_debate_fail
+				}
+			}
+		}
+	}
+
+	option = { # Have a little chat with our opponents
+		name = ce_debate_events.2.c
+		trigger = { 
+			OR = {
+				has_law = law_type:law_secret_police
+				has_law = law_type:law_ce_revolutionary_court_system
+			}
+		}
+		highlighted_option = yes
+
+		random_list = {
+			3 = {
+				add_enactment_modifier = {
+					name = command_economy_debate_success
+				}
+			}
+			1 = {
+				add_enactment_modifier = {
+					name = command_economy_debate_fail
+				}
+			}
+		}
+	}
+}
+
+# Dizzy With Success
+ce_debate_events.3 = { # Stall event
+	type = country_event
+	placement = root
+	title = ce_debate_events.3.t
+	desc = ce_debate_events.3.d
+	flavor = ce_debate_events.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_labour_standard
+			is_enacting_law = law_type:law_ce_advanced_labour_standard
+		}
+		NOT = {
+			has_variable = command_economy_law_stall_timer
+		}	
+	}
+
+	immediate = {
+		set_variable = {
+			name = command_economy_law_stall_timer
+			days = 730 # two years
+		}
+		random_scope_state = {
+			save_scope_as = state_run_state
+		}
+		random_interest_group = {
+			limit = { is_in_government = yes }
+			save_scope_as = command_econ_proponent_ig
+		}
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+	
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	# We must own our mistakes
+	option = {
+		name = ce_debate_events.3.a
+		default_option = yes
+
+		scope:command_econ_proponent_ig = {
+			add_modifier = {
+				name = ig_dizzy_with_success
+				months = normal_modifier_time
+			}
+		}
+
+		add_enactment_modifier = {
+			name = command_economy_stall
+		}
+	}
+
+	# There are no roadblocks on the path to progress!
+	option = {
+		name = ce_debate_events.3.b
+
+		scope:state_run_state = {
+			add_modifier = {
+				name = state_dizzy_with_success
+				months = normal_modifier_time
+			}
+		}
+
+		add_enactment_modifier = {
+			name = command_economy_stall
+		}
+	}
+}
+
+# Indefensible Extortion
+ce_debate_events.4 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.4.t
+	desc = ce_debate_events.4.d
+	flavor = ce_debate_events.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_election.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_silver_standard
+			is_enacting_law = law_type:law_ce_gold_standard
+			is_enacting_law = law_type:law_ce_coins
+			#is_enacting_law = law_type:law_ce_privatised_court_system
+			is_enacting_law = law_type:law_ce_credit_standard
+		}
+		any_interest_group = {
+			is_in_government = yes
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value > neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = enacting_law_scope
+		}
+		# THIS IS GROSS AND I APOLOGIZE FOR IT
+		if = {
+			limit = {
+				has_law = law_type:law_mercantilism
+			}
+			law_type:law_mercantilism = {
+				save_scope_as = standing_law_scope
+			}		
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_protectionism
+			}
+			law_type:law_protectionism = {
+				save_scope_as = standing_law_scope
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_isolationism
+			}
+			law_type:law_isolationism = {
+				save_scope_as = standing_law_scope
+			}
+		}
+
+		random_interest_group = {
+			limit = {
+				is_in_government = yes
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value > neutral
+				}
+			}
+			save_scope_as = pro_free_trade_ig
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.4.a
+        default_option = yes
+
+		add_enactment_modifier = {
+			name = freeing_the_markets
+		}
+	}
+
+	option = {
+		name = ce_debate_events.4.b
+
+		scope:pro_free_trade_ig = {
+			add_modifier = {
+				name = free_market_ideologue
+				months = short_modifier_time
+			}
+		}
+	}
+}
+
+# The Marketplace of Ideas
+ce_debate_events.5 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.5.t
+	desc = ce_debate_events.5.d
+	flavor = ce_debate_events.5.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/africa_leader_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/leader_arguing"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		not = { has_variable = free_trade_law_debate_timer }
+		OR = {
+			is_enacting_law = law_type:law_ce_silver_standard
+			is_enacting_law = law_type:law_ce_gold_standard
+			is_enacting_law = law_type:law_ce_coins
+			is_enacting_law = law_type:law_ce_credit_standard
+		}
+		any_interest_group = {
+			is_in_government = no
+			is_marginal = no
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				is_in_government = no
+				is_marginal = no
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = opposing_free_trade_ig
+		}
+		set_variable = {
+			name = free_trade_law_debate_timer
+			days = 730 # two years
+		}
+		currently_enacting_law = {
+			save_scope_as = enacting_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.5.a
+		default_option = yes
+
+		add_enactment_modifier = {
+			name = free_trade_debate
+		}
+		scope:opposing_free_trade_ig = {
+			add_modifier = {
+				name = no_free_exchange
+				months = short_modifier_time
+			}
+		}
+	}
+	option = {
+		name = ce_debate_events.5.b
+		random_list = {
+			1 = {
+				add_enactment_modifier = {
+					name = free_trade_debate_success
+				}
+			}
+			1 = {
+				add_enactment_modifier = {
+					name = free_trade_debate_fail
+				}
+			}
+		}
+	}
+	option = {
+		name = ce_debate_events.5.c
+
+		scope:opposing_free_trade_ig = {
+			add_modifier = {
+				name = free_exchange_of_ideas
+				months = short_modifier_time
+			}
+		}
+	}
+}
+
+# Industry Suffers in [State]
+ce_debate_events.6 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.6.t
+	desc = ce_debate_events.6.d
+	flavor = ce_debate_events.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_silver_standard
+			is_enacting_law = law_type:law_ce_gold_standard
+			is_enacting_law = law_type:law_ce_coins
+			is_enacting_law = law_type:law_ce_credit_standard
+		}
+		any_scope_state = {
+			OR = {
+				has_industry_building = yes
+				has_building = building_shipyards
+				has_building = building_arms_industry
+				has_heavy_industry_building = yes
+			}
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					has_industry_building = yes
+					has_building = building_shipyards
+					has_building = building_arms_industry
+					has_heavy_industry_building = yes
+				}
+			}
+			save_scope_as = industrial_protectionist_state
+		}
+		currently_enacting_law = {
+			save_scope_as = enacting_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.6.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = free_trade_stall
+		}
+	}
+	option = { 
+		name = ce_debate_events.6.b
+		random_list = {
+			3 = {
+				add_enactment_modifier = {
+					name = free_trade_stall_fail
+				}
+			}
+			1 = {
+				add_enactment_modifier = {
+					name = free_trade_stall_success
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = ce_debate_events.6.c
+		scope:industrial_protectionist_state = {
+			add_modifier = {
+				name = industrial_concerns_ignored
+				months = short_modifier_time
+			}
+		}
+		random_list = {
+			1 = {
+				add_enactment_modifier = {
+					name = free_trade_stall_fail
+				}
+			}
+			2 = {
+				add_enactment_modifier = {
+					name = free_trade_stall_success
+				}
+			}
+		}
+	}
+}
+
+ce_debate_events.7 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.7.t
+	desc = ce_debate_events.7.d
+	flavor = ce_debate_events.7.f
+	
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	duration = 3
+
+	cooldown = { months = normal_modifier_time }
+	
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_no_legal_system
+			is_enacting_law = law_type:law_ce_no_monetary_system
+			is_enacting_law = law_type:law_ce_goods_standard
+			is_enacting_law = law_type:law_ce_local_court_system
+		}
+		any_interest_group = {
+			OR = {
+				has_ideology = ideology_reactionary
+				has_ideology = ideology_paternalistic
+			}
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = anarchist_terrorism
+		}
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				OR = {
+					has_ideology = ideology_reactionary
+					has_ideology = ideology_paternalistic
+				}
+				is_marginal = no
+			}
+			save_scope_as = anarchy_target_ig
+			leader = {
+				save_scope_as = anarchy_target_leader
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { is_enacting_law = law_type:law_anarchy }
+	}
+
+	option = { # support terrorism
+		name = ce_debate_events.7.a
+		default_option = yes
+		# lose lots of law progress
+		add_enactment_modifier = {
+			name = anarchist_terrorism
+		}
+		scope:anarchy_target_ig = {
+			add_modifier = {
+				name = anarchist_assassination
+				multiplier = 2
+			}
+		}
+		add_modifier = {
+			name = anarchist_assaination_opposition_approval
+			months = normal_modifier_time
+		}
+		scope:anarchy_target_leader = {
+			kill_character = yes
+		}
+	}
+
+	option = { # condemn terrorism
+		name = ce_debate_events.7.b
+		# lose some law progress, lose lots of opposition ig opinion
+		add_enactment_modifier = {
+			name = anarchist_terrorism
+			multiplier = 2
+		}
+		scope:anarchy_target_ig = {
+			add_modifier = {
+				name = anarchist_assassination
+			}
+		}
+		scope:anarchy_target_leader = {
+			kill_character = yes
+		}
+	}
+}
+
+# Debate Event - Remove an institution for progress
+ce_debate_events.8 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.8.t
+	desc = ce_debate_events.8.desc
+	flavor = ce_debate_events.8.f
+	
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	
+	duration = 3
+
+	cooldown = { months = normal_modifier_time }
+	
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_no_legal_system
+			is_enacting_law = law_type:law_ce_no_monetary_system
+			is_enacting_law = law_type:law_ce_goods_standard
+			is_enacting_law = law_type:law_ce_local_court_system
+		}
+		any_interest_group = {
+			leader = {
+				has_ideology = ideology_anarchist
+			}
+		}
+		OR = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 2
+			}
+			institution_investment_level = {
+				institution = institution_home_affairs
+				value >= 2
+			}
+			institution_investment_level = {
+				institution = institution_colonial_affairs
+				value >= 2
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+    		save_scope_as = current_law_scope
+    	}
+    	random_interest_group = {
+    		limit = {
+    			leader = {
+    				has_ideology = ideology_anarchist
+    			}
+    		}
+    		save_scope_as = anarchists_scope
+    	}
+	}
+
+	cancellation_trigger = {
+		NOT = { is_enacting_law = law_type:law_anarchy }
+	}
+
+	option = { # remove police
+		name = ce_debate_events.8.a
+		trigger = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 2
+			}
+		}
+		# add 15 progress
+		add_enactment_modifier = {
+			name = law_dismentling_the_state
+		}
+		change_institution_investment_level = {
+			institution = institution_police
+			investment = -3
+		}
+		if = {
+			limit = {
+				any_interest_group = {
+					law_stance = {
+						law = law_type:law_dedicated_police
+						value > neutral
+					}
+				}
+			}
+			random_interest_group = {
+				limit = {
+					is_marginal = no
+					law_stance = {
+						law = law_type:law_dedicated_police
+						value > neutral
+					}
+				}
+				add_modifier = {
+					name = dismantling_the_state
+					months = short_modifier_time
+				}
+			}
+		}
+	}
+	
+	option = { # remove home affairs
+		name = ce_debate_events.8.c
+		trigger = {
+			institution_investment_level = {
+				institution = institution_home_affairs
+				value >= 2
+			}
+		}
+		add_enactment_modifier = {
+			name = law_dismentling_the_state
+		}
+		change_institution_investment_level = {
+			institution = institution_home_affairs
+			investment = -3
+		}
+		if = {
+			limit = {
+				any_interest_group = {
+					law_stance = {
+						law = law_type:law_no_home_affairs
+						value < neutral
+					}
+				}
+			}
+			random_interest_group = {
+				limit = {
+					is_marginal = no
+					law_stance = {
+						law = law_type:law_no_home_affairs
+						value < neutral
+					}
+				}
+				add_modifier = {
+					name = dismantling_the_state
+					months = short_modifier_time
+				}
+			}
+		}
+	}
+	option = { # remove colonialism
+		name = ce_debate_events.8.d
+		trigger = {
+			institution_investment_level = {
+				institution = institution_colonial_affairs
+				value >= 2
+			}
+		}
+		add_enactment_modifier = {
+			name = law_dismentling_the_state
+		}
+		change_institution_investment_level = {
+			institution = institution_colonial_affairs
+			investment = -3
+		}
+		if = {
+			limit = {
+				any_interest_group = {
+					law_stance = {
+						law = law_type:law_no_colonial_affairs
+						value < neutral
+					}
+				}
+			}
+			random_interest_group = {
+				limit = {
+					is_marginal = no
+					law_stance = {
+						law = law_type:law_no_colonial_affairs
+						value < neutral
+					}
+				}
+				add_modifier = {
+					name = dismantling_the_state
+					months = short_modifier_time
+				}
+			}
+		}
+	}
+	option = { # remove nothing
+		name = ce_debate_events.8.e
+		default_option = yes
+		# lose 20 progress
+		add_enactment_modifier = {
+			name = withering_away
+		}
+		# lose IG opinion
+		scope:anarchists_scope = {
+			add_modifier = {
+				name = ig_withering_away
+				months = short_modifier_time
+			}
+		}
+	}
+}
+
+# Advance event - Mutual Aid
+ce_debate_events.9 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.9.t
+	desc = ce_debate_events.9.d
+	flavor = ce_debate_events.9.f
+	
+	event_image = {
+		video = "gfx/event_pictures/africa_prosperous_farm.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/prosperous_farm"
+
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	
+	duration = 3
+
+	cooldown = { months = normal_modifier_time }
+	
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_no_legal_system
+			is_enacting_law = law_type:law_ce_no_monetary_system
+			is_enacting_law = law_type:law_ce_goods_standard
+			is_enacting_law = law_type:law_ce_local_court_system
+		}
+		ig:ig_rural_folk = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = mutual_aid
+		}
+	}
+
+	immediate = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			female = no
+			ideology = ideology_anarchist
+		}
+		ig:ig_rural_folk = {
+			save_scope_as = farmer_ig
+			leader = { save_scope_as = anarchist_farmer }
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { is_enacting_law = law_type:law_anarchy }
+	}
+
+	option = { # encourage mutual aid
+		name = ce_debate_events.9.a
+		# improve poor welfare
+		add_modifier = {
+			name = encouraging_mutual_aid
+			months = short_modifier_time
+		}
+		# increase success chance
+		add_enactment_modifier = {
+			name = mutual_aid
+		}
+	}
+	option = { # novel agricultural methods
+		name = ce_debate_events.9.b
+		# agriculture throughput
+		add_modifier = {
+			name = anarchist_agriculture
+			months = short_modifier_time
+		}
+		# increase success chance
+		add_enactment_modifier = {
+			name = mutual_aid
+		}
+	}
+	option = { # use as propaganda
+		name = ce_debate_events.9.c
+		default_option = yes
+		# greatly increase success chance
+		add_enactment_modifier = {
+			name = mutual_aid
+			multiplier = 2
+		}
+	}
+}
+
+# Out of Autocracy/Oligarchy: Advancement
+ce_debate_events.10 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.10.t
+	desc = ce_debate_events.10.d
+	flavor = ce_debate_events.10.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/asia/politician_parliament_motion"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_credit_standard
+			is_enacting_law = law_type:law_ce_no_legal_system
+			is_enacting_law = law_type:law_ce_local_court_system
+			is_enacting_law = law_type:law_ce_privatised_court_system
+		}
+		OR = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_oligarchy
+			has_law = law_type:law_ce_national_court_system
+			has_law = law_type:law_ce_supreme_court_system
+			has_law = law_type:law_ce_revolutionary_court_system
+		}
+		NOT = { has_modifier = admitted_abuses_of_power }
+		NOT = { has_modifier = downplayed_abuses_of_power }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.10.a
+		add_enactment_modifier = {
+			name = admitted_abuses_of_power
+		}
+
+		every_interest_group = {
+			limit = { is_in_government = yes }
+			leader = {
+				add_modifier = {
+					name = corrupted_by_power
+					months = normal_modifier_time
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ce_debate_events.10.b
+		default_option = yes
+
+		add_enactment_modifier = {
+			name = downplayed_abuses_of_power
+		}
+	}
+}
+
+# To Census/Universal Suffrage: Debate
+ce_debate_events.11 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.11.t
+	desc = ce_debate_events.11.d
+	flavor = ce_debate_events.11.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_election.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+		#	is_enacting_law = law_type:law_ce_credit_standard
+			is_enacting_law = law_type:law_ce_no_legal_system
+			is_enacting_law = law_type:law_ce_local_court_system
+			is_enacting_law = law_type:law_ce_privatised_court_system
+		}
+		NOR = {
+		#	has_law = law_type:law_ce_credit_standard
+			has_law = law_type:law_ce_no_legal_system
+			has_law = law_type:law_ce_local_court_system
+			has_law = law_type:law_ce_privatised_court_system
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_to_preserve
+		}
+		NOT = { has_modifier = voting_age_25 }
+		NOT = { has_modifier = voting_age_21_compromise }
+		NOT = { has_modifier = voting_age_18 }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		random_political_movement = {
+			limit = { is_political_movement_type = movement_to_preserve }
+			save_scope_as = anti_voting_movement
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.11.a
+		add_enactment_modifier = {
+			name = voting_age_25
+		}
+		add_radicals = {
+			value = medium_radicals
+			pop_type = academics
+		}
+		add_radicals = {
+			value = medium_radicals
+			pop_type = soldiers
+		}
+	}
+
+	option = {
+		name = ce_debate_events.11.b
+		default_option = yes
+		add_enactment_modifier = {
+			name = voting_age_21_compromise
+		}
+	}
+
+	option = {
+		name = ce_debate_events.11.c
+		add_enactment_modifier = {
+			name = voting_age_18
+		}
+		scope:anti_voting_movement = {
+			add_modifier = {
+				name = too_low_voting_age
+				months = normal_modifier_time
+			}
+		}
+	}
+}
+
+# Out of Autocracy/Oligarchy: Stall
+ce_debate_events.12 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.12.t
+	desc = ce_debate_events.12.d
+	flavor = ce_debate_events.12.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_election.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/election"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_credit_standard
+			is_enacting_law = law_type:law_ce_no_legal_system
+			is_enacting_law = law_type:law_ce_local_court_system
+			is_enacting_law = law_type:law_ce_privatised_court_system
+		}
+		OR = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_oligarchy
+			has_law = law_type:law_ce_national_court_system
+			has_law = law_type:law_ce_supreme_court_system
+			has_law = law_type:law_ce_revolutionary_court_system
+		}
+		NOT = { has_modifier = administrative_assistance_for_elections }
+		NOT = { has_modifier = setting_up_election_system }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.12.a
+		add_enactment_modifier = {
+			name = administrative_assistance_for_elections_1
+		}
+	}
+
+	option = {
+		name = ce_debate_events.12.b
+		default_option = yes
+
+		add_enactment_modifier = {
+			name = setting_up_election_system_1
+		}
+	}
+}
+
+ce_debate_events.13 = { #Cool & Based Speech
+	type = country_event
+	placement = root
+	title = ce_debate_events.13.t
+	desc = ce_debate_events.13.d
+	flavor = ce_debate_events.13.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_peoples_law
+			is_enacting_law = law_type:law_ce_labour_standard
+			is_enacting_law = law_type:law_ce_advanced_labour_standard
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+
+		random_country = {
+			limit = { 
+				country_rank >= rank_value:major_power
+				NOT = { 
+					this = root 
+				}
+			}
+			save_scope_as = holiday_home_country
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.13.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = council_republic_speech_advance
+		}
+	}
+
+	option = {
+		name = ce_debate_events.13.b
+		add_loyalists = {
+			value = 0.05
+		}
+	}
+	
+}
+
+ce_debate_events.14 = { #Factory Owner Murdered
+	type = country_event
+	placement = root
+	title = ce_debate_events.14.t
+	desc = ce_debate_events.14.d
+	flavor = ce_debate_events.14.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_peoples_law
+			is_enacting_law = law_type:law_ce_labour_standard
+			is_enacting_law = law_type:law_ce_advanced_labour_standard
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.14.a
+		default_option = yes
+
+		add_enactment_modifier = {
+			name = council_republic_debate_progress
+		}
+
+		every_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+
+			add_modifier = {
+				name = angry_at_factory_revolution
+				months = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = ce_debate_events.14.b
+
+		add_enactment_modifier = {
+			name = council_republic_factory_debate_fail
+		}
+	}
+	
+}
+
+ce_debate_events.15 = { #Party Headquarters burns down 
+	type = country_event
+	placement = root
+	title = ce_debate_events.15.t
+	desc = ce_debate_events.15.d
+	flavor = ce_debate_events.15.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_fire.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/destruction"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_peoples_law
+			is_enacting_law = law_type:law_ce_labour_standard
+			is_enacting_law = law_type:law_ce_advanced_labour_standard
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.15.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = council_republic_fire_stall_big
+		}
+	}
+
+	option = {
+		name = ce_debate_events.15.b
+		
+		every_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+
+			add_modifier = {
+				name = communist_party_supported
+				months = normal_modifier_time
+			}
+		}
+
+		add_enactment_modifier = {
+			name = council_republic_fire_stall
+		}
+		
+	}
+	
+}
+
+# Stall event - Forced disappearance
+ce_debate_events.16 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.16.t
+	desc = ce_debate_events.16.d
+	flavor = ce_debate_events.16.f
+	
+	event_image = {
+		video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/public_figure_assassination"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_revolutionary_court_system
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = forced_disappearance_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+	}
+
+	option = { # we saw nothing
+		name = ce_debate_events.16.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = forced_disappearance_coverage_modifier
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = forced_disappearance_modifier
+				months = normal_modifier_time
+			}
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+
+	option = { # this has gone too far
+		name = ce_debate_events.16.b
+		add_enactment_modifier = {
+			name = forced_disappearance_acknowledge_modifier
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+}
+
+# Advancement event - Counterintelligence
+ce_debate_events.17 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.17.t
+	desc = ce_debate_events.17.d
+	flavor = ce_debate_events.17.f
+	
+	event_image = {
+		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/police_breaking_door"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_revolutionary_court_system
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		any_country = {	
+			relations:root < relations_threshold:neutral
+			is_player = no
+			NOT = { is_country_type = decentralized }
+			NOT = { is_country_type = unrecognized }
+		}
+		NOT = {
+			has_modifier = counterintelligence_modifier
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_country = {
+			limit = {
+				owner = {
+					relations:root < relations_threshold:neutral
+					is_player = no
+					NOT = { THIS = ROOT }
+					NOT = { is_country_type = decentralized }
+					NOT = { is_country_type = unrecognized }
+				}
+			}
+			save_scope_as = spy_country
+		}
+	}
+
+	option = { # make a public statement
+		name = ce_debate_events.17.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = counterintelligence_modifier
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -30
+		}
+	}
+
+	option = { # use it to blackmail
+		name = ce_debate_events.17.b
+		add_enactment_modifier = {
+			name = counterintelligence_weak_modifier
+		}
+		scope:internal_security_ig = {
+			add_modifier = {
+				name = counterattack_modifier
+				months = normal_modifier_time
+			}
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -50
+		}
+	}
+}
+
+# Debate event - People worry about privacy
+ce_debate_events.18 = {
+	type = country_event
+
+	title = ce_debate_events.18.t
+	desc = ce_debate_events.18.d
+	flavor = ce_debate_events.18.f
+	
+	event_image = {
+		video = "gfx/event_pictures/africa_public_protest.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/public_protest"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		is_enacting_law = law_type:law_ce_revolutionary_court_system
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = privacy_concerns_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_to_enact
+			}
+			save_scope_as = enacting_movement
+		}
+	}
+
+	option = { # they are right
+		name = ce_debate_events.18.a
+		default_option = yes
+		# if there's a movement to preserve, they get happy
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+	
+	option = { # these are foolish concerns
+		name = ce_debate_events.18.b
+		add_enactment_modifier = {
+			name = privacy_concerns_modifier
+			multiplier = -1
+		}
+		# if there's a movement to preserve, they get angry
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_bad_modifier
+				}
+			}
+		}
+		if = { #but the supporters get happy
+			limit = {
+				scope:enacting_movement = { desired_law = law_type:law_ce_revolutionary_court_system }
+			}
+			scope:enacting_movement = {
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+				multiplier = -1
+			}
+		}
+	}
+}
+
+ce_debate_events.19 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.16.t
+	desc = ce_debate_events.16.d
+	flavor = ce_debate_events.16.f
+	
+	event_image = {
+		video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/public_figure_assassination"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_privatised_court_system
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = forced_disappearance_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+	}
+
+	option = { # we saw nothing
+		name = ce_debate_events.16.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = forced_disappearance_coverage_modifier
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = forced_disappearance_modifier
+				months = normal_modifier_time
+			}
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+
+	option = { # this has gone too far
+		name = ce_debate_events.16.b
+		add_enactment_modifier = {
+			name = forced_disappearance_acknowledge_modifier
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+}
+
+# Advancement event - Counterintelligence
+ce_debate_events.20 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.17.t
+	desc = ce_debate_events.17.d
+	flavor = ce_debate_events.17.f
+	
+	event_image = {
+		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/police_breaking_door"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_privatised_court_system
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		any_country = {	
+			relations:root < relations_threshold:neutral
+			is_player = no
+			NOT = { is_country_type = decentralized }
+			NOT = { is_country_type = unrecognized }
+		}
+		NOT = {
+			has_modifier = counterintelligence_modifier
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_country = {
+			limit = {
+				owner = {
+					relations:root < relations_threshold:neutral
+					is_player = no
+					NOT = { THIS = ROOT }
+					NOT = { is_country_type = decentralized }
+					NOT = { is_country_type = unrecognized }
+				}
+			}
+			save_scope_as = spy_country
+		}
+	}
+
+	option = { # make a public statement
+		name = ce_debate_events.17.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = counterintelligence_modifier
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -30
+		}
+	}
+
+	option = { # use it to blackmail
+		name = ce_debate_events.17.b
+		add_enactment_modifier = {
+			name = counterintelligence_weak_modifier
+		}
+		scope:internal_security_ig = {
+			add_modifier = {
+				name = counterattack_modifier
+				months = normal_modifier_time
+			}
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -50
+		}
+	}
+}
+
+# Debate event - People worry about privacy
+ce_debate_events.21 = {
+	type = country_event
+
+	title = ce_debate_events.18.t
+	desc = ce_debate_events.21.d
+	flavor = ce_debate_events.21.f
+	
+	event_image = {
+		video = "gfx/event_pictures/africa_public_protest.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/public_protest"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		is_enacting_law = law_type:law_ce_privatised_court_system
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = privacy_concerns_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_to_enact
+			}
+			save_scope_as = enacting_movement
+		}
+	}
+
+	option = { # they are right
+		name = ce_debate_events.18.a
+		default_option = yes
+		# if there's a movement to preserve, they get happy
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+	
+	option = { # these are foolish concerns
+		name = ce_debate_events.18.b
+		add_enactment_modifier = {
+			name = privacy_concerns_modifier
+			multiplier = -1
+		}
+		# if there's a movement to preserve, they get angry
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_bad_modifier
+				}
+			}
+		}
+		if = { #but the supporters get happy
+			limit = {
+				scope:enacting_movement = { desired_law = law_type:law_ce_privatised_court_system }
+			}
+			scope:enacting_movement = {
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+				multiplier = -1
+			}
+		}
+	}
+}
+
+ce_debate_events.22 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.16.t
+	desc = ce_debate_events.16.d
+	flavor = ce_debate_events.16.f
+	
+	event_image = {
+		video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/public_figure_assassination"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_militaized_law
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = forced_disappearance_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+	}
+
+	option = { # we saw nothing
+		name = ce_debate_events.16.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = forced_disappearance_coverage_modifier
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = forced_disappearance_modifier
+				months = normal_modifier_time
+			}
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+
+	option = { # this has gone too far
+		name = ce_debate_events.16.b
+		add_enactment_modifier = {
+			name = forced_disappearance_acknowledge_modifier
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+}
+
+# Advancement event - Counterintelligence
+ce_debate_events.23 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.17.t
+	desc = ce_debate_events.17.d
+	flavor = ce_debate_events.17.f
+	
+	event_image = {
+		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/police_breaking_door"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_militaized_law
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		any_country = {	
+			relations:root < relations_threshold:neutral
+			is_player = no
+			NOT = { is_country_type = decentralized }
+			NOT = { is_country_type = unrecognized }
+		}
+		NOT = {
+			has_modifier = counterintelligence_modifier
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_country = {
+			limit = {
+				owner = {
+					relations:root < relations_threshold:neutral
+					is_player = no
+					NOT = { THIS = ROOT }
+					NOT = { is_country_type = decentralized }
+					NOT = { is_country_type = unrecognized }
+				}
+			}
+			save_scope_as = spy_country
+		}
+	}
+
+	option = { # make a public statement
+		name = ce_debate_events.17.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = counterintelligence_modifier
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -30
+		}
+	}
+
+	option = { # use it to blackmail
+		name = ce_debate_events.17.b
+		add_enactment_modifier = {
+			name = counterintelligence_weak_modifier
+		}
+		scope:internal_security_ig = {
+			add_modifier = {
+				name = counterattack_modifier
+				months = normal_modifier_time
+			}
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -50
+		}
+	}
+}
+
+# Debate event - People worry about privacy
+ce_debate_events.24 = {
+	type = country_event
+
+	title = ce_debate_events.18.t
+	desc = ce_debate_events.18.d
+	flavor = ce_debate_events.18.f
+	
+	event_image = {
+		video = "gfx/event_pictures/africa_public_protest.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/public_protest"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		is_enacting_law = law_type:law_ce_militaized_law
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = privacy_concerns_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_to_enact
+			}
+			save_scope_as = enacting_movement
+		}
+	}
+
+	option = { # they are right
+		name = ce_debate_events.18.a
+		default_option = yes
+		# if there's a movement to preserve, they get happy
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+	
+	option = { # these are foolish concerns
+		name = ce_debate_events.18.b
+		add_enactment_modifier = {
+			name = privacy_concerns_modifier
+			multiplier = -1
+		}
+		# if there's a movement to preserve, they get angry
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_bad_modifier
+				}
+			}
+		}
+		if = { #but the supporters get happy
+			limit = {
+				scope:enacting_movement = { desired_law = law_type:law_ce_militaized_law }
+			}
+			scope:enacting_movement = {
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+				multiplier = -1
+			}
+		}
+	}
+}
+
+ce_debate_events.25 = {
+	type = country_event
+
+	title = ce_debate_events.25.t
+	desc = ce_debate_events.25.d
+	flavor = ce_debate_events.25.f
+
+	event_image = {
+		video = "gfx/event_pictures/africa_leader_arguing.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/leader_arguing"
+
+	duration = 3
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_national_court_system
+			is_enacting_law = law_type:law_ce_supreme_court_system
+		}
+		NOR = {
+			has_modifier = red_tape_reduced
+			has_modifier = red_tape
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_ce_supreme_court_system
+			}
+			ig:ig_intelligentsia = {
+				save_scope_as = bureaucrat_class
+			}
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_ce_national_court_system
+			}
+			ig:ig_petty_bourgeoisie = {
+				save_scope_as = bureaucrat_class
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = { # promise job retention
+		name = ce_debate_events.25.a
+		default_option = yes
+		# lose 10% success chance
+		add_enactment_modifier = {
+			name = red_tape_reduced
+		}
+		# 10% polstr
+		scope:bureaucrat_class = {
+			add_modifier = {
+				name = red_tape_jobs
+				months = normal_modifier_time
+			}
+		}
+	}
+	option = { # get back to work
+		name = ce_debate_events.25.b
+		trigger = {
+			NOT = { has_law = law_type:law_secret_police }
+		}
+		# lose 15% success chance and bureaucracy mult
+		add_enactment_modifier = {
+			name = red_tape
+		}
+	}
+	option = { # secret police will keep them in line
+		name = ce_debate_events.25.c
+		trigger = {
+			has_law = law_type:law_secret_police
+		}
+		# lose 10% success chance
+		add_enactment_modifier = {
+			name = red_tape_reduced
+		}
+	}
+}
+
+# Advance event - Meritocracy
+ce_debate_events.26 = {
+	type = country_event
+
+	title = ce_debate_events.26.t
+	desc = ce_debate_events.26.d
+	flavor = ce_debate_events.26.f
+
+	event_image = {
+		video = "gfx/event_pictures/africa_leader_arguing.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/leader_arguing"
+
+	duration = 3
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_national_court_system
+			is_enacting_law = law_type:law_ce_supreme_court_system
+		}
+		NOT = { has_modifier = meritocracy }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		if = {
+			limit = {
+				is_enacting_law = law_type:law_appointed_bureaucrats
+			}
+			ig:ig_intelligentsia = {
+				save_scope_as = meritocracy_ig
+			}
+		}
+		if = {
+			limit = {
+				is_enacting_law = law_type:law_elected_bureaucrats
+			}
+			ig:ig_petty_bourgeoisie = {
+				save_scope_as = meritocracy_ig
+			}
+		}
+		if = {
+			limit = {
+				is_enacting_law = law_type:law_hereditary_bureaucrats
+			}
+			ig:ig_devout = {
+				save_scope_as = meritocracy_ig
+			}
+		}
+		ig:ig_landowners = {
+			save_scope_as = bureaucrat_class
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = { # use this to pass the law
+		name = ce_debate_events.26.a
+		default_option = yes
+		# enactment success
+		add_enactment_modifier = {
+			name = meritocracy
+			multiplier = 2
+		}
+	}
+	option = { # use this to disempower landowners
+		name = ce_debate_events.26.b
+		# less polstr
+		scope:bureaucrat_class = {
+			add_modifier = {
+				name = meritocracy_ig
+				months = short_modifier_time
+				multiplier = -1
+			}
+		}
+		# enactment success
+		add_enactment_modifier = {
+			name = meritocracy
+		}
+	}
+	option = { # use this to empower new bureaucrat class
+		name = ce_debate_events.26.c
+		# less polstr
+		scope:meritocracy_ig = {
+			add_modifier = {
+				name = meritocracy_ig
+				months = short_modifier_time
+			}
+		}
+		# enactment success
+		add_enactment_modifier = {
+			name = meritocracy
+		}
+	}
+}
+
+# Debate event - The Bureaucratic Struggle
+ce_debate_events.27 = {
+	type = country_event
+
+	title = ce_debate_events.27.t
+	desc = ce_debate_events.27.d
+	flavor = ce_debate_events.27.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/asia/politician_parliament_motion"
+
+	duration = 3
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_national_court_system
+			is_enacting_law = law_type:law_ce_supreme_court_system
+		}
+		NOR = {
+			has_modifier = good_and_fast
+			has_modifier = good_and_cheap
+			has_modifier = cheap_and_fast
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = { # good and fast
+		name = ce_debate_events.27.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = good_and_fast
+		}
+	}
+	option = { # good and cheap
+		name = ce_debate_events.27.b
+		add_enactment_modifier = {
+			name = good_and_cheap
+		}
+	}
+	option = { # cheap and fast
+		name = ce_debate_events.27.c
+		add_enactment_modifier = {
+			name = cheap_and_fast
+		}
+	}
+}
+
+ce_debate_events.28 = { # 
+	type = country_event
+	placement = root
+
+	title = ce_debate_events.28.t
+	desc = ce_debate_events.28.d
+	flavor = ce_debate_events.28.f
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/public_figure_assassination"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		has_law = law_type:law_ce_local_court_system
+		OR = {
+			is_enacting_law = law_type:law_ce_national_court_system
+			is_enacting_law = law_type:law_ce_supreme_court_system
+			is_enacting_law = law_type:law_ce_revolutionary_court_system
+			is_enacting_law = law_type:law_ce_privatised_court_system
+		}
+		any_interest_group = {
+			is_in_government = no
+			is_marginal = no
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+    		save_scope_as = current_law_scope
+    	}
+		random_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			save_scope_as = assassination_target_ig
+		}
+		random_interest_group = {
+			limit = {
+				is_in_government = no
+				is_marginal = no
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = they_dont_like_laws_ig
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = { # We shall protect our own
+		name = ce_debate_events.28.a
+		scope:assassination_target_ig = {
+			add_modifier = {
+				name = well_protected_ig
+				months = normal_modifier_time
+			}
+		}
+		add_enactment_modifier = {
+			name = rising_support_for_law_enforcement
+		}
+	}
+
+	option = { # See what our critics want?
+		name = ce_debate_events.28.b
+		default_option = yes
+
+
+		scope:they_dont_like_laws_ig = {
+			add_modifier = {
+				name = under_suspicion_ig
+				months = normal_modifier_time
+			}
+		}
+		add_enactment_modifier = {
+			name = rising_support_for_law_enforcement
+		}
+	}
+}
+
+# The Papers' Police Polemics 
+ce_debate_events.29 = { # debate
+	type = country_event
+	placement = root
+	title = ce_debate_events.29.t
+	desc = ce_debate_events.29.d
+	flavor = ce_debate_events.29.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/asia/politician_parliament_motion"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		has_law = law_type:law_ce_local_court_system
+		OR = {
+			is_enacting_law = law_type:law_ce_national_court_system
+			is_enacting_law = law_type:law_ce_supreme_court_system
+			is_enacting_law = law_type:law_ce_revolutionary_court_system
+			is_enacting_law = law_type:law_ce_privatised_court_system
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+    		save_scope_as = current_law_scope
+    	}
+    }
+
+    cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.29.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = war_of_police_editorials
+		}
+	}
+	option = {
+		name = ce_debate_events.29.b
+		random_list = {
+			1 = {
+				add_enactment_modifier = {
+					name = flood_of_supportive_editorials
+				}
+			}
+			3 = {
+				add_enactment_modifier = {
+					name = wave_of_negative_editorials
+				}
+			}
+		}
+	}
+	option = {
+		name = ce_debate_events.29.c
+		trigger = { has_law = law_type:law_censorship }
+		random_list = {
+			3 = {
+				add_enactment_modifier = {
+					name = flood_of_supportive_editorials
+				}
+			}
+			1 = {
+				add_enactment_modifier = {
+					name = wave_of_negative_editorials
+				}
+			}
+		}
+	}
+}
+
+# The Rally Run Roughshod
+ce_debate_events.30 = { # stall event
+	type = country_event
+	placement = root
+	title = ce_debate_events.30.t
+	desc = ce_debate_events.30.d
+	flavor = ce_debate_events.30.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/africa_soldiers_breaking_protest.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/soldiers_breaking_protest"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		any_political_movement = {
+			political_movement_support > 0.1
+			any_supporting_interest_group = {
+				is_marginal = no
+			}
+		}
+		has_law = law_type:law_ce_local_court_system
+		OR = {
+			is_enacting_law = law_type:law_ce_national_court_system
+			is_enacting_law = law_type:law_ce_supreme_court_system
+			is_enacting_law = law_type:law_ce_revolutionary_court_system
+			is_enacting_law = law_type:law_ce_privatised_court_system
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+    		save_scope_as = current_law_scope
+    	}
+		random_political_movement = {
+			limit = {
+				political_movement_support > 0.1
+			}
+			save_scope_as = rally_movement
+			random_supporting_interest_group = {
+				limit = {
+					is_marginal = no
+				}
+				save_scope_as = rally_movement_ig
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.30.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = violently_suppressed_rally_bad_aftermath
+		}
+
+		scope:rally_movement_ig = {
+			add_modifier = {
+				name = placated_rally_ig
+				months = normal_modifier_time
+			}
+		}
+	}
+	option = {
+		name = ce_debate_events.30.b
+		trigger = { has_law = law_type:law_censorship }
+
+		scope:rally_movement_ig = {
+			add_modifier = {
+				name = suppressed_rally_ig
+				months = normal_modifier_time
+			}
+		}
+		random_list = {
+			1 = {
+				add_enactment_modifier = {
+					name = violently_suppressed_rally_positive_aftermath
+				}
+			}
+			1 = {
+				add_enactment_modifier = {
+					name = violently_suppressed_rally_very_bad_aftermath
+				}
+			}
+		}
+	}
+	option = {
+		name = ce_debate_events.30.c
+		random_list = {
+			1 = {
+				add_enactment_modifier = {
+					name = violently_suppressed_rally_positive_aftermath
+				}
+			}
+			3 = {
+				add_enactment_modifier = {
+					name = violently_suppressed_rally_very_bad_aftermath
+				}
+			}
+		}
+	}
+}
+
+ce_debate_events.31 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.16.t
+	desc = ce_debate_events.16.d
+	flavor = ce_debate_events.16.f
+	
+	event_image = {
+		video = "gfx/event_pictures/southamerica_public_figure_assassination.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/public_figure_assassination"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_peoples_law
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = forced_disappearance_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+	}
+
+	option = { # we saw nothing
+		name = ce_debate_events.16.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = forced_disappearance_coverage_modifier
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = forced_disappearance_modifier
+				months = normal_modifier_time
+			}
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+
+	option = { # this has gone too far
+		name = ce_debate_events.16.b
+		add_enactment_modifier = {
+			name = forced_disappearance_acknowledge_modifier
+		}
+		scope:anti_secret_police_leader = {
+			kill_character = yes
+		}
+	}
+}
+
+# Advancement event - Counterintelligence
+ce_debate_events.32 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.17.t
+	desc = ce_debate_events.17.d
+	flavor = ce_debate_events.17.f
+	
+	event_image = {
+		video = "gfx/event_pictures/middleeast_police_breaking_door.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/police_breaking_door"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	trigger = {
+		is_enacting_law = law_type:law_ce_peoples_law
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		any_country = {	
+			relations:root < relations_threshold:neutral
+			is_player = no
+			NOT = { is_country_type = decentralized }
+			NOT = { is_country_type = unrecognized }
+		}
+		NOT = {
+			has_modifier = counterintelligence_modifier
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_country = {
+			limit = {
+				owner = {
+					relations:root < relations_threshold:neutral
+					is_player = no
+					NOT = { THIS = ROOT }
+					NOT = { is_country_type = decentralized }
+					NOT = { is_country_type = unrecognized }
+				}
+			}
+			save_scope_as = spy_country
+		}
+	}
+
+	option = { # make a public statement
+		name = ce_debate_events.17.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = counterintelligence_modifier
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -30
+		}
+	}
+
+	option = { # use it to blackmail
+		name = ce_debate_events.17.b
+		add_enactment_modifier = {
+			name = counterintelligence_weak_modifier
+		}
+		scope:internal_security_ig = {
+			add_modifier = {
+				name = counterattack_modifier
+				months = normal_modifier_time
+			}
+		}
+		change_relations = {
+			country = scope:spy_country
+			value = -50
+		}
+	}
+}
+
+# Debate event - People worry about privacy
+ce_debate_events.33 = {
+	type = country_event
+
+	title = ce_debate_events.18.t
+	desc = ce_debate_events.18.d
+	flavor = ce_debate_events.18.f
+	
+	event_image = {
+		video = "gfx/event_pictures/africa_public_protest.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/public_protest"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		is_enacting_law = law_type:law_ce_peoples_law
+		ig:ig_armed_forces = {
+			is_marginal = no
+		}
+		NOT = {
+			has_modifier = privacy_concerns_modifier
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value < neutral
+			}
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = internal_security_ig
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value < neutral
+				}
+			}
+			save_scope_as = anti_secret_police_ig
+			leader = {
+				save_scope_as = anti_secret_police_leader
+			}
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_to_enact
+			}
+			save_scope_as = enacting_movement
+		}
+	}
+
+	option = { # they are right
+		name = ce_debate_events.18.a
+		default_option = yes
+		# if there's a movement to preserve, they get happy
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+	
+	option = { # these are foolish concerns
+		name = ce_debate_events.18.b
+		add_enactment_modifier = {
+			name = privacy_concerns_modifier
+			multiplier = -1
+		}
+		# if there's a movement to preserve, they get angry
+		if = {
+			limit = {
+				any_political_movement = {
+					is_political_movement_type = movement_to_preserve
+				}
+			}
+			random_political_movement = {
+				limit = {
+					is_political_movement_type = movement_to_preserve
+				}
+				add_modifier = {
+					name = privacy_concerns_movement_bad_modifier
+				}
+			}
+		}
+		if = { #but the supporters get happy
+			limit = {
+				scope:enacting_movement = { desired_law = law_type:law_ce_peoples_law }
+			}
+			scope:enacting_movement = {
+				add_modifier = {
+					name = privacy_concerns_movement_modifier
+				}
+			}
+		}
+		scope:anti_secret_police_ig = {
+			add_modifier = {
+				name = privacy_concerns_ig_modifier
+				months = normal_modifier_time
+				multiplier = -1
+			}
+		}
+	}
+}
+
+# Advancement event - Violent supression of protestors
+ce_debate_events.34 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.34.t
+	desc = ce_debate_events.34.d
+	flavor = ce_debate_events.34.f
+	
+	event_image = {
+		video = "gfx/event_pictures/africa_soldiers_breaking_protest.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/africa/soldiers_breaking_protest"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	duration = 3
+	
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_civil_law
+			is_enacting_law = law_type:law_ce_common_law
+		}
+		any_interest_group = {
+			law_stance = {
+				law = owner.currently_enacting_law.type
+				value > neutral
+			}
+		}
+		OR = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 1
+			}
+			institution_investment_level = {
+				institution = institution_ce_judicial_court
+				value >= 2
+			}
+			has_law = law_type:law_secret_police
+			has_law = law_type:law_dedicated_police
+			has_law = law_type:law_militarized_police
+			has_law = law_type:law_ce_revolutionary_court_system
+			has_law = law_type:law_ce_militaized_law
+			has_law = law_type:law_ce_privatised_court_system
+		}
+		any_political_movement = {
+			political_movement_support > 0.1
+			any_supporting_interest_group = {
+				is_marginal = no
+			}
+			is_political_movement_type = movement_to_enact
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		random_interest_group = {
+			limit = {
+				law_stance = {
+					law = owner.currently_enacting_law.type
+					value > neutral
+				}
+			}
+			save_scope_as = liberties_ig
+		}
+	}
+
+	option = { # both need to calm down
+		name = ce_debate_events.34.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = violent_suppression_modifier
+		}
+		capital = {
+			add_radicals = {
+				value = large_radicals
+				strata = poor
+			}
+		}
+	}
+
+	option = { # police needs to address this
+		name = ce_debate_events.34.b
+		add_enactment_modifier = {
+			name = violent_suppression_modifier
+			multiplier = 2
+		}
+		capital = {
+			add_radicals = {
+				value = large_radicals
+				pop_type = officers
+			}
+			add_radicals = {
+				value = large_radicals
+				pop_type = soldiers
+			}
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = blamed_police_modifier
+				months = normal_modifier_time
+			}
+		}
+	}
+}
+
+# Debate event - Government needs info
+ce_debate_events.35 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.35.t
+	desc = ce_debate_events.35.d
+	flavor = ce_debate_events.35.f
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/asia/politician_parliament_motion"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	duration = 3
+	
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_civil_law
+			is_enacting_law = law_type:law_ce_common_law
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	option = { # we need that info!
+		name = ce_debate_events.35.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = government_info_bad_modifier
+		}
+	}
+
+	option = { # we can find another way
+		name = ce_debate_events.35.b
+		add_enactment_modifier = {
+			name = government_info_modifier
+		}
+	}
+}
+
+# Stall event - Terrorist attack
+ce_debate_events.36 = {
+	type = country_event
+	placement = ROOT
+	
+	title = ce_debate_events.36.t
+	desc = ce_debate_events.36.d
+	flavor = ce_debate_events.36.f
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/vandalized_storefront"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	duration = 3
+	
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_ce_civil_law
+			is_enacting_law = law_type:law_ce_common_law
+		}
+		OR = {
+			institution_investment_level = {
+				institution = institution_police
+				value >= 1
+			}
+			institution_investment_level = {
+				institution = institution_ce_judicial_court
+				value >= 2
+			}
+			has_law = law_type:law_secret_police
+			has_law = law_type:law_dedicated_police
+			has_law = law_type:law_militarized_police
+			has_law = law_type:law_ce_revolutionary_court_system
+			has_law = law_type:law_ce_militaized_law
+			has_law = law_type:law_ce_privatised_court_system
+		}
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	option = { # make a public statement
+		name = ce_debate_events.36.a
+		default_option = yes
+		add_enactment_modifier = {
+			name = terrorist_attack_modifier
+		}
+		capital = {
+			add_radicals = {
+				value = large_radicals
+				pop_type = officers
+			}
+			add_radicals = {
+				value = medium_radicals
+				pop_type = soldiers
+			}
+		}
+	}
+
+	option = { # our police must be purged
+		name = ce_debate_events.36.b
+		add_enactment_modifier = {
+			name = purged_police_modifier
+		}
+		capital = {
+			add_radicals = {
+				value = medium_radicals
+				pop_type = officers
+			}
+			add_radicals = {
+				value = large_radicals
+				pop_type = soldiers
+			}
+		}
+	}
+}
+
+ce_debate_events.37 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.37.t
+	desc = ce_debate_events.37.d
+	flavor = ce_debate_events.37.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_engineer_blueprint.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/engineer_blueprint"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_religious_schools
+			is_enacting_law = law_type:law_private_schools
+			is_enacting_law = law_type:law_public_schools
+		}
+		any_scope_state = {
+			has_building = building_university
+		}
+		NOT = { has_modifier = assisting_professors }
+		NOT = { has_modifier = university_support }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.37.a
+		add_enactment_modifier = {
+			name = assisting_professors
+		}
+	}
+
+	option = {
+		name = ce_debate_events.37.b
+		default_option = yes
+		add_enactment_modifier = {
+			name = university_support
+		}
+	}
+}
+
+# Any Schools: Debate
+ce_debate_events.38 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.38.t
+	desc = ce_debate_events.38.d
+	flavor = ce_debate_events.38.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/middleeast_battlefield_trenches.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/middleeast/battlefield_trenches"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_religious_schools
+			is_enacting_law = law_type:law_private_schools
+			is_enacting_law = law_type:law_public_schools
+		}
+		NOT = { has_modifier = curriculum_focus }
+		NOT = { has_modifier = discipline_focus }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+		ig:ig_armed_forces = {
+			save_scope_as = armed_forces_ig
+		}
+		currently_enacting_law = {
+			save_scope_as = enacting_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.38.a
+		add_enactment_modifier = {
+			name = curriculum_focus
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = undisciplined_children
+				months = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = ce_debate_events.38.b
+		default_option = yes
+		add_enactment_modifier = {
+			name = discipline_focus
+		}
+	}
+}
+
+# Any Schools: Stall
+ce_debate_events.39 = {
+	type = country_event
+	placement = root
+	title = ce_debate_events.39.t
+	desc = ce_debate_events.39.d
+	flavor = ce_debate_events.39.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/asia/politician_parliament_motion"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		OR = {
+			is_enacting_law = law_type:law_religious_schools
+			is_enacting_law = law_type:law_private_schools
+			is_enacting_law = law_type:law_public_schools
+		}
+		NOT = { has_modifier = curriculum_compromise }
+		NOT = { has_modifier = extended_curriculum_discussions }
+	}
+
+	immediate = {
+		currently_enacting_law = {
+			save_scope_as = current_law_scope
+		}
+	}
+
+	cancellation_trigger = {
+		NOT = { currently_enacting_law = scope:current_law_scope }
+	}
+
+	option = {
+		name = ce_debate_events.39.a
+		add_enactment_modifier = {
+			name = curriculum_compromise
+		}
+		every_interest_group = {
+			limit = {
+				is_in_government = yes
+			}
+			add_modifier = {
+				name = curriculum_compromise_1
+				months = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = ce_debate_events.39.b
+		default_option = yes
+		add_enactment_modifier = {
+			name = extended_curriculum_discussions_1
+		}
+	}
+}
+

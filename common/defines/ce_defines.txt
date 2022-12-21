@@ -1,0 +1,1 @@
+﻿NDefines.NPolitics.MINIMUM_INVESTMENT_COST = 1

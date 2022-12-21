@@ -1,0 +1,26 @@
+﻿institution_ce_judicial_court = { # 
+	icon = "gfx/interface/icons/institution_icons/ce_judicial_system_icon.dds"
+	background_texture = "gfx/interface/illustrations/institutions/ce_judicial_system_background.dds"
+	modifier = {
+		political_movement_radicalism_mult = 0.05
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+	}
+}
+
+institution_ce_treasury = { # 
+	icon = "gfx/interface/icons/institution_icons/ce_treasury_icon.dds"
+	background_texture = "gfx/interface/illustrations/institutions/ce_treasury_background.dds"
+	modifier = {
+		country_minting_mult = 0.3
+		building_minimum_wage_mult = -0.1
+	}
+}
+
+institution_ce_national_church = { # 
+	icon = "gfx/interface/icons/institution_icons/ce_national_church_icon.dds"
+	background_texture = "gfx/interface/illustrations/institutions/ce_national_church_background.dds"
+	modifier = {
+		state_loyalists_from_sol_change_mult = 0.05
+		political_movement_radicalism_mult = 0.05
+	}
+}

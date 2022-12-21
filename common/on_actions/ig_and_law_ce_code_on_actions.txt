@@ -1,0 +1,125 @@
+﻿# For on_actions launched by the code itself.
+
+# Root = Country
+on_monthly_pulse_country = {
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_variable = game_start_variable_law_ce
+					}
+					year < 1837
+				}
+				set_variable = game_start_variable_law_ce
+				if = {
+					limit = {
+						has_technology_researched = stock_exchange
+						NOT = { 
+							AND = {
+								exists = c:USA
+								this = c:USA
+							}
+						}
+					}
+					activate_law = law_type:law_ce_gold_standard
+				}
+				else_if = {
+					limit = {
+						OR = {
+						#	AND = {	
+						#		exists = c:USA
+						#		this = c:USA
+						#		has_technology_researched = stock_exchange
+						#	}
+							AND = {	
+								exists = c:USA
+								this = c:USA
+							#	NOT = { has_technology_researched = stock_exchange }
+							}
+							any_primary_culture = {
+								OR = {
+									has_discrimination_trait = han_chinese
+									has_discrimination_trait = sinosphere
+									has_discrimination_trait = yamato
+									has_discrimination_trait = korean_language
+								}
+							}
+						}
+					}
+					add_technology_researched = currency_standards
+					activate_law = law_type:law_ce_silver_standard
+					
+				}
+				else_if = { #
+					limit = {
+						NOT = { has_technology_researched = currency_standards }
+						any_primary_culture = {
+							has_discrimination_trait = middle_eastern_heritage
+						}
+					}
+					add_technology_researched = currency_standards
+					activate_law = law_type:law_ce_silver_standard
+				}
+				else_if = { # Not turksi
+					limit = {
+						NOT = { has_technology_researched = currency_standards }
+						NOT = {
+							any_primary_culture = {
+								has_discrimination_trait = middle_eastern_heritage
+							}
+						}
+					}
+					activate_law = law_type:law_ce_goods_standard
+				}
+				else = {
+					activate_law = law_type:law_ce_coins
+				}
+			}
+		}
+	}
+}
+
+on_law_checkpoint_advance = {
+	random_events = {
+		10 = ce_debate_events.1
+		10 = ce_debate_events.2
+		10 = ce_debate_events.3
+		10 = ce_debate_events.4
+		10 = ce_debate_events.5
+		10 = ce_debate_events.6
+		10 = ce_debate_events.7
+		10 = ce_debate_events.8
+		10 = ce_debate_events.9
+		10 = ce_debate_events.10
+		10 = ce_debate_events.11
+		10 = ce_debate_events.12
+		10 = ce_debate_events.13
+		10 = ce_debate_events.14
+		10 = ce_debate_events.15
+		10 = ce_debate_events.16
+		10 = ce_debate_events.17
+		10 = ce_debate_events.18
+		10 = ce_debate_events.19
+		10 = ce_debate_events.20
+		10 = ce_debate_events.21
+		10 = ce_debate_events.22
+		10 = ce_debate_events.23
+		10 = ce_debate_events.24
+		10 = ce_debate_events.25
+		10 = ce_debate_events.26
+		10 = ce_debate_events.27
+		10 = ce_debate_events.28
+		10 = ce_debate_events.29
+		10 = ce_debate_events.30
+		10 = ce_debate_events.31
+		10 = ce_debate_events.32
+		10 = ce_debate_events.33
+		10 = ce_debate_events.34
+		10 = ce_debate_events.35
+		10 = ce_debate_events.36
+		10 = ce_debate_events.37
+		10 = ce_debate_events.38
+		10 = ce_debate_events.39
+	}
+}

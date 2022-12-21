@@ -1,0 +1,544 @@
+﻿# group = this is the law_group a law belongs to
+# icon = graphical icon shown in-game
+# modifier = {} modifier on country for having adopted this law
+
+law_ce_local_court_system = {
+	group = lawgroup_ce_judicial_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_local_court_system_icon.dds"
+	
+	progressiveness = -50
+	
+	unlocking_technologies = {
+		
+	}
+	
+	is_visible = {
+		
+	}
+	
+	disallowing_laws = {
+		
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	on_activate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					year < 1837
+					NOT = { is_country_type = decentralized }
+					NOT = {
+						has_variable = ce_judge_system_setup
+					}
+					OR = {
+						AND = {
+							exists = c:FRA
+							this = c:FRA
+						}
+						AND = {
+							exists = c:USA
+							this = c:USA
+						}
+					}
+				}
+				activate_law = law_type:law_ce_supreme_court_system
+				set_variable = ce_judge_system_setup
+			}
+			if = {
+				limit = {
+					year < 1837
+					NOT = { is_country_type = decentralized }
+					NOT = {
+						has_variable = ce_judge_system_setup
+					}
+					NOR = {
+						AND = {
+							exists = c:FRA
+							this = c:FRA
+						}
+						AND = {
+							exists = c:USA
+							this = c:USA
+						}
+					}
+					OR = {
+						any_primary_culture = {
+							has_discrimination_trait = european_heritage
+						}
+						AND = {
+							AND = {
+								exists = c:TUR
+								this = c:TUR
+							}
+						}
+					}
+				}
+				activate_law = law_type:law_ce_national_court_system
+				set_variable = ce_judge_system_setup
+			}
+		}
+	}
+	
+	modifier = {
+		country_bureaucracy_investment_cost_factor_mult = -0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.1
+	}
+	
+	possible_political_movements = {
+		law_ce_national_court_system
+	}
+	
+	ai_will_do = {
+		has_law = law_type:law_anarchy
+	}
+	
+	pop_support = {
+		value = 0
+		
+	}	
+}
+
+law_ce_national_court_system = {
+	group = lawgroup_ce_judicial_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_national_court_system_icon.dds"
+	
+	progressiveness = 50
+	
+	unlocking_technologies = {
+		
+	}
+	
+	is_visible = {
+		#is_country_type = decentralized
+	}
+	
+	disallowing_laws = {
+		
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	modifier = {
+		country_institution_ce_judicial_court_max_investment_add = 2
+		country_bureaucracy_investment_cost_factor_mult = -0.05
+	}
+	
+	institution = institution_ce_judicial_court
+	institution_modifier = {
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+	}
+	
+	possible_political_movements = {
+		
+	}
+	
+	ai_will_do = {
+		always = no
+	}
+	
+	pop_support = {
+		value = 0
+
+	}	
+}
+
+law_ce_supreme_court_system = {
+	group = lawgroup_ce_judicial_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_supreme_court_system_icon.dds"
+	
+	progressiveness = 100
+	
+	unlocking_technologies = {
+		
+	}
+	
+	is_visible = {
+		#is_country_type = decentralized
+	}
+	
+	disallowing_laws = {
+		
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	modifier = {
+		country_institution_ce_judicial_court_max_investment_add = 3
+		country_bureaucracy_investment_cost_factor_mult = -0.2
+	}
+	
+	institution = institution_ce_judicial_court
+	institution_modifier = {
+		country_authority_add = 50
+	}
+	
+	possible_political_movements = {
+		
+	}
+	
+	ai_will_do = {
+		always = no
+	}
+	
+	pop_support = {
+		value = 0
+
+	}	
+}
+
+law_ce_privatised_court_system = {
+	group = lawgroup_ce_judicial_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_privatised_court_system_icon.dds"
+	
+	progressiveness = 75
+	
+	unlocking_technologies = {
+		civilizing_mission
+	}
+	
+	is_visible = {
+		#is_country_type = decentralized
+	}
+	
+	disallowing_laws = {
+		law_ce_revolutionary_court_system
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	modifier = {
+		# Important Factors
+		country_institution_ce_judicial_court_max_investment_add = 3
+		country_bureaucracy_investment_cost_factor_mult = -0.15
+	}
+	
+	institution = institution_ce_judicial_court
+	institution_modifier = {
+		building_minimum_wage_mult = -0.1
+		building_capitalists_shares_mult = 0.1
+	}
+	
+	possible_political_movements = {
+		law_ce_supreme_court_system
+		law_ce_national_court_system
+		law_ce_revolutionary_court_system
+	}
+	
+	ai_will_do = {
+		OR = {
+			AND = {
+				exists = ruler
+				ruler = {
+					has_ideology = ideology_market_liberal
+				}
+			}
+			AND = {
+				exists = ruler
+				ruler = {
+					has_ideology = ideology_atheist
+				}
+			}
+			has_law = law_type:law_landed_voting
+			has_law = law_type:law_wealth_voting
+			has_law = law_type:law_oligarchy
+		}
+	}
+	
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_WEALTH"			
+			if = {
+				limit = { 
+					wealth >= 20
+				}
+				value = 0.025
+			}
+			if = {
+				limit = { 
+					wealth >= 22
+				}
+				value = 0.025
+			}
+			if = {
+				limit = { 
+					wealth >= 24
+				}
+				value = 0.05
+			}	
+			if = {
+				limit = { 
+					wealth >= 26
+				}
+				value = 0.05
+			}				
+			if = {
+				limit = { 
+					wealth >= 28
+				}
+				value = 0.1
+			}			
+			if = {
+				limit = { 
+					wealth >= 30
+				}
+				value = 0.1
+			}			
+		}		
+	}	
+}
+
+law_ce_revolutionary_court_system = {
+	group = lawgroup_ce_judicial_system
+	
+	icon = "gfx/interface/icons/law_icons/law_ce_revolutionary_court_system_icon.dds"
+	
+	progressiveness = 100
+	
+	unlocking_technologies = {
+		democracy
+	}
+	
+	disallowing_laws = {
+		law_ce_privatised_court_system
+	}
+	
+	on_enact = {
+		recalculate_pop_ig_support = yes
+	}
+	
+	modifier = {
+		# Important Factors
+		country_institution_social_security_max_investment_add = 4
+		#
+		country_bureaucracy_mult = -0.2
+		state_bureaucracy_population_base_cost_factor_mult = -0.15
+	}
+	
+	institution = institution_ce_judicial_court
+	institution_modifier = {
+		state_poor_standard_of_living_add = 1
+		state_loyalists_from_sol_change_mult = 0.05
+		building_aristocrats_shares_mult = -0.1
+		building_bureaucrats_shares_mult = -0.1
+	}
+	
+	possible_political_movements = {
+		law_ce_local_court_system
+		law_ce_national_court_system
+	}
+	
+	ai_will_do = {
+		OR = {
+			AND = {
+				exists = ruler
+				ruler = {
+					has_ideology = ideology_vanguardist
+				}
+			}
+			AND = {
+				exists = ruler
+				ruler = {
+					has_ideology = ideology_radical
+				}
+			}
+			AND = {
+				exists = ruler
+				ruler = {
+					has_ideology = ideology_communist
+				}
+			}
+			has_law = law_type:law_council_republic
+		}
+	}
+	
+	pop_support = {
+		value = 0
+		add = {
+			desc = "POP_POVERTY"			
+			if = {
+				limit = { 
+					standard_of_living <= 14
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 13
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 12
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}	
+			if = {
+				limit = { 
+					standard_of_living <= 11
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}				
+			if = {
+				limit = { 
+					standard_of_living <= 10
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}			
+			if = {
+				limit = { 
+					standard_of_living <= 9
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 8
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}
+			if = {
+				limit = { 
+					standard_of_living <= 7
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}	
+			if = {
+				limit = { 
+					standard_of_living <= 6
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 01
+			}	
+			if = {
+				limit = { 
+					standard_of_living <= 5
+					OR = {
+						is_pop_type = laborers
+						is_pop_type = machinists
+						is_pop_type = clerks
+					}
+					owner = { 
+						NOR = { 
+							has_law = law_type:law_old_age_pension 
+							has_law = law_type:law_wage_subsidies
+						} 
+					}
+				}
+				value = 0.1
+			}					
+		}	
+	}	
+}
