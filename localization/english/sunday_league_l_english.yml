@@ -1,0 +1,32 @@
+﻿l_english:
+
+ #laws
+
+#Military Academy strings 
+lawgroup_military_academy:0 "Military Education"
+lawgroup_military_academy_desc:0 "How your army staff is educated"
+law_no_military_education:0 "No Military School"
+law_no_military_education_desc:0 "[concept_general] are more likely to have Traditionalist trait."
+law_military_academy:0 "Military Academy"
+law_military_academy_desc:0 "Strategist and Tactician traits become available for your [concept_general]. Each [concept_institution] level increases chances to get them."
+law_college_of_artillery:0 "College of Artillery"
+law_college_of_artillery_desc:0 "[concept_general] are much more likely to have Artillery Commander trait. Strategist and Tactician traits become available for your [concept_general]. Each [concept_institution] level increases chances to get them."
+law_school_of_application_for_infantry_and_cavalry:0 "School of Application for Infantry and Cavalry"
+law_school_of_application_for_infantry_and_cavalry_desc:0 "[concept_general] are more likely to have Offensive Planner trait and Defensive Strategist. Strategist and Tactician traits become available for your [concept_general]. Each [concept_institution] level increases chances to get them." 
+law_war_college:0 "War College"
+law_war_college_desc:0 "[concept_general] have  slightly higher chance for gaining Strategist trait. Strategist and Tactician traits become available for your [concept_general]. Each [concept_institution] level increases chances to get them."
+institution_military_academy:0 "Military School" 
+institution_military_academy_desc:0 "Strategist and Tactician traits become available for your [concept_general]. Each level Institution level increases chances to get them. Strategist trait gives 20% Defense, -5% supply consumption, 10% recovery speed, -50% blunder chance and 75% logistics secured chance. Tactician trait gives 15% offence, 15% morale damage, 100% camouflaged chace and 100% surprise manouver chance"
+modifier_country_institution_military_academy_max_investment_add:0 "Max $Military School$ [concept_institution] Investment"
+military_theory:0 "Military Theory"
+
+tactician_i:0 "Masterful Tactician"
+strategist_i:0 "Brilliant Strategist"
+tactician_ii:0 "Masterful Tactician"
+strategist_ii:0 "Brilliant Strategist"
+tactician_iii:0 "Masterful Tactician"
+strategist_iii:0 "Brilliant Strategist"
+tactician_iv:0 "Masterful Tactician"
+strategist_iv:0 "Brilliant Strategist"
+tactician_v:0 "Masterful Tactician"
+strategist_v:0 "Brilliant Strategist"

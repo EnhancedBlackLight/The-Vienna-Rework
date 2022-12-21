@@ -1,0 +1,119 @@
+
+law_no_military_education = {
+	group = lawgroup_military_academy
+	icon = "gfx/interface/icons/law_icons/no_schools.dds"
+	
+	modifier = {
+	state_conscription_rate_add = 0.01
+	interest_group_ig_landowners_pol_str_mult = 0.15
+	country_military_goods_cost_mult = -0.25
+    country_military_tech_cost_mult = 0.05
+	state_aristocrats_investment_pool_contribution_add = 0.05
+	}
+	
+	progressiveness = -50
+	custom_tooltip = law_no_military_education_tt
+
+}
+law_military_academy = {
+	group = lawgroup_military_academy
+	icon = "gfx/interface/icons/law_icons/national_militia.dds"
+	
+	progressiveness = 0
+	
+	unlocking_technologies = { military_drill }
+	
+   	disallowing_laws = {
+		law_peasant_levies
+	}
+
+	modifier = {
+		state_building_barracks_max_level_add = 25
+		country_officers_pol_str_mult = 0.15
+		country_institution_military_academy_max_investment_add = 3
+	}
+	 institution = institution_military_academy
+	institution_modifier = {
+		state_education_access_add = 0.05
+		state_pop_qualifications_mult = 0.05
+	}
+	possible_political_movements = {
+		law_no_military_education
+	}
+}
+law_college_of_artillery = {
+	group = lawgroup_military_academy
+	icon = "gfx/interface/icons/law_icons/mass_conscription.dds"
+	
+	progressiveness = 0
+	
+	unlocking_technologies = { military_drill }
+	
+		disallowing_laws = {
+		law_peasant_levies
+	}
+    custom_tooltip = {
+		text = college_of_artillery_tt
+	}
+	modifier = {
+		country_institution_military_academy_max_investment_add = 3
+		building_output_artillery_mult = 0.15
+	}
+ institution = institution_military_academy
+	institution_modifier = {
+		country_military_weekly_innovation_mult = 0.03
+	}
+	possible_political_movements = {
+		law_no_military_education
+	}
+}
+law_school_of_application_for_infantry_and_cavalry = {
+	group = lawgroup_military_academy
+	icon = "gfx/interface/icons/law_icons/national_guard.dds"
+	
+	progressiveness = 0
+	
+	unlocking_technologies = { military_drill }
+	
+    	disallowing_laws = {
+		law_peasant_levies
+	}
+
+	modifier = {
+		country_institution_military_academy_max_investment_add = 3
+	}
+	 institution = institution_military_academy
+	institution_modifier = {
+		unit_army_offense_mult = 0.025
+		unit_army_defense_mult = 0.025
+	}
+	possible_political_movements = {
+		law_no_military_education
+	}
+}
+law_war_college = {
+	group = lawgroup_military_academy
+	icon = "gfx/interface/icons/law_icons/professional_army.dds"
+	
+	progressiveness = 50
+	
+	unlocking_technologies = { military_drill }
+  	
+    	disallowing_laws = {
+		law_peasant_levies
+	}
+
+	modifier = {
+		country_institution_military_academy_max_investment_add = 4
+		country_academics_pol_str_mult = 0.1
+	}
+	 institution = institution_military_academy
+	institution_modifier = { 
+         country_military_tech_cost_mult = -0.01	
+		  character_battle_condition_careful_maneuver_mult = 0.1
+		 character_battle_condition_surprise_maneuver_mult = 0.1
+	}
+	possible_political_movements = {
+		law_no_military_education
+	}
+}

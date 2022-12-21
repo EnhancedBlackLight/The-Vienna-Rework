@@ -142,6 +142,14 @@ ideology_stratocratic = {
 		law_wage_subsidies = disapprove
 		law_old_age_pension = disapprove
 	}
+
+	lawgroup_military_academy = {
+		law_no_military_education = approve
+		law_military_academy = neutral
+		law_college_of_artillery = neutral
+		law_school_of_application_for_infantry_and_cavalry = neutral
+		law_war_college = neutral
+	}
 }
 
 ideology_pious = {
@@ -220,12 +228,12 @@ ideology_particularist = {
 		law_slave_trade = neutral
 	}
 
-	lawgroup_centralization= { #NFM Centralization
-		law_totalitarian = strongly_disapprove
-		law_unitary = neutral
-		law_cooperative_federalism = neutral
-		law_dual_federalism = neutral
-		law_regionalism = approve
+	lawgroup_military_academy = {
+		law_no_military_education = approve
+		law_military_academy = disapprove
+		law_college_of_artillery = disapprove
+		law_school_of_application_for_infantry_and_cavalry = disapprove
+		law_war_college = disapprove
 	}
 }
 
@@ -288,6 +296,14 @@ ideology_meritocratic = {
 		law_hereditary_bureaucrats = disapprove
 	}	
 	
+	lawgroup_military_academy = {
+		law_no_military_education = disapprove
+		law_military_academy = neutral
+		law_college_of_artillery = strongly_approve
+		law_school_of_application_for_infantry_and_cavalry = approve
+		law_war_college = strongly_approve
+	}
+
 	lawgroup_taxation = {
 		law_per_capita_based_taxation = approve
 		law_proportional_taxation = approve
@@ -352,6 +368,14 @@ ideology_jingoist = {
 		law_peasant_levies = disapprove
 	}
 	
+	lawgroup_military_academy = {
+		law_no_military_education = disapprove
+		law_military_academy = strongly_approve
+		law_college_of_artillery = strongly_approve
+		law_school_of_application_for_infantry_and_cavalry = strongly_approve
+		law_war_college = strongly_approve
+	}
+
 	lawgroup_colonization = {
 		law_colonial_resettlement = approve
 		law_colonial_exploitation = approve
@@ -572,6 +596,14 @@ ideology_populist = {
 		law_mass_conscription = approve
 		law_peasant_levies = neutral
 		law_professional_army = disapprove
+	}
+
+	lawgroup_military_academy = {
+		law_no_military_education = disapprove
+		law_military_academy = strongly_approve
+		law_college_of_artillery = approve
+		law_school_of_application_for_infantry_and_cavalry = approve
+		law_war_college = neutral
 	}
 }
 

@@ -1,0 +1,21 @@
+
+military_theory = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/wargaming.dds"
+	category = military
+	unlocking_technologies = {
+		wargaming
+	}
+	modifier = {
+		country_institution_military_academy_max_investment_add = 1
+	}
+}
+
+
+# country_law_enactment_success_add = 
+# building_unincorporated_throughput_add 
+
+# country_radicals_from_conquest_mult
+# country_decree_cost_mult
+
+# country_gold_reserve_limit_mult
