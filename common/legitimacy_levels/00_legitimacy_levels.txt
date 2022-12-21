@@ -3,6 +3,8 @@
 
 	modifier = {
 		state_radicals_from_sol_change_mult = 0.5
+		country_law_enactment_time_mult = 0.35
+		country_revolution_secession_speed_mult = 0.15
 	}
 
 	# Radicals will multiply by 1.5% - 3.0% each month
@@ -18,6 +20,8 @@ legitimacy_level_unacceptable = {
 
 	modifier = {
 		state_radicals_from_sol_change_mult = 0.25
+		country_law_enactment_time_mult = 0.2
+		country_revolution_secession_speed_mult = 0.075
 	}
 
 	# Radicals will multiply by 0% - 1.5% each month
@@ -32,6 +36,7 @@ legitimacy_level_contested = {
 	threshold = 50
 
 	modifier = {
+		country_law_enactment_time_mult = 0.1
 	}
 }
 
