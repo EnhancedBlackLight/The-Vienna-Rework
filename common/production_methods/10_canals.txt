@@ -38,7 +38,7 @@ pm_canal_pwr_coal = {
 			building_input_coal_add = 150
 			building_input_wood_add = 100
 			building_output_services_add = 350
-			building_output_transportation_add = 350
+			building_output_transportation_add = 300
 		}
 
 		level_scaled = {
@@ -70,7 +70,8 @@ pm_canal_pwr_oil = {
 			building_input_tools_add = 85
 			building_input_oil_add = 120
 			building_input_wood_add = 50
-			building_input_paper_add = 50
+			building_output_services_add = 500
+			building_output_transportation_add = 400
 		}
 
 		level_scaled = {
@@ -101,7 +102,7 @@ pm_canal_pwr_electricity = {
 			#input goods
 			building_input_tools_add = 80
 			building_input_electricity_add = 250
-			building_output_services_add = 350
+			building_output_services_add = 600
 			building_output_transportation_add = 500
 		}
 
