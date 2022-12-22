@@ -1,5 +1,25 @@
-﻿pm_canal = {
+﻿pm_canal_pwr_none = {
 	texture = "gfx/interface/icons/production_method_icons/canals.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 300
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+		}
+	}
+	building_modifiers = {
+		throughput_scaled = {
+		}
+
+		level_scaled = {
+		}
+	}
+}
+pm_canal_pwr_coal = {
+	texture = "gfx/interface/icons/production_method_icons/canal_coal.dds"
 
 	country_modifiers = {
 		unscaled = {
@@ -14,55 +34,32 @@
 	building_modifiers = {
 		throughput_scaled = {
 			#input goods
-			building_input_tools_add = 50
-			building_input_coal_add = 100
+			building_input_tools_add = 75
+			building_input_coal_add = 150
 			building_input_wood_add = 100
-			building_output_services_add = 300
-			building_output_transportation_add = 300
+			building_output_services_add = 350
+			building_output_transportation_add = 350
 		}
 
 		level_scaled = {
-			building_employment_clerks_add = 1000
-			building_employment_machinists_add = 1500
+			building_employment_clerks_add = 1500
+			building_employment_machinists_add = 2000
 			building_employment_capitalists_add = 250
 		}
 	}
 }
-pm_canals_mint = {
-	texture = "gfx/interface/icons/production_method_icons/canals.dds"
+pm_canal_pwr_oil = {
+	texture = "gfx/interface/icons/production_method_icons/canal_oil.dds"
 
+	unlocking_technologies = {
+		combustion_engine
+	}
 	country_modifiers = {
 		unscaled = {
-			country_prestige_add = 70
-			country_minting_add = 1000
+			country_prestige_add = 500
 		}
 	}
-
-	building_modifiers = {
-		throughput_scaled = {
-			#input goods
-			building_input_tools_add = 25
-			building_input_coal_add = 50
-			building_input_wood_add = 50
-			building_input_paper_add = 50
-		}
-
-		level_scaled = {
-			building_employment_clerks_add = 1000
-			building_employment_machinists_add = 1000
-			building_employment_capitalists_add = 250
-		}
-	}
-}
-pm_canals_eletric = {
-	texture = "gfx/interface/icons/production_method_icons/canals.dds"
-
-	country_modifiers = {
-		unscaled = {
-			country_prestige_add = 100
-		}
-	}
-state_modifiers = {
+	state_modifiers = {
 		unscaled = {
 			state_infrastructure_add = 50
 		}
@@ -70,20 +67,53 @@ state_modifiers = {
 	building_modifiers = {
 		throughput_scaled = {
 			#input goods
-			building_input_tools_add = 50
-			building_input_engines_add = 50
-			building_input_electricity_add = 200
+			building_input_tools_add = 85
+			building_input_oil_add = 120
+			building_input_wood_add = 50
+			building_input_paper_add = 50
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_machinists_add = 2500
+			building_employment_capitalists_add = 250
+		}
+	}
+}
+pm_canal_pwr_electricity = {
+	texture = "gfx/interface/icons/production_method_icons/canal_electricity.dds"
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 500
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_infrastructure_add = 50
+		}
+	}
+	building_modifiers = {
+		throughput_scaled = {
+			#input goods
+			building_input_tools_add = 80
+			building_input_electricity_add = 250
 			building_output_services_add = 350
 			building_output_transportation_add = 500
 		}
 
 		level_scaled = {
-			building_employment_clerks_add = 1000
+			building_employment_clerks_add = 1500
 			building_employment_machinists_add = 2000
-			building_employment_capitalists_add = 300
+			building_employment_capitalists_add = 275
 		}
 	}
 }
+
+
 pm_canals_oil = {
 	texture = "gfx/interface/icons/production_method_icons/canals.dds"
 
@@ -111,6 +141,99 @@ state_modifiers = {
 			building_employment_clerks_add = 1500
 			building_employment_machinists_add = 3500
 			building_employment_capitalists_add = 500
+		}
+	}
+}
+
+
+
+
+
+
+
+pm_canal_tax_none = {
+	texture = "gfx/interface/icons/production_method_icons/base1.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = 100
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+		}
+	}
+	building_modifiers = {
+		throughput_scaled = {
+		}
+
+		level_scaled = {
+		}
+	}
+}
+pm_canal_tax_low = {
+	texture = "gfx/interface/icons/production_method_icons/base2.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = -40
+			country_tax_income_add = 15000
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+		}
+	}
+	building_modifiers = {
+		throughput_scaled = {
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 700
+		}
+	}
+}
+pm_canal_tax_med = {
+	texture = "gfx/interface/icons/production_method_icons/base3.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = -80
+			country_tax_income_add = 30000
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+		}
+	}
+	building_modifiers = {
+		throughput_scaled = {
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1100
+		}
+	}
+}
+pm_canal_tax_high = {
+	texture = "gfx/interface/icons/production_method_icons/base4.dds"
+
+	country_modifiers = {
+		unscaled = {
+			country_prestige_add = -130
+			country_tax_income_add = 45000
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+		}
+	}
+	building_modifiers = {
+		throughput_scaled = {
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1600
 		}
 	}
 }

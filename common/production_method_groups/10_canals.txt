@@ -1,11 +1,23 @@
-﻿pmg_canal = {
+﻿pmg_canal_power = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_canal
-		pm_canals_mint
-		pm_canals_eletric
-		pm_canals_oil
+		pm_canal_pwr_none
+		pm_canal_pwr_coal
+		pm_canal_pwr_oil
+		pm_canal_pwr_electricity
+	}
+}
+
+pmg_canal_taxation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_canal_tax_none
+		pm_canal_tax_low
+		pm_canal_tax_med
+		pm_canal_tax_high
 	}
 }

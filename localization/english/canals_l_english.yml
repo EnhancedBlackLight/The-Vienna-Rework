@@ -1,0 +1,8 @@
+﻿l_english:
+ pmg_canal_power:0 "Power Method"
+ pm_canal_pwr_none:0 "Not Powered"
+ pmg_canal_taxation:0 "Taxation Amount"
+ pm_canal_tax_none:0 "No Taxes"
+ pm_canal_tax_low:0 "Low Taxes"
+ pm_canal_tax_med:0 "Medium Taxes"
+ pm_canal_tax_high:0 "High Taxes"

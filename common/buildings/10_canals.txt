@@ -19,10 +19,17 @@
 	}
 
 	production_method_groups = {
-		pmg_canal
-		pm_canals_mint
-		pm_canals_eletric
-		pm_canals_oil
+		pmg_canal_power
+		pm_canal_pwr_none
+		pm_canal_pwr_coal
+		pm_canal_pwr_oil
+		pm_canal_pwr_electricity
+
+		pmg_canal_taxation
+		pm_canal_tax_none
+		pm_canal_tax_low
+		pm_canal_tax_med
+		pm_canal_tax_high
 	}
 }
 
@@ -46,9 +53,15 @@ building_panama_canal = {
 	}
 
 	production_method_groups = {
-		pmg_canal
-		pm_canals_mint
-		pm_canals_eletric
-		pm_canals_oil
+		pmg_canal_power
+		pm_canal_pwr_coal
+		pm_canal_pwr_oil
+		pm_canal_pwr_electricity
+
+		pmg_canal_taxation
+		pm_canal_tax_none
+		pm_canal_tax_low
+		pm_canal_tax_med
+		pm_canal_tax_high
 	}
 }

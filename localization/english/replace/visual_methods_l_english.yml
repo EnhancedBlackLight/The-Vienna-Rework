@@ -4,8 +4,11 @@
  pm_mechanized_infantry_conscription:0 "$pm_mechanized_infantry$"
  pm_motorized_recon_conscription:0 "$pm_motorized_recon$"
  pm_destroyers:0 "Destroyers (@ironclads!#N 2#!@ammunition!#N 2#!)"
- pm_torpedo_boat:0 "Torpedo Boats (@ammunition!#N 2#!)"
- pm_canal:0 "Canal (@tools!#N 10#!@coal!#N 15#!)"
+ pm_torpedo_boat:0 "Torpedo Boats (@ammunition!#N 2#!)"\
+ pm_canal_pwr_coal:0 "Coal Powered (@tools!#N 75#!@wood!#N 100#!@coal!#N 150#!)"
+ pm_canal_pwr_oil:0 "Oil Powered (@tools!#N 85#!@wood!#N 50#!@oil!#N 120#!)"
+ pm_canal_pwr_electricity:0 "Electric Canal (@tools!#N 80#!@electricity!#N 250#!)"
+
  pm_potatoes:0 "Potatoes (@grain!#N 20#!@liquor!#P 15#!)"
  pm_vineyards:0 "Vineyards (@grain!#N 20#!@wine!#P 10#!)"
  pm_vineyards_building_maize_farm:0 "Vineyards (@grain!#N 15#!@wine!#P 7#!)"
