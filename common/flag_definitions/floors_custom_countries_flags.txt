@@ -1,0 +1,33 @@
+﻿ICA = {
+	flag_definition = {
+		coa = ICA
+	}
+	flag_definition = {
+		coa = ICA_republic
+		priority = 10
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = ICA_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	
+}
+
+SEA = {
+	flag_definition = {
+		coa = SEA
+	}
+	flag_definition = {
+		coa = SEA_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}

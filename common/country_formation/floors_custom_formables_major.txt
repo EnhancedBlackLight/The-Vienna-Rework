@@ -1,0 +1,53 @@
+﻿ICA = {
+	states = {
+		STATE_TONKIN
+		STATE_ANNAM
+		STATE_MEKONG
+		STATE_CAMBODIA
+		STATE_LAOS
+		STATE_NAKHON_RATCHASIMA
+	}
+	#based on french indochina borders + some culture homelands
+	required_states_fraction = 0.90
+
+	ai_will_do = {
+		always = yes
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+
+SEA = {
+	# states = {
+	# 	STATE_TONKIN
+	# 	STATE_ANNAM
+	# 	STATE_MEKONG
+	# 	STATE_CAMBODIA
+	# 	STATE_LAOS
+	# 	STATE_NAKHON_RATCHASIMA
+	# 	STATE_CHIANG_MAI
+	# 	STATE_BANGKOK
+	# 	STATE_TENASSERIM
+	# 	STATE_MALAYA
+	# 	STATE_EAST_BORNEO
+	# 	STATE_NORTH_BORNEO
+	# 	STATE_WEST_BORNEO
+	# 	STATE_LUZON
+	# 	STATE_VISAYAS
+	# 	STATE_MINDANAO
+	# }
+
+	use_culture_states = yes
+
+	required_states_fraction = 0.39 #11 states mainland South East Asia
+
+	ai_will_do = {
+		always = yes
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
