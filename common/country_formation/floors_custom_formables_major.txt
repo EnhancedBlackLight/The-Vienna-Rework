@@ -51,3 +51,69 @@ SEA = {
 		has_technology_researched = nationalism
 	}
 }
+
+FSP = {
+	# states = {
+	# 	STATE_TONKIN
+	# 	STATE_ANNAM
+	# 	STATE_MEKONG
+	# 	STATE_CAMBODIA
+	# 	STATE_LAOS
+	# 	STATE_NAKHON_RATCHASIMA
+	# 	STATE_CHIANG_MAI
+	# 	STATE_BANGKOK
+	# 	STATE_TENASSERIM
+	# 	STATE_MALAYA
+	# 	STATE_EAST_BORNEO
+	# 	STATE_NORTH_BORNEO
+	# 	STATE_WEST_BORNEO
+	# 	STATE_LUZON
+	# 	STATE_VISAYAS
+	# 	STATE_MINDANAO
+	# }
+
+	use_culture_states = yes
+
+	required_states_fraction = 0.75 #
+
+	ai_will_do = {
+		always = yes
+	}
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+}
+
+FBR = {
+	# states = {
+	# 	STATE_TONKIN
+	# 	STATE_ANNAM
+	# 	STATE_MEKONG
+	# 	STATE_CAMBODIA
+	# 	STATE_LAOS
+	# 	STATE_NAKHON_RATCHASIMA
+	# 	STATE_CHIANG_MAI
+	# 	STATE_BANGKOK
+	# 	STATE_TENASSERIM
+	# 	STATE_MALAYA
+	# 	STATE_EAST_BORNEO
+	# 	STATE_NORTH_BORNEO
+	# 	STATE_WEST_BORNEO
+	# 	STATE_LUZON
+	# 	STATE_VISAYAS
+	# 	STATE_MINDANAO
+	# }
+
+	use_culture_states = yes
+
+	required_states_fraction = 0.75 #
+
+	ai_will_do = {
+		always = yes
+	}
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+}

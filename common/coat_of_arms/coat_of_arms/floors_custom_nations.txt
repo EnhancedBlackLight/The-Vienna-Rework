@@ -165,3 +165,62 @@ SEA_communist = {
 		color1 = {224 0 37}
 	}
 }
+
+##################################################################
+
+FSP = {
+	pattern = "pattern_solid.tga"
+	color1 = {white}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { position = { 0.029 0.125 } scale = { 1 0.25 } }	
+		instance = { position = { 0.029 0.875 } scale = { 1 0.25 } }				
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "yellow"
+		instance = { position = { 0.029 0.5 } scale = { 1 0.5 } }		
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		instance = { position = { .775 0.125 } scale = { .5 0.25 } }				
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.875 } scale = { 1 0.25 } }				
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "yellow"
+		instance = { position = { 0.029 0.5 } scale = { 1 0.5 } }		
+	}
+	textured_emblem = {
+		texture = "te_coa_france_greater.dds"
+		instance = { scale = { .9 .9 } position = { 0.75 0.5 } }
+	}
+	textured_emblem = {
+		texture = "te_coa_spanish_republic.dds"
+		instance = { scale = { .9 .9 } position = { 0.27 0.50 } } 
+	}
+}
+
+###################################################################################################
+
+FBR = {
+	color1 = "red"
+	sub = {
+        parent = "sub_FRA_coa" 
+        instance = { scale = { 0.5 0.5 } offset = { 0.0 0.0 } } # top left
+        instance = { scale = { 0.5 0.5 } offset = { 0.5 .5 } } # bottom right
+    } 
+	sub = {
+        parent = "sub_ENG_coa" 
+        instance = { scale = { 0.5 0.5 } offset = { 0.5 0.00 } } # top left
+        instance = { scale = { 0.5 0.5 } offset = { 0.00 0.5 } } # bottom right
+    } 
+}

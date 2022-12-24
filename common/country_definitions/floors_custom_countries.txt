@@ -20,3 +20,25 @@ SEA = {
 
 	capital = STATE_BANGKOK
 }
+
+FSP = {
+	color = { 51, 93, 161 }
+	country_type = colonial
+
+	tier = hegemony
+
+	cultures = { french spanish catalan}
+
+	capital = STATE_ILE_DE_FRANCE
+}
+
+FBR = {
+	color = { 73, 209, 193 }
+	country_type = colonial
+
+	tier = hegemony
+
+	cultures = { french british }
+
+	capital = STATE_ILE_DE_FRANCE
+}

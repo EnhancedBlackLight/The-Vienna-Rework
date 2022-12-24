@@ -3,6 +3,10 @@
   ICA_ADJ: "Indo-chinese"
   SEA: "South East Asia"
   SEA_ADJ: "South East Asian"
+  FSP: "Franco-Spain Union"
+  FSP_ADJ: "Franco-Spainish Union"
+  FBR: "Angevin Empire"
+  FBR_ADJ: "Angevin Empire"
 
   #floors added country decisions
   italia: "Extend Italian Claims"
