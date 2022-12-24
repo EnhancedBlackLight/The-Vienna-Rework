@@ -3,3 +3,7 @@
   ICA_ADJ: "Indo-chinese"
   SEA: "South East Asia"
   SEA_ADJ: "South East Asian"
+
+  #floors added country decisions
+  italia: "Extend Italian Claims"
+  italia_desc: ""
