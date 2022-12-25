@@ -375,3 +375,21 @@ ILY = {
 	
 	ai_will_do = { always = yes }
 }
+
+EAF = { #East African Federation
+	states = {
+		STATE_KENYA 
+		STATE_RIFT_VALLEY
+		STATE_ZANZIBAR
+		STATE_LINDI
+		STATE_TANGANYIKA
+		STATE_UGANDA
+		STATE_
+		STATE_
+	}
+	is_major_formation = no
+
+	required_states_fraction = 0.75	
+	
+	ai_will_do = { always = yes }
+}

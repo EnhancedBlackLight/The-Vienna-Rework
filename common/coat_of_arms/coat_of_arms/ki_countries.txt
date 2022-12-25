@@ -1157,3 +1157,65 @@ BKV = { # Bukovina
 			color3 = "white"
 	}
 }
+
+JER = { # Jersualem
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross_jerusalem.dds"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+		color1 = "yellow"	
+	}	
+}
+
+EAF = { # East Africa
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "red"
+	color2 = "green_dark"
+	
+
+	colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+		color1 = "yellow"
+		color2 = "black"
+	}	
+}
+EAF_republic = { # East Africa
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "red"
+	color2 = "green_dark"
+	
+
+	colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+		color1 = "yellow"
+		color2 = "black"
+	}	
+	colored_emblem = {
+		texture = "ce_6_stars.dds"
+		instance = { scale = { 0.5 0.5 } position = { 0.175 0.25 } }
+		color1 = "yellow"
+	}	
+}
+EAF_communist = { # East Africa
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "red"
+	color2 = "red"
+	
+
+	colored_emblem = {
+		texture = "ce_bend_sinister_fimbriated.dds"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+		color1 = "yellow"
+		color2 = "black"
+	}	
+	colored_emblem = {
+		texture = "ce_hammer_wheat.dds"
+		instance = { scale = { 0.5 0.5 } position = { 0.175 0.25 } }
+		color1 = "yellow"
+	}	
+}
+

@@ -65,3 +65,24 @@ BKV = {
 
 	ai_will_do = { always = no }
 }
+
+JAU = { # Goshu
+	states = {
+		STATE_NEW_SOUTH_WALES
+		STATE_VICTORIA
+		STATE_SOUTH_AUSTRALIA
+		STATE_QUEENSLAND
+		STATE_NORTHERN_TERRITORY
+		STATE_WESTERN_AUSTRALIA
+		STATE_TASMANIA
+	}
+
+	ai_will_do = { always = no }
+}
+
+JER = { # Jerusalem
+	states = {
+		STATE_PALESTINE
+	}
+	ai_will_do = { always = no }
+}

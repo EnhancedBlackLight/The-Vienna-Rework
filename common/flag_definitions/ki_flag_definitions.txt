@@ -480,3 +480,45 @@ BKV = { # Bukovina
 		coa = BKV
 		}
 }
+
+JAU = { # Illyria
+	flag_definition = {
+		coa = JAU
+		}
+	flag_definition = {
+		coa = JAU_monarchy
+		priority = 9
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = JAU_subject_JAP
+		allow_overlord_canton = yes		
+		subject_canton = LMV
+		priority = 50
+		trigger = { 
+			coa_def_japanese_ensign_trigger = yes
+		}
+	}
+}
+
+EAF = { # Eaf
+	flag_definition = {
+		coa = EAF
+		}
+	flag_definition = {
+		coa = EAF_republic
+		priority = 9
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = EAF_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}

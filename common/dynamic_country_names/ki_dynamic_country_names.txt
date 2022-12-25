@@ -242,9 +242,51 @@ RMA = { # Volga Germany
 	}
 }
 
+JER = { #jerusalem
+	dynamic_country_name = {
+		name =  dyn_c_kingdom_of_jerusalem
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+}
 
-
-
+EAF = { #EAF
+	dynamic_country_name = {
+		name = dyn_c_east_african_kingdom
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_east_african_commune
+		
+		is_main_tag_only = yes
+		priority = 20
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+		dynamic_country_name = {
+		name = dyn_c_east_african_federation
+		
+		is_main_tag_only = yes
+		priority = 2
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+}
 
 
 
@@ -270,3 +312,4 @@ RMA = { # Volga Germany
 		}
 	}
 #}
+

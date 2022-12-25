@@ -311,6 +311,38 @@ BKV = {
 	capital = STATE_MOLDAVIA
 }
 
+JAU = {
+	color = { 117 37 41 }
+	
+	country_type = unrecognized
+
+	tier = kingdom
+	
+	cultures = { japanese }
+	capital = STATE_NEW_SOUTH_WALES
+}
+
+JER = {
+	color = { 255 216 89 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { french british spanish south_italian greek }
+	capital = STATE_PALESTINE
+}
+
+EAF = {
+	color = { 47 132 27 }
+	
+	country_type = unrecognized
+
+	tier = kingdom
+	
+	cultures = { sukuma swahili lacustrine_bantu yao makau chewa unyamwezi luo maasai ruanda rundi baganda nilotic kikuyu }
+	capital = STATE_UGANDA
+}
 
 
 

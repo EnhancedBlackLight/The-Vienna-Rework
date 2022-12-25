@@ -103,3 +103,17 @@
  
  BKV:0 "Bukovina"
  BKV_ADJ:0 "Bukovinan"
+ 
+ JAU:0 "Goshu"
+ JAU_ADJ:0 "Goshu"
+ 
+ JER:0 "Jerusalem"
+ JER_ADJ:0 "Jerusalem"
+ dyn_c_kingdom_of_jerusalem: "Kingdom of Jerusalem"
+ 
+ EAF:0 "East Africa"
+ EAF_ADJ:0 "East African"
+ dyn_c_east_african_federation: "East African Federaton"
+ dyn_c_east_african_commune: "East African Commune"
+ dyn_c_east_african_kingdom: "East African Kingdom"
+
