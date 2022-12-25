@@ -38,12 +38,12 @@
 		law_multicultural = strongly_disapprove	
 	}
 
-	lawgroup_centralization= { #NFM Centralization
-#		law_totalitarian = strongly_disapprove
-		law_unitary = disapprove
-		law_cooperative_federalism = neutral
-		law_dual_federalism = approve
-		law_regionalism = neutral
+	lawgroup_military_academy = {
+		law_no_military_education = approve
+		law_military_academy = neutral
+		law_college_of_artillery = disapprove
+		law_school_of_application_for_infantry_and_cavalry = disapprove
+		law_war_college = disapprove
 	}
 }
 
@@ -80,14 +80,6 @@ ideology_scholar_paternalistic = {
 		law_militarized_police = neutral
 		law_no_police = disapprove
 	}
-
-	lawgroup_centralization= { #NFM Centralization
-	#	law_totalitarian = approve
-		law_unitary = approve
-		law_cooperative_federalism = neutral
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_disapprove
-	}
 }
 
 ideology_junker_paternalistic = {
@@ -123,12 +115,12 @@ ideology_junker_paternalistic = {
 		law_militarized_police = neutral
 		law_no_police = disapprove
 	}
-	lawgroup_centralization= { #NFM Centralization
-#		law_totalitarian = disapprove
-		law_unitary = neutral
-		law_cooperative_federalism = approve
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_disapprove
+	lawgroup_military_academy = {
+		law_no_military_education = approve
+		law_military_academy = neutral
+		law_college_of_artillery = neutral
+		law_school_of_application_for_infantry_and_cavalry = neutral
+		law_war_college = neutral
 	}
 }
 

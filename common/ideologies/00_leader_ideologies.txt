@@ -444,6 +444,17 @@ ideology_reformer = {
 		law_restricted_child_labor = neutral
 		law_compulsory_primary_school = approve
 	}
+
+	lawgroup_ce_monetary_system = {
+		law_ce_no_monetary_system = disapprove
+		law_ce_goods_standard = disapprove
+		law_ce_coins = disapprove
+		law_ce_silver_standard = disapprove
+		law_ce_gold_standard = approve
+		law_ce_credit_standard = approve
+		law_ce_labour_standard = neutral
+		law_ce_advanced_labour_standard = neutral
+	}
 	
 	possible = {
 		owner = {
@@ -870,6 +881,22 @@ ideology_jingoist_leader = {
 		law_harsh_colonial_exploitation = strongly_approve
 		law_merciless_colonial_exploitation = strongly_approve
 	}
+
+	lawgroup_military_academy = {
+		law_no_military_education = disapprove
+		law_military_academy = strongly_approve
+		law_college_of_artillery = approve
+		law_school_of_application_for_infantry_and_cavalry = approve
+		law_war_college = approve
+	}
+
+	lawgroup_ce_judicial_system = {
+		law_ce_local_court_system = neutral
+		law_ce_national_court_system = neutral
+		law_ce_supreme_court_system = approve
+		law_ce_privatised_court_system = disapprove
+		law_ce_revolutionary_court_system = approve
+	}
 	
 	possible = {
 		scope:interest_group = {
@@ -1057,6 +1084,17 @@ ideology_social_democrat = {
 		law_no_social_security = strongly_disapprove
 		law_wage_subsidies = approve
 		law_old_age_pension = strongly_approve
+	}
+
+	lawgroup_ce_monetary_system = {
+		law_ce_no_monetary_system = strongly_disapprove
+		law_ce_goods_standard = neutral
+		law_ce_coins = neutral
+		law_ce_silver_standard = strongly_disapprove
+		law_ce_gold_standard = strongly_approve
+		law_ce_credit_standard = strongly_approve
+		law_ce_labour_standard = approve
+		law_ce_advanced_labour_standard = neutral
 	}
 
 	possible = {
@@ -1965,7 +2003,18 @@ ideology_market_liberal = {
 		law_mercantilism = disapprove
 		law_protectionism = disapprove		
 		law_isolationism = strongly_disapprove
-	}			
+	}
+	
+	lawgroup_ce_monetary_system = {
+		law_ce_no_monetary_system = strongly_disapprove
+		law_ce_goods_standard = neutral
+		law_ce_coins = disapprove
+		law_ce_silver_standard = approve
+		law_ce_gold_standard = strongly_approve
+		law_ce_credit_standard = strongly_approve
+		law_ce_labour_standard = disapprove
+		law_ce_advanced_labour_standard = strongly_disapprove
+	}
 
 	possible = {
 		owner = {
