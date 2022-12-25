@@ -37,7 +37,7 @@ base_values = {
 	
 	character_health_add = 1	# Must be != 0. Even better if it's > 0
 	
-	country_construction_add = 20 #upped from 5 to 20 for minor nations
+	country_construction_add = 5 #upped from 5 to 20 for minor nations
 	
 	building_mobilization_cost_mult = 0.6
 	

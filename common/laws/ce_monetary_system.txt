@@ -29,7 +29,7 @@ law_ce_coins = {
 		country_institution_ce_treasury_max_investment_add = 1
 		state_poor_expected_sol = -1.5
 		building_group_bg_mining_throughput_mult = 0.15
-		state_construction_mult = -0.5
+		country_construction_add = 10
 	}
 	
 	institution = institution_ce_treasury
@@ -73,8 +73,8 @@ law_ce_silver_standard = {
 	
 	modifier = {
 		country_institution_ce_treasury_max_investment_add = 3
-		state_construction_mult = -0.25
 		state_farmers_investment_pool_contribution_add = 0.001
+		country_construction_add = 20
 	}
 	
 	institution = institution_ce_treasury
@@ -186,6 +186,7 @@ law_ce_gold_standard = {
 		country_institution_ce_treasury_max_investment_add = 3
 		state_machinists_investment_pool_contribution_add = 0.005
 		state_farmers_investment_pool_contribution_add = 0.005
+		country_construction_add = 25
 	}
 	
 	institution = institution_ce_treasury
@@ -277,6 +278,7 @@ law_ce_goods_standard = {
 		country_institution_ce_treasury_max_investment_add = 2
 		state_poor_expected_sol = 1
 		state_peasants_investment_pool_contribution_add = 0.005
+		country_construction_add = 15
 	}
 	
 	institution = institution_ce_treasury
@@ -580,6 +582,7 @@ law_ce_credit_standard = {
 		country_academics_pol_str_mult = 0.15
 		country_shopkeepers_pol_str_mult = 0.15
 		country_engineers_pol_str_mult = 0.15
+		country_construction_add = 15
 	}
 	
 	institution = institution_ce_treasury
@@ -697,6 +700,7 @@ law_ce_labour_standard = {
 		country_aristocrats_pol_str_mult = -0.1
 		country_capitalists_pol_str_mult = -0.1
 		country_farmers_pol_str_mult = -0.1
+		country_construction_add = 20
 	}
 	
 	institution = institution_ce_treasury
@@ -863,6 +867,7 @@ law_ce_advanced_labour_standard = {
 		state_engineers_investment_pool_contribution_add = 0.15
 		state_machinists_investment_pool_contribution_add = 0.1
 		state_laborers_investment_pool_contribution_add = 0.05
+		country_construction_add = 25
 	}
 	
 	institution = institution_ce_treasury
