@@ -44,7 +44,7 @@
 		}
 		create_diplomatic_pact = {
 			country = c:POL
-			type = personal_union
+			type = puppet
 		}
 	}
 	c:PRU = {
