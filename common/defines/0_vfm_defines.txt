@@ -77,6 +77,8 @@ NPops = {
 
 	#some market testing
 	OBSESSION_SPAWN_CHANCE = 0.8				# Per year (1.0 = 1%), multiplied by goods supply and market size mult #default 0.1
+
+	MIGRATION_PULL_FROM_EMPTY_STATE = 100 #Paradox mistake???
 }
 ### End Pop Growth Constant defines
 
