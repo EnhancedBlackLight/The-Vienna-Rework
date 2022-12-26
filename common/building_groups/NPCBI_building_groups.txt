@@ -1,0 +1,168 @@
+﻿### NPCBI (© Revan ©) ###
+
+bg_brewery = {
+	parent_group = bg_manufacturing
+
+	lens = light_industry
+	
+	urbanization = 20
+	infrastructure_usage_per_level = 2
+	
+	should_auto_expand = { 
+		npcbi_auto_expand_rule = yes
+	}
+}
+
+bg_tin_mining = {
+	parent_group = bg_mining
+	
+	default_building = building_tin_mine
+	
+	can_use_slaves = yes
+	
+	should_auto_expand = { 
+		npcbi_auto_expand_rule = yes
+	}
+}
+
+bg_copper_mining = {
+	parent_group = bg_mining
+	
+	default_building = building_copper_mine
+	
+	can_use_slaves = yes
+	
+	should_auto_expand = { 
+		npcbi_auto_expand_rule = yes
+	}
+}
+
+bg_bronze = {
+	parent_group = bg_manufacturing
+
+	lens = light_industry
+	
+	economy_of_scale = yes
+	
+	urbanization = 20
+	infrastructure_usage_per_level = 2
+	
+	should_auto_expand = { 
+		npcbi_auto_expand_rule = yes
+	}
+}
+
+bg_foundry = {
+	parent_group = bg_manufacturing
+
+	lens = light_industry
+	
+	urbanization = 20
+	infrastructure_usage_per_level = 2
+	
+	should_auto_expand = { 
+		npcbi_auto_expand_rule = yes
+	}
+}
+
+bg_gemstones_mining = {
+	parent_group = bg_mining
+	
+	default_building = building_gemstones_mine
+
+	can_use_slaves = yes
+	
+	should_auto_expand = { 
+		npcbi_auto_expand_rule = yes
+	}
+}
+
+bg_gemstone_fields = {
+	parent_group = bg_mining
+
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	depletable_resource = yes
+	
+	pays_taxes = no
+	
+	default_building = building_gemstone_fields
+	
+	fired_pops_become_radical = no
+}
+
+bg_copper_fields = {
+	parent_group = bg_mining
+
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	depletable_resource = yes				# test yes
+	
+	pays_taxes = no
+	
+	default_building = building_copper_fields
+	
+	can_use_slaves = yes
+	
+	fired_pops_become_radical = no
+}
+
+bg_tin_fields = {
+	parent_group = bg_mining
+
+	auto_place_buildings = yes
+
+	discoverable_resource = yes
+	
+	depletable_resource = yes				# test yes
+	
+	pays_taxes = no
+	
+	default_building = building_tin_fields
+	
+	can_use_slaves = yes
+	
+	fired_pops_become_radical = no
+}
+
+bg_department_stores = {
+	category = urban
+	
+	always_possible = yes
+	
+	economy_of_scale = yes
+	
+	cash_reserves_max = 35000
+	
+	is_government_funded = yes
+
+	lens = urban
+	
+	urbanization = 40
+	infrastructure_usage_per_level = 4
+	
+	should_auto_expand = { 
+		npcbi_auto_expand_rule = yes
+	}
+}
+
+bg_building_banks = {
+	category = urban
+	
+	always_possible = yes
+	
+#	economy_of_scale = yes
+	
+#	cash_reserves_max = 100000
+	
+	is_government_funded = yes
+
+	lens = urban
+	
+	urbanization = 30
+	infrastructure_usage_per_level = 10
+}

@@ -1,0 +1,1499 @@
+﻿### NPCBI (© Revan ©) ###
+
+BUILDINGS={
+	s:STATE_NEW_JERSEY={
+		region_state:USA={
+			create_building={
+				building="building_brewery"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_PENNSYLVANIA={
+		region_state:USA={
+			create_building={
+				building="building_brewery"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_ILLINOIS={
+		region_state:USA={
+			create_building={
+				building="building_brewery"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_DISTRICT_OF_COLUMBIA={
+		region_state:USA={
+			create_building={
+				building="building_public_house"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_pub_drinks_beer" "pm_pub_tobacco" }
+			}			
+		}	
+	}
+	s:STATE_LEINSTER={
+		region_state:GBR={
+			create_building={
+				building="building_brewery"
+				level=3
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_HOME_COUNTIES={
+		region_state:GBR={
+			create_building={
+				building="building_public_house"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_pub_drinks_beer" "pm_pub_tea" }
+			}			
+		}	
+	}
+	s:STATE_FRIESLAND={
+		region_state:NET={
+			create_building={
+				building="building_brewery"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_LOIRE={
+		region_state:FRA={
+			create_building={
+				building="building_brewery"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_ILE_DE_FRANCE={
+		region_state:FRA={
+			create_building={
+				building="building_public_house"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_pub_drinks_wine" "pm_pub_coffee" }
+			}
+		}
+	}
+	s:STATE_FLANDERS={
+		region_state:BEL={
+			create_building={
+				building="building_brewery"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_ELBE={
+		region_state:BRE={
+			create_building={
+				building="building_brewery"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}			
+		}
+	}
+	s:STATE_BOHEMIA={
+		region_state:AUS={
+			create_building={
+				building="building_brewery"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_AUSTRIA={
+		region_state:AUS={
+			create_building={
+				building="building_public_house"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_pub_drinks_beer" "pm_pub_coffee" }
+			}
+		}
+	}
+	s:STATE_BAVARIA={
+		region_state:BAV={
+			create_building={
+				building="building_brewery"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+			create_building={
+				building="building_public_house"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_pub_drinks_beer" "pm_pubs_automation_disabled" }
+			}		
+		}
+	}
+	s:STATE_BRANDENBURG={
+		region_state:PRU={
+			create_building={
+				building="building_brewery"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+			create_building={
+				building="building_public_house"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_pub_drinks_beer" "pm_pubs_automation_disabled" }
+			}		
+		}
+	}
+	s:STATE_POSEN={
+		region_state:PRU={
+			create_building={
+				building="building_brewery"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_ANHALT={
+		region_state:ANH={
+			create_building={
+				building="building_brewery"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+	s:STATE_ZEALAND={
+		region_state:DEN={
+			create_building={
+				building="building_brewery"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_beer_production" }
+			}
+		}
+	}
+
+	s:STATE_WALES={
+		region_state:GBR={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+
+	s:STATE_WEST_COUNTRY={
+		region_state:GBR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	
+	s:STATE_NIGERIA={
+		region_state:SOK={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_NEW_YORK={
+		region_state:USA={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_MANITOBA={
+		region_state:HBC={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_CALIFORNIA={
+		region_state:MEX={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_JUJUY={
+		region_state:BOL={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+		region_state:ARG={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_SANTIAGO={
+		region_state:CHL={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_LOS_RIOS={
+		region_state:CHL={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_AMAZONAS={
+		region_state:BOL={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_MATO_GROSSO={
+		region_state:BRZ={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_AREQUIPA={
+		region_state:PEU={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ICA={
+		region_state:PEU={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_LIMA={
+		region_state:PEU={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_OUTER_MANCHURIA={
+		region_state:CHI={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_TONKIN={
+		region_state:DAI={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_MALAYA={
+		region_state:JOH={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+		region_state:SEL={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+		region_state:PRK={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+		region_state:SIA={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_NORTH_SUMATRA={
+		region_state:DEI={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+		region_state:SAK={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+		region_state:JMB={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_SOUTH_SUMATRA={
+		region_state:DEI={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_TRANS_BAIKAL={
+		region_state:RUS={
+			create_building={
+				building="building_tin_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_tin_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_NORRLAND={
+		region_state:SWE={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_OSTROBOTHNIA={
+		region_state:FIN={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_WESTPHALIA={
+		region_state:PRU={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}		
+	}
+	s:STATE_SARDINIA={
+		region_state:SAR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_EASTERN_THRACE={
+		region_state:TUR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_DOBRUDJA={
+		region_state:TUR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_NORTHERN_THRACE={
+		region_state:TUR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_BULGARIA={
+		region_state:TUR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_WESTERN_THRACE={
+		region_state:TUR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_SILESIA={
+		region_state:PRU={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_GREATER_POLAND={
+		region_state:RUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_WEST_GALICIA={
+		region_state:AUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+		region_state:KRA={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_CENTRAL_HUNGARY={
+		region_state:AUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_WALLACHIA={
+		region_state:WAL={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_SILESIA={
+		region_state:PRU={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_ALASKA={
+		region_state:RUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_WASHINGTON={
+		region_state:ORG={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_OREGON={
+		region_state:ORG={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_UTAH={
+		region_state:MEX={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_BRITISH_COLUMBIA={
+		region_state:ORG={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_YUKON_TERRITORY={
+		region_state:HBC={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_NEVADA={
+		region_state:MEX={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_CHIHUAHUA={
+		region_state:MEX={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_VERACRUZ = {
+		region_state:MEX={		
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_SAN_SALVADOR={
+		region_state:UCA={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_HONDURAS={
+		region_state:UCA={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_PANAMA={
+		region_state:CLM={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_CUBA={
+		region_state:CUB={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ECUADOR={
+		region_state:ECU={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ZULIA={
+		region_state:VNZ={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ANTIOQUIA={
+		region_state:CLM={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_CUNDINAMARCA={
+		region_state:CLM={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_CAUCA={
+		region_state:CLM={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_TARAPACA={
+		region_state:PEU={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ANTOFAGASTA={
+		region_state:BOL={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_POTOSI={
+		region_state:BOL={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_TUCUMAN={
+		region_state:ARG={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_LARISTAN={
+		region_state:PER={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+		region_state:OMA={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ISFAHAN={
+		region_state:PER={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_KASTAMONU={
+		region_state:TUR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_TRABZON={
+		region_state:TUR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_GREATER_CAUCASUS={
+		region_state:RUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_URALSK={
+		region_state:RUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_KIRGHIZIA={
+		region_state:KOK={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_LHASA={
+		region_state:TIB={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_CENTRAL_INDIA={
+		region_state:IND={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_DZUNGARIA={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_SHAOZHOU={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_BEIJING={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_OUTER_MANCHURIA={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_NORTHERN_MANCHURIA={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_XIAN={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_FUJIAN={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ZHEJIANG={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ULIASTAI={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_URGA={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_WEST_BORNEO={
+		region_state:LAN={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}		
+		}
+		region_state:PON={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+		region_state:STG={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_WEST_JAVA={
+		region_state:DEI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_ACEH={
+		region_state:ACE={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+		region_state:SAK={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_WESTERN_NEW_GUINEA={
+		region_state:TID={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_SUNDA_ISLANDS={
+		region_state:BAL={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+		region_state:POR={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_LUZON={
+		region_state:PHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_VISAYAS={
+		region_state:PHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_NEW_SOUTH_WALES={
+		region_state:NSW={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_VICTORIA={
+		region_state:NSW={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_QUEENSLAND={
+		region_state:NSW={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_SOUTH_AUSTRALIA={
+		region_state:SAS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_WESTERN_AUSTRALIA={
+		region_state:WAS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_NORTHERN_TERRITORY={
+		region_state:NSW={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}			
+		}
+	}
+	s:STATE_NORTH_ISLAND={
+		region_state:UNT={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+		region_state:NSW={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+		region_state:NTO={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_URAL={
+		region_state:RUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_TUVA={
+		region_state:CHI={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_OKHOTSK={
+		region_state:RUS={
+			create_building={
+				building="building_copper_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_copper_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_NEW_SOUTH_WALES={
+		region_state:NSW={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_CEYLON={
+		region_state:BIC={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_CIRCARS={
+		region_state:BIC={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_KACHIN={
+		region_state:BUR={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_SHAOZHOU={
+		region_state:CHI={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_CHONGQING={
+		region_state:CHI={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_HUNAN={
+		region_state:CHI={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_MOCAMBIQUE={
+		region_state:POR={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_ZAMBEZIA={
+		region_state:POR={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_NORTH_ANGOLA={
+		region_state:POR={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_SOUTH_ANGOLA={
+		region_state:POR={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_ICA={
+		region_state:PEU={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_URUGUAY={
+		region_state:URU={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_MINAS_GERAIS={
+		region_state:BRZ={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_BAJO_PARAGUAY={
+		region_state:PRG={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}
+		}
+	}
+	s:STATE_CALIFORNIA={
+		region_state:MEX={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_NEVADA={
+		region_state:MEX={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_COLORADO={
+		region_state:MEX={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+	s:STATE_MAINE={
+		region_state:USA={
+			create_building={
+				building="building_gemstones_mine"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_picks_and_shovels_building_gemstones_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+			}	
+		}
+	}
+}

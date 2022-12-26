@@ -1,0 +1,109 @@
+﻿### NPCBI (© Revan ©) ###
+
+popneed_intoxicants = {
+	default = liquor
+
+	entry = {
+		goods = liquor
+		
+		weight = 1
+		max_weight = 3.0 # Maxes out at 60% of supply share
+		min_weight = 0.0
+	}
+	
+	entry = {
+		goods = tobacco
+		
+		weight = 1
+		max_weight = 3.0 # Maxes out at 60% of supply share
+		min_weight = 0.0
+	}
+	
+	entry = {
+		goods = opium
+		
+		weight = 1
+		max_weight = 3.0 # Maxes out at 60% of supply share
+		min_weight = 0.0
+	}
+	
+	entry = {
+		goods = beer
+		
+		weight = 0.75
+		max_weight = 3.0 # Maxes out at 60% of supply share
+		min_weight = 0.0
+	}
+}
+
+popneed_riches = {
+	default = gold
+	
+	entry = {
+		goods = gemstones
+		
+		weight = 0.4
+		max_weight = 2.0 # Maxes out at 40% of supply share
+		min_weight = 0.2
+	}
+	
+	entry = {
+		goods = gold
+		
+		weight = 0.2
+		max_weight = 2.0 # Maxes out at 40% of supply share
+		min_weight = 0.2
+	}
+	
+	entry = {
+		goods = sculptures
+		
+		weight = 0.25
+		max_weight = 2.0 # Maxes out at 80% of supply share
+		min_weight = 0.2
+	}
+	
+	entry = {
+		goods = gold_jewellery
+		
+		weight = 0.25
+		max_weight = 2.0 # Maxes out at 40% of supply share
+		min_weight = 0.25
+	}
+	
+	entry = {
+		goods = luxus_jewellery
+		
+		weight = 0.25
+		max_weight = 2.0 # Maxes out at 80% of supply share
+		min_weight = 0.25
+	}
+}
+
+popneed_hq_art = {
+	default = sculptures
+	
+	entry = {
+		goods = sculptures
+		
+		weight = 1
+		max_weight = 3.0 # Maxes out at 80% of supply share
+		min_weight = 0.25
+	}
+	
+	entry = {
+		goods = gold_jewellery
+		
+		weight = 1
+		max_weight = 3.0 # Maxes out at 80% of supply share
+		min_weight = 0.25
+	}
+	
+	entry = {
+		goods = luxus_jewellery
+		
+		weight = 1
+		max_weight = 3.0 # Maxes out at 80% of supply share
+		min_weight = 0.25
+	}
+}

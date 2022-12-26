@@ -443,6 +443,11 @@ STATE_SILESIA = {
         bg_lead_mining = 54
         bg_sulfur_mining = 40
         bg_logging = 14
+		bg_copper_mining = 28
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
     }
 }
 
@@ -460,6 +465,11 @@ STATE_GREATER_POLAND = {
         bg_coal_mining = 36
         bg_iron_mining = 36
         bg_logging = 9
+		bg_copper_mining = 21
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 3
     }
 }
 
@@ -496,6 +506,12 @@ STATE_WEST_PRUSSIA = {
         bg_sulfur_mining = 40
         bg_logging = 8
         bg_fishing = 10
+		bg_gemstones_mining = 3
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 7
     }
     naval_exit_id = 3000
 }
@@ -549,10 +565,15 @@ STATE_WEST_GALICIA = {
         bg_coal_mining = 140
         bg_iron_mining = 33
         bg_logging = 17
+		bg_copper_mining = 20
     }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 9
     }
 }
 
@@ -591,6 +612,11 @@ STATE_CENTRAL_HUNGARY = {
         bg_coal_mining = 20
         bg_iron_mining = 30
         bg_logging = 6
+		bg_copper_mining = 16
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 7
     }
 }
 
@@ -606,6 +632,11 @@ STATE_BEKES = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 11
+		bg_copper_mining = 7
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 15
     }
 }
 
@@ -765,10 +796,15 @@ STATE_WALLACHIA = {
         bg_coal_mining = 68
         bg_iron_mining = 21
         bg_logging = 4
+		bg_copper_mining = 11
     }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 60
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 10
     }
 }
 

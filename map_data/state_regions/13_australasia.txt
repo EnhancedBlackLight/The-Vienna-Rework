@@ -16,11 +16,26 @@
         bg_logging = 7
         bg_whaling = 4
         bg_fishing = 8
+		bg_copper_mining = 54
+		bg_gemstones_mining = 6
     }
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 12
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
+    }
+	resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+		depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3122
 }
@@ -41,11 +56,16 @@ STATE_VICTORIA = {
         bg_logging = 11
         bg_whaling = 3
         bg_fishing = 8
+		bg_copper_mining = 8
     }
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 6
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 2
     }
     naval_exit_id = 3122
 }
@@ -95,6 +115,17 @@ STATE_QUEENSLAND = {
         bg_logging = 5
         bg_whaling = 3
         bg_fishing = 12
+		bg_copper_mining = 39
+		bg_gemstones_mining = 7
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3124
 }
@@ -118,6 +149,17 @@ STATE_SOUTH_AUSTRALIA = {
         bg_sulfur_mining = 60
         bg_whaling = 2
         bg_fishing = 6
+		bg_copper_mining = 32
+		bg_gemstones_mining = 5
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 5
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+		depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3121
 }
@@ -141,11 +183,22 @@ STATE_WESTERN_AUSTRALIA = {
         bg_logging = 4
         bg_whaling = 3
         bg_fishing = 9
+		bg_copper_mining = 28
+		bg_gemstones_mining = 3
     }
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 8
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+		depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 3
     }
     naval_exit_id = 3123
 }
@@ -167,6 +220,17 @@ STATE_NORTHERN_TERRITORY = {
         bg_logging = 5
         bg_whaling = 2
         bg_fishing = 6
+		bg_copper_mining = 4
+		bg_gemstones_mining = 4
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 8
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+		depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 3
     }
     naval_exit_id = 3126
 }
@@ -189,11 +253,16 @@ STATE_NORTH_ISLAND = {
         bg_logging = 11
         bg_whaling = 3
         bg_fishing = 8
+		bg_copper_mining = 12
     }
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 4
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3122
 }
@@ -214,11 +283,17 @@ STATE_SOUTH_ISLAND = {
         bg_logging = 7
         bg_whaling = 4
         bg_fishing = 10
+		bg_gemstones_mining = 4
     }
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 6
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+		depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3122
 }

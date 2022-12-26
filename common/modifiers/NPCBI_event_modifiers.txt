@@ -1,0 +1,12 @@
+﻿### NPCBI (© Revan ©) ###
+
+mining_production_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_iron_mine_throughput_mult = 0.2
+	building_coal_mine_throughput_mult = 0.2
+	building_tin_mine_throughput_mult = 0.2
+	building_copper_mine_throughput_mult = 0.2
+	building_lead_mine_throughput_mult = 0.2
+	building_gemstones_mine_throughput_mult = 0.2
+	building_sulfur_mine_throughput_mult = 0.2
+}

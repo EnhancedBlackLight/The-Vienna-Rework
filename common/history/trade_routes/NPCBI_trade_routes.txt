@@ -1,0 +1,55 @@
+﻿### NPCBI (© Revan ©) ###
+
+TRADE_ROUTES = {
+	# Britain
+	c:GBR = {
+		create_trade_route = {
+			goods = opium
+			level = 30
+			direction = export
+			target = c:CHI.market
+		}			
+		create_trade_route = {
+			goods = silk
+			level = 18
+			direction = import
+			target = c:CHI.market
+		}	
+		create_trade_route = {
+			goods = porcelain
+			level = 15
+			direction = import
+			target = c:CHI.market
+		}		
+		create_trade_route = {
+			goods = tea
+			level = 25
+			direction = import
+			target = c:CHI.market
+		}
+		create_trade_route = {
+			goods = hardwood
+			level = 14
+			direction = import
+			target = c:RUS.market
+		}
+		create_trade_route = {
+			goods = liquor
+			level = 5
+			direction = export
+			target = c:PRU.market
+		}
+		create_trade_route = {
+			goods = liquor
+			level = 5
+			direction = export
+			target = c:BEL.market
+		}	
+		create_trade_route = {
+			goods = coffee
+			level = 7
+			direction = import
+			target = c:BRZ.market
+		}		
+	}	
+}

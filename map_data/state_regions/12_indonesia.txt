@@ -14,6 +14,7 @@
         bg_lead_mining = 24
         bg_logging = 17
         bg_fishing = 10
+		bg_tin_mining = 42
     }
     resource = {
         type = "bg_rubber"
@@ -40,6 +41,7 @@ STATE_NORTH_BORNEO = {
         bg_sulfur_mining = 36
         bg_logging = 20
         bg_fishing = 8
+		bg_copper_mining = 20
     }
     resource = {
         type = "bg_gold_fields"
@@ -49,6 +51,10 @@ STATE_NORTH_BORNEO = {
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 16
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3055
 }
@@ -71,6 +77,7 @@ STATE_WEST_BORNEO = {
         bg_lead_mining = 30
         bg_logging = 17
         bg_fishing = 7
+		bg_copper_mining = 18
     }
     resource = {
         type = "bg_gold_fields"
@@ -81,6 +88,10 @@ STATE_WEST_BORNEO = {
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 12
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3052
 }
@@ -130,10 +141,15 @@ STATE_WEST_JAVA = {
         bg_sulfur_mining = 32
         bg_logging = 8
         bg_fishing = 11
+		bg_copper_mining = 24
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
     }
     naval_exit_id = 3052
 }
@@ -206,6 +222,7 @@ STATE_NORTH_SUMATRA = {
         bg_sulfur_mining = 48
         bg_logging = 29
         bg_fishing = 13
+		bg_tin_mining = 14
     }
     resource = {
         type = "bg_rubber"
@@ -230,10 +247,15 @@ STATE_SOUTH_SUMATRA = {
         bg_sulfur_mining = 48
         bg_logging = 29
         bg_fishing = 13
+		bg_tin_mining = 38
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 28
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
     }
     naval_exit_id = 3120
 }
@@ -254,10 +276,19 @@ STATE_ACEH = {
         bg_sulfur_mining = 20
         bg_logging = 14
         bg_fishing = 8
+		bg_copper_mining = 10
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 18
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 7
+    }
+	resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
     }
     naval_exit_id = 3051
 }
@@ -278,10 +309,19 @@ STATE_WESTERN_NEW_GUINEA = {
         bg_iron_mining = 18
         bg_logging = 20
         bg_fishing = 9
+		bg_copper_mining = 18
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 8
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 3
+    }
+	resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
     }
     naval_exit_id = 3125
 }
@@ -300,10 +340,15 @@ STATE_MOLUCCAS = {
     capped_resources = {
         bg_logging = 4
         bg_fishing = 6
+		bg_copper_mining = 5
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 4
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 8
     }
     naval_exit_id = 3125
 }
@@ -324,10 +369,15 @@ STATE_CELEBES = {
         bg_iron_mining = 27
         bg_logging = 14
         bg_fishing = 4
+		bg_copper_mining = 8
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 4
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 6
     }
     naval_exit_id = 3125
 }
@@ -349,10 +399,19 @@ STATE_EASTERN_NEW_GUINEA = {
         bg_sulfur_mining = 32
         bg_logging = 16
         bg_fishing = 10
+		bg_copper_mining = 16
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 12
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 6
+    }
+	resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 10
     }
     naval_exit_id = 3129
 }
@@ -374,6 +433,7 @@ STATE_SUNDA_ISLANDS = {
         bg_sulfur_mining = 40
         bg_logging = 17
         bg_fishing = 10
+		bg_copper_mining = 27
     }
     resource = {
         type = "bg_rubber"
@@ -398,6 +458,7 @@ STATE_MINDANAO = {
         bg_iron_mining = 36
         bg_logging = 14
         bg_fishing = 8
+		bg_copper_mining = 28
     }
     resource = {
         type = "bg_rubber"
@@ -422,6 +483,7 @@ STATE_LUZON = {
         bg_iron_mining = 24
         bg_logging = 20
         bg_fishing = 12
+		bg_copper_mining = 22
     }
     resource = {
         type = "bg_rubber"
@@ -445,6 +507,7 @@ STATE_VISAYAS = {
         bg_iron_mining = 30
         bg_logging = 18
         bg_fishing = 10
+		bg_copper_mining = 28
     }
     resource = {
         type = "bg_rubber"
@@ -509,6 +572,11 @@ STATE_SOLOMON_ISLANDS = {
         bg_logging = 2
         bg_whaling = 2
         bg_fishing = 3
+		bg_copper_mining = 2
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 5
     }
     naval_exit_id = 3129
 }
@@ -562,6 +630,11 @@ STATE_VANUATU = {
     capped_resources = {
         bg_logging = 2
         bg_fishing = 3
+		bg_copper_mining = 2
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3124
 }
@@ -582,6 +655,11 @@ STATE_KANAK = {
         bg_lead_mining = 8
         bg_logging = 2
         bg_fishing = 3
+		bg_copper_mining = 4
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 2
     }
     naval_exit_id = 3124
 }
@@ -600,6 +678,11 @@ STATE_BOUGAINVILLE = {
         bg_logging = 2
         bg_whaling = 2
         bg_fishing = 2
+		bg_copper_mining = 1
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 2
     }
     naval_exit_id = 3129
 }
@@ -640,6 +723,11 @@ STATE_TONGA = {
         bg_logging = 2
         bg_whaling = 4
         bg_fishing = 3
+		bg_copper_mining = 2
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 3
     }
     naval_exit_id = 3156
 }
