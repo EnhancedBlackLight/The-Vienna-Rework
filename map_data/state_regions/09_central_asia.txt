@@ -11,6 +11,10 @@
     capped_resources = {
         bg_logging = 4
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
 }
 
 STATE_KUBAN = {
@@ -68,6 +72,7 @@ STATE_AZERBAIJAN = {
     capped_resources = {
         bg_lead_mining = 18
         bg_logging = 6
+		bg_copper_mining = 28
     }
     resource = {
         type = "bg_oil_extraction"
@@ -92,6 +97,7 @@ STATE_GREATER_CAUCASUS = {
         bg_iron_mining = 24
         bg_lead_mining = 24
         bg_logging = 8
+		bg_copper_mining = 29
     }
     naval_exit_id = 3036
 }
@@ -109,10 +115,16 @@ STATE_SAMARA = {
     capped_resources = {
         bg_iron_mining = 30
         bg_logging = 9
+		bg_gemstones_mining = 2
     }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 30
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 14
     }
 }
 
@@ -181,10 +193,17 @@ STATE_URALSK = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 7
+		bg_copper_mining = 27
+		bg_gemstones_mining = 19
     }
     resource = {
         type = "bg_oil_extraction"
         undiscovered_amount = 60
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 17
     }
 }
 
@@ -215,6 +234,12 @@ STATE_UZBEKIA = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_opium_plantations" "bg_tea_plantations" }
     capped_resources = {
         bg_logging = 6
+		bg_gemstones_mining = 2
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 7
     }
 }
 
@@ -231,6 +256,12 @@ STATE_TAJIKISTAN = {
     capped_resources = {
         bg_coal_mining = 36
         bg_logging = 2
+		bg_gemstones_mining = 2
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 7
     }
 }
 
@@ -247,6 +278,7 @@ STATE_KIRGHIZIA = {
     capped_resources = {
         bg_coal_mining = 32
         bg_logging = 6
+		bg_copper_mining = 36
     }
 }
 
@@ -264,6 +296,10 @@ STATE_TURKMENIA = {
         bg_sulfur_mining = 40
         bg_logging = 2
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
+    }
 }
 
 STATE_SEMIRECHE = {
@@ -279,6 +315,13 @@ STATE_SEMIRECHE = {
     capped_resources = {
         bg_coal_mining = 28
         bg_logging = 4
+		bg_copper_mining = 30
+		bg_gemstones_mining = 3
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 8
     }
 }
 
@@ -311,6 +354,17 @@ STATE_AKMOLINSK = {
     capped_resources = {
         bg_iron_mining = 21
         bg_logging = 5
+		bg_copper_mining = 19
+		bg_gemstones_mining = 8
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 9
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 5
     }
 }
 
@@ -327,6 +381,12 @@ STATE_PASHTUNISTAN = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_opium_plantations" "bg_tea_plantations" }
     capped_resources = {
         bg_logging = 6
+		bg_gemstones_mining = 2
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 8
     }
 }
 
@@ -344,6 +404,12 @@ STATE_WESTERN_AFGHANISTAN = {
     capped_resources = {
         bg_coal_mining = 32
         bg_logging = 4
+		bg_gemstones_mining = 3
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 6
     }
 }
 
@@ -362,6 +428,12 @@ STATE_EASTERN_AFGHANISTAN = {
         bg_coal_mining = 24
         bg_iron_mining = 24
         bg_logging = 7
+		bg_gemstones_mining = 3
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 6
     }
 }
 
@@ -381,6 +453,11 @@ STATE_BALUCHISTAN = {
         bg_lead_mining = 18
         bg_logging = 2
         bg_fishing = 5
+		bg_copper_mining = 12
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 6
     }
     naval_exit_id = 3048
 }
@@ -398,6 +475,13 @@ STATE_LHASA = {
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 20
+		bg_copper_mining = 36
+		bg_gemstones_mining = 2
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 5
     }
 }
 

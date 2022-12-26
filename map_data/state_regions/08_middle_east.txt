@@ -14,6 +14,10 @@
     capped_resources = {
         bg_fishing = 4
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
     naval_exit_id = 3046
 }
 
@@ -30,6 +34,10 @@ STATE_OMAN = {
     arable_resources = { "bg_livestock_ranches" "bg_coffee_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_fishing = 10
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
     }
     naval_exit_id = 3048
 }
@@ -50,7 +58,7 @@ STATE_ABU_DHABI = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 40
+        undiscovered_amount = 80
     }
     naval_exit_id = 3046
 }
@@ -71,6 +79,10 @@ STATE_YEMEN = {
         bg_lead_mining = 12
         bg_fishing = 9
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
+    }
     naval_exit_id = 3047
 }
 
@@ -88,6 +100,12 @@ STATE_HEDJAZ = {
     capped_resources = {
         bg_sulfur_mining = 28
         bg_fishing = 5
+		bg_gemstones_mining = 3
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 7
     }
     naval_exit_id = 3047
 }
@@ -227,6 +245,10 @@ STATE_BAGHDAD = {
     wood = "x0CA064"
     arable_land = 54
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_tobacco_plantations" }
+	resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
+    }
 }
 
 STATE_MOSUL = {
@@ -253,6 +275,7 @@ STATE_DEIR_EZ_ZOR = {
     id = 412
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x0D20D8" "x19152C" "x1B437C" "x1ECFDA" "x1F78F4" "x205956" "x246A9F" "x24B968" "x479916" "x519F26" "x56095E" "x6BDF5C" "x849047" "x969057" "x97B814" "x9A097B" "xA6B14C" "xBD22F1" "xBF549D" "xC414B6" "xCE5C9A" "xE67DB6" "xF5D646" "xF98995" }
+    traits = { "state_trait_euphrates_river" }
     city = "x849047"
     farm = "x97B814"
     mine = "x519F26"
@@ -321,6 +344,21 @@ STATE_LARISTAN = {
     capped_resources = {
         bg_coal_mining = 24
         bg_fishing = 10
+		bg_copper_mining = 20
+		bg_gemstones_mining = 3
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 5
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
     }
     naval_exit_id = 3046
 }
@@ -338,6 +376,17 @@ STATE_SISTAN = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_dye_plantations" }
     capped_resources = {
         bg_fishing = 4
+		bg_copper_mining = 9
+		bg_gemstones_mining = 5
+    }
+	resource = {
+        type = "bg_gemstone_fields"
+        depleted_type = "bg_gemstones_mining"
+        undiscovered_amount = 7
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 10
     }
     naval_exit_id = 3046
 }
@@ -355,6 +404,15 @@ STATE_KHORASAN = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_dye_plantations" "bg_opium_plantations" }
     capped_resources = {
         bg_logging = 4
+		bg_copper_mining = 6
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 11
+    }
+	resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
     }
 }
 
@@ -373,6 +431,10 @@ STATE_KHUZESTAN = {
         bg_sulfur_mining = 40
         bg_fishing = 5
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 60
+    }
     naval_exit_id = 3046
 }
 
@@ -390,6 +452,7 @@ STATE_ISFAHAN = {
         bg_coal_mining = 32
         bg_iron_mining = 36
         bg_lead_mining = 42
+		bg_copper_mining = 30
     }
 }
 
@@ -406,6 +469,10 @@ STATE_MAZANDARAN = {
     capped_resources = {
         bg_coal_mining = 60
         bg_logging = 14
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 20
     }
 }
 
@@ -437,6 +504,11 @@ STATE_TABRIZ = {
     capped_resources = {
         bg_coal_mining = 40
         bg_logging = 7
+		bg_copper_mining = 10
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 7
     }
 }
 
@@ -451,6 +523,10 @@ STATE_LURISTAN = {
     wood = "x928FFD"
     arable_land = 64
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_opium_plantations" }
+	resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 40
+    }
 }
 
 STATE_HUDAVENDIGAR = {
@@ -523,6 +599,11 @@ STATE_KASTAMONU = {
         bg_coal_mining = 72
         bg_logging = 11
         bg_fishing = 10
+		bg_copper_mining = 20
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3036
 }
@@ -578,6 +659,11 @@ STATE_TRABZON = {
         bg_iron_mining = 21
         bg_logging = 8
         bg_fishing = 9
+		bg_copper_mining = 17
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3036
 }
@@ -628,6 +714,11 @@ STATE_KARS = {
     capped_resources = {
         bg_logging = 9
         bg_fishing = 5
+		bg_copper_mining = 13
+    }
+	resource = {
+        type = "bg_copper_fields"
+        undiscovered_amount = 4
     }
     naval_exit_id = 3036
 }

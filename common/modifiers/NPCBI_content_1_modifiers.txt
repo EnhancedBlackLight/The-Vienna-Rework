@@ -1,0 +1,12 @@
+﻿### NPCBI (© Revan ©) ###
+
+siberia_mining = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_migration_pull_mult = 2
+	building_coal_mine_throughput_mult = 0.25
+	building_iron_mine_throughput_mult = 0.25
+	building_tin_mine_throughput_mult = 0.25
+	building_copper_mine_throughput_mult = 0.25
+	building_gemstones_mine_throughput_mult = 0.25
+	building_sulfur_mine_throughput_mult = 0.25
+}

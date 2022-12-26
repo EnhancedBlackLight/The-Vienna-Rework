@@ -1,0 +1,307 @@
+﻿### NPCBI (© Revan ©) ###
+
+building_brewery = {
+	building_group = bg_brewery
+	texture = "gfx/interface/icons/building_icons/brewery.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	#has_max_level = no
+	
+	
+	unlocking_technologies = {
+		building_brewery_tech
+	}
+	
+	production_method_groups = {
+		pmg_beer_production_brewery
+		pmg_wine_production_brewery
+		pmg_ownership_land_building_brewery
+	}
+	
+	required_construction = construction_cost_medium
+	
+	ai_value = 5000
+}
+
+building_public_house = {
+	building_group = bg_light_industry
+	texture = "gfx/interface/icons/building_icons/public_house.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	has_max_level = yes
+	
+	
+	unlocking_technologies = {
+		building_brewery_tech
+	}
+	
+	production_method_groups = {
+		pmg_base_building_public_house
+		pmg_exclusive_area
+		pmg_ownership_land_building_public_house
+	}
+	
+	required_construction = construction_cost_medium
+	
+	ai_value = 4500
+}
+
+building_copper_mine = {
+	building_group = bg_copper_mining
+	texture = "gfx/interface/icons/building_icons/copper_mine.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		shaft_mining
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_copper_mine
+		pmg_explosives_building_copper_mine
+		pmg_steam_automation_building_copper_mine
+		pmg_train_automation_building_copper_mine
+		pmg_ownership_capital_building_copper_mine
+	}
+	
+	ai_value = 8000
+}
+ 
+building_tin_mine = {
+	building_group = bg_tin_mining
+	texture = "gfx/interface/icons/building_icons/tin_mine.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		shaft_mining
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_tin_mine
+		pmg_explosives_building_tin_mine
+		pmg_steam_automation_building_tin_mine
+		pmg_train_automation_building_tin_mine
+		pmg_ownership_capital_building_tin_mine
+	}
+	
+	ai_value = 8000
+}
+
+building_tooling_workshops = {
+	building_group = bg_light_industry
+	texture = "gfx/interface/icons/building_icons/tooling_workshops.dds"
+	
+	unlocking_technologies = {
+		manufacturies
+	}
+
+	production_method_groups = {
+		pmg_base_building_tooling_workshops
+		pmg_automation_building_tooling_workshops
+		pmg_blending_tool_workshops
+		pmg_ownership_capital_building_tooling_workshops
+	}
+
+	required_construction = construction_cost_high
+	
+	ai_value = 2000 # Tools are very important
+}
+
+building_bronze = {
+	building_group = bg_bronze
+	texture = "gfx/interface/icons/building_icons/foundry.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		building_bronze_tech
+	}
+	
+	production_method_groups = {
+		pmg_bronze_production_industry
+		pmg_automation_building_bronze
+		pmg_ownership_land_building_bronze
+	}
+	
+	required_construction = construction_cost_medium
+	
+	ai_value = 10000
+}
+
+building_foundry = {
+	building_group = bg_foundry
+	texture = "gfx/interface/icons/building_icons/Ornamental_Forge.dds"
+	city_type = city
+	levels_per_mesh = 5
+
+	#has_max_level = no
+	
+	unlocking_technologies = {
+		building_foundry_tech
+	}
+	
+	production_method_groups = {
+		pmg_foundry_production_industry
+		pmg_automation_building_foundry
+		pmg_blending_jewellery_foundry
+		pmg_foundry_production_goldsmith_industry
+		pmg_ownership_land_building_foundry
+	}
+	
+	required_construction = construction_cost_high
+	
+	ai_value = 6000
+}
+
+building_railway = {
+	building_group = bg_private_infrastructure	
+	texture = "gfx/interface/icons/building_icons/building_railway.dds"
+	
+	unlocking_technologies = {
+		railways
+	}
+
+	production_method_groups = {
+		pmg_base_building_railway
+		pmg_passenger_trains
+		pmg_tracks_railway
+		pmg_ownership_capital_building_railway
+	}
+
+	required_construction = construction_cost_high
+	
+	ai_value = 2000 # Railways are important
+	
+	should_auto_expand = { 
+		OR = {
+			cash_reserves_ratio > 0.5
+			is_subsidized = yes
+		}
+		state.market_access < 1
+		owner.construction_queue_duration < max_autoexpand_queue_weeks
+	}
+}
+
+building_gemstones_mine = {
+	building_group = bg_gemstones_mining
+	texture = "gfx/interface/icons/building_icons/gemstones_mine.dds"
+	city_type = mine
+	levels_per_mesh = 5
+	required_construction = construction_cost_medium
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_mining_equipment_building_gemstones_mine
+		pmg_explosives_building_gemstones_mine
+		pmg_steam_automation_building_gemstones_mine
+		pmg_train_automation_building_gemstones_mine
+		pmg_ownership_capital_building_gemstones_mine
+	}
+	
+	ai_value = 7000
+}
+
+building_gemstone_fields = {
+	building_group = bg_gemstone_fields
+	texture = "gfx/interface/icons/building_icons/gemstone_fields.dds"
+	buildable = no
+	expandable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_gemstone_fields
+	}
+}
+
+building_copper_fields = {
+	building_group = bg_copper_fields
+	texture = "gfx/interface/icons/building_icons/copper_fields.dds"
+	buildable = no
+	expandable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_copper_fields
+	}
+}
+
+building_tin_fields = {
+	building_group = bg_tin_fields
+	texture = "gfx/interface/icons/building_icons/tin_fields.dds"
+	buildable = no
+	expandable = no
+	terrain_manipulator = mining
+	
+	unlocking_technologies = {
+		prospecting
+	}
+
+	production_method_groups = {
+		pmg_base_building_tin_fields
+	}
+}
+
+building_department_store = {
+	building_group = bg_department_stores
+	texture = "gfx/interface/icons/building_icons/department_store.dds"
+	city_type = city
+	levels_per_mesh = 5
+	has_max_level = yes
+	
+	unlocking_technologies = {
+		building_department_store_tech
+	}
+	
+	production_method_groups = {
+		pmg_base_building_department_stores
+		pmg_second_building_department_stores
+		pmg_third_building_department_stores
+		pmg_fourth_building_department_stores
+		pmg_fifth_building_department_stores
+		pmg_ownership_capital_building_department_stores
+	}
+	
+	ai_value = 2000
+	
+	required_construction = construction_cost_medium
+}
+
+building_bank = {
+	building_group = bg_building_banks
+	texture = "gfx/interface/icons/building_icons/bank.dds"
+	city_type = city
+	levels_per_mesh = 1
+	has_max_level = yes
+	
+	unlocking_technologies = {
+		banking
+	}
+	
+	production_method_groups = {
+		pmg_base_building_banks
+		pmg_second_building_banks
+	}
+	
+	ai_value = 500
+	
+	required_construction = construction_cost_very_high
+}

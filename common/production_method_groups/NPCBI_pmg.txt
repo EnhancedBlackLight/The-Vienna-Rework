@@ -1,0 +1,411 @@
+﻿### NPCBI (© Revan ©) ###
+
+pmg_beer_production_brewery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_beer_production
+		pm_advanced_beer_production
+	}
+}
+
+pmg_wine_production_brewery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_wine_production_disabled
+		pm_wine_production
+		pm_advanced_wine_production
+	}
+}
+
+pmg_base_building_public_house = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pub_drinks_beer
+		pm_pub_drinks_liquor
+		pm_pub_drinks_wine
+	}
+}
+
+pmg_exclusive_area = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_pubs_automation_disabled
+		pm_pub_coffee
+		pm_pub_tea
+		pm_pub_tobacco
+		pm_pub_opium
+	}
+}
+
+pmg_ownership_land_building_brewery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded
+		pm_government_run
+	}
+}
+
+pmg_ownership_land_building_public_house = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded
+		pm_government_run
+	}
+}
+
+pmg_mining_equipment_building_copper_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+#		pm_mines_no_work
+		pm_picks_and_shovels_building_copper_mine
+		pm_atmospheric_engine_pump_building_copper_mine
+		pm_condensing_engine_pump_building_copper_mine
+		pm_diesel_pump_building_copper_mine
+	}
+}
+
+pmg_explosives_building_copper_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_explosives
+		pm_nitroglycerin_building_copper_mine
+		pm_dynamite_building_copper_mine
+	}
+}
+
+pmg_steam_automation_building_copper_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_steam_automation
+		pm_steam_donkey_mine
+	}
+}
+
+pmg_train_automation_building_copper_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_mine
+	}
+}
+
+pmg_ownership_capital_building_copper_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+#		pm_no_guilds_all_building
+		pm_merchant_guilds_building_copper_mine
+		pm_privately_owned_building_copper_mine
+		pm_publicly_traded_building_copper_mine
+		pm_government_run_building_copper_mine
+		pm_worker_cooperative_building_copper_mine
+	}
+}
+
+pmg_mining_equipment_building_tin_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+#		pm_mines_no_work
+		pm_picks_and_shovels_building_tin_mine
+		pm_atmospheric_engine_pump_building_tin_mine
+		pm_condensing_engine_pump_building_tin_mine
+		pm_diesel_pump_building_tin_mine
+	}
+}
+
+pmg_explosives_building_tin_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_explosives
+		pm_nitroglycerin_building_tin_mine
+		pm_dynamite_building_tin_mine
+	}
+}
+
+pmg_steam_automation_building_tin_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_steam_automation
+		pm_steam_donkey_mine
+	}
+}
+
+pmg_train_automation_building_tin_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_mine
+	}
+}
+
+pmg_ownership_capital_building_tin_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+#		pm_no_guilds_all_building
+		pm_merchant_guilds_building_tin_mine
+		pm_privately_owned_building_tin_mine
+		pm_publicly_traded_building_tin_mine
+		pm_government_run_building_tin_mine
+		pm_worker_cooperative_building_tin_mine
+	}
+}
+
+pmg_mining_equipment_building_gemstones_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+#		pm_mines_no_work
+		pm_picks_and_shovels_building_gemstones_mine
+		pm_atmospheric_engine_pump_building_gemstones_mine
+		pm_condensing_engine_pump_building_gemstones_mine
+		pm_diesel_pump_building_gemstones_mine
+	}
+}
+
+pmg_explosives_building_gemstones_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_explosives
+		pm_nitroglycerin_building_gemstones_mine
+		pm_dynamite_building_gemstones_mine
+	}
+}
+
+pmg_steam_automation_building_gemstones_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_no_steam_automation
+		pm_steam_donkey_mine
+	}
+}
+
+pmg_train_automation_building_gemstones_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_road_carts
+		pm_rail_transport_mine
+	}
+}
+
+pmg_ownership_capital_building_gemstones_mine = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+#		pm_no_guilds_all_building
+		pm_merchant_guilds_building_gemstones_mine
+		pm_privately_owned_building_gemstones_mine
+		pm_publicly_traded_building_gemstones_mine
+		pm_government_run_building_gemstones_mine
+		pm_worker_cooperative_building_gemstones_mine
+	}
+}
+
+pmg_canning = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_canning
+		pm_tin_cannery
+		pm_cannery
+		pm_vacuum_canning
+	}
+}
+
+pmg_blending_tool_workshops = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_disabled_blending
+		pm_blending_tool_workshops
+	}
+}
+
+pmg_base_building_tooling_workshops = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_crude_tools
+		pm_copper_tools
+		pm_pig_iron
+		pm_steel
+	}
+}
+
+pmg_bronze_production_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_bronze_production
+	}
+}
+
+pmg_automation_building_bronze = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_bronze_automation_disabled
+		pm_watertube_boiler_building_bronze
+		pm_rotary_valve_engine_building_bronze
+	}
+}
+
+pmg_ownership_land_building_bronze = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded
+		pm_government_run
+	}
+}
+
+pmg_base_building_arts_academy = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_traditional_art
+		pm_realist_art
+		pm_romantic_art
+		pm_photographic_art
+		pm_film_art
+	}
+}
+
+pmg_foundry_production_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_foundry_sculpture_production_disabled
+		pm_foundry_iron_sculptures_production
+		pm_foundry_copper_sculptures_production
+		pm_foundry_bronze_sculptures_production
+	}
+}
+
+pmg_foundry_production_goldsmith_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_foundry_goldsmith_automation_disabled
+		pm_foundry_gold_jewellery_production
+		pm_foundry_luxury_jewellery_production
+	}
+}
+
+pmg_blending_jewellery_foundry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_blending_goldsmith_automation_disabled
+		pm_blending_simple_jewellery_foundry
+		pm_blending_gold_jewellery_foundry
+		pm_blending_luxury_jewellery_foundry
+	}
+}
+
+pmg_automation_building_foundry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_foundry_automation_disabled
+		pm_rotary_valve_engine_building_foundry
+		pm_assembly_lines_building_foundry
+	}
+}
+
+pmg_ownership_land_building_foundry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_industry
+		pm_publicly_traded
+		pm_government_run
+	}
+}
+
+pmg_tracks_railway = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_new_tracks
+		pm_iron_tracks_railway
+		pm_steel_tracks_railway
+	}
+}
+
+pmg_base_building_gemstone_fields = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_gemstone_fields
+	}
+}
+
+pmg_base_building_copper_fields = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_copper_fields
+	}
+}
+
+pmg_base_building_tin_fields = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		default_building_tin_fields
+	}
+}
+
+pmg_base_building_department_stores = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_base_building_department_stores_1
+		pm_base_department_stores_1
+	}
+}
+
+pmg_second_building_department_stores = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_base_building_department_stores_2
+		pm_base_department_stores_2
+	}
+}
+
+pmg_third_building_department_stores = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_exclusively_department_stores_1
+		pm_exclusively_department_stores_1
+	}
+}
+
+pmg_fourth_building_department_stores = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_exclusively_department_stores_2
+		pm_exclusively_department_stores_2
+	}
+}
+
+pmg_fifth_building_department_stores = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_electronics_department_stores
+		pm_electronics_department_stores
+	}
+}
+
+pmg_ownership_capital_building_department_stores = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_merchant_guilds_building_department_stores
+		pm_privately_owned_building_department_stores
+		pm_publicly_traded_building_department_stores
+		pm_government_run_building_department_stores
+		pm_worker_cooperative_building_copper_mine
+	}
+}
+
+pmg_base_building_banks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_base_banks
+	}
+}
+
+pmg_second_building_banks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_base_banks_credit
+		pm_base_banks_credit
+	}
+}
