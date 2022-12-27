@@ -40,7 +40,7 @@ sunni = {
 	color = { 0.1 0.5 0.3 }
 	
 	taboos = {
-		liquor wine
+		liquor wine beer
 	} 
 }
 
@@ -52,7 +52,7 @@ shiite = {
 	color = { 0.4 0.7 0.3 }
 	
 	taboos = {
-		liquor wine
+		liquor wine beer
 	}
 }
 
@@ -132,7 +132,7 @@ mormon = {
 		christian
 	}
 	taboos = {
-		liquor wine coffee tobacco
+		liquor wine beer coffee tobacco
 	}
 	color = { 0.3 0.4 0.65 }
 }
@@ -161,7 +161,7 @@ ibadi = {
 	color = { 0.3 0.4 0.8 }
 	
 	taboos = {
-		liquor wine
+		liquor wine beer
 	} 
 }
 
