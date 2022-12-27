@@ -13,15 +13,10 @@
     capped_resources = {
         bg_logging = 7
         bg_fishing = 4
-		bg_copper_mining = 13
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 10
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3155
 }
@@ -64,16 +59,11 @@ STATE_HONDURAS = {
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 15
-		bg_copper_mining = 11
         bg_fishing = 8
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 16
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 14
     }
     naval_exit_id = 3026
 }
@@ -93,15 +83,10 @@ STATE_NICARAGUA = {
     capped_resources = {
         bg_logging = 14
         bg_fishing = 5
-		bg_copper_mining = 9
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 14
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 17
     }
     naval_exit_id = 3026
 }
@@ -122,15 +107,10 @@ STATE_COSTA_RICA = {
         bg_coal_mining = 24
         bg_logging = 8
         bg_fishing = 3
-		bg_copper_mining = 12
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 12
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 9
     }
     naval_exit_id = 3026
 }
@@ -150,15 +130,10 @@ STATE_PANAMA = {
         bg_coal_mining = 36
         bg_logging = 8
         bg_fishing = 6
-		bg_copper_mining = 27
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 12
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 4
     }
     naval_exit_id = 3026
 }
@@ -177,15 +152,10 @@ STATE_HAITI = {
     capped_resources = {
         bg_logging = 7
         bg_fishing = 6
-		bg_copper_mining = 3
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 12
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3061
 }
@@ -204,15 +174,10 @@ STATE_SANTO_DOMINGO = {
     capped_resources = {
         bg_logging = 11
         bg_fishing = 7
-		bg_copper_mining = 4
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 12
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 10
     }
     naval_exit_id = 3061
 }
@@ -229,14 +194,9 @@ STATE_PUERTO_RICO = {
     capped_resources = {
         bg_logging = 2
         bg_fishing = 4
-		bg_copper_mining = 8
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 6
-    }
-	resource = {
-        type = "bg_copper_fields"
         undiscovered_amount = 6
     }
     naval_exit_id = 3025
@@ -254,11 +214,6 @@ STATE_BAHAMAS = {
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_fishing = 5
-		bg_copper_mining = 2
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 4
     }
     naval_exit_id = 3061
 }
@@ -278,10 +233,6 @@ STATE_WEST_INDIES = {
     capped_resources = {
         bg_fishing = 8
     }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 20
-    }
     naval_exit_id = 3025
 }
 
@@ -298,15 +249,10 @@ STATE_JAMAICA = {
     capped_resources = {
         bg_logging = 4
         bg_fishing = 5
-		bg_copper_mining = 2
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 14
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 4
     }
     naval_exit_id = 3061
 }
@@ -328,19 +274,10 @@ STATE_CUBA = {
         bg_iron_mining = 18
         bg_logging = 15
         bg_fishing = 10
-		bg_copper_mining = 11
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 8
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 4
-    }
-	resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 5
     }
     naval_exit_id = 3061
 }

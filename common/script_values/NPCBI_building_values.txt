@@ -1,3 +1,0 @@
-﻿### NPCBI (© Revan ©) ###
-
-max_autoexpand_npcbi_queue_weeks = 32

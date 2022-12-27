@@ -18,10 +18,6 @@
         type = "bg_rubber"
         undiscovered_amount = 22
     }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 5
-    }
     naval_exit_id = 3091
 }
 
@@ -112,16 +108,10 @@ STATE_SIERRA_LEONE = {
         bg_iron_mining = 36
         bg_logging = 11
         bg_fishing = 6
-		bg_gemstones_mining = 5
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 28
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 6
     }
     naval_exit_id = 3088
 }
@@ -187,10 +177,6 @@ STATE_HAUSALAND = {
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 20
-    }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 10
     }
 }
 
@@ -280,10 +266,6 @@ STATE_OUTER_HAUSALAND = {
         bg_coal_mining = 48
         bg_logging = 4
     }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 5
-    }
 }
 
 STATE_BORNU = {
@@ -317,15 +299,10 @@ STATE_NIGERIA = {
         bg_iron_mining = 45
         bg_lead_mining = 45
         bg_logging = 20
-		bg_tin_mining = 65
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 24
-    }
-	resource = {
-        type = "bg_tin_fields"
-        undiscovered_amount = 10
     }
 }
 
@@ -344,10 +321,6 @@ STATE_EAST_HAUSALAND = {
         bg_coal_mining = 72
         bg_logging = 18
     }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 5
-    }				   
 }
 
 STATE_GUINEA = {
@@ -414,16 +387,10 @@ STATE_TOGO = {
         bg_sulfur_mining = 44
         bg_logging = 11
         bg_fishing = 12
-		bg_gemstones_mining = 6
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 20
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 10
     }
     naval_exit_id = 3091
 }
@@ -466,16 +433,10 @@ STATE_LINDI = {
         bg_coal_mining = 44
         bg_iron_mining = 33
         bg_logging = 5
-		bg_gemstones_mining = 14
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 16
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 9
     }
 }
 
@@ -518,21 +479,10 @@ STATE_TANGANYIKA = {
         bg_coal_mining = 72
         bg_iron_mining = 48
         bg_logging = 23
-		bg_tin_mining = 66
-		bg_gemstones_mining = 11
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 28
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 11
-    }
-	resource = {
-        type = "bg_tin_fields"
-        undiscovered_amount = 8
     }
 }
 
@@ -599,10 +549,6 @@ STATE_OROMIA = {
         type = "bg_rubber"
         undiscovered_amount = 28
     }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 10
-    }						
 }
 
 STATE_AMHARA = {
@@ -660,21 +606,10 @@ STATE_KAZEMBE = {
     capped_resources = {
         bg_coal_mining = 48
         bg_logging = 14
-		bg_tin_mining = 36
-		bg_gemstones_mining = 7
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 22
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 14
-    }
-	resource = {
-        type = "bg_tin_fields"
-        undiscovered_amount = 16
     }
 }
 
@@ -715,16 +650,10 @@ STATE_SOUTH_MADAGASCAR = {
         bg_logging = 23
         bg_whaling = 4
         bg_fishing = 8
-		bg_gemstones_mining = 4
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 16
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 11
     }
     naval_exit_id = 3107
 }
@@ -745,16 +674,10 @@ STATE_NORTH_MADAGASCAR = {
         bg_logging = 20
         bg_whaling = 6
         bg_fishing = 10
-		bg_gemstones_mining = 4
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 16
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 14
     }
     naval_exit_id = 3107
 }
@@ -815,16 +738,10 @@ STATE_MOCAMBIQUE = {
     capped_resources = {
         bg_logging = 23
         bg_fishing = 8
-		bg_gemstones_mining = 11
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 28
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 13
     }
     naval_exit_id = 3107
 }
@@ -858,12 +775,6 @@ STATE_NORTH_CAMEROON = {
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 18
-		bg_gemstones_mining = 3
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 7
     }
 }
 
@@ -928,21 +839,10 @@ STATE_CONGO = {
         bg_coal_mining = 48
         bg_logging = 17
         bg_fishing = 4
-		bg_gemstones_mining = 4
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 60
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 12
-    }
-    resource = {
-        type = "bg_oil_extraction"
-											 
-        undiscovered_amount = 5
     }
     naval_exit_id = 3104
 }
@@ -984,21 +884,10 @@ STATE_KASAI = {
     capped_resources = {
         bg_iron_mining = 27
         bg_logging = 13
-		bg_tin_mining = 31
-		bg_gemstones_mining = 4
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 22
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 7
-    }
-	resource = {
-        type = "bg_tin_fields"
-        undiscovered_amount = 7
     }
 }
 
@@ -1019,16 +908,10 @@ STATE_BAS_CONGO = {
         bg_iron_mining = 36
         bg_logging = 13
         bg_fishing = 7
-		bg_gemstones_mining = 11
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 32
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 5
     }
     naval_exit_id = 3104
 }
@@ -1069,7 +952,6 @@ STATE_NORTH_ANGOLA = {
     capped_resources = {
         bg_logging = 13
         bg_fishing = 8
-		bg_gemstones_mining = 6
     }
     resource = {
         type = "bg_rubber"
@@ -1093,7 +975,6 @@ STATE_SOUTH_ANGOLA = {
     capped_resources = {
         bg_logging = 5
         bg_fishing = 7
-		bg_gemstones_mining = 3
     }
     resource = {
         type = "bg_rubber"
@@ -1138,16 +1019,10 @@ STATE_KATANGA = {
     capped_resources = {
         bg_iron_mining = 27
         bg_logging = 18
-		bg_gemstones_mining = 3
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 20
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 6
     }
 }
 
@@ -1171,10 +1046,6 @@ STATE_GABON = {
         type = "bg_rubber"
         undiscovered_amount = 24
     }
-    resource = {
-        type = "bg_oil_extraction"
-        undiscovered_amount = 5
-    }
     naval_exit_id = 3091
 }
 
@@ -1193,7 +1064,6 @@ STATE_ZAMBIA = {
         bg_coal_mining = 36
         bg_lead_mining = 33
         bg_logging = 17
-		bg_tin_mining = 42
     }
     resource = {
         type = "bg_rubber"
@@ -1216,16 +1086,10 @@ STATE_ZAMBEZIA = {
     capped_resources = {
         bg_iron_mining = 33
         bg_fishing = 6
-		bg_gemstones_mining = 6
     }
     resource = {
         type = "bg_rubber"
         undiscovered_amount = 14
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 9
     }
     naval_exit_id = 3107
 }
@@ -1267,14 +1131,6 @@ STATE_NAMAQUALAND = {
         bg_coal_mining = 32
         bg_logging = 4
         bg_fishing = 7
-		bg_tin_mining = 46
-		bg_copper_mining = 27
-		bg_gemstones_mining = 11
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 15
     }
     naval_exit_id = 3105
 }
@@ -1414,18 +1270,12 @@ STATE_NORTHERN_CAPE = {
     capped_resources = {
         bg_iron_mining = 33
         bg_logging = 2
-		bg_gemstones_mining = 2
     }
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 8
         discovered_amount = 4
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 6
     }
 }
 
@@ -1443,12 +1293,6 @@ STATE_BOTSWANA = {
     capped_resources = {
         bg_coal_mining = 48
         bg_logging = 5
-		bg_gemstones_mining = 4
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 16
     }
 }
 

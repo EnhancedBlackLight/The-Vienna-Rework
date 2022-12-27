@@ -60,11 +60,6 @@ STATE_SARDINIA = {
         bg_sulfur_mining = 20
         bg_logging = 11
         bg_fishing = 10
-		bg_copper_mining = 26
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3032
 }
@@ -117,12 +112,6 @@ STATE_CORSICA = {
     capped_resources = {
         bg_logging = 6
         bg_fishing = 7
-		bg_gemstones_mining = 2
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 8
     }
     naval_exit_id = 3032
 }
@@ -483,12 +472,6 @@ STATE_BALEARES = {
     capped_resources = {
         bg_logging = 2
         bg_fishing = 5
-		bg_gemstones_mining = 3
-    }
-	resource = {
-        type = "bg_gemstone_fields"
-        depleted_type = "bg_gemstones_mining"
-        undiscovered_amount = 9
     }
     naval_exit_id = 3032
 }
@@ -712,11 +695,6 @@ STATE_EASTERN_THRACE = {
         bg_logging = 4
         bg_fishing = 10
         bg_monuments = 1
-		bg_copper_mining = 19
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 4
     }
     naval_exit_id = 3035
 }
@@ -736,11 +714,6 @@ STATE_DOBRUDJA = {
     capped_resources = {
         bg_logging = 11
         bg_fishing = 7
-		bg_copper_mining = 19
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 5
     }
     naval_exit_id = 3036
 }
@@ -801,11 +774,6 @@ STATE_NORTHERN_THRACE = {
         bg_iron_mining = 33
         bg_logging = 17
         bg_fishing = 6
-		bg_copper_mining = 27
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 4
     }
     naval_exit_id = 3036
 }
@@ -825,11 +793,6 @@ STATE_BULGARIA = {
     capped_resources = {
         bg_logging = 14
         bg_fishing = 2
-		bg_copper_mining = 20
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 6
     }
     naval_exit_id = 3036
 }
@@ -1113,11 +1076,6 @@ STATE_WESTERN_THRACE = {
         bg_iron_mining = 27
         bg_logging = 5
         bg_fishing = 10
-		bg_copper_mining = 10
-    }
-	resource = {
-        type = "bg_copper_fields"
-        undiscovered_amount = 11
     }
     naval_exit_id = 3035
 }
