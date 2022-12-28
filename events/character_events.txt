@@ -3,17 +3,23 @@
 character_events.100 = {
 	type = country_event
 	hidden = yes
-
-	trigger = {
-		OR = {
-		 year>= 1850
-		 NOT = { c:USA = ROOT }}
-	}
-
 	immediate = {
 		random_interest_group = {
 			limit = {
-				NOT = { has_variable = memento_mori }
+				NOT = { 
+					has_variable = memento_mori
+				}
+				NOT = {
+					any_scope_character = {
+						is_ruler = yes
+					}
+				}
+				leader = {
+					NOT = {
+						has_modifier = lepsius_museum_lead_scientist_modifier				###No one kills Indy! Just kidding. Have a look at lepsius.30 and lepsius.31
+						has_variable = lepsius_archaeological_expedition_leader_var
+					}
+				}
 			}
 			save_scope_as = memento_mori_ig
 			leader = {
