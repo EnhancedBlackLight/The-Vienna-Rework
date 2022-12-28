@@ -1,8 +1,12 @@
 # Scales with how much population is under low pop threshold
 low_pop_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_accepted_birth_rate_mult = 0.35
+	state_migration_pull_mult = 1.0
 }
 
 high_pop_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_birth_rate_mult = -0.15
+	state_migration_pull_mult = -1.0
 }
