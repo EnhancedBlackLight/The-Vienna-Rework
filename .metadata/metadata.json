@@ -1,6 +1,6 @@
 {
-  "name" : "The Vienna Rework",
-  "id" : "vr.base",
+  "name" : "The Vienna Rework - DEV VERSION",
+  "id" : "vr.dev",
   "version" : "1.0.2",
   "supported_game_version" : "1.1.*",
   "short_description" : "",
