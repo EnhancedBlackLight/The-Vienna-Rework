@@ -223,6 +223,9 @@
 	ethnicities = {
 		1 = caucasian
 	}
+	obsessions = {
+		beer
+	}
 }
 
 south_german={
@@ -421,6 +424,9 @@ south_german={
 	graphics = european
 	ethnicities = {
 		1 = caucasian
+	}
+	obsessions = {
+		beer
 	}
 }
 
