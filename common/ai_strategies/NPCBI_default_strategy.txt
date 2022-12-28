@@ -4,8 +4,8 @@ ai_strategy_default = {
 	icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds" # Never shown
 
 	desired_tax_level = medium
-	max_tax_level = high
-	min_tax_level = low
+	max_tax_level = very_high
+	min_tax_level = very_low
 	
 	undesirable_infamy_level = 50
 	unacceptable_infamy_level = 100		
@@ -289,6 +289,20 @@ ai_strategy_default = {
 	aggression = {
 		value = 0
 
+		# AI should be aggressive against countries it has claims on if they have a larger army (WIP)
+		if = {
+			limit = {
+				can_reach_target_country = yes
+				scope:target_country = { 
+					any_scope_state = {
+						root = { has_claim = prev }
+					}	
+				country_rank >= scope:target_country.country_rank
+				}
+			}
+			add = 20
+		}
+			
 		# Higher aggression against pariah countries
 		if = {
 			limit = {
@@ -722,6 +736,17 @@ ai_strategy_default = {
 	}
 
 	strategic_region_scores = {
+		region_arabic = {
+			if = {
+				limit = { # Great Powers care about Egyptian-Ottoman conflict in Arabia early game
+					exists = c:TUR
+					c:TUR = { has_journal_entry = je_sick_man_syria }
+					country_rank = rank_value:great_power
+					navy_size >= 50
+				}
+				add = 1000
+			}
+		}
 		region_japan = {	
 			if = {
 				limit = { # Great Powers should try to open Japan
@@ -928,7 +953,7 @@ ai_strategy_default = {
 				limit = {
 					has_variable = monroe_doctrine	
 				}
-				add = 100
+				add = 1000
 			}			
 		}
 		region_great_plains = {
@@ -1056,6 +1081,19 @@ ai_strategy_default = {
 		befriend = {
 			value = 200
 			
+			# AI should be not be friendly with countries it has claims on
+			if = {
+				limit = {
+					can_reach_target_country = yes
+					scope:target_country = { 
+						any_scope_state = {
+							root = { has_claim = prev }
+						}	
+					}
+				}
+				subtract = 100
+			}
+		
 			if = {
 				limit = {	
 					country_rank <= scope:target_country.country_rank
@@ -1122,6 +1160,19 @@ ai_strategy_default = {
 		reconcile = {
 			value = 0
 
+			# AI should not reconcile with countries it has claims on
+			if = {
+				limit = {
+					can_reach_target_country = yes
+					scope:target_country = { 
+						any_scope_state = {
+							root = { has_claim = prev }
+						}	
+					}
+				}
+				subtract = 100
+			}
+			
 			if = {
 				limit = {
 					OR = {
@@ -1182,6 +1233,19 @@ ai_strategy_default = {
 		}		
 		protect = {
 			value = 0
+			
+			# AI should not protect countries it has claims on
+			if = {
+				limit = {
+					can_reach_target_country = yes
+					scope:target_country = { 
+						any_scope_state = {
+							root = { has_claim = prev }
+						}	
+					}
+				}
+				subtract = 100
+			}
 			
 			if = {
 				limit = {
@@ -1266,6 +1330,19 @@ ai_strategy_default = {
 		antagonize = {
 			value = 0
 			
+			# AI should be antagonistic towards countries it has claims on
+			if = {
+				limit = {
+					can_reach_target_country = yes
+					scope:target_country = { 
+						any_scope_state = {
+							root = { has_claim = prev }
+						}	
+					}
+				}
+				add = 50
+			}
+      
 			if = {
 				limit = {
 					countries_are_valid_rivals = yes
@@ -1399,6 +1476,19 @@ ai_strategy_default = {
 		conquer = {
 			value = 0
 	
+			# AI should want to conquer countries it has claims on
+			if = {
+				limit = {
+					can_reach_target_country = yes
+					scope:target_country = { 
+						any_scope_state = {
+							root = { has_claim = prev }
+						}	
+					}
+				}
+				add = 50
+			}
+			
 			if = {
 				limit = {
 					can_reach_target_country = yes
@@ -1676,12 +1766,36 @@ ai_strategy_default = {
 		dominate = {
 			value = 0		
 			
+			# AI should want to conquer countries it has claims on, not dominate
+			if = {
+				limit = {
+					can_reach_target_country = yes
+					scope:target_country = { 
+						any_scope_state = {
+							root = { has_claim = prev }
+						}	
+					}
+				}
+				subtract = 50
+			}
+			
 			if = {
 				limit = {
 					scope:target_country = { is_subject_of = root }	
 				}
 				add = 100
 			}			
+      
+			if = {
+				limit = {
+					scope:target_country = { 
+						is_subject_of = root
+						relations:root < relations_threshold:cordial 
+						scope:target_country.country_rank < rank_value:major_power
+					}
+				}
+				add = 50
+			}	
 			
 			if = {
 				limit = {
@@ -1853,9 +1967,9 @@ ai_strategy_default = {
 					can_reach_target_state = yes			
 				}
 				add = {
-					value = 20
+					value = 40
 				
-					add = {
+					subtract = { #AI should want to conquer more smaller states, not less large states
 						value = scope:target_state.state_population
 						divide = 100000
 						max = 20						
@@ -1912,9 +2026,9 @@ ai_strategy_default = {
 					scope:target_state = { is_homeland_of_country_cultures = root }				
 				}
 				add = {
-					value = 10
+					value = 20
 				
-					add = {
+					subtract = { #AI should want to conquer more smaller states, not less large states
 						value = scope:target_state.state_population
 						divide = 100000
 						max = 10						
@@ -2066,8 +2180,38 @@ ai_strategy_default = {
 				multiply = 0
 			}				
 			
+			if = {
+				limit = {
+					has_strategic_land_adjacency = scope:target_state
+				}
+				multiply = 1.5
+			}
+			
+			if = {
+				limit = {
+					NOT = {
+						has_strategic_land_adjacency = scope:target_state
+					}
+				}
+				multiply = 0.5
+			}
+		
+			if = {
+				limit = {
+					scope:target_state = { is_homeland_of_country_cultures = root }
+				}
+				multiply = 1.25
+			}
+
+			if = {
+				limit = {
+					can_reach_target_state = no
+				}
+				multiply = 0
+			}
+			
 			min = 0
-			max = 100			
+			max = 200			
 		}
 		
 		return_state = {
@@ -2098,9 +2242,18 @@ ai_strategy_default = {
 			
 			if = {
 				limit = {
-					has_strategic_adjacency = scope:target_state
+					can_reach_target_country = yes
+					is_country_type = unrecognized
+					scope:target_country = { is_country_type = unrecognized }						
 				}
-				multiply = 1.5
+				add = 50
+			}
+			
+			if = {
+				limit = {
+					has_strategic_land_adjacency = scope:target_state
+				}
+				multiply = 2
 			}
 		
 			if = {
@@ -2112,7 +2265,9 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					can_reach_target_state = no
+					NOT = {
+						has_strategic_adjacency = scope:target_state
+					}
 				}
 				multiply = 0
 			}
@@ -2202,7 +2357,7 @@ ai_strategy_default = {
 						state_region = s:STATE_SHAOZHOU
 					}					
 				}
-				add = 100
+				add = 1000
 			}	
 
 			if = {
@@ -2229,6 +2384,14 @@ ai_strategy_default = {
 					can_reach_target_state = no
 				}
 				multiply = 0
+			}
+
+			if = {
+				limit = {
+					has_claim = scope:target_state
+					scope:target_country = { has_treaty_port_in_country = root }
+				}
+				add = 25
 			}			
 
 			min = 0
@@ -2400,6 +2563,13 @@ ai_strategy_default = {
 				multiply = 0.5
 			}	
 
+			if = {
+				limit = {
+					can_reach_target_country = no
+				}
+				multiply = 0
+			}
+			
 			min = 0
 			max = 100			
 		}	
