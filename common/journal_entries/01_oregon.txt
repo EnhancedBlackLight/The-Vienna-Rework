@@ -94,6 +94,26 @@
 						}
 					}
 				}
+				s:STATE_WYOMING = {
+					any_scope_state = {
+						owner = {
+							OR = {
+								c:GBR = THIS
+								is_subject_of = c:GBR
+							}
+						}
+					}
+				}
+				s:STATE_MONTANA = {
+					any_scope_state = {
+						owner = {
+							OR = {
+								c:GBR = THIS
+								is_subject_of = c:GBR
+							}
+						}
+					}
+				}
 			}
 			c:GBR = { trigger_event = { id = oregon.2 } }
 		}
