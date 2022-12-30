@@ -54,12 +54,12 @@ NDiplomacy = {
 
 ### Pop Growth Constants
 @min_birthrate = 0.0030 #original 0.0020
-@max_birthrate = 0.0100 #original 0.0050
+@max_birthrate = 0.0150 #original 0.0050
 @min_mortality = 0.0005
 @max_mortality = 0.0070
 @pop_growth_sol_equilibrium = 8							# Equilibrium is where (with no birthrate/death-rate mods) growth is stagnant
-@pop_growth_sol_delta_cap = 20							# SoL Delta Cap is where net growth stops increasing with rising SoL, i.e. both drop at the same pace
-@pop_growth_sol_cap = 40								# SoL Cap is where they birthrate/death-rate stop dropping
+@pop_growth_sol_delta_cap = 40							# SoL Delta Cap is where net growth stops increasing with rising SoL, i.e. both drop at the same pace
+@pop_growth_sol_cap = 60								# SoL Cap is where they birthrate/death-rate stop dropping
 
 @mortality_at_equilibrium = @[max_birthrate-(pop_growth_sol_equilibrium*(max_birthrate-min_birthrate)/pop_growth_sol_cap)]
 @birthrate_at_delta_cap = @[max_birthrate-(pop_growth_sol_delta_cap*(max_birthrate-min_birthrate)/pop_growth_sol_cap)]
@@ -79,6 +79,39 @@ NPops = {
 	OBSESSION_SPAWN_CHANCE = 0.8				# Per year (1.0 = 1%), multiplied by goods supply and market size mult #default 0.1
 
 	MIGRATION_PULL_FROM_EMPTY_STATE = 100 #Paradox mistake???
+
+	#Cultural migration tweaks
+	# General factors for how many pops will migrate
+	MIGRATION_PULL_HIGH_THRESHOLD = 1.25						#	State must have a migration pull of at least market average * this to get economic immigration
+	MIGRATION_PULL_LOW_THRESHOLD = 0.75							# State must have a migration pull of less or equal than market average * this to get full amount of emigration
+	ECONOMIC_MIGRATION_BASE = 0.02								# Base amount of a pop that wants to move for economic reasons
+	ECONOMIC_MIGRATION_FROM_SOL_DIFFERENCE = 0.01				# Each point of difference of pop SoL to the market's average SoL makes this fraction of the pop want to economically migrate (in %)
+	ECONOMIC_MIGRATION_STATE_POPULATION_THRESHOLD = 100000				# States with less pops than this have reduced economic emigration numbers to avoid total depopulation
+	CULTURAL_MIGRATION_BASE = 0.05								# Base amount of a pop that wants to move due to mass migration
+	CULTURAL_MIGRATION_FROM_RADICALS = 0.05						# At 100% radicals, this fraction of the pop wants to mass migrate
+	MIGRATION_UNEMPLOYMENT_MULT = 10.0							# Amount of migration from SoL is increased by this when a pop is unemployed
+	MIGRATION_MIN_STATE_POPS = 20000							# A state with less pops than this will not get emigration
+	MIGRATION_MIN_POP_AMOUNT = 1								# No less than this amount of a pop can migrate each week (if any migration at all should happen)
+	MIGRATION_MAX_POP_AMOUNT = 10000							# No more than this amount of a pop can migrate each week
+	MIGRATION_MAX_PER_STATE_BASE = 500							# No more than this amount of people can move from or to a state in a single week (base)	
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 10					# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.05	# The amount of unemployed workers in a state * this value is added to how many people can move from it
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.05	# The amount of unemployed workers in a state * this value is removed from how many people can move to it
+	MIGRATION_MAX_PER_STATE_CULTURAL_MIGRATION_MULT = 8.0		# Weekly migration caps are multiplied by this amount by this for cultural-type migration
+	MIGRATION_AVERAGE_ATTRACTION_EMIGRATION_MULT = 0.25			# States with an average migration attraction gets this multiplier to emigrants
+	
+	# Factors for creating mass migration targets
+	MIGRATION_CULTURE_TARGET_TURMOIL = 0.05				# Create one migration target for this amount of cultural turmoil
+	MIGRATION_CULTURE_TARGET_MIN_PULL = 10				# A state must have at least this in migration pull to be picked as a mass migration target
+	MIGRATION_CULTURE_TARGET_MIN_MARKET_POPS = 100000	# A market must have at least this many possible migrants to trigger a mass migration
+	MIGRATION_CULTURE_TARGET_MIN_STATE_POPS = 10000		# A state must have at least this many possible migrants for mass emigration to occur
+	MIGRATION_CULTURE_TARGET_MIN_MARKET_ACCESS = 0.5	# A state must have at least this much market access to their market to be a mass migration target
+	MIGRATION_CULTURE_TARGET_MIN_ARABLE_LAND = 50		# A state must have at least this much arable land to be a mass migration target
+	MIGRATION_CULTURE_TARGET_APPEAR_CHANCE = 2  		# Per week (1 = 1%)
+	MIGRATION_CULTURE_TARGET_APPEAR_CHANCE_STRUGGLING_FACTOR = 1 # Chance increases by this for each point of SoL below 10
+	MIGRATION_CULTURE_TARGET_APPEAR_CHANCE_STARVING_FACTOR = 1.5 # Chance increases by this for each point of SoL below 5 (added on top of struggling factor)
+	MIGRATION_CULTURE_TARGET_RANDOM_FACTOR = 4			# The higher this is, the more random the selection of mass migration targets will be
+	MIGRATION_CULTURE_TARGET_DURATION = 1				# In years
 }
 ### End Pop Growth Constant defines
 
