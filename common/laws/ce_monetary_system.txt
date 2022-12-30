@@ -848,7 +848,7 @@ law_ce_advanced_labour_standard = {
 	}
 	
 	unlocking_technologies = {
-		macroeconomics
+		international_exchange_standards
 	}
 	
 	unlocking_laws = {
