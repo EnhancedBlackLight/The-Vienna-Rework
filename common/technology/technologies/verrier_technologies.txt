@@ -1,0 +1,114 @@
+﻿############################
+# Morgenroete TECHNOLOGIES #
+############################
+
+#by Marco Dandolo
+
+########################
+
+verrier_physics_tech = {
+	# Unlocks production method Basic Observatory
+	# Unlocks decision: Astronomic observation
+
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/verrier_physics_tech.dds"
+	category = production
+	
+	modifier = {
+	}
+	
+	unlocking_technologies = {
+	}
+}
+
+atmospheric_engine = {
+	# Unlocks Motor Industry
+	# Unlocks Atmospheric Engine Pump PM in Coal Mine, Iron Mine, Lead Mine, Sulfur Mine
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/atmospheric_engine.dds"
+	category = production
+	
+	unlocking_technologies = {
+		shaft_mining
+		verrier_physics_tech
+	}
+}
+
+verrier_astronomy_tech = {
+	# Unlocks Advanced Observatory
+	# Unlocks Journal Entries and Decisions
+
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/verrier_astronomy_tech.dds"
+	category = production
+	
+	modifier = {
+	}
+	
+	unlocking_technologies = {
+		verrier_physics_tech
+		mechanical_tools
+	}
+}
+
+verrier_electromagnetism_tech = {
+	# No effect at the moment
+
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/verrier_electromagnetism_tech.dds"
+	category = production
+	
+	modifier = {
+	}
+	
+	unlocking_technologies = {
+		verrier_astronomy_tech
+	}
+}
+
+electrical_generation = {
+	# Unlocks Power Plants
+	# Unlocks Electric Sewing Machines PM and Automatic Power Looms PM in Textile Mills
+	# Unlocks Brine Electrolysis PM in Chemical Plants
+	# Unlocks Electric Fencing PM and Refrigerated Storage PM in Livestock Ranches
+	# Unlocks Refrigerated Storage PM in Fishing Wharfs
+	# Unlocks Electric Saw Mills PM in Logging Camps
+	# Unlocks Electric Streetlights PM in Urban Centers
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/electrical_generation.dds"
+	category = production
+	
+	unlocking_technologies = {	
+		verrier_electromagnetism_tech
+		rotary_valve_engine
+	}
+}
+
+combustion_engine = {
+	# Unlocks Automobile Production PM in Motor Industries
+	# Unlocks Diesel Pump PM in Coal, Iron, Lead, Sulfur Mines
+	# Unlocks Chainsaws PM in Logging Camps
+	# Unlocks Combustion Derricks PM in Oil Rigs
+	# Unlocks Public Motor Carriages PM in Urban Centers
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/combustion_engine.dds"
+	category = production
+	
+	unlocking_technologies = {	
+		rotary_valve_engine
+		verrier_electromagnetism_tech
+	}
+}
+
+verrier_astro_physics_tech = {
+	# Unlocks Journal Entries for Einstein, Lemaître and the Great Debate
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/verrier_astro_physics_tech.dds"
+	category = production
+
+	can_research = no #only via journal entry
+	
+	modifier = {
+		country_prestige_mult = 0.05
+	}
+}
