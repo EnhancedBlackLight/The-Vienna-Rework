@@ -1,0 +1,40 @@
+﻿gov_parliamentary_dictatorship = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_LORD_PROTECTOR"
+	female_ruler = "RULER_TITLE_LADY_PROTECTOR"
+	
+	possible = {
+		has_law = law_type:law_parliamentary_republic
+		OR = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_one_party_state
+		}
+	}
+}
+
+gov_parliamentary_council = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_COUNCIL_LEADER"
+	female_ruler = "RULER_TITLE_COUNCIL_LEADER"
+
+	possible = {
+		has_law = law_type:law_parliamentary_republic
+		has_law = law_type:law_corporate_council
+		country_has_voting_franchise = no
+	}
+}
+
+gov_parliamentary_oligarchy = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_CHANCELLOR"
+	female_ruler = "RULER_TITLE_CHANCELLOR"
+
+	possible = {
+		has_law = law_type:law_parliamentary_republic
+		country_has_voting_franchise = no
+		NOT = { has_law = law_type:law_corporate_council } #NEW
+	}
+}

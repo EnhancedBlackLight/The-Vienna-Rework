@@ -1,0 +1,32 @@
+coa_undemocratic_monarchy_trigger = {
+	coa_monarchy_trigger = yes
+	OR = {
+		has_law = law_type:law_autocracy
+		has_law = law_type:law_elder_council
+		has_law = law_type:law_oligarchy
+		has_law = law_type:law_one_party_state #NEW
+	}
+}
+
+coa_autocracy_trigger = {
+    OR = { #NEW
+        has_law = law_type:law_one_party_state
+        has_law = law_type:law_autocracy
+    }
+}
+
+coa_fascist_trigger = {
+	# A fascist can lead a monarchy or a theocracy without the government changing form. The Papal State should retain the same flag even if the Pope's a fascist, for example.
+	# A fascist can also lead a democracy without the democracy immediately becoming fascist. If the fascist successfully implements his wildest dreams and becomes a dictatorship, then sure the government will become Fascist, but while there's still voting the government shouldn't count as (fully) fascist yet.
+
+	# (NEW) The comments from the guy at paradox above me make sense in the game's scope, but with the inclusion of a democratic distribution of power which changes its status of elective dictatorship there now needs to be an extra trigger to see if the Economic Council law is implemented. If that doesn't make sense, basically the leader of the economic council is an elective dictator in council / elective republics (essentially complete power while elected yet doesn't hold office for life). In the newly implemented Fascist Social Republic, the leader of the council is installed as permanent dictator while the council is still completely democratically elected. Essentially this is just a long winded rant about how poorly this ideology was done compared to Vic2 (they also butchered the anarcho-liberals), but oh well. Of course, if they still end up going autocracy or one party state then the flag will change.
+
+	OR = { #NEW
+        coa_dictatorship_trigger = yes
+        has_law = law_type:law_corporate_council
+    }
+	any_scope_character = {
+		is_ruler = yes
+		has_ideology = ideology_fascist
+    }
+}

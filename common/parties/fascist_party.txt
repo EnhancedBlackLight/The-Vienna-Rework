@@ -1,4 +1,4 @@
-﻿fascist_party = {
+fascist_party = {
 	color = { 50 60 198 }
 	name = {
 		first_valid = {
@@ -242,7 +242,7 @@
 			country_has_voting_franchise = yes
 		}
 	}
-	
+
 	join_weight = {
 		value = {
 			value = -5
@@ -316,7 +316,7 @@
 						has_ideology = ideology_reformer
 						has_ideology = ideology_abolitionist
 						has_ideology = ideology_pacifist
-					}	
+					}
 				}
 			}
 			add = {
@@ -333,14 +333,14 @@
 				desc = "from_trade_unions"
 			}
 		}
-		if = { # free trade advocates don't love protectionism
+		if = { # free trade advocates don't love protectionism (NEW) they actually really hate it (to prevent market libs from associating with fascist parties 💀
 			limit = {
 				leader = {
 					has_ideology = ideology_market_liberal
 				}
 			}
 			add = {
-				value = -2
+				value = -5
 				desc = "from_market_liberal"
 			}
 		}
@@ -360,7 +360,7 @@
 				has_ideology = ideology_patriotic
 			}
 			add = {
-				value = 4
+				value = 5 #4 -> 5
 				desc = "from_patriot"
 			}
 		}
@@ -437,16 +437,6 @@
 				desc = "from_no_proportional_or_per_capita_tax"
 			}
 		}
-		if = { #NFM
-			limit = {
-				leader = {
-					has_variable = politically_neutral_var
-				}
-			}
-			add = {
-				value = -10
-				desc = "Politically Neutral"
-			}
-		}
 	}
 }
+

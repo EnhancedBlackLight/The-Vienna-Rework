@@ -1,0 +1,230 @@
+﻿l_english:
+# Laws
+law_one_party_state:0 "One Party State"
+law_one_party_state_desc:0 "Political power is owned solely by the ruling party with all other parties outlawed. Swearing an oath to the party is a requirement for political office.
+
+law_corporate_council:0 "Economic Council"
+law_corporate_council_desc:0 "Government is split into branches of the economy, with the workers of each branch electing their own leader. The leaders of each branch form a council where policy is discussed. The leader of the nation is typically the leader of the council.
+
+law_corporotocracy:0 "Corporatocracy"
+law_corporotocracy_desc:0 "A system with any official government minimized, ran entirely by massive capitalist conglomerates."
+
+law_collectivized_economy:0 "Collectivized Economy"
+law_collectivized_economy_desc:0 "An economic system where the workers directly own and manage the means of production."
+
+law_corporatist_economy:0 "Corporatist Economy"
+law_corporatist_economy_desc:0 "A blended, top-down economy where industries deemed important by the government are nationalized. Agriculture may be allowed to be collectivized in non-socialist states."
+
+# Government Types
+gov_fascist_state:0 "Fascist State"
+gov_fascist_state_desc:2 "This is a [concept_government_type] defined by its adherence to fascist [concept_ideology]. It is typically led by a [Concept('concept_ruler','Dictator')] with some variance in its power structure.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_fascist_social_republic:0 "Fascist Social Republic"
+gov_fascist_social_republic_desc:2 "This is a [concept_government_type] defined by its adherence to fascist [concept_ideology]. It is typically led by an [Concept('concept_election','$concept_elected$')] [Concept('concept_ruler','Dictator')] who holds power over an [Concept('concept_election','$concept_elected$')] corporate council.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_council_syndicalist_republic:0 "Syndicalist Council Republic"
+gov_council_syndicalist_republic_desc:2 "This is a [concept_government_type] where the [concept_country] is ruled by a council formed by the leaders of economic branches who are [Concept('concept_election','$concept_elected$')] by the workers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_soviet_syndicalist_republic:0 "Syndicalist Soviet Republic"
+gov_soviet_syndicalist_republic_desc:2 "This is a [concept_government_type] where the [concept_country] is ruled by a Soviet formed by the leaders of economic branches who are [Concept('concept_election','$concept_elected$')] by the workers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_corporotocracy:0 "Corporate Economic Zone"
+gov_corporotocracy_desc:2 "This is a [concept_government_type] where the [concept_country] has little formal government structure. The [concept_country] is ruled with a light hand by a conglomerate of corporate figureheads.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_corporate_oligarchy:0 "Corporate State"
+gov_corporate_oligarchy:2 "This is a [concept_government_type] where the [concept_country] is dominated by an unelected conglomerate of corporate figureheads.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_council_syndicalist_dictatorship:0 "Syndicalist Council Dictatorship"
+gov_council_syndicalist_republic_desc:2 "This is a [concept_government_type] where the [concept_country] is ruled by a [Concept('concept_ruler','Dictator')] [Concept('concept_election','$concept_elected$')] from a council formed by the leaders of economic branches who are [Concept('concept_election','$concept_elected$')] by the workers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_soviet_syndicalist_dictatorship:0 "Syndicalist Soviet Dictatorship"
+gov_council_syndicalist_republic_desc:2 "This is a [concept_government_type] where the [concept_country] is ruled by a [Concept('concept_ruler','Dictator')] [Concept('concept_election','$concept_elected$')] from a Soviet formed by the leaders of economic branches who are [Concept('concept_election','$concept_elected$')] by the workers.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+
+gov_presidential_council:0 "Presidential Council"
+gov_presidential_council_desc:0 "This is a [concept_government_type] where the [concept_country] is ruled by a [Concept('concept_ruler','$RULER_TITLE_COUNCIL_PRESIDENT$')] elected from the country's economic council."
+
+gov_parliamentary_council:0 "Parliamentary Council"
+gov_parliamentary_council_desc:0 "This is a [concept_government_type] where the [concept_country] is ruled by a [Concept('concept_ruler','$RULER_TITLE_COUNCIL_LEADER$')] elected from the country's economic council."
+
+# Ideologies
+ideology_market_anarchist:0 "Market Anarchist"
+ideology_market_anarchist_desc:0 "#lore This leader believes in the near eradication of the government, instead believing in rule through a purely capitalist system. #!"
+
+ideology_anarchist:0 "Social Anarchist"
+ideology_anarchist_desc:0 "#lore This leader seeks the abolishment of hierarchy, authority and the state, leaving people to govern themselves. #!"
+
+ideology_market_oligarch:0 "Market Oligarch"
+ideology_market_oligarch_desc:0 "#lore This leader believes in the eradication of government, instead believing in complete domination by corporations. #!"
+
+# Misc
+bg_power:0 "Power Plants"
+
+# Ruler Titles
+RULER_CEO:0 "C.E.O."
+RULER_TITLE_COUNCIL_PRESIDENT:0 "Council President"
+RULER_TITLE_COUNCIL_LEADER:0 "Council Leader"
+RULER_TITLE_COUNCIL_DICTATOR:0 "Council Dictator"
+
+# Political Parties
+party_nazis:0 "National Socialist German Workers' Party"
+party_corporatocracy_inc:0 "Corporatocracy, Inc."
+
+from_corpoativists:0 "From Corporatocracy Supporters"
+from_corpo_liberals:0 "From Market Liberalism"
+from_corpo_liberal_support:0 "From Market Liberal Support"
+from_against_corporatocracy:0 "From Against Corporatocracy"
+
+# Journal Entries
+
+je_corporatocracy_1:0 "Path to Corporatocracy"
+je_corporatocracy_1_reason:0 "The state has long impeded the progress of the common man, be it in the form of Kings or Elected Officials. The rugged individualists of society must no longer shoulder the weight of societal conformity."
+corporatocracy_1_tt:0 "Has a #bold Market Anarchist#! or #bold Market Oligarch#! leader!"
+
+je_corporatocracy_2:0 "Bolstering the Markets"
+je_corporatocracy_2_reason:0 "A market divided against itself cannot profit - we will ensure the rugged individualists bring up the rest."
+corporatocracy_2.tt:0 "Two interest groups who have a #bold Market Anarchist#!, #bold Market Oligarch#!, or #bold Market Liberal#! leader are in government and have at least 15% clout each. Alternatively, pass Corporatocracy. \n\n #bold Of course, getting public support would ensure there is no serious backlash rather than passing the law outright...#!"
+
+# Modifiers
+
+rejected_corporatocracy:0 "Rejected Corporatocracy"
+corporate_heads_assassinated:0 "Corporate Leaders Assassinated"
+hero_of_the_proletariat:0 "Hero of the Proletariat"
+mass_civil_unrest_corpo:0 "Massive Civil Unrest"
+economic_council_mod:0 "Economic Council Debated"
+eloquently_spoken:0 "Eloquently Spoken"
+ops_vanguard_mod:0 "For the Party!"
+ops_normal_mod:0 "For our Security!"
+ops_fascist_mod:0 "For the Nation!"
+ce_vanguard_mod:0 "Reluctant Agreeance"
+ce_success_mod:0 "Break the Chains"
+ce_failure_mod:0 "Who asked?"
+cpe_success_mod:0 "Collaborative Effort"
+cpe_failure_mod:0 "Corporatist Opposition"
+cpe_gridlock_mod:0 "Gridlocked Debates"
+
+# Corporatocracy Event Chain
+
+corporatocracy_events.1.t:0 "The Idea of Radical Capitalism"
+corporatocracy_events.1.desc:0 "The notion of a radical form of capitalism is not new - at least, not for [SCOPE.sCharacter('corporativist_leader').GetFullName]. Their charisma has attracted many followers, enough to determine their ideology for the forseeable future."
+corporatocracy_events.1.f:0 "The time to act is now! Let this be our chance to provide true meritocracy, true individualism!"
+corporatocracy_events.1.a:0 "Let every man be free to do as he pleases, shrug off the burden of government from the free market!"
+corporate_anarchy.tt:0 "[SCOPE.sCharacter('corporativist_leader').GetFullName] will become a Market Anarchist and [SCOPE.gsInterestGroup('corporativist_ig').GetName] will always select Market Anarchist leaders.
+corporatocracy_events.1.b:0 "Who is to say that the captains of industry don't know what's best for all? The men who are able to organize workplaces are surely wise enough to rule a nation!"
+corporate_oligarchy.tt:0 "[SCOPE.sCharacter('corporativist_leader').GetFullName] will become a Market Oligarch and [SCOPE.gsInterestGroup('corporativist_ig').GetName] will always select Market Oligarch leaders."
+corporatocracy_events.1.c:0 "What does it matter who runs the nation outside of the businesses? Let the businesses run as they should, that's what matters!"
+corporate_liberalism.tt:0 "[SCOPE.sCharacter('corporativist_leader').GetFullName] will become a Market Liberal and [SCOPE.gsInterestGroup('corporativist_ig').GetName] will always select Market Liberal leaders."
+corporatocracy_events.1.d:0 "Perhaps the businesses are good at running themselves, but they can't run a nation!"
+corporate_rejection.tt:0 "[SCOPE.sCharacter('corporativist_leader').GetFullName] will reject the notion of Corporatocracy, leaving a bad image of the [SCOPE.gsInterestGroup('corporativist_ig').GetName]."
+
+corporatocracy_events.2.t:0 "Manipulating the Markets"
+corporatocracy_events.2.desc:0 "With the emergence of radical capitalism, the [SCOPE.gsInterestGroup('new_corporativist_ig').GetName] have garnered curiosity over our ideas, offering to hear [SCOPE.sCharacter('corporativist_leader').GetFullName] out."
+corporatocracy_events.2.f:0 "When you talk of these things like 'an unhindered market', 'rampant individualism', and 'freedom from government burden', how do you expect to accomplish them?"
+corporatocracy_events.2.a:0 "We seek the near abolishment of the state - to let each man be free as they please."
+corporate_anarchy2.tt:0 "[SCOPE.sCharacter('new_corporativist_leader').GetFullName] will become a Market Anarchist and [SCOPE.gsInterestGroup('new_corporativist_ig').GetName] will always select Market Anarchist leaders."
+corporatocracy_events.2.b:0 "The government has been long in the way of individualists such as you an I - with it gone, there will be nothing to stop us."
+corporate_oligarchy2.tt:0 "[SCOPE.sCharacter('new_corporativist_leader').GetFullName] will become a Market Oligarch and [SCOPE.gsInterestGroup('new_corporativist_ig').GetName] will always select Market Oligarch leaders."
+corporatocracy_events.2.c:0 "We mean to lobby the government into instituting more market-friendly polices."
+corporate_liberalism2.tt:0 "[SCOPE.sCharacter('new_corporativist_leader').GetFullName] will become a Market Liberal and [SCOPE.gsInterestGroup('new_corporativist_ig').GetName] will always select Market Liberal leaders."
+corporatocracy_events.2.d:0 "Bore them with a long, arduous speech about vague principles while talking in circles."
+corporate_neutrality.tt:0 "They were utterly unimpressed."
+corporatocracy_events.2.e:0 "We mean to assert complete and total control, dominating the lives of the many for the very few. Their lives don't matter, only ours do!"
+corporate_rejection2.tt:0 "The [SCOPE.gsInterestGroup('new_corporativist_ig').GetName] will be completely disgusted with the idea of Corporatocracy, rejecting outright any form of Free Market Capitalism."
+
+corporatocracy_events.3.t:0 "Dealing with the Devil"
+corporatocracy_events.3.desc:0 "The [SCOPE.gsInterestGroup('corpo_bourgs').GetName] are an unknown variable in the Corporatocratic movement. Perhaps it is time to sway their leader in our favor."
+corporatocracy_events.3.f:0 "There are many benefits to a free and open market, as I'm sure you're aware. The unimpeded trade of luxury goods and items, lowering their price down to affordable levels, for example. I'm certain you understand where we're coming from."
+corporatocracy_events.3.a:0 "Indeed, we do."
+petite_liberalism.tt:0 "The [SCOPE.gsInterestGroup('corpo_bourgs').GetName] will always become Market Liberals."
+corporatocracy_events.3.b:0 "I'm afraid it will take more than just luxury goods to sway us."
+petite_neutrality.tt:0 "The [SCOPE.gsInterestGroup('corpo_bourgs').GetName] will be unimpressed."
+corporatocracy_events.3.c:0 "Who do you take us for?! Do you think the backbone of the nation's pride will be swayed by bribes?!"
+petite_rejection.tt:0 "The [SCOPE.gsInterestGroup('corpo_bourgs').GetName] will reject Corporatocracy completely."
+
+corporatocracy_events.4.t:0 "Corporate Revolution"
+corporatocracy_events.4.desc:0 "With the passing of the new law, the powerful capitalists have been handed complete control. This has not been accepted by everyone, however..."
+corporatocracy_events.4.f:0 "Friends, supporters, individualists! What we have done today will be talked about in our history books for eons to come! When the average man sits by his fireplace, counting the money he has made, he will know of this day!"
+corporatocracy_events.4.a:0 "The Market Anarchists and Liberals were able to reform society into their individualist utopia - but not without civil unrest."
+corporate_revolution.tt:0 "Laissez-Faire, Free Trade, Private Schools, Private Healthcare, and Child Labor will be enacted."
+corporatocracy_events.4.b:0 "The Market Oligarchs were able to dominate the decision process, much to the ire of the masses."
+corporate_domination.tt:0 "Oligarchy, Laissez-Faire, Free Trade, and Child Labor will be enacted."
+corporatocracy_events.4.c:0 "The [SCOPE.gsInterestGroup('ig_corporate_vanquisher').GetName] under [SCOPE.sCharacter('proletarian_hero').GetFullName] lead a mass assassination campaign against our leaders, leading to widespread opposition support."
+
+# Law Events
+
+pelo_law_events.1.t:0 "Extremist Council Debate"
+pelo_law_events.1.desc.a:0 "A heated debate about the Economic Council reform sparked between two opposing groups - yet, they found themselves agreeing on almost everything!"
+pelo_law_events.1.desc.b:0 "A heated debate about the Economic Council reform was sparked in government today. The leftists were able to fluently discuss the law's benefits and won the debate handily."
+pelo_law_events.1.desc.c:0 "[SCOPE.sCharacter('fc_leader_law').GetFullName] gave a rousing speech discussing the benefits of the upcoming Economic Council law."
+pelo_law_events.1.desc.d:0 "Debate sparked about the upcoming Economic Council reform. The general attitude was a positive one."
+pelo_law_events.1.f:0 "A system of voting by the people, for the people! We will see that the common man makes a difference in their own workplace!"
+pelo_law_events.1.a:0 "For the Nation and its People!"
+cc_horseshoe.tt:0 "Communists and Fascists agreeing for once? How unexpected!"
+pelo_law_events.1.b:0 "For the People!"
+cc_communists.tt:0 "Once they started talking, no one could shut them up."
+pelo_law_events.1.c:0 "For the Nation!"
+cc_fascists.tt:0 "It was such a great speech no one had any time to actually debate the law."
+pelo_law_events.1.d:0 "For a new day!"
+
+pelo_law_events.2.t:0 "The Party of the Revolution"
+pelo_law_events.2.desc:0 "The transition to a One Party State is certainly discussed within the nation, though often with hushed voices and whispers."
+pelo_law_events.2.f:0 "Comrades! Our fight for the workers was not an easy one! There are many forces at play who seek to undermine what we have done, but will we let them?! No, I say!"
+pelo_law_events.2.a:0 "To safeguard the revolution!"
+ops_jorjorwell.tt:0 "This reminds me of a certain book..."
+pelo_law_events.2.b:0 "For a more efficient system!"
+
+pelo_law_events.3.t:0 "For a Brighter and More Secure Future"
+pelo_law_events.3.desc:0 "The transition to a One Party State is certainly discussed within the nation, though often with hushed voices and whispers."
+pelo_law_events.3.f:0 "Brothers! Our nation is strong and secure! There are many who would see us fall, see us crumble! We will not let them!"
+pelo_law_events.3.a:0 "For the security of our nation!"
+pelo_law_events.3.b:0 "For the strength of our people!"
+
+pelo_law_events.4.t:0 "The Means of Production"
+pelo_law_events.4.desc:0 "With the success of the revolution, it's time to finally put the means of production in the hands of the workers."
+pelo_law_events.4.f:0 "Comrades! The means of production are ours! We must all cooperate if we are to prosper together!"
+pelo_law_events.4.a:0 "If we must..."
+ce_vanguard.tt:0 "The Vanguardists were really hoping for government intervention."
+pelo_law_events.4.b:0 "Our chains are broken!"
+pelo_law_events.4.c:0 "Wait, who asked for this again?"
+ce_whoasked.tt:0 "Why have your leaders abandoned you?"
+
+pelo_law_events.5.t:0 "An Economic Compromise"
+pelo_law_events.5.desc:0 "Debate among socialists often includes how to run the means of production once seized. It seems as though the more authoritarian and moderate sides have reached a compromise."
+pelo_law_events.5.fl:0 "Some industries are simply too volatile and important to be left unsupervised. It is for this reason our governing bodies should run them."
+pelo_law_events.5.a:0 "A compromise, but a good one."
+pelo_law_events.5.b:0 "The Vanguardists are completely on board."
+pelo_law_events.5.c:0 "The Communists accept the proposal."
+pelo_law_events.5.d:0 "We're having trouble finding out who asked."
+
+pelo_law_events.6.t:0 "Heated Economic Debate"
+pelo_law_events.6.desc:0 "The upcoming economic reform has sparked quite a bit of debate. Various groups from all positions seem to be placing their input."
+pelo_law_events.6.fl:0 "What we're proposing is an entirely unique economy, one that benefits everyone! Each industry will be owned by who is necessary for what is optimal for the nation!"
+pelo_law_events.6.a:0 "The Fascists support the new law."
+pelo_law_events.6.b:0 "The Fascists and Capitalists are in gridlock."
+pelo_law_events.6.c:0 "The Capitalists oppose the law."
+pelo_law_events.6.d:0 "The Fascists and Communists both support the new law."
+cpe_horseshoe.tt:0 "Promise you'll collectivize the farms?"
+pelo_law_events.6.e:0 "The Fascists and Communists win the debate against the Capitalists."
+pelo_law_events.6.f:0 "The Communists support the new law."
+pelo_law_events.6.g:0 "The Communists and Capitalists are in gridlock."
+pelo_law_events.6.h:0 "The Fascists and Capitalists win the debate against the Communists."
+cpe_capfas.tt:0 "Promise you'll promote private industry?"
+pelo_law_events.6.i:0 "The Fascists and Capitalists both support the new law."
+pelo_law_events.6.j:0 "The Capitalists support the new law."
+pelo_law_events.6.k:0 "The Capitalists and Communists are in gridlock."
+pelo_law_events.6.l:0 "The Communists oppose the law."
+pelo_law_events.6.m:0 "No strong proponents or opponents of the law lead to endless bickering."
+
+# Cut Events
+corporatocracy_events.5.t:0 "Market Crash!"
+corporatocracy_events.5.desc:0 "The general populace has not taken kindly to our new laws. With the passing of Corporatocracy, there has been nonstop rioting throughout the nation."
+corporatocracy_events.5.f:0 "The trade unions have organized one of the biggest strikes in history. The landowners are refusing to cooperate with the new system. Everything is not going to plan."
+corporatocracy_events.5.a:0 "The [SCOPE.gsInterestGroup('ig_corporate_vanquisher').GetName] under [SCOPE.sCharacter('proletarian_hero').GetName] lead a mass assassination campaign against our leaders, leading to widespread opposition support."
+corporatocracy_events.5.b:0 "[SCOPE.sCharacter('single_corpo_assassination_target').GetName] was caught in the riots and beaten to death."
+corporatocracy_events.5.c:0 "The Secret Police were able to prevent our leaders' deaths."
+
+# Easter Egg Stuff (yuo have been warned!)
+
+gov_1984:0 "1984"
+gov_1984_desc:0 "this is just like jorjor well's book, uhhhhh 1984"
+RULER_BB:0 "Big Brother"
+RULER_BS:0 "Big Sister"

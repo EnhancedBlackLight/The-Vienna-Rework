@@ -1,0 +1,359 @@
+law_interventionism = {
+	group = lawgroup_economic_system
+
+	icon = "gfx/interface/icons/law_icons/interventionism.dds"
+
+	progressiveness = 50
+
+	disallowing_laws = {
+		law_serfdom
+	}
+
+	on_activate = {
+	}
+
+	unlocking_technologies = {
+		manufacturies
+	}
+
+	modifier = {
+		state_aristocrats_investment_pool_contribution_add = 0.10
+		state_capitalists_investment_pool_contribution_add = 0.35
+
+		country_subsidies_all = yes
+	}
+
+	build_from_investment_pool = {
+		bg_agriculture
+		bg_plantations
+		bg_ranching
+		bg_manufacturing
+		bg_mining
+		bg_logging
+		bg_rubber
+		bg_whaling
+		bg_fishing
+		bg_oil_extraction
+		bg_infrastructure
+		bg_power #NEW
+		bg_government #NEW
+		bg_military #NEW
+	}
+
+	possible_political_movements = {
+		law_command_economy
+		law_agrarianism
+		law_laissez_faire
+	}
+}
+
+law_laissez_faire = {
+	group = lawgroup_economic_system
+
+	icon = "gfx/interface/icons/law_icons/laissez_faire.dds"
+
+	progressiveness = 100
+
+	disallowing_laws = {
+		law_serfdom
+		law_isolationism
+		law_council_republic #NEW
+	}
+
+	unlocking_technologies = {
+		international_trade
+	}
+
+	on_activate = {
+	}
+
+	modifier = {
+		country_loan_interest_rate_mult = -0.25
+
+		state_capitalists_investment_pool_contribution_add = 0.60
+
+		country_subsidies_bg_infrastructure = yes
+		country_subsidies_bg_trade = yes
+	}
+
+	build_from_investment_pool = {
+		bg_fishing
+        bg_infrastructure
+        bg_logging
+        bg_mining
+        bg_agriculture #NEW
+        bg_plantations #NEW
+		bg_ranching #NEW
+		bg_manufacturing
+		bg_rubber
+		bg_whaling
+		bg_oil_extraction
+		bg_power #NEW
+	}
+
+	possible_political_movements = {
+		law_interventionism
+		law_command_economy
+		law_agrarianism
+	}
+
+	ai_will_do = { #NEW
+        has_law = law_type:law_corporotocracy
+	}
+}
+
+law_corporatist_economy = { #NEW
+    group = lawgroup_economic_system
+
+    icon = "gfx/interface/icons/law_icons/corporatist_economy.dds"
+
+    progressiveness = 125
+
+    disallowing_laws = {
+        law_serfdom
+        law_corporotocracy
+    }
+
+    unlocking_technologies = {
+		central_planning
+    }
+
+    modifier = {
+        state_bureaucrats_investment_pool_contribution_add = 0.35
+        state_capitalists_investment_pool_contribution_add = 0.25
+        state_laborers_investment_pool_contribution_add = 0.10
+        state_farmers_investment_pool_contribution_add = 0.10
+        state_machinists_investment_pool_contribution_add = 0.10
+        state_clerks_investment_pool_contribution_add = 0.10
+        state_shopkeepers_investment_pool_contribution_add = 0.10
+        state_engineers_investment_pool_contribution_add = 0.10
+
+        country_subsidies_all = yes
+
+        state_radicals_from_sol_change_mult = 0.25
+
+        state_poor_expected_sol = 2
+        state_middle_expected_sol = 2
+    }
+
+    tax_modifier_very_low = {
+		tax_dividends_add = 0.45
+	}
+
+	tax_modifier_low = {
+		tax_dividends_add = 0.40
+	}
+
+	tax_modifier_medium = {
+		tax_dividends_add = 0.35
+	}
+
+	tax_modifier_high = {
+		tax_dividends_add = 0.30
+	}
+
+	tax_modifier_very_high = {
+		tax_dividends_add = 0.25
+	}
+
+	build_from_investment_pool = {
+        bg_fishing
+        bg_infrastructure
+        bg_logging
+        bg_mining
+        bg_agriculture
+        bg_plantations
+		bg_ranching
+		bg_manufacturing
+		bg_rubber
+		bg_whaling
+		bg_oil_extraction
+		bg_power
+		bg_government
+		bg_urban_facilities
+		bg_military
+	}
+
+	ai_will_do = {
+        OR = {
+            AND = {
+                exists = ruler
+                ruler = {
+                    has_ideology = ideology_fascist
+                }
+            }
+            AND = {
+                exists = ruler
+                ruler = {
+					OR = {
+						has_ideology = ideology_communist
+						has_ideology = ideology_vanguardist
+					}
+				has_law = law_type:law_corporate_council
+				}
+            }
+        }
+	}
+}
+
+law_command_economy = {
+	group = lawgroup_economic_system
+
+	icon = "gfx/interface/icons/law_icons/command_economy.dds"
+
+	progressiveness = 100
+
+	disallowing_laws = {
+		law_serfdom
+		law_anarchy #NEW
+		law_corporotocracy #NEW
+	}
+
+	unlocking_technologies = {
+		central_planning
+	}
+
+	on_activate = {
+		activate_law = law_type:law_graduated_taxation
+	}
+
+	modifier = {
+		country_mandate_subsidies = yes
+
+		state_tax_capacity_mult = 0.25
+		country_authority_mult = 0.25
+	}
+
+    tax_modifier_very_low = { #NEW
+		tax_dividends_add = 0.65
+	}
+
+	tax_modifier_low = { #NEW
+		tax_dividends_add = 0.60
+	}
+
+	tax_modifier_medium = { #NEW
+		tax_dividends_add = 0.55
+	}
+
+	tax_modifier_high = { #NEW
+		tax_dividends_add = 0.50
+	}
+
+	tax_modifier_very_high = { #NEW
+		tax_dividends_add = 0.45
+	}
+
+	possible_political_movements = {
+		law_interventionism
+		law_agrarianism
+		law_laissez_faire
+	}
+
+	ai_will_do = {
+        OR = {
+            AND = {
+                exists = ruler
+                ruler = {
+                    has_ideology = ideology_vanguardist
+                }
+            }
+            AND = {
+                exists = ruler
+                ruler = {
+                    has_ideology = ideology_fascist
+                }
+                OR = {
+                    has_law = law_type:law_one_party_state
+                    has_law = law_type:law_autocracy
+                }
+            }
+            AND = {
+                has_law = law_type:law_council_republic
+                OR = {
+                    has_law = law_type:law_one_party_state
+                    has_law = law_type:law_autocracy
+                }
+            }
+        }
+	}
+}
+
+law_collectivized_economy = { #NEW
+    group = lawgroup_economic_system
+
+    icon = "gfx/interface/icons/law_icons/council_republic.dds"
+
+    progressiveness = 150
+
+    disallowing_laws = {
+        law_serfdom
+        law_corporotocracy
+    }
+
+    unlocking_laws = {
+        law_council_republic
+    }
+
+    modifier = {
+		state_engineers_investment_pool_contribution_add = 0.35
+		state_shopkeepers_investment_pool_contribution_add = 0.35
+		state_clerks_investment_pool_contribution_add = 0.35
+		state_machinists_investment_pool_contribution_add = 0.35
+		state_farmers_investment_pool_contribution_add = 0.35
+		state_laborers_investment_pool_contribution_add = 0.35
+
+		country_subsidies_all = yes
+
+		state_radicals_from_sol_change_mult = 0.15
+
+		state_poor_expected_sol = 3
+		state_middle_expected_sol = 3
+    }
+
+    build_from_investment_pool = {
+        bg_fishing
+        bg_infrastructure
+        bg_logging
+        bg_mining
+        bg_agriculture
+        bg_plantations
+		bg_ranching
+		bg_manufacturing
+		bg_rubber
+		bg_whaling
+		bg_oil_extraction
+		bg_power
+		bg_government
+		bg_urban_facilities
+		bg_military
+    }
+
+    ai_will_do = {
+        OR = {
+            AND = {
+                exists = ruler
+                ruler = {
+                    has_ideology = ideology_communist
+                }
+            }
+            AND = {
+                exists = ruler
+                ruler = {
+                    has_ideology = ideology_anarchist
+                }
+				has_law = law_type:law_anarchy
+            }
+            AND = {
+                has_law = law_type:law_council_republic
+                OR = {
+					NOT = {
+						has_law = law_type:law_autocracy
+						has_law = law_type:law_oligarchy
+						has_law = law_type:law_one_party_state
+					}
+                }
+            }
+        }
+	}
+}
