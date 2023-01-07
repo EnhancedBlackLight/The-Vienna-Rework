@@ -445,14 +445,6 @@ ideology_patriotic = {
 		law_censorship = approve
 		law_right_of_assembly = neutral
 		law_protected_speech = disapprove
-	}	
-
-	lawgroup_centralization= { #NFM Centralization
-		law_totalitarian = approve
-		law_unitary = neutral
-		law_cooperative_federalism = neutral
-		law_dual_federalism = neutral
-		law_regionalism = disapprove
 	}
 
 	lawgroup_ce_judicial_system = {

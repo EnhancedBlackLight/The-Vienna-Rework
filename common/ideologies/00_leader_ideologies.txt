@@ -1404,14 +1404,6 @@ ideology_vanguardist = {
 		law_racial_segregation = disapprove
 		law_cultural_exclusion = neutral
 		law_multicultural = approve	
-	}			
-
-	lawgroup_centralization= { #NFM Centralization
-		law_totalitarian = strongly_approve
-		law_unitary = approve
-		law_cooperative_federalism = neutral
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_disapprove
 	}
 	
 	possible = {
@@ -1587,14 +1579,6 @@ ideology_fascist = {
 		law_dedicated_police = approve
 		law_militarized_police = strongly_approve
 		law_no_police = disapprove
-	}
-
-	lawgroup_centralization= { #NFM Centralization
-		law_totalitarian = strongly_approve
-		law_unitary = approve
-		law_cooperative_federalism = neutral
-		law_dual_federalism = disapprove
-		law_regionalism = strongly_disapprove
 	}
 	lawgroup_governance_principles = { #NEW
 		law_presidential_republic = strongly_approve
@@ -1853,14 +1837,6 @@ ideology_anarchist = {
 		law_traditionalism = strongly_disapprove
 		law_command_economy = strongly_disapprove
 		law_corporatist_economy = strongly_disapprove
-	}
-
-	lawgroup_centralization= { #NFM Centralization
-		law_totalitarian = strongly_disapprove
-		law_unitary = strongly_disapprove
-		law_cooperative_federalism = disapprove
-		law_dual_federalism = neutral
-		law_regionalism = strongly_approve
 	}
 	
 	possible = {
