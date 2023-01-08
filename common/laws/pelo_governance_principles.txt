@@ -197,6 +197,14 @@ law_council_republic = {
 		country_engineers_pol_str_mult = 0.10
 		country_capitalists_pol_str_mult = -0.50
 		country_landowners_pol_str_mult = -0.50
+
+		#merge previous council republic modifiers
+		country_farmers_pol_str_mult = 0.25
+		country_legitimacy_govt_total_clout_add = 0.4
+
+		state_machinists_investment_pool_contribution_add = 0.20
+		state_farmers_investment_pool_contribution_add = 0.20
+		state_laborers_investment_pool_contribution_add = 0.20
 	}
 
 	possible_political_movements = {
