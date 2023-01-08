@@ -384,8 +384,6 @@ EAF = { #East African Federation
 		STATE_LINDI
 		STATE_TANGANYIKA
 		STATE_UGANDA
-		STATE_
-		STATE_
 	}
 	is_major_formation = no
 
