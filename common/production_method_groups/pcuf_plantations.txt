@@ -1,0 +1,175 @@
+﻿pmg_fertilizer_coffee = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_coffee
+		pm_soil_enriching_farming_coffee_plantation
+		pm_fertilization_coffee_plantation
+		pm_chemical_fertilizer_coffee_plantation
+	}
+}
+
+pmg_harvesting_process_coffee = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+	}
+}
+
+pmg_fertilizer_cotton = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_cotton
+		pm_soil_enriching_farming_cotton_plantation
+		pm_fertilization_cotton_plantation
+		pm_chemical_fertilizer_cotton_plantation
+	}
+}
+
+pmg_harvesting_process_cotton = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_fertilizer_dye = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_dye
+		pm_soil_enriching_farming_dye_plantation
+		pm_fertilization_dye_plantation
+		pm_chemical_fertilizer_dye_plantation
+	}
+}
+
+pmg_harvesting_process_dye = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_fertilizer_opium = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_opium
+		pm_soil_enriching_farming_opium_plantation
+		pm_fertilization_opium_plantation
+		pm_chemical_fertilizer_opium_plantation
+	}
+}
+
+pmg_harvesting_process_opium = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_fertilizer_tea = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_tea
+		pm_soil_enriching_farming_tea_plantation
+		pm_fertilization_tea_plantation
+		pm_chemical_fertilizer_tea_plantation
+	}
+}
+
+pmg_harvesting_process_tea = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_fertilizer_tobacco = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_tobacco
+		pm_soil_enriching_farming_tobacco_plantation
+		pm_fertilization_tobacco_plantation
+		pm_chemical_fertilizer_tobacco_plantation
+	}
+}
+
+pmg_harvesting_process_tobacco = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_fertilizer_sugar = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_sugar
+		pm_soil_enriching_farming_sugar_plantation
+		pm_fertilization_sugar_plantation
+		pm_chemical_fertilizer_sugar_plantation
+	}
+}
+
+pmg_harvesting_process_sugar = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+		pm_tractors
+		pm_compression_ignition_tractors
+	}
+}
+
+pmg_fertilizer_banana = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_banana
+		pm_soil_enriching_farming_banana_plantation
+		pm_fertilization_banana_plantation
+		pm_chemical_fertilizer_banana_plantation
+	}
+}
+
+pmg_harvesting_process_banana = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+	}
+}
+
+pmg_fertilizer_silk = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_no_fertilizer_silk
+		pm_soil_enriching_farming_silk_plantation
+		pm_fertilization_silk_plantation
+		pm_chemical_fertilizer_silk_plantation
+	}
+}
+
+pmg_harvesting_process_silk = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_tools_disabled
+		pm_tools
+
+	}
+}
+

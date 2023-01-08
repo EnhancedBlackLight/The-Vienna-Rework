@@ -1,0 +1,665 @@
+﻿pm_no_fertilizer_coffee = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_coffee_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 25				#x30 = 750	
+			
+			# output goods													
+			building_output_coffee_add = 20					#x50 = 1000
+		}
+
+		level_scaled = {
+			# earnings	14.58 -> 7.4											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_coffee_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 40				#x30 = 1200
+			
+			# output goods													
+			building_output_coffee_add = 30					#x50 = 1500
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.9											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_coffee_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 55				#x30 = 1650
+			
+			# output goods													
+			building_output_coffee_add = 40					#x50 = 2000
+		}
+
+		level_scaled = {
+			# earnings	20.8 -> 10.4									
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}	
+
+pm_no_fertilizer_cotton = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_cotton_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 20				#x30 = 600
+			
+			# output goods													
+			building_output_fabric_add = 40					#x20 = 800
+		}
+
+		level_scaled = {
+			# earnings	11.8857	->	5.94						
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_cotton_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 30				#x30 = 900
+			
+			# output goods													
+			building_output_fabric_add = 60					#x20 = 1200
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.91											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_cotton_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 40				#x30 = 1200
+			
+			# output goods													
+			building_output_fabric_add = 80					#x20 = 1600
+		}
+
+		level_scaled = {
+			# earnings	23.77	> 11.8										
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}	
+
+pm_no_fertilizer_dye = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_dye_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 25				#x30 = 750
+			
+			# output goods													
+			building_output_dye_add = 25					#x40 = 1000
+		}
+
+		level_scaled = {
+			# earnings	14.85	-> 7.4								
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_dye_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 40				#x30 = 1200
+			
+			# output goods													
+			building_output_dye_add = 37.5					#x40 = 1500
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.91											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_dye_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 55				#x30 = 1650
+			
+			# output goods													
+			building_output_dye_add = 50					#x40 = 2000
+		}
+
+		level_scaled = {
+			# earnings	20.8 -> 10.4								
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_no_fertilizer_opium = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_opium_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 25				#x30 = 750
+			
+			# output goods													
+			building_output_opium_add = 20					#x50 = 1000
+		}
+
+		level_scaled = {
+			# earnings	14.85 ->7.42										
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_opium_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 40				#x30 = 1200
+			
+			# output goods													
+			building_output_opium_add = 30					#x50 = 1500
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.9											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_opium_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 55				#x30 = 1650
+			
+			# output goods													
+			building_output_opium_add = 40					#x50 = 2000
+		}
+
+		level_scaled = {
+			# earnings	20.8	-> 10.4								
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_no_fertilizer_tea = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_tea_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 25				#x30 = 750
+			
+			# output goods													
+			building_output_tea_add = 20					#x50 = 1000
+		}
+
+		level_scaled = {
+			# earnings	14.85	-> 7.42								
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_tea_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 40				#x30 = 1200
+			
+			# output goods													
+			building_output_tea_add = 30					#x50 = 1500
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.91											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_tea_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 55				#x30 = 1650
+			
+			# output goods													
+			building_output_tea_add = 40					#x50 = 2000
+		}
+
+		level_scaled = {
+			# earnings	20.8	-> 10.4									
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_no_fertilizer_tobacco = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_tobacco_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 25				#x30 = 750
+			
+			# output goods													
+			building_output_tobacco_add = 25					#x40 = 1000
+		}
+
+		level_scaled = {
+			# earnings	14.85	-> 7.4							
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_tobacco_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 40				#x30 = 1200
+			
+			# output goods													
+			building_output_tobacco_add = 37.5				#x40 = 1500
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.91											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_tobacco_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 55				#x30 = 1650
+			
+			# output goods													
+			building_output_tobacco_add = 50					#x40 = 2000
+		}
+
+		level_scaled = {
+			# earnings	20.8 -> 10.4								
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_no_fertilizer_sugar = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_sugar_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 22				#x30 = 660
+			
+			# output goods													
+			building_output_sugar_add = 30			#x30 = 1005
+		}
+
+		level_scaled = {
+			# earnings	14.26	> 10.25								
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_sugar_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 35				#x30 = 1050
+			
+			# output goods													
+			building_output_sugar_add = 45					#x30 = 1350
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.91											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_sugar_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 48.5			#x30 = 1455
+			
+			# output goods													
+			building_output_sugar_add = 60					#x30 = 1800
+		}
+
+		level_scaled = {
+			# earnings	20.50	-> 10.25									
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_no_fertilizer_banana = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_banana_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 22				#x30 = 660
+			
+			# output goods													
+			building_output_fruit_add = 30					#x30 = 900
+		}
+
+		level_scaled = {
+			# earnings	14.26	-> 7.13						
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_banana_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 35				#x30 = 1050
+			
+			# output goods													
+			building_output_fruit_add = 45					#x30 = 1350
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.91											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_banana_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 48.5		#x30 = 1455
+			
+			# output goods													
+			building_output_fruit_add = 60				#x30 = 1800
+		}
+
+		level_scaled = {
+			# earnings	20.50	-> 10.21									
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_no_fertilizer_silk = {
+	texture = "gfx/interface/icons/goods_icons/red_cross.dds"
+}
+
+pm_soil_enriching_farming_silk_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/soil_enriching_farming.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 20				#x30 = 600
+			
+			# output goods													
+			building_output_silk_add = 20					#x40 = 800
+		}
+
+		level_scaled = {
+			# earnings	11.88	-> 5.94								
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_fertilization_silk_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/fertilization.dds"
+	
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 30				#x30 = 900
+			
+			# output goods													
+			building_output_silk_add = 30					#x40 = 1200
+		}
+
+		level_scaled = {
+			# earnings	17.82	-> 8.91											
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
+
+pm_chemical_fertilizer_silk_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/chemical_fertilizers.dds"
+	unlocking_technologies = {
+		nitrogen_fixation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods													
+			building_input_fertilizer_add = 40				#x30 = 1200
+			
+			# output goods													
+			building_output_silk_add = 40					#x40 = 1600
+		}
+
+		level_scaled = {
+			# earnings	23.77	-> 11.88									
+			building_employment_laborers_add = 1000
+			building_employment_farmers_add = 500
+		}
+	}
+}
