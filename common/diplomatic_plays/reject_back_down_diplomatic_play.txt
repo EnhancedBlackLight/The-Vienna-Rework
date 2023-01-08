@@ -1,0 +1,31 @@
+﻿dp_reject_back_down = {
+	war_goal = contain_threat
+	enable_switch_sides = yes # default no
+	allow_negotiated_peace = yes # default yes
+	mirror_war_goal = no # default no
+	initiator_can_add_war_goals = yes # default yes
+    target_can_add_war_goals = yes # default yes
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	on_war_begins = {
+		add_war_goal = { holder = initiator type = war_reparations }
+		remove_war_goal = { who = initiator war_goal = contain_threat}
+	}
+}
+
+dp_test_cb = {
+	war_goal = war_reparations
+	enable_switch_sides = yes
+	allow_negotiated_peace = yes
+	mirror_war_goal = no
+	initiator_can_add_war_goals = yes # default yes
+    target_can_add_war_goals = yes # default yes
+	backing_down_always_ends_play = no
+
+	selectable_in_lens = {
+		always = no
+	}
+}

@@ -1,0 +1,5 @@
+﻿l_english:
+  reject_back_down_event.2.t:0 "Diplomatic Play a Success!"
+  reject_back_down_event.2.d:0 "Our enemies have conceded to our primary demand and backed down! How shall we respond? If you reject their backing down, the concession will be returned, a new play will start, and you will need to add war goals again. This play will always escalate to war, and the opposing side may get more allies than before. If you accept, you will keep the concession and nothing else will happen."
+  reject_back_down_event.2.a:0 "Reject their concession and push for more."
+  reject_back_down_event.2.b:0 "Accept their concession."
