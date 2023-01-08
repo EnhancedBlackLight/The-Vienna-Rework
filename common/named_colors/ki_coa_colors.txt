@@ -34,5 +34,9 @@ colors = {
 	carthage_tan = 	hsv360 	{	32	44	89	}
 	hre_yellow = 	hsv360 	{	46	88	100	}
 	rom_blue = 		hsv360 	{	205	100	70	}
+	blue_romanian = 		hsv360 	{	205	100	70	}
 	blue_royal = 	hsv360 	{	216	100	50	}
+	green_darker = 	hsv360 	{	120	100	13	}
+	teal = 	hsv360 	{	191	51	56	}
+	yellow_lighter = 	hsv360 	{	60	9	98	}
 }

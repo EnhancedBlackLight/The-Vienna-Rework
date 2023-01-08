@@ -522,3 +522,16 @@ EAF = { # Eaf
 		}
 	}
 }
+
+MRV = { # Greater Moravia
+	flag_definition = {
+		coa = EAF
+		}
+	flag_definition = {
+		coa = MRV_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}

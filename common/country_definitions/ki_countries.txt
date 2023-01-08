@@ -279,26 +279,6 @@ ILY = {
 	cultures = { croat bosniak slovene }
 	capital = STATE_CROATIA
 }
-ILY_monarchy = {
-	color = { 84 173 160 }
-	
-	country_type = recognized
-
-	tier = kingdom
-	
-	cultures = { croat bosniak slovene }
-	capital = STATE_CROATIA
-}
-ILY_subject_AUS = {
-	color = { 84 173 160 }
-	
-	country_type = recognized
-
-	tier = kingdom
-	
-	cultures = { croat bosniak slovene }
-	capital = STATE_CROATIA
-}
 
 BKV = {
 	color = { 183 18 60 }
@@ -340,10 +320,19 @@ EAF = {
 
 	tier = kingdom
 	
-	cultures = { sukuma swahili lacustrine_bantu yao makau chewa unyamwezi luo maasai ruanda rundi baganda nilotic kikuyu }
+	cultures = { sukuma swahili lacustrine_bantu makau unyamwezi luo maasai ruanda rundi baganda nilotic kikuyu }
 	capital = STATE_UGANDA
 }
 
+NTH = {
+	color = { 226 163 36 }
+	
+	country_type = recognized
 
+	tier = kingdom
+	
+	cultures = { british }
+	capital = STATE_YORKSHIRE
+}
 
 
