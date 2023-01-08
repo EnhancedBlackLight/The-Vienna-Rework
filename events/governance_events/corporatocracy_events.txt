@@ -1,0 +1,441 @@
+namespace = corporatocracy_events
+
+# Rise of Radical Capitalism
+corporatocracy_events.1 = {
+    type = country_event
+	placement = root
+	title = corporatocracy_events.1.t
+	desc = corporatocracy_events.1.desc
+	flavor = corporatocracy_events.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	trigger = {
+		# triggered by JE
+	}
+
+    immediate = {
+		random_interest_group = {
+			limit = {
+				has_variable = og_corporativist_ig
+			}
+			save_scope_as = corporativist_ig
+			leader = {
+				save_scope_as = corporativist_leader
+			}
+		}
+    }
+
+    option = { # Choose Anarchy
+        name = corporatocracy_events.1.a
+        default_option = yes
+        custom_tooltip = corporate_anarchy.tt
+
+        if = {
+            limit = {
+                scope:corporativist_leader = {
+                    NOT = { has_ideology = ideology_market_anarchist }
+                }
+            }
+            scope:corporativist_leader = {
+                set_ideology = ideology_market_anarchist
+            }
+        }
+        scope:corporativist_ig = {
+            set_variable = chose_marketanarchy
+        }
+
+        add_journal_entry = {
+			type = je_corporatocracy_2
+		}
+    }
+
+    option = { # Choose Oligarchy
+        name = corporatocracy_events.1.b
+        custom_tooltip = corporate_oligarchy.tt
+
+        if = {
+            limit = {
+                scope:corporativist_leader = {
+                    NOT = { has_ideology = ideology_market_oligarch }
+                }
+            }
+            scope:corporativist_leader = {
+                set_ideology = ideology_market_oligarch
+            }
+        }
+        scope:corporativist_ig = {
+            set_variable = chose_marketoligarchy
+        }
+
+        add_journal_entry = {
+			type = je_corporatocracy_2
+		}
+    }
+
+    option = { # Choose Liberalism
+        name = corporatocracy_events.1.c
+        custom_tooltip = corporate_liberalism.tt
+
+        if = {
+            limit = {
+                scope:corporativist_leader = {
+                    NOT = { has_ideology = ideology_market_liberal }
+                }
+            }
+            scope:corporativist_leader = {
+                set_ideology = ideology_market_liberal
+            }
+        }
+        scope:corporativist_ig = {
+            set_variable = chose_marketliberalism
+        }
+
+        add_journal_entry = {
+			type = je_corporatocracy_2
+		}
+    }
+
+    option = { # Reject Corporatocracy
+        name = corporatocracy_events.1.d
+        custom_tooltip = corporate_rejection.tt
+
+        if = {
+            limit = {
+                scope:corporativist_leader = {
+                    NOT = { has_ideology = ideology_moderate }
+                }
+            }
+            scope:corporativist_leader = {
+                set_ideology = ideology_moderate
+            }
+        }
+
+        scope:corporativist_ig = {
+            add_modifier = {
+                name = rejected_corporatocracy
+                months = normal_modifier_time
+            }
+        }
+
+        add_journal_entry = {
+			type = je_corporatocracy_2
+		}
+    }
+}
+
+# Spread of Radical Capitalism
+corporatocracy_events.2 = {
+    type = country_event
+	placement = root
+	title = corporatocracy_events.2.t
+	desc = corporatocracy_events.2.desc
+	flavor = corporatocracy_events.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	trigger = { #JE
+        NOT = { has_variable = corp_event_2_complete }
+	}
+
+	immediate = {
+		random_interest_group = {
+			limit = { has_variable = og_corporativist_ig }
+			save_scope_as = corporativist_ig
+			leader = {
+				save_scope_as = corporativist_leader
+			}
+		}
+		every_interest_group = {
+			limit = {
+				OR = {
+					is_interest_group_type = ig_industrialists
+					is_interest_group_type = ig_intelligentsia
+				}
+				NOT = { has_variable = og_corporativist_ig }
+			}
+			leader = {
+				save_scope_as = new_corporativist_leader
+			}
+			save_scope_as = new_corporativist_ig
+		}
+    }
+
+    option = { # Choose Anarchy
+        name = corporatocracy_events.2.a
+        custom_tooltip = corporate_anarchy2.tt
+        default_option = yes
+
+        scope:new_corporativist_ig = {
+            leader = {
+                set_ideology = ideology_market_anarchist
+            }
+            set_variable = chose_marketanarchy
+        }
+        set_variable = corp_event_2_complete
+    }
+
+    option = { # Choose Oligarchy
+        name = corporatocracy_events.2.b
+        custom_tooltip = corporate_oligarchy2.tt
+
+        scope:new_corporativist_ig = {
+            leader = {
+                set_ideology = ideology_market_oligarch
+            }
+            set_variable = chose_marketoligarchy
+        }
+        set_variable = corp_event_2_complete
+    }
+
+    option = { # Choose Liberalism
+        name = corporatocracy_events.2.c
+        custom_tooltip = corporate_liberalism2.tt
+
+        scope:new_corporativist_ig = {
+            leader = {
+                set_ideology = ideology_market_liberal
+            }
+            set_variable = chose_marketliberalism
+        }
+        set_variable = corp_event_2_complete
+    }
+
+    option = { # Won't change
+        name = corporatocracy_events.2.d
+        custom_tooltip = corporate_neutrality.tt
+    }
+
+    option = { # Rejects market extremism
+        name = corporatocracy_events.2.e
+        custom_tooltip = corporate_rejection2.tt
+
+        scope:new_corporativist_ig = {
+            if = {
+                limit = {
+                    leader = {
+                        OR = {
+                            has_ideology = ideology_market_anarchist
+                            has_ideology = ideology_market_oligarch
+                            has_ideology = ideology_market_liberal
+                        }
+                    }
+                }
+                set_ideology = ideology_moderate
+            }
+            set_variable = against_marketextremism
+        }
+        set_variable = corp_event_2_complete
+    }
+}
+
+corporatocracy_events.3 = { # Deal with the Devil
+    type = country_event
+	placement = root
+	title = corporatocracy_events.3.t
+	desc = corporatocracy_events.3.desc
+	flavor = corporatocracy_events.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/ruler_speaking_to_people"
+
+	trigger = { #JE
+        NOT = { has_variable = corp_event_3_complete }
+	}
+
+	immediate = {
+        ig:ig_petty_bourgeoisie = {
+            leader = {
+                save_scope_as = petty_bourg_leader
+            }
+            save_scope_as = corpo_bourgs
+        }
+	}
+
+	option = { # Petite Bourgeoisie agree to liberalism
+        name = corporatocracy_events.3.a
+        custom_tooltip = petite_liberalism.tt
+        default_option = yes
+
+        scope:corpo_bourgs = {
+            leader = { set_ideology = ideology_market_liberal }
+            set_variable = chose_marketliberalism
+        }
+        set_variable = corp_event_3_complete
+	}
+
+	option = { # Petite Bourgeoisie do NOT agree to liberalism
+        name = corporatocracy_events.3.b
+        custom_tooltip = petite_neutrality.tt
+
+        set_variable = corp_event_3_complete
+	}
+
+	option = { # Bourgeoisie reject corporatocracy
+        name = corporatocracy_events.3.c
+        custom_tooltip = petite_rejection.tt
+
+        if = {
+            limit = {
+                scope:petty_bourg_leader = { has_ideology = ideology_market_liberal }
+            }
+            scope:petty_bourg_leader = { set_ideology = ideology_moderate }
+        }
+        scope:corpo_bourgs = { set_variable = against_marketextremism }
+        set_variable = corp_event_3_complete
+	}
+}
+
+corporatocracy_events.4 = {
+    type = country_event
+	placement = root
+	title = corporatocracy_events.4.t
+	desc = corporatocracy_events.4.desc
+	flavor = corporatocracy_events.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+
+	trigger = {}
+
+	immediate = {
+        random_interest_group = {
+            limit = {
+                leader = {
+                    OR = {
+                        has_ideology = ideology_fascist
+                        has_ideology = ideology_communist
+                        has_ideology = ideology_anarchist
+                        has_ideology = ideology_vanguardist
+                    }
+                }
+                ig_clout >= .10
+            }
+            save_scope_as = ig_corporate_vanquisher
+            scope:ig_corporate_vanquisher = {
+                leader = { save_scope_as = proletarian_hero }
+            }
+        }
+
+        every_interest_group = {
+            limit = {
+                leader = {
+                    OR = {
+                        has_ideology = ideology_market_anarchist
+                        has_ideology = ideology_market_oligarch
+                        has_ideology = ideology_market_liberal
+                    }
+                }
+            }
+            set_variable = corpo_assassination_target
+        }
+
+        every_interest_group = {
+            limit = {
+                leader = { has_ideology = ideology_market_oligarch }
+            }
+            save_scope_as = ig_corpo_oligarchs
+        }
+
+        every_interest_group = {
+            limit = {
+                leader = {
+                    OR = {
+                        has_ideology = ideology_market_anarchist
+                        has_ideology = ideology_market_liberal
+                    }
+                }
+            }
+            save_scope_as = ig_corpo_anarchists
+        }
+	}
+
+	option = { # Overwhelming support causes immediate government reform anarchy and liberalism edition
+        name = corporatocracy_events.4.a
+        default_option = yes
+
+        trigger = {
+            exists = scope:ig_corpo_anarchists
+        }
+
+        activate_law = law_type:law_laissez_faire
+        activate_law = law_type:law_free_trade
+        activate_law = law_type:law_child_labor_allowed
+        activate_law = law_type:law_private_health_insurance
+        activate_law = law_type:law_private_schools
+
+        add_modifier = { name = mass_civil_unrest_corpo months = normal_modifier_time }
+	}
+
+	option = { # Overwhelming support causes immediate government reform oligarchy edition
+        name = corporatocracy_events.4.b
+
+        trigger = {
+            exists = scope:ig_corpo_oligarchs
+        }
+
+        activate_law = law_type:law_corporotocracy
+        activate_law = law_type:law_oligarchy
+        activate_law = law_type:law_laissez_faire
+        activate_law = law_type:law_free_trade
+        activate_law = law_type:law_child_labor_allowed
+
+        add_modifier = { name = mass_civil_unrest_corpo months = normal_modifier_time }
+	}
+
+	option = { # Assassination Campaign
+        name = corporatocracy_events.4.c
+        trigger = {
+            exists = scope:proletarian_hero
+        }
+
+        every_interest_group = {
+            limit = {
+                has_variable = corpo_assassination_target
+            }
+            leader = { kill_character = yes }
+        }
+
+        scope:ig_corporate_vanquisher = {
+            add_modifier = {
+                name = hero_of_the_proletariat
+                months = normal_modifier_time
+            }
+        }
+	}
+
+}

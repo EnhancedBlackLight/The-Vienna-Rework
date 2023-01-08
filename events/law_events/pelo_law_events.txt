@@ -1,0 +1,812 @@
+namespace = pelo_law_events
+
+pelo_law_events.1 = { # Passing Economic Council
+    type = country_event
+	placement = root
+	title = pelo_law_events.1.t
+	flavor = pelo_law_events.1.f
+
+	immediate = {
+        random_interest_group = {
+            limit = {
+                leader = {
+                    has_ideology = ideology_fascist
+                }
+            }
+            save_scope_as = fc_ig_law
+            leader = { save_scope_as = fc_leader_law }
+        }
+        random_interest_group = {
+            limit = {
+                leader = {
+                    has_ideology = ideology_communist
+                }
+            }
+            leader = { save_scope_as = cm_leader_law }
+            save_scope_as = cm_ig_law
+        }
+        random_interest_group = {
+            limit = {
+                leader = {
+                    has_ideology = ideology_vanguardist
+                }
+            }
+            save_scope_as = vn_ig_law
+            leader = { save_scope_as = vn_leader_law }
+        }
+    }
+
+	desc = {
+        first_valid = {
+            triggered_desc = { # Communists / Vanguardists and Fascists agree
+                desc = pelo_law_events.1.desc.a
+                trigger = {
+                    OR = {
+                        exists = scope:vn_ig_law
+                        exists = scope:cm_ig_law
+                    }
+                    exists = scope:fc_ig_law
+                }
+            }
+
+            triggered_desc = { # Communists / Vanguardists agree
+                desc = pelo_law_events.1.desc.b
+                trigger = {
+                    OR = {
+                        exists = scope:vn_ig_law
+                        exists = scope:cm_ig_law
+                    }
+                }
+            }
+
+            triggered_desc = { # Fascists agree
+                desc = pelo_law_events.1.desc.c
+                trigger = {
+                    exists = scope:fc_ig_law
+                }
+            }
+
+            triggered_desc = { # Generic, fallback desc
+                desc = pelo_law_events.1.desc.d
+                trigger = {
+                    NAND = {
+                        exists = scope:fc_ig_law
+                        exists = scope:vn_ig_law
+                        exists = scope:cm_ig_law
+                    }
+                }
+            }
+        }
+	}
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/politicians_arguing"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		is_enacting_law = law_type:law_corporate_council
+	}
+
+    option = { # Communists and Fascists agree for once
+        name = pelo_law_events.1.a
+        default_option = yes
+        custom_tooltip = cc_horseshoe.tt
+
+        trigger = {
+            OR = {
+                exists = scope:vn_ig_law
+                exists = scope:cm_ig_law
+            }
+            exists = scope:fc_ig_law
+        }
+
+        add_enactment_modifier = {
+            name = economic_council_mod
+            multiplier = 2
+        }
+    }
+
+    option = { # Communists agree
+        name = pelo_law_events.1.b
+        custom_tooltip = cc_communists.tt
+
+        trigger = {
+            OR = {
+                exists = scope:vn_ig_law
+                exists = scope:cm_ig_law
+            }
+        }
+
+        add_enactment_modifier = {
+            name = economic_council_mod
+        }
+
+        if = {
+            limit = {
+                exists = scope:cm_ig_law
+            }
+            scope:cm_ig_law = {
+                add_modifier = {
+                    name = eloquently_spoken
+                    months = normal_modifier_time
+                }
+            }
+        }
+        if = {
+            limit = {
+                exists = scope:vn_ig_law
+            }
+            scope:vn_ig_law = {
+                add_modifier = {
+                    name = eloquently_spoken
+                    months = normal_modifier_time
+                }
+            }
+        }
+    }
+
+    option = { # Fascists agree
+        name = pelo_law_events.1.c
+        custom_tooltip = cc_fascists.tt
+
+        trigger = {
+            exists = scope:fc_ig_law
+        }
+
+        add_enactment_modifier = {
+            name = economic_council_mod
+            multiplier = 2
+        }
+
+        scope:fc_ig_law = {
+            add_modifier = {
+                name = eloquently_spoken
+                months = normal_modifier_time
+            }
+        }
+    }
+
+    option = { # Fallback option
+        name = pelo_law_events.1.d
+
+        trigger = {
+            NOT = { exists = scope:fc_ig_law }
+            NOT = { exists = scope:cm_ig_law }
+            NOT = { exists = scope:vn_ig_law }
+        }
+
+        add_enactment_modifier = {
+            name = economic_council_mod
+        }
+    }
+
+}
+
+pelo_law_events.2 = { # One Party State is being enacted, council republic edition
+    type = country_event
+	placement = root
+	title = pelo_law_events.2.t
+	flavor = pelo_law_events.2.f
+	desc = pelo_law_events.2.desc
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/ruler_speaking_to_people"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+        is_enacting_law = law_type:law_one_party_state
+        has_law = law_type:law_council_republic
+	}
+
+	immediate = {
+        random_interest_group = {
+            limit = {
+                is_in_government = yes
+                leader = { has_ideology = ideology_vanguardist }
+            }
+            save_scope_as = vn_ops_law
+        }
+        currently_enacting_law = {
+            save_scope_as = current_law_scope
+        }
+	}
+
+	option = { # Comrade Trump, you will never be the vanguard of the revolution
+        name = pelo_law_events.2.a
+        custom_tooltip = ops_jorjorwell.tt
+        default_option = yes
+
+        trigger = {
+            exists = scope:vn_ops_law
+        }
+
+        add_enactment_modifier = {
+            name = ops_vanguard_mod
+        }
+	}
+
+	option = { # Always exists
+        name = pelo_law_events.2.b
+
+        add_enactment_modifier = {
+            name = ops_normal_mod
+        }
+	}
+
+}
+
+pelo_law_events.3 = { # One Party State is being enacted, not council republic edition
+    type = country_event
+	placement = root
+	title = pelo_law_events.3.t
+	flavor = pelo_law_events.3.f
+	desc = pelo_law_events.3.desc
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/ruler_speaking_to_people"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+        is_enacting_law = law_type:law_one_party_state
+        NOT = { has_law = law_type:law_council_republic }
+	}
+
+	immediate = {
+        random_interest_group = {
+            limit = {
+                is_in_government = yes
+                leader = { has_ideology = ideology_fascist }
+            }
+            save_scope_as = fc_ops_law
+        }
+        currently_enacting_law = {
+            save_scope_as = current_law_scope
+        }
+	}
+
+	option = { # not too fond of worker representation
+        name = pelo_law_events.3.a
+        custom_tooltip = ops_jorjorwell.tt
+        default_option = yes
+
+        trigger = {
+            exists = scope:fc_ops_law
+        }
+
+        add_enactment_modifier = {
+            name = ops_fascist_mod
+        }
+	}
+
+	option = { # Always exists
+        name = pelo_law_events.3.b
+
+        add_enactment_modifier = {
+            name = ops_normal_mod
+        }
+	}
+
+}
+
+pelo_law_events.4 = { # Collectivized economy is being enacted
+    type = country_event
+	placement = root
+	title = pelo_law_events.4.t
+	flavor = pelo_law_events.4.f
+	desc = pelo_law_events.4.desc
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_gears_pistons.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+        is_enacting_law = law_type:law_collectivized_economy
+        has_law = law_type:law_council_republic
+	}
+
+	immediate = {
+        random_interest_group = {
+            limit = {
+                leader = { has_ideology = ideology_vanguardist }
+                is_in_government = yes
+            }
+            save_scope_as = vn_ig_ce_law
+        }
+        random_interest_group = {
+            limit = {
+                leader = {
+                    OR = {
+                        has_ideology = ideology_communist
+                        has_ideology = ideology_anarchist
+                    }
+                }
+                is_in_government = yes
+            }
+            save_scope_as = cman_ig_ce_law
+        }
+        currently_enacting_law = {
+            save_scope_as = current_law_scope
+        }
+	}
+
+	option = { # Vanguardists reluctantly agree
+        name = pelo_law_events.4.a
+        custom_tooltip = ce_vanguard.tt
+
+        trigger = { exists = scope:vn_ig_ce_law }
+
+        add_enactment_modifier = {
+            name = ce_vanguard_mod
+        }
+	}
+
+	option = { # Other communists violently agree
+        name = pelo_law_events.4.b
+
+        trigger = { exists = scope:cman_ig_ce_law }
+
+        add_enactment_modifier = {
+            name = ce_success_mod
+        }
+	}
+
+	option = { # Why are we passing this again?
+        name = pelo_law_events.4.c
+        custom_tooltip = ce_whoasked.tt
+
+        trigger = {
+            NOR = {
+                exists = scope:cman_ig_ce_law
+                exists = scope:vn_ig_ce_law
+            }
+        }
+
+        add_enactment_modifier = {
+            name = ce_failure_mod
+        }
+	}
+
+}
+
+pelo_law_events.5 = { # Corporatist Economy is being passed, council republic edition
+    type = country_event
+	placement = root
+	title = pelo_law_events.5.t
+	flavor = pelo_law_events.5.fl
+	desc = pelo_law_events.5.desc
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_gears_pistons.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+        is_enacting_law = law_type:law_corporatist_economy
+        has_law = law_type:law_council_republic
+	}
+
+	immediate = {
+        currently_enacting_law = {
+            save_scope_as = current_law_scope
+        }
+        random_interest_group = {
+            limit = {
+                leader = {
+                    has_ideology = ideology_communist
+                }
+            }
+            save_scope_as = cpe_cm_ig
+        }
+        random_interest_group = {
+            limit = {
+                leader = {
+                    has_ideology = ideology_vanguardist
+                }
+            }
+            save_scope_as = cpe_vn_ig
+        }
+	}
+
+	option = { # They agree
+        name = pelo_law_events.5.a
+        default_option = yes
+
+        trigger = {
+            exists = scope:cpe_cm_ig
+            exists = scope:cpe_vn_ig
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+            multiplier = 2
+        }
+	}
+
+	option = { # Vanguardists agree
+        name = pelo_law_events.5.b
+        default_option = yes
+
+        trigger = {
+            NOT = { exists = scope:cpe_cm_ig }
+            exists = scope:cpe_vn_ig
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+        }
+	}
+
+	option = { # Communists agree
+        name = pelo_law_events.5.c
+        default_option = yes
+
+        trigger = {
+            exists = scope:cpe_cm_ig
+            NOT = { exists = scope:cpe_vn_ig }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+        }
+	}
+
+	option = { # Who asked?
+        name = pelo_law_events.5.d
+        default_option = yes
+
+        trigger = {
+            NOT = { exists = scope:cpe_cm_ig }
+            NOT = { exists = scope:cpe_vn_ig }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_failure_mod
+        }
+	}
+
+}
+
+pelo_law_events.6 = { # Corporatist Economy is being passed, not council republic edition
+    type = country_event
+	placement = root
+	title = pelo_law_events.6.t
+	flavor = pelo_law_events.6.fl
+	desc = pelo_law_events.6.desc
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_gears_pistons.bk2"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/gears_pistons"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+        is_enacting_law = law_type:law_corporatist_economy
+        NOT = { has_law = law_type:law_council_republic }
+	}
+
+	immediate = {
+        random_interest_group = {
+            limit = {
+                leader = { has_ideology = ideology_fascist }
+            }
+            save_scope_as = cpe_fascist_ig
+        }
+        random_interest_group = {
+            limit = {
+                leader = {
+                    OR = {
+                        has_ideology = ideology_market_anarchist
+                        has_ideology = ideology_market_liberal
+                        has_ideology = ideology_market_oligarch
+                    }
+                }
+            }
+            save_scope_as = cpe_capitalist_ig
+        }
+        random_interest_group = {
+            limit = {
+                leader = {
+                    OR = {
+                        has_ideology = ideology_vanguardist
+                        has_ideology = ideology_communist
+                    }
+                }
+            }
+            save_scope_as = cpe_leftist_ig
+        }
+	}
+
+	option = { # Fascist support, no capitalist opposition
+        name = pelo_law_events.6.a
+        default_option = yes
+
+        trigger = {
+            exists = scope:cpe_fascist_ig
+            NOT = { exists = scope:cpe_capitalist_ig }
+            NOT = { exists = scope:cpe_leftist_ig }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+        }
+	}
+
+	option = { # Fascist support, capitalist opposition
+        name = pelo_law_events.6.b
+
+        trigger = {
+            exists = scope:cpe_fascist_ig
+            exists = scope:cpe_capitalist_ig
+            NOT = { exists = scope:cpe_leftist_ig }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_gridlock_mod
+        }
+	}
+
+	option = { # Capitalist opposition
+        name = pelo_law_events.6.c
+
+        trigger = {
+            NOT = { exists = scope:cpe_fascist_ig }
+            exists = scope:cpe_capitalist_ig
+            NOT = { exists = scope:cpe_leftist_ig }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_failure_mod
+        }
+	}
+
+	option = { # Fascist and Communist support, no opposition
+        name = pelo_law_events.6.d
+        custom_tooltip = cpe_horseshoe.tt
+
+        trigger = {
+            exists = scope:cpe_fascist_ig
+            AND = {
+                exists = scope:cpe_leftist_ig
+                NOR = {
+                    has_law = law_type:law_command_economy
+                    has_law = law_type:law_collectivized_economy
+                }
+            }
+            NOT = { exists = scope:cpe_capitalist_ig }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+            multiplier = 2
+        }
+	}
+
+	option = { # Fascist and Communist support, capitalist opposition
+        name = pelo_law_events.6.e
+        custom_tooltip = cpe_horseshoe.tt
+
+        trigger = {
+            exists = scope:cpe_fascist_ig
+            AND = {
+                exists = scope:cpe_leftist_ig
+                NOR = {
+                    has_law = law_type:law_command_economy
+                    has_law = law_type:law_collectivized_economy
+                }
+            }
+            exists = scope:cpe_capitalist_ig
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+        }
+	}
+
+	option = { # Communist support, no opposition
+        name = pelo_law_events.6.f
+
+        trigger = {
+            NOT = { exists = scope:cpe_fascist_ig }
+            NOT = { exists = scope:cpe_capitalist_ig }
+            AND = {
+                exists = scope:cpe_leftist_ig
+                NOR = {
+                    has_law = law_type:law_command_economy
+                    has_law = law_type:law_collectivized_economy
+                }
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+        }
+	}
+
+	option = { # Communist support, capitalist opposition
+        name = pelo_law_events.6.g
+
+        trigger = {
+            NOT = { exists = scope:cpe_fascist_ig }
+            exists = scope:cpe_capitalist_ig
+            AND = {
+                exists = scope:cpe_leftist_ig
+                NOR = {
+                    has_law = law_type:law_command_economy
+                    has_law = law_type:law_collectivized_economy
+                }
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_gridlock_mod
+        }
+	}
+
+	option = { # Fascist and capitalist support, communist opposition
+        name = pelo_law_events.6.h
+        custom_tooltip = cpe_capfas.tt
+
+        trigger = {
+            exists = scope:cpe_fascist_ig
+            exists = scope:cpe_capitalist_ig
+            AND = {
+                exists = scope:cpe_leftist_ig
+                OR = {
+                    has_law = law_type:law_command_economy
+                    has_law = law_type:law_collectivized_economy
+                }
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+        }
+	}
+
+	option = { # Fascist and capitalist support, no opposition
+        name = pelo_law_events.6.i
+        custom_tooltip = cpe_capfas.tt
+
+        trigger = {
+            exists = scope:cpe_fascist_ig
+            exists = scope:cpe_capitalist_ig
+            NOT = { exists = scope:cpe_leftist_ig }
+            OR = {
+                has_law = law_type:law_collectivized_economy
+                has_law = law_type:law_command_economy
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+            multiplier = 2
+        }
+	}
+
+	option = { # Capitalist support, no opposition
+        name = pelo_law_events.6.j
+
+        trigger = {
+            NOT = { exists = scope:cpe_fascist_ig }
+            exists = scope:cpe_capitalist_ig
+            NOT = { exists = scope:cpe_leftist_ig }
+            OR = {
+                has_law = law_type:law_collectivized_economy
+                has_law = law_type:law_command_economy
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_success_mod
+        }
+	}
+
+	option = { # Capitalist support, communist opposition
+        name = pelo_law_events.6.k
+
+        trigger = {
+            NOT = { exists = scope:cpe_fascist_ig }
+            exists = scope:cpe_capitalist_ig
+            exists = scope:cpe_leftist_ig
+            OR = {
+                has_law = law_type:law_collectivized_economy
+                has_law = law_type:law_command_economy
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_gridlock_mod
+        }
+	}
+
+	option = { # Communist opposition
+        name = pelo_law_events.6.l
+
+        trigger = {
+            NOT = { exists = scope:cpe_fascist_ig }
+            NOT = { exists = scope:cpe_capitalist_ig }
+            exists = scope:cpe_leftist_ig
+            OR = {
+                has_law = law_type:law_collectivized_economy
+                has_law = law_type:law_command_economy
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_failure_mod
+        }
+	}
+
+    option = { # Fallback option
+        name = pelo_law_events.6.m
+
+        trigger = {
+            NOT = { exists = scope:cpe_fascist_ig }
+            NOT = { exists = scope:cpe_capitalist_ig }
+            AND = {
+                NOT = { exists = scope:cpe_leftist_ig }
+                NOR = {
+                    has_law = law_type:law_command_economy
+                    has_law = law_type:law_collectivized_economy
+                }
+            }
+        }
+
+        add_enactment_modifier = {
+            name = cpe_gridlock_mod
+        }
+	}
+
+    # fuck me that was a lot of options
+}

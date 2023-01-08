@@ -1,0 +1,140 @@
+﻿gov_fascist_state = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+	
+	possible = {
+		OR = {
+			has_law = law_type:law_presidential_republic
+			has_law = law_type:law_parliamentary_republic
+		}
+		OR = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_one_party_state
+		}
+		coa_fascist_trigger = yes
+	}
+}
+
+gov_fascist_social_republic = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_COUNCIL_DICTATOR"
+	female_ruler = "RULER_TITLE_COUNCIL_DICTATOR"
+
+	possible = {
+		OR = {
+			has_law = law_type:law_presidential_republic
+			has_law = law_type:law_parliamentary_republic
+		}
+		has_law = law_type:law_corporate_council
+		coa_fascist_trigger = yes
+	}
+}
+
+gov_presidential_council = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_COUNCIL_PRESIDENT"
+	female_ruler = "RULER_TITLE_COUNCIL_PRESIDENT"
+
+	possible = {
+		has_law = law_type:law_presidential_republic
+		has_law = law_type:law_corporate_council
+	}
+}
+
+gov_military_dictatorship = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_GENERAL"
+	female_ruler = "RULER_TITLE_GENERAL"
+	
+	possible = {
+		has_law = law_type:law_presidential_republic
+		OR = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_one_party_state
+		}
+		OR = {
+			has_law = law_type:law_mass_conscription
+			has_law = law_type:law_professional_army
+		}
+	}
+}
+
+gov_presidential_dictatorship = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+	
+	possible = {
+		has_law = law_type:law_presidential_republic
+		OR = {
+			has_law = law_type:law_autocracy
+			has_law = law_type:law_one_party_state
+		}
+		OR = {
+			has_law = law_type:law_peasant_levies
+			has_law = law_type:law_national_militia
+		}
+	}
+}
+
+gov_junta = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_GENERAL"
+	female_ruler = "RULER_TITLE_GENERAL"
+
+	possible = {
+		has_law = law_type:law_presidential_republic
+		country_has_voting_franchise = no
+		NOT = { has_law = law_type:law_corporate_council } #NEW
+		OR = {
+			has_law = law_type:law_mass_conscription
+			has_law = law_type:law_professional_army
+		}
+	}
+}
+
+gov_presidential_oligarchy = {
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_TITLE_PRESIDENT"
+	female_ruler = "RULER_TITLE_PRESIDENT"
+
+	possible = {
+		has_law = law_type:law_presidential_republic
+		NOT = { has_law = law_type:law_corporate_council } #NEW
+		country_has_voting_franchise = no
+	}
+}
+
+gov_1984 = { # haha funny easter egg, if ur here looking in the scripts bc yuo couldnt figure it out on yuor own then shame on yuo
+	transfer_of_power = dictatorial
+
+	male_ruler = "RULER_BB"
+	female_ruler = "RULER_BS"
+
+	possible = {
+		OR = {
+			has_law = law_type:law_presidential_republic
+			has_law = law_type:law_council_republic
+		}
+		has_law = law_type:law_one_party_state
+		has_law = law_type:law_command_economy
+		has_law = law_type:law_outlawed_dissent
+		has_law = law_type:law_closed_borders
+		has_law = law_type:law_child_labor_allowed
+		has_law = law_type:law_secret_police
+		has_law = law_type:law_militarized_police
+		OR = {
+			has_law = law_type:law_womens_suffrage
+			has_law = law_type:law_women_in_the_workplace
+		}
+		has_technology_researched = mass_propaganda
+	}
+}

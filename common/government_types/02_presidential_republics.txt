@@ -93,22 +93,6 @@ gov_warlord_state = {
 	}
 }
 
-gov_fascist_state = {
-	transfer_of_power = dictatorial
-
-	male_ruler = "RULER_TITLE_PRESIDENT"
-	female_ruler = "RULER_TITLE_PRESIDENT"
-	
-	possible = {
-		OR = {
-			has_law = law_type:law_presidential_republic
-			has_law = law_type:law_parliamentary_republic
-		}
-		has_law = law_type:law_autocracy 
-		coa_fascist_trigger = yes
-	}
-}
-
 gov_chartered_company = {
 	transfer_of_power = presidential_elective
 	new_leader_on_reform_government = no
@@ -178,66 +162,6 @@ gov_crown_colony = {
 			has_discrimination_trait = european_heritage
 		}
 		country_is_in_europe = no
-	}
-}
-
-gov_military_dictatorship = {
-	transfer_of_power = dictatorial
-
-	male_ruler = "RULER_TITLE_GENERAL"
-	female_ruler = "RULER_TITLE_GENERAL"
-	
-	possible = {
-		has_law = law_type:law_presidential_republic
-		has_law = law_type:law_autocracy 
-		OR = {
-			has_law = law_type:law_mass_conscription
-			has_law = law_type:law_professional_army
-		}
-	}
-}
-
-gov_presidential_dictatorship = {
-	transfer_of_power = dictatorial
-
-	male_ruler = "RULER_TITLE_PRESIDENT"
-	female_ruler = "RULER_TITLE_PRESIDENT"
-	
-	possible = {
-		has_law = law_type:law_presidential_republic
-		has_law = law_type:law_autocracy 
-		OR = {
-			has_law = law_type:law_peasant_levies
-			has_law = law_type:law_national_militia
-		}
-	}
-}
-
-gov_junta = {
-	transfer_of_power = dictatorial
-
-	male_ruler = "RULER_TITLE_GENERAL"
-	female_ruler = "RULER_TITLE_GENERAL"
-	
-	possible = {
-		has_law = law_type:law_presidential_republic
-		country_has_voting_franchise = no
-		OR = {
-			has_law = law_type:law_mass_conscription
-			has_law = law_type:law_professional_army
-		}
-	}
-}
-
-gov_presidential_oligarchy = {
-	transfer_of_power = dictatorial
-
-	male_ruler = "RULER_TITLE_PRESIDENT"
-	female_ruler = "RULER_TITLE_PRESIDENT"
-	
-	possible = {
-		has_law = law_type:law_presidential_republic
-		country_has_voting_franchise = no
 	}
 }
 
