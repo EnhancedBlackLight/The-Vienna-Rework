@@ -1,0 +1,11 @@
+﻿on_diplomatic_play_started = {
+	events = {
+		pm_convert_event.3
+	}
+}
+
+on_wargoal_enforced = {
+	events = {
+		pm_convert_event.2
+	}
+}
