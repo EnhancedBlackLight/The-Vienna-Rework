@@ -42,6 +42,42 @@
 			}
 			add = 1
 		}
+		if = { #makes moderates less likely as more society techs related to politics are researched
+			limit = {
+				has_technology_researched = nationalism
+			}
+			multiply = 0.9
+		}
+		if = {
+			limit = {
+				has_technology_researched = egalitarianism
+			}
+			multiply = 0.9
+		}
+		if = {
+			limit = {
+				has_technology_researched = labor_movement
+			}
+			multiply = 0.9
+		}
+		if = {
+			limit = {
+				has_technology_researched = socialism
+			}
+			multiply = 0.9
+		}
+		if = {
+			limit = {
+				has_technology_researched = philosophical_pragmatism
+			}
+			multiply = 0.9
+		}
+		if = {
+			limit = {
+				has_technology_researched = political_agitation
+			}
+			multiply = 0.9
+		}
 	}
 }
 
@@ -2466,13 +2502,13 @@ ideology_market_anarchist = { #NEW
 						any_scope_state = {
 							any_scope_building = {
 								is_building_type = building_urban_center
-								level >= 15
+								level >= 10
 							}
 						}
 					}
 				}
 			}
-			add = -150
+			add = -100
 		}
 		#significantly more likely for industrialists in a council republic
 		if = {
@@ -2637,13 +2673,13 @@ ideology_market_oligarch = { #NEW
 						any_scope_state = {
 							any_scope_building = {
 								is_building_type = building_urban_center
-								level >= 20
+								level >= 10
 							}
 						}
 					}
 				}
 			}
-			add = -150
+			add = -100
 		}
 		#significantly more likely for industrialists in a council republic
 		if = {
