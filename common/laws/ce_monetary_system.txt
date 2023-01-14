@@ -95,7 +95,6 @@ law_ce_silver_standard = {
 	}
 	
 	possible_political_movements = {
-		law_ce_goods_standard
 		law_ce_gold_standard
 		law_ce_credit_standard
 		law_ce_labour_standard
@@ -203,7 +202,6 @@ law_ce_gold_standard = {
 	}
 	
 	possible_political_movements = {
-		law_ce_goods_standard
 		law_ce_credit_standard
 		law_ce_silver_standard
 	}
@@ -397,8 +395,6 @@ law_ce_goods_standard = {
 	}
 	
 	possible_political_movements = {
-		law_ce_coins
-		law_ce_silver_standard
 		law_ce_gold_standard
 	#	law_ce_allocation_to_needs
 	}
@@ -543,8 +539,6 @@ law_ce_no_monetary_system = {
 	
 	possible_political_movements = {
 		law_ce_goods_standard
-		law_ce_coins
-		law_ce_silver_standard
 		law_ce_gold_standard
 		law_ce_credit_standard
 	}
@@ -604,7 +598,6 @@ law_ce_credit_standard = {
 	}
 	
 	possible_political_movements = {
-		law_ce_goods_standard
 		law_ce_credit_standard
 		law_ce_gold_standard
 		law_ce_labour_standard
