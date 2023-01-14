@@ -18,28 +18,12 @@
 			name = modifier_french_independence_payments
 		}
 
-		add_modifier = {
-			name = age_of_caudillos_modifier
-			months = very_long_modifier_time
-			is_decaying = yes
-		}
-
 		ig:ig_devout = {
 			set_interest_group_name = ig_catholic_church
-			remove_ideology = ideology_moralist
-			add_ideology = ideology_catholic_moralist
 		}
 
 		ig:ig_armed_forces = {
 			add_ruling_interest_group = yes
-			add_ideology = ideology_caudillismo
-		}
-
-		ig:ig_landowners = {
-			add_ruling_interest_group = yes
-			set_interest_group_name = ig_planter_landowners
-			remove_ideology = ideology_paternalistic
-			add_ideology = ideology_caudillismo
 		}
 	}
 }

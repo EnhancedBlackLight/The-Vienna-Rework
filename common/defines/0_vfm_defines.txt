@@ -6,11 +6,11 @@ NJominiMap = {
 
 NAI = {
 	STRATEGY_RANDOM_FACTOR = 10.0
-	CHANGE_STRATEGY_INCREASE_WEEKLY_CHANCE = 20.0
+	CHANGE_STRATEGY_INCREASE_WEEKLY_CHANCE = 40.0
 	CHANGE_STRATEGY_DIPLOMATIC_STATE_GAINED = 15
 	CHANGE_STRATEGY_DIPLOMATIC_STATE_LOST = 15
-	COUNTRY_GOAL_STRATEGIC_UPDATE_COUNT = 5
-	COUNTRY_GOAL_ADJUSTMENT_UPDATE_COUNT = 50
+	COUNTRY_GOAL_STRATEGIC_UPDATE_COUNT = 10
+	COUNTRY_GOAL_ADJUSTMENT_UPDATE_COUNT = 75
 	BASE_AGGRESSION = 0.6
 	DIPLO_PROPOSAL_TO_PLAYER_COOLDOWN_MONTHS = 60
 	DIPLO_PROPOSAL_LIKELY_NON_ACCEPTED_COOLDOWN_MONTHS = 60
@@ -32,6 +32,7 @@ NAI = {
 }
 
 NCountry = {
+	COUNTRY_FORMATION_CANDIDATE_MIN_RANK = 2
 }
 
 NPolitics = {
@@ -52,14 +53,17 @@ NDiplomacy = {
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_RETURN_STATE = 5
 }
 
+NPops =  efficiently for each tax capacity
+} 
+
 ### Pop Growth Constants
-@min_birthrate = 0.03 #original 0.0020
-@max_birthrate = 0.11 #original 0.0050
-@min_mortality = 0.0002
-@max_mortality = 0.003
+@min_birthrate = 0.0010
+@max_birthrate = 0.0050
+@min_mortality = 0.0005
+@max_mortality = 0.0070
 @pop_growth_sol_equilibrium = 8							# Equilibrium is where (with no birthrate/death-rate mods) growth is stagnant
-@pop_growth_sol_delta_cap = 15							# SoL Delta Cap is where net growth stops increasing with rising SoL, i.e. both drop at the same pace
-@pop_growth_sol_cap = 80								# SoL Cap is where they birthrate/death-rate stop dropping
+@pop_growth_sol_delta_cap = 20							# SoL Delta Cap is where net growth stops increasing with rising SoL, i.e. both drop at the same pace
+@pop_growth_sol_cap = 40								# SoL Cap is where they birthrate/death-rate stop dropping
 
 @mortality_at_equilibrium = @[max_birthrate-(pop_growth_sol_equilibrium*(max_birthrate-min_birthrate)/pop_growth_sol_cap)]
 @birthrate_at_delta_cap = @[max_birthrate-(pop_growth_sol_delta_cap*(max_birthrate-min_birthrate)/pop_growth_sol_cap)]
@@ -69,14 +73,6 @@ NDiplomacy = {
 @fixed_delta_slope = @[(min_mortality-mortality_at_delta_cap)/(pop_growth_sol_cap-pop_growth_sol_delta_cap)]
 		
 NPops = {
-	#performance
-	ASSIMILATION_RATE = 0.0075	# Percentage of pops who will Assimilate into a different Culture each month, if eligible #0.002
-	MIN_ASSIMILATION = 1000		# If there is any assmiliation at least this many people will assimilate #10
-	CONVERSION_RATE = 0.0075	# Percentage of pops who will Convert into a different Religion each month, if eligible #0.002
-	MIN_CONVERSION = 1000       # default: 10
-
-	#some market testing
-	OBSESSION_SPAWN_CHANCE = 0.8				# Per year (1.0 = 1%), multiplied by goods supply and market size mult #default 0.1
 }
 ### End Pop Growth Constant defines
 

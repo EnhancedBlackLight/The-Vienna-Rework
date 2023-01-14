@@ -48,15 +48,34 @@
 					has_global_variable = oregon_trail_mapped
 				}
 				has_state_in_state_region = STATE_MONTANA
+				s:STATE_MONTANA = {
+					NOT = {
+						any_scope_state = {
+							owner = {
+								country_rank = 0
+							}
+						}
+					}
+				}
+				
 				has_state_in_state_region = STATE_WYOMING
+				s:STATE_WYOMING = {
+					NOT = {
+						any_scope_state = {
+							owner = {
+								country_rank = 0
+							}
+						}
+					}
+				}
 				c:GBR = {
 					relations:ROOT >= relations_threshold:cordial
 				}
 			}
 			AND = {
-				has_state_in_state_region = STATE_WASHINGTON
-				has_state_in_state_region = STATE_IDAHO
-				has_state_in_state_region = STATE_OREGON
+				owns_entire_state_region = STATE_WASHINGTON
+				owns_entire_state_region = STATE_IDAHO
+				owns_entire_state_region = STATE_OREGON
 			}
 		}
 	}
@@ -85,26 +104,6 @@
 					}
 				}
 				s:STATE_IDAHO = {
-					any_scope_state = {
-						owner = {
-							OR = {
-								c:GBR = THIS
-								is_subject_of = c:GBR
-							}
-						}
-					}
-				}
-				s:STATE_WYOMING = {
-					any_scope_state = {
-						owner = {
-							OR = {
-								c:GBR = THIS
-								is_subject_of = c:GBR
-							}
-						}
-					}
-				}
-				s:STATE_MONTANA = {
 					any_scope_state = {
 						owner = {
 							OR = {

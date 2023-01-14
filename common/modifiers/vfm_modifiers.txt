@@ -1,4 +1,4 @@
-# Scales with how much population is under low pop threshold
+# We need to rework how high and low population work in a state, but save it until after 1.2 fixes migration and arable land
 low_pop_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_accepted_birth_rate_mult = 0.35
@@ -9,4 +9,56 @@ high_pop_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	state_birth_rate_mult = -0.15
 	state_migration_pull_mult = -1.0
+}
+
+#Low Countries
+pax_belgica = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 30
+	country_army_power_projection_add = 12
+}
+
+control_turkestan = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.05
+}
+
+russia_welfare = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_minimum_wealth_add = 2
+}
+
+control_korea = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.05
+}
+
+japan_iwakura_mission = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 1
+}
+
+gbr_unified_south_africa = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.1
+}
+
+saf_unified_south_africa = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.2
+}
+
+ethiopian_unifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.2
+}
+
+south_africa_recent_unification = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 50
+}
+
+south_africa_recent_unification_war = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_sol_change_mult = 0.15
 }
