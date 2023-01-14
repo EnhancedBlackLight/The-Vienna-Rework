@@ -241,9 +241,9 @@ law_corporotocracy = { #NEW
 		law_corporatist_economy
 	}
 
-	on_activate = {
-		activate_law = law_type:law_anarchy
-	}
+	# on_activate = {
+	# 	activate_law = law_type:law_anarchy
+	# }
 
 
 	modifier = {
