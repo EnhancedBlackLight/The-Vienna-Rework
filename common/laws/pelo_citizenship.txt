@@ -28,7 +28,9 @@ law_ethnostate = { # Makes it actually viable considering it just isn't in the b
 		state_loyalists_from_sol_change_accepted_culture_mult = 0.35 #0.2 to 0.35
 		state_migration_pull_mult = -0.10 # NEW
 		state_accepted_birth_rate_mult = 0.10 # NEW
+		state_political_strength_from_discrimination_mult = -0.9
 	}
+	
 
 	possible_political_movements = {
 		law_racial_segregation
@@ -60,6 +62,7 @@ law_national_supremacy = { # Buffs a little bit
 		state_loyalists_from_sol_change_accepted_culture_mult = 0.25 # 0.15 to 0.25
 		state_migration_pull_mult = -0.05 # NEW
 		state_accepted_birth_rate_mult = 0.05 # NEW
+		state_political_strength_from_discrimination_mult = -0.70
 	}
 
 	possible_political_movements = {
@@ -87,6 +90,7 @@ law_racial_segregation = { # The gap between RS and NS is too large imo, i feel 
 		country_authority_add = 100
 		state_radicals_from_sol_change_accepted_culture_mult = -0.15 # -0.1 to -0.15
 		state_loyalists_from_sol_change_accepted_culture_mult = 0.15 # 0.1 to 0.15
+		state_political_strength_from_discrimination_mult = -0.5
 	}
 
 	possible_political_movements = {
@@ -143,6 +147,7 @@ law_cultural_exclusion = {
 		state_radicals_from_sol_change_accepted_culture_mult = -0.05 # Unchanged
 		state_loyalists_from_sol_change_accepted_culture_mult = 0.05 # Unchanged
 		state_migration_pull_mult = 0.05 # NEW
+		state_political_strength_from_discrimination_mult = -0.3
 	}
 
 	possible_political_movements = {

@@ -59,6 +59,6 @@ legislative_efficiency = { # Excess AUT reduces enactment time by -50% at 2x pro
 	country_law_enactment_time_mult = -0.5
 }
 #may tweak discrimination to still allow for some political participation for pops of discriminated cultures if they are a significant amount of the population
-# discrimination = {
-# 	state_political_strength_from_discrimination_mult = -0.9
-# }
+discrimination = {
+	state_political_strength_from_discrimination_mult = -0.1
+}
