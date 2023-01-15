@@ -2461,7 +2461,7 @@ STATES = {
 		add_homeland = afro_caribeno
 		add_homeland = muisca
 	}
-	s:STATE_RUSCA = {
+	s:STATE_CAUCA = {
 		create_state = {
 			country = c:CLM
 			owned_provinces = { x69559D x808050 x0000D0 x70B453 xDFB23F x5575E4 x53873F xA03713 xCCF8B8 x008050 xB81135 x04F7D1 x488A71 xB98FDD xF294CC x824FE7 x8000D0 x5437B1 x6E5F7F }
@@ -7262,7 +7262,7 @@ STATES = {
 			owned_provinces = { x8FD393 xC09041 x019041 xDA8EF4 x0F3A99 x3B6A9E }
 		}
 		
-		add_homeland = north_RUScasian
+		add_homeland = north_caucasian
 		add_claim = c:RUS
 		add_claim = c:CHC
 	}
@@ -7279,7 +7279,7 @@ STATES = {
 		
 		add_homeland = russian
 		add_homeland = ukrainian
-		add_homeland = north_RUScasian
+		add_homeland = north_caucasian
 		add_claim = c:RUS
 		add_claim = c:CIR
 	}
