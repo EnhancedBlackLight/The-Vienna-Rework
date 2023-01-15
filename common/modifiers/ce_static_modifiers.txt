@@ -51,7 +51,7 @@ political_dysfunction = {
 
 excess_innovation = { #spread from excess innovation cut in fourth
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_tech_spread_add = 0.05
+	country_tech_spread_add = 0.02
 }
 
 legislative_efficiency = { # Excess AUT reduces enactment time by -50% at 2x production to usage
@@ -61,4 +61,10 @@ legislative_efficiency = { # Excess AUT reduces enactment time by -50% at 2x pro
 #may tweak discrimination to still allow for some political participation for pops of discriminated cultures if they are a significant amount of the population
 discrimination = {
 	state_political_strength_from_discrimination_mult = -0.1
+}
+
+country_literacy_rate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_max_add = 300
+	country_tech_spread_add = 250
 }
