@@ -3,7 +3,7 @@ je_corporatocracy_1 = {
 
     is_shown_when_inactive = {
 		NOT = { has_variable = completed_corporatocracy_1_var }
-		has_technology_researched = political_agitation
+		has_technology_researched = anarchism
 		NOT = { is_country_type = decentralized }
 	}
 

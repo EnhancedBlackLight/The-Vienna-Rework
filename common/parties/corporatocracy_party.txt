@@ -17,7 +17,7 @@ corporatocracy_party = { # its a widespread corporation essentially
 		default = "/gfx/interface/icons/party_icons/corporotocracy.dds"
 	}
 	unlocking_technologies = {
-		political_agitation
+		anarchism
 	}
 	valid_for_country = {
 		always = yes

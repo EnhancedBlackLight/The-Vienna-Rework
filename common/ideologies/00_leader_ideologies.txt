@@ -2613,7 +2613,7 @@ ideology_market_oligarch = { #NEW
 
 	possible = {
 		owner = {
-			has_technology_researched = political_agitation
+			has_technology_researched = mutual_funds
 		}
 		scope:interest_group = {
 			OR = {

@@ -232,7 +232,7 @@ law_corporotocracy = { #NEW
 	progressiveness = 150
 
 	unlocking_technologies = {
-		political_agitation
+		anarchism
 	}
 
 	disallowing_laws = {
