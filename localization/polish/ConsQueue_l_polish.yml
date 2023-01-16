@@ -1,0 +1,4 @@
+﻿l_polish:
+ 
+ NEW_CONSTRUCTION_QUEUE:0 "#v [GetPlayer.GetNumActiveConstructionQueueElements] W trakcie budowy #! [GetPlayer.GetNumInactiveConstructionQueueElements|=]"
+ 

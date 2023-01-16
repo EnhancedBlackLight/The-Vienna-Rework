@@ -1,0 +1,4 @@
+﻿l_german:
+ 
+ NEW_CONSTRUCTION_QUEUE:0 "#v [GetPlayer.GetNumActiveConstructionQueueElements] Im Bau #! [GetPlayer.GetNumInactiveConstructionQueueElements|=]"
+ 
