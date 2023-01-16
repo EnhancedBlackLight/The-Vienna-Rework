@@ -1,0 +1,3 @@
+﻿l_braz_por:
+ 
+ NEW_CONSTRUCTION_QUEUE:0 "#v [GetPlayer.GetNumActiveConstructionQueueElements] Em Construção #! [GetPlayer.GetNumInactiveConstructionQueueElements|=]"
