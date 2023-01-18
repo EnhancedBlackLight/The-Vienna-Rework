@@ -40,3 +40,11 @@ TZN = {
 	cultures = { swahili unyamwezi yao lacustrine_bantu }
 	capital = STATE_ZANZIBAR
 }
+
+RUT = {
+	color = hsv{ 0.37 0.28 0.54 }
+	country_type = recognized
+	tier = kingdom
+	cultures = {byelorussian}
+	capital = STATE_MINSK
+}
