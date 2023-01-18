@@ -68,3 +68,8 @@ country_literacy_rate = {
 	country_weekly_innovation_max_add = 300
 	country_tech_spread_add = 250
 }
+
+diplomatic_mitigation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_infamy_decay_mult = 0.65
+}
