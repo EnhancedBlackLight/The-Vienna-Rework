@@ -14,9 +14,6 @@
 		always = yes
 	}
 
-	possible = {
-		has_technology_researched = nationalism
-	}
 }
 
 SEA = {

@@ -15,20 +15,12 @@
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-			has_technology_researched = pan-nationalism
-			NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 EUR = { #Europe
 	use_culture_states = yes
 
-	required_states_fraction = 0.45
+	required_states_fraction = 0.4
 
-	possible = {
-		has_technology_researched = pan-nationalism
-		NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 
 BNL = { #Benelux
@@ -44,9 +36,6 @@ BNL = { #Benelux
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-			has_technology_researched = pan-nationalism
-	}
 }
 CEL = { #Celtica
 	use_culture_states = yes
@@ -54,12 +43,6 @@ CEL = { #Celtica
 	required_states_fraction = 0.80
 	
 	ai_will_do = { always = yes }
-
-	possible = {
-		has_technology_researched = pan-nationalism
-		NOT = { has_game_rule = plausible_formable_nations }
-
-	}
 	
 }
 CRT = { #CARTHAGE
@@ -85,9 +68,6 @@ CRT = { #CARTHAGE
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-		NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 ZAP = { #Zapadoslavia
 	use_culture_states = yes
@@ -96,9 +76,6 @@ ZAP = { #Zapadoslavia
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-			has_technology_researched = pan-nationalism
-	}
 }
 CRB = { #Caribbean
 	states = {
@@ -116,9 +93,6 @@ CRB = { #Caribbean
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-			has_technology_researched = pan-nationalism
-	}
 }
 HRE = { #Holy Roman Empire
 	states = {
@@ -133,7 +107,7 @@ HRE = { #Holy Roman Empire
 		STATE_WALLONIA STATE_RHONE STATE_WEST_PRUSSIA STATE_LAZIO
 	}
 
-	required_states_fraction = 0.80
+	required_states_fraction = 0.625
 	
 	ai_will_do = { always = yes }
 }
@@ -156,11 +130,6 @@ IFR = {
 	
 	ai_will_do = { always = no }
 
-	possible = {
-			NOT = { exists = c:IFR }
-			has_technology_researched = pan-nationalism
-			NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 SOM = {
 	use_culture_states = yes
@@ -199,14 +168,10 @@ RMA = {
 	}
 	is_major_formation = no
 
-	required_states_fraction = 0.75	
+	required_states_fraction = 0.35	
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-		has_technology_researched = pan-nationalism
-		NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 
 BGR = {
@@ -221,15 +186,6 @@ BGR = {
     }	
 	required_states_fraction = 0.6
 	
-	    possible = {
-         root = {
-            AND = {
-                owns_entire_state_region = STATE_BULGARIA
-                owns_entire_state_region = STATE_WALLACHIA 
-				has_state_in_state_region = STATE_MOLDAVIA
-            }
-        }
-    }
 	ai_will_do = { always = yes }
 }
 
@@ -280,10 +236,6 @@ PAG = { #Patria Grande
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-		has_technology_researched = pan-nationalism
-		NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 
 GRL = { #Grandelumiere
@@ -336,9 +288,6 @@ GRL = { #Grandelumiere
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-		NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 
 MRV = { # Greater Moravia
@@ -361,9 +310,6 @@ MRV = { # Greater Moravia
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-		NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 
 ILY = {

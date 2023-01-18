@@ -67,9 +67,7 @@ CSC = { #Cascadia
 	is_major_formation = no
 
 	required_states_fraction = 0.75	
-	
-	possible = { is_subject = no }
-	
+		
 	ai_will_do = { always = yes }
 	
 }

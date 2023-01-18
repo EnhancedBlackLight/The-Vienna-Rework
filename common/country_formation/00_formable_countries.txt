@@ -32,7 +32,7 @@ UCA = {
 RUS = {
 	use_culture_states = yes
 
-	required_states_fraction = 0.75
+	required_states_fraction = 0.5
 	
 	ai_will_do = { always = yes }
 }
@@ -124,14 +124,10 @@ BYZ = {
 		STATE_ALBANIA
 	}
 
-	required_states_fraction = 1.0
+	required_states_fraction = 0.5
 	
 	ai_will_do = { always = yes }
 
-	possible = {
-		has_law = law_type:law_monarchy
-		NOT = { has_game_rule = plausible_formable_nations }
-	}
 }
 
 PLC = {
@@ -463,12 +459,12 @@ TRH = {
 		STATE_DZUNGARIA
 	}
 
-	required_states_fraction = 0.7
+	required_states_fraction = 0.5
 	
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = pan-nationalism
+		has_technology_researched = nationalism
 	}
 }
 
@@ -490,13 +486,12 @@ IDN = {
 		STATE_WEST_JAVA
 	}
 
-	required_states_fraction = 0.75
+	required_states_fraction = 0.5
 	
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = pan-nationalism
-
+		has_technology_researched = nationalism
 	}
 }
 
@@ -527,13 +522,12 @@ BHT = {
 		STATE_TRAVANCORE
 	}
 
-	required_states_fraction = 0.75
+	required_states_fraction = 0.5
 	
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = pan-nationalism
-
+		has_technology_researched = nationalism
 	}
 }
 
@@ -545,4 +539,20 @@ YEM = {
 	required_states_fraction = 0.75	
 	
 	ai_will_do = { always = yes }
+}
+JAP = {
+	states = {
+		STATE_KYUSHU
+		STATE_CHUGOKU
+		STATE_SHIKOKU
+		STATE_KANSAI
+		STATE_CHUBU
+		STATE_KANTO
+		STATE_TOHOKU
+		STATE_HOKKAIDO
+		STATE_SAKHALIN
+		STATE_RYUKYU_ISLANDS
+	}
+
+	required_states_fraction = 0.7
 }
