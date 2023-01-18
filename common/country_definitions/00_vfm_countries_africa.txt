@@ -48,3 +48,10 @@ RUT = {
 	cultures = {byelorussian}
 	capital = STATE_MINSK
 }
+
+SFV = {
+	color = hsv{ 0.1 0.43 0.56 }
+	country_type = recognized
+	tier = empire
+	cultures = {persian azerbaijani georgian armenian}
+}
