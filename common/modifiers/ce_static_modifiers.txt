@@ -42,6 +42,8 @@ base_values = {
 	building_mobilization_cost_mult = 0.6
 	
 	building_economy_of_scale_level_cap_add = 20
+
+	country_society_tech_cost_mult = -0.33
 }
 
 #reportedly breaking for an unknown reason so its going to be disabled
