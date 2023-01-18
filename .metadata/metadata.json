@@ -24,7 +24,7 @@
       "common/country_creation",		
       "common/character_templates",			
       "common/dynamic_country_map_colors",
-      "common/dynamic_country_names/"
+      "common/dynamic_country_names"
     ],
     "multiplayer_synchronized" : true
   }

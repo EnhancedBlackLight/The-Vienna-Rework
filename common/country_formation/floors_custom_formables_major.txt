@@ -1,4 +1,4 @@
-﻿ICA = {
+﻿VIC = {
 	states = {
 		STATE_TONKIN
 		STATE_ANNAM

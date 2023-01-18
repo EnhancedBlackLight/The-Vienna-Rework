@@ -1,4 +1,4 @@
-﻿ICA = {
+﻿VIC = {
 	color = { 148 198 170}
 	country_type = colonial
 

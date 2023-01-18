@@ -1,4 +1,4 @@
-﻿ICA = {
+﻿VIC = {
 	pattern = "pattern_solid.tga"
 	color1 = {255 247 0}
 

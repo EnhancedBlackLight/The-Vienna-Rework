@@ -1,6 +1,6 @@
-﻿ICA = {
+﻿VIC = {
 	flag_definition = {
-		coa = ICA
+		coa = VIC
 	}
 	flag_definition = {
 		coa = ICA_republic
@@ -10,7 +10,7 @@
 		}
 	}
 	flag_definition = {
-		coa = ICA_communist
+		coa = VIC_communist
 		priority = 1500
 		trigger = {
 			coa_def_communist_flag_trigger = yes
