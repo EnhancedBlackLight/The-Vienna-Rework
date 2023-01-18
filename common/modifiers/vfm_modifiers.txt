@@ -62,3 +62,9 @@ south_africa_recent_unification_war = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	state_radicals_from_sol_change_mult = 0.15
 }
+
+nation_building = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_society_tech_spread_mult = 0.2
+	country_production_tech_spread_mult = 0.2
+}

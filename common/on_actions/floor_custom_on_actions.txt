@@ -1,0 +1,10 @@
+on_state_incorporation = {
+	effect = {
+		root.owner = {
+			add_modifier = {
+				name = nation_building
+				months = 8
+			}
+		}
+	}
+}
