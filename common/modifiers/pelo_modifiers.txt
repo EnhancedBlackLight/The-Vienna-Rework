@@ -1,0 +1,89 @@
+rejected_corporatocracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_pop_attraction_mult = -.25
+	interest_group_pol_str_mult = -.25
+}
+
+corporate_heads_assassinated = {
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_explosion_negative.dds
+	interest_group_pop_attraction_mult = -.35
+	interest_group_pol_str_mult = -.35
+}
+
+hero_of_the_proletariat = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	interest_group_pop_attraction_mult = 0.35
+	interest_group_pol_str_mult = 0.35
+}
+
+mass_civil_unrest_corpo = {
+	icon = gfx/interface/icons/timed_modifier_icons/unused/modifier_explosion_negative.dds
+	building_group_bg_manufacturing_throughput_mult = -0.25
+	building_group_bg_agriculture_throughput_mult = -0.25
+	building_group_bg_plantation_throughput_mult = -0.25
+	state_radicals_from_sol_change_mult = 0.35
+}
+
+economic_council_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_law_enactment_success_add = 0.15
+	country_law_enactment_time_mult = -0.1
+}
+
+eloquently_spoken = {
+	icon = gfx/interface/icons/timed_modifier_icons/lightbulb_positive.dds
+	interest_group_pop_attraction_mult = 0.10
+}
+
+ops_vanguard_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_law_enactment_success_add = 0.25
+	country_law_enactment_time_mult = 0.15
+}
+
+ops_fascist_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_law_enactment_success_add = 0.25
+	country_law_enactment_time_mult = 0.15
+}
+
+ops_normal_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_law_enactment_success_add = 0.1
+	country_law_enactment_time_mult = 0.2
+}
+
+ce_vanguard_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_law_enactment_success_add = 0.15
+	country_law_enactment_time_mult = 0.2
+}
+
+ce_success_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_law_enactment_success_add = 0.15
+	country_law_enactment_time_mult = -0.1
+}
+
+ce_failure_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_law_enactment_success_add = -0.15
+	country_law_enactment_time_mult = 0.30
+}
+
+cpe_success_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_law_enactment_success_add = 0.15
+	country_law_enactment_time_mult = -0.15
+}
+
+cpe_failure_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_law_enactment_success_add = -0.15
+	country_law_enactment_time_mult = 0.30
+}
+
+cpe_gridlock_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_law_enactment_time_mult = 0.25
+}

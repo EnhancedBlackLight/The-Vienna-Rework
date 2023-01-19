@@ -1,0 +1,318 @@
+﻿namespace = reject_back_down_event
+
+# setup target if target exists and isn't now a subject of root
+reject_back_down_event.1 = {
+	type = diplo_play_event
+	placement = root
+	hidden = yes
+
+	immediate = {
+		target = {
+			root = {
+				set_variable = {
+					name = temp
+					value = prev
+				}
+			}
+		}
+		if = {
+			limit = {
+				initiator = {
+					has_variable = target
+				}
+			}
+			initiator = {
+				remove_variable = target
+			}
+		}
+		if = {
+			limit = {
+				initiator = {
+					is_player = yes
+				}
+				NOT = {
+					has_play_goal = make_vassal
+				}
+				NOT = {
+					has_play_goal = make_puppet
+				}
+				NOT = {
+					has_play_goal = make_dominion
+				}
+				exists = var:temp
+				var:temp = {
+					any_scope_state = {
+						is_capital = yes
+					}
+				}
+			}
+			initiator = {
+				set_variable = {
+					name = target
+					value = root.var:temp
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				initiator = {
+					is_player = yes
+				}
+			}
+			every_state = {
+				limit = {
+					has_variable = owned_by_target
+				}
+				remove_variable = owned_by_target
+			}
+			every_country = {
+				limit = {
+					has_variable = subject_of_target
+				}
+				remove_variable = owned_by_target
+			}
+		}
+	}
+}
+
+# setup new diplo play and return stuff to target
+reject_back_down_event.2 = {
+	type = country_event
+	placement = root
+
+	title = reject_back_down_event.2.t
+	desc = reject_back_down_event.2.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_military_parade.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	hidden = no
+	is_popup = yes
+
+	duration = 1
+
+	option = {
+		name = reject_back_down_event.2.b
+		default_option = yes
+		remove_variable = target
+
+		every_country = {
+			limit = {
+				has_variable = subject_of_target
+			}
+			remove_variable = subject_of_target
+		}
+		every_state = {
+			limit = {
+				has_variable = owned_by_target
+			}
+			remove_variable = owned_by_target
+		}
+	}
+
+	option = {
+		name = reject_back_down_event.2.a
+		root = {
+			change_infamy = 5
+		}
+		if = {
+			limit = {
+				exists = var:target
+				var:target = {
+					any_scope_state = {
+						is_capital = yes
+					}
+				}
+				has_variable = target
+			}
+			create_diplomatic_play = {
+				name = reject_back_down_war
+				type = dp_reject_back_down
+				target_country = var:target
+			}
+			every_state = {
+				limit = {
+					owner = root
+					has_variable = owned_by_target
+				}
+				set_state_owner = root.var:target
+				set_state_type = incorporated
+			}
+			every_country = {
+				limit = {
+					has_variable = subject_of_target
+					NOT = {
+						is_subject_of = root.var:target
+					}
+					is_player = no
+				}
+				if = {
+					limit = {
+						is_subject_of = root
+					}
+					if = {
+						limit = {
+							is_subject_type = subject_type_puppet
+						}
+						root = {
+							remove_diplomatic_pact = {
+								country = prev
+								type = puppet
+							}
+						}
+						root.var:target = {
+							create_diplomatic_pact = {
+								country = prev
+								type = puppet
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							is_subject_type = subject_type_dominion
+						}
+						root = {
+							remove_diplomatic_pact = {
+								country = prev
+								type = dominion
+							}
+						}
+						root.var:target = {
+							create_diplomatic_pact = {
+								country = prev
+								type = dominion
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							is_subject_type = subject_type_protectorate
+						}
+						root = {
+							remove_diplomatic_pact = {
+								country = prev
+								type = protectorate
+							}
+						}
+						root.var:target = {
+							create_diplomatic_pact = {
+								country = prev
+								type = protectorate
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							is_subject_type = subject_type_tributary
+						}
+						root = {
+							remove_diplomatic_pact = {
+								country = prev
+								type = tributary
+							}
+						}
+						root.var:target = {
+							create_diplomatic_pact = {
+								country = prev
+								type = tributary
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							is_subject_type = subject_type_personal_union
+						}
+						root = {
+							remove_diplomatic_pact = {
+								country = prev
+								type = personal_union
+							}
+						}
+						root.var:target = {
+							create_diplomatic_pact = {
+								country = prev
+								type = personal_union
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							is_subject_type = subject_type_vassal
+						}
+						root = {
+							remove_diplomatic_pact = {
+								country = prev
+								type = vassal
+							}
+						}
+						root.var:target = {
+							create_diplomatic_pact = {
+								country = prev
+								type = vassal
+							}
+						}
+					}
+				}
+				else = {
+					create_diplomatic_pact = {
+						country = prev
+						type = puppet
+					}
+				}
+			}		
+		}
+		remove_variable = target
+		every_country = {
+			limit = {
+				has_variable = subject_of_target
+			}
+			remove_variable = subject_of_target
+		}
+		every_state = {
+			limit = {
+				has_variable = owned_by_target
+			}
+			remove_variable = owned_by_target
+		}
+	}
+}
+
+# setup owned states/subjects
+reject_back_down_event.3 = {
+	type = diplomatic_play_event
+	placement = root
+	hidden = yes
+	
+	immediate = {
+		target = {
+			root = {
+				set_variable = {
+					name = temp
+					value = prev
+				}
+			}
+		}
+		if = {
+			limit = {
+				initiator = {
+					is_player = yes
+				}
+			}
+			every_state = {
+				limit = {
+					owner = root.var:temp
+				}
+				set_variable = owned_by_target
+			}
+			every_country = {
+				limit = {
+					is_subject_of = root.var:temp
+				}
+				set_variable = subject_of_target
+			}
+			
+		}
+	}
+}

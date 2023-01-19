@@ -1,0 +1,94 @@
+# Party full of corpo rats.
+
+corporatocracy_party = { # its a widespread corporation essentially
+    color = { 185 185 185 }
+    name = {
+        first_valid = {
+            triggered_desc = {
+                desc = party_corporatocracy_inc
+                trigger = {
+                    always = yes
+                }
+            }
+        }
+    }
+
+    icon = {
+		default = "/gfx/interface/icons/party_icons/corporotocracy.dds"
+	}
+	unlocking_technologies = {
+		anarchism
+	}
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+		}
+	}
+
+	join_weight = {
+
+        value = {
+            value = -5
+            desc = "base_value"
+        }
+
+        if = { # Corporativists will always join the party
+            limit = {
+                leader = {
+                    OR = {
+                        has_ideology = ideology_market_anarchist
+                        has_ideology = ideology_market_oligarch
+                    }
+                }
+            }
+            add = {
+                value = 15
+                desc = "from_corporativists"
+            }
+        }
+
+        if = { # Market liberals will support the existing party
+            limit = {
+                leader = { has_ideology = ideology_market_liberal }
+                exists = owner.py:corporatocracy_party
+            }
+            add = {
+                value = 5
+                desc = "from_corpo_liberal_support"
+            }
+        }
+
+        if = { # General support from market liberals
+            limit = {
+                leader = { has_ideology = ideology_market_liberal }
+            }
+            add = {
+                value = 5
+                desc = "from_corpo_liberals"
+            }
+        }
+
+        if = { # Generally people who are more socialist economically will NOT want corporations to rule over everything, who would've thought
+            limit = {
+                OR = {
+                    has_ideology = ideology_proletarian
+                    leader = {
+                        OR = {
+                            has_ideology = ideology_vanguardist
+                            has_ideology = ideology_communist
+                            has_ideology = ideology_anarchist
+                            has_ideology = ideology_fascist
+                        }
+                    }
+                }
+            }
+            add = {
+                value = -10
+                desc = "from_against_corporatocracy"
+            }
+        }
+	}
+}

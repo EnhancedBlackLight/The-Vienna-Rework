@@ -35,7 +35,7 @@
 			country_or_subject_owns_entire_state_region = STATE_WEST_PRUSSIA
 			country_or_subject_owns_entire_state_region = STATE_EAST_PRUSSIA
 			country_or_subject_owns_entire_state_region = STATE_POSEN
-			amount >= 10
+			amount >= 15
 		}
 	}
 
@@ -90,7 +90,7 @@ je_german_unification = {
 			has_variable = je_unification_progress
 		}
 		calc_true_if = {
-			amount >= 17
+			amount >= 19
 			owns_entire_state_region = STATE_POMERANIA
 			owns_entire_state_region = STATE_ELBE
 			owns_entire_state_region = STATE_WESTPHALIA

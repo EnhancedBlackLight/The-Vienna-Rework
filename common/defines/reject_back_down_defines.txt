@@ -1,0 +1,3 @@
+﻿NAI = {
+	DIPLO_PLAY_BOLDNESS_CONTAINMENT_PLAY = 1000	# Add this boldness if in a containment play
+}

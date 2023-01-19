@@ -1,0 +1,4 @@
+﻿l_turkish:
+ 
+ NEW_CONSTRUCTION_QUEUE:0 "#v [GetPlayer.GetNumActiveConstructionQueueElements] İnşa Halinde #! [GetPlayer.GetNumInactiveConstructionQueueElements|=]"
+ 

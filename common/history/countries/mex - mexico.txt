@@ -19,25 +19,17 @@
 		
 		ig:ig_armed_forces = { # Barragan was head of state, on paper, but Antonio Lopez de Santa Anna had his finger in every political pie
 			add_ruling_interest_group = yes
-			set_interest_group_name = ig_mexican_army
 			add_ideology = ideology_caudillismo
 		}
 
 		ig:ig_landowners = {
 			add_ruling_interest_group = yes
-			set_interest_group_name = ig_hispanic_landowners
 			remove_ideology = ideology_paternalistic
 			add_ideology = ideology_caudillismo
 		}
 
 		ig:ig_devout = {
 			set_interest_group_name = ig_catholic_church
-			remove_ideology = ideology_moralist
-			add_ideology = ideology_catholic_moralist
-		}
-
-		ig:ig_rural_folk = {
-			set_interest_group_name = ig_mexican_rural
 		}
 
 		add_modifier = {

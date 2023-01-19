@@ -66,7 +66,7 @@ BKV = {
 	ai_will_do = { always = no }
 }
 
-JAU = { # Goshu
+#JAU = { # Goshu
 	states = {
 		STATE_NEW_SOUTH_WALES
 		STATE_VICTORIA
@@ -83,6 +83,14 @@ JAU = { # Goshu
 JER = { # Jerusalem
 	states = {
 		STATE_PALESTINE
+	}
+	ai_will_do = { always = no }
+}
+
+NTH = { # Northumbria
+	states = {
+		STATE_LANCASHIRE
+		STATE_YORKSHIRE
 	}
 	ai_will_do = { always = no }
 }

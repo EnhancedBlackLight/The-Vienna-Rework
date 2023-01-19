@@ -838,7 +838,7 @@ decree_genocide = {
 			}
 				NOT = { 
 					has_decree = decree_emergency_relief
-						}
+				}
 		custom_tooltip = {
 			text = homeland_decree.tt
 			OR = {
@@ -930,6 +930,38 @@ decree_genocide = {
 			}
 			multiply = -0.5
 		}		
+	}
+}
+decree_emergency_relief = {
+	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	modifier = {
+		state_welfare_payments_add = 0.5
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = { 
+				average_sol < average_expected_sol
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_nationalist_agenda
+						has_strategy = ai_strategy_reactionary_agenda
+					}
+				}
+			}
+			multiply = 0.5
+		}	
 	}
 }
 decree_promote_health = {

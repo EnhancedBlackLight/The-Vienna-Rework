@@ -5,4 +5,6 @@
 	GOLD_RESERVE_LIMIT_FACTOR = 1.0				    # The base factor of annual GDP that should be provided as a Gold Reserve                                                                                
 	GOLD_RESERVE_RETURNS_FACTOR = 0.75				# How rapidly diminishing returns will cause gold reserves to drop off after the limit has been reached (higher value increases penalty)                 
     CUSTOMS_UNION_CONTROLLER_MINIMUM_TARIFFS_SPLIT = 0.05 #Minimum Tariff  profit income the Main market controller gets from its partner's sold goods split between                                                          
+    
+    TRADE_ROUTE_MAX_LEVEL = 150							# Trade routes cannot be higher level than this increased max from 100 to 150
 }

@@ -1,0 +1,3 @@
+﻿l_korean:
+ 
+ NEW_CONSTRUCTION_QUEUE:0 "#v 건설 중: [GetPlayer.GetNumActiveConstructionQueueElements] #! [GetPlayer.GetNumInactiveConstructionQueueElements|=] (대기열)"

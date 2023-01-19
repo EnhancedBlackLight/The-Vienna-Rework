@@ -47,7 +47,7 @@ state_shopkeepers_investment_pool_contribution_add = {
 state_farmers_investment_pool_contribution_add = {
 	good = yes
 	percent = yes
-	num_decimals = 3
+	num_decimals = 1
 }
 
 building_capitalists_shares_mult = {

@@ -1,0 +1,5 @@
+﻿l_polish:
+    reject_back_down_event.2.t:0 "Posunięcie dyplomatyczne zakończone sukcesem!"
+    reject_back_down_event.2.d:0 "Nasi wrogowie przychylili się do naszego głównego żądania i wycofali się! Jak powinniśmy na to odpowiedzieć? Jeśli odrzucisz ich wycofanie się, ustępstwo zostanie wycofane, rozpocznie się nowa gra i będziesz musiał ponownie dodać cele wojenne. Ta gra zawsze będzie eskalować do wojny, a strona przeciwna może uzyskać więcej sojuszników niż wcześniej. Jeśli zaakceptujesz, zachowasz ustępstwo i nic więcej się nie wydarzy."
+    reject_back_down_event.2.a:0 "Odrzuć ich ustępstwa i naciskaj na więcej."
+    reject_back_down_event.2.b:0 "Zaakceptuj ich ustępstwo."

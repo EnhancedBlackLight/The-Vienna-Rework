@@ -29,13 +29,15 @@ law_military_academy = {
 
 	modifier = {
 		state_building_barracks_max_level_add = 25
-		country_officers_pol_str_mult = 0.15
+		country_officers_pol_str_mult = 0.1
 		country_institution_military_academy_max_investment_add = 3
+		building_minimum_wage_mult = 0.1
 	}
 	 institution = institution_military_academy
 	institution_modifier = {
 		state_education_access_add = 0.05
 		state_pop_qualifications_mult = 0.05
+		country_military_wages_mult = 0.15
 	}
 	possible_political_movements = {
 		law_no_military_education
@@ -59,7 +61,7 @@ law_college_of_artillery = {
 		country_institution_military_academy_max_investment_add = 3
 		building_output_artillery_mult = 0.15
 	}
- institution = institution_military_academy
+ 	institution = institution_military_academy
 	institution_modifier = {
 		country_military_weekly_innovation_mult = 0.03
 	}
@@ -86,6 +88,7 @@ law_school_of_application_for_infantry_and_cavalry = {
 	institution_modifier = {
 		unit_army_offense_mult = 0.025
 		unit_army_defense_mult = 0.025
+		country_military_wages_mult = 0.05
 	}
 	possible_political_movements = {
 		law_no_military_education
@@ -110,7 +113,7 @@ law_war_college = {
 	 institution = institution_military_academy
 	institution_modifier = { 
          country_military_tech_cost_mult = -0.01	
-		  character_battle_condition_careful_maneuver_mult = 0.1
+		 character_battle_condition_careful_maneuver_mult = 0.1
 		 character_battle_condition_surprise_maneuver_mult = 0.1
 	}
 	possible_political_movements = {

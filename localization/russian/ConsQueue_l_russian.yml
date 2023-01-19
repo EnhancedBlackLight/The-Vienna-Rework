@@ -1,0 +1,4 @@
+﻿l_russian:
+ 
+ NEW_CONSTRUCTION_QUEUE:0 "#v [GetPlayer.GetNumActiveConstructionQueueElements] Строится #! [GetPlayer.GetNumInactiveConstructionQueueElements|=]"
+ 

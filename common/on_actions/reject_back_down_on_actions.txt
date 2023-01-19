@@ -1,0 +1,83 @@
+﻿# Root = Diplomatic Play
+on_diplo_play_start = {
+	effect = {
+		post_notification = diplo_play_start_notification
+		trigger_event = reject_back_down_event.3
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_back_down = {
+	effect = {
+		post_notification = diplo_play_back_down_notification
+		if = {
+			limit = {
+				scope:notification_target = {
+					is_player = yes
+				}
+				scope:actor = {
+					is_player = no
+				}
+			}
+			set_global_variable = achievement_mightier_than_the_sword
+		}
+		trigger_event = reject_back_down_event.1
+	}
+}
+
+# Root = Country
+on_wargoal_enforced = {
+	effect = {
+		set_variable = {
+            name = recently_won_war
+            days = 600
+            value = yes
+        }
+		if = {
+			limit = {
+				has_variable = target
+				exists = var:target
+				var:target = {
+					any_scope_state = {
+						is_capital = yes
+					}
+				}
+			}
+			trigger_event = reject_back_down_event.2
+		}
+		else_if = {
+			limit = {
+				has_variable = target
+				is_player = yes
+			}
+			remove_variable = target
+			every_country = {
+				limit = {
+					has_variable = subject_of_target
+				}
+				remove_variable = subject_of_target
+			}
+			every_state = {
+				limit = {
+					has_variable = owned_by_target
+				}
+				remove_variable = owned_by_target
+			}
+		}
+		else = {
+			every_scope_state = {
+				limit = {
+					has_variable = owned_by_target
+				}
+				remove_variable = owned_by_target
+			}
+			every_country = {
+				limit = {
+					is_subject_of = root
+					has_variable = subject_of_target
+				}
+				remove_variable = subject_of_target
+			}
+		}
+	}
+}

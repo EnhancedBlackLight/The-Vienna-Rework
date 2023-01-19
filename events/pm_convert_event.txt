@@ -1,0 +1,101 @@
+namespace = pm_convert_event
+
+pm_convert_event.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = { is_player = yes }
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				NOT = { has_variable = pm_convert_origin }
+			}
+			set_variable = pm_convert_origin
+		}
+		every_scope_state = {
+			limit = {
+				is_split_state = yes
+			}
+			set_variable = {
+				name = pm_convert_split
+				value = arable_land
+			}
+		}		
+	}
+}
+
+pm_convert_event.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = { 
+		is_player = yes
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				has_variable = pm_convert_split
+				arable_land > var:pm_convert_split
+			}
+			remove_variable = pm_convert_origin
+			remove_variable = pm_convert_split
+		}
+		every_scope_state = {
+			limit = {
+				NOT = { has_variable = pm_convert_origin }
+			}
+			pm_convert_custom = yes		
+		}
+	}
+}
+
+pm_convert_event.3 = {
+	type = country_event
+	hidden = yes
+
+	trigger = { 
+	}
+
+	immediate = {
+		every_scope_state = {
+			limit = {
+				has_variable = pm_convert_origin
+			}
+			remove_variable = pm_convert_origin
+		}
+		every_scope_state = {
+			limit = {
+				has_variable = pm_convert_split
+			}
+			remove_variable = pm_convert_split
+		}
+
+		if = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = { id = pm_convert_event.1 }
+		}
+	}
+}
+
+
+
+pm_convert_event.99 = {
+	type = country_event
+	hidden = yes
+
+	trigger = { 
+	}
+
+	immediate = {
+		create_diplomatic_play = {
+			name = taiping_rebellion
+			target_country = c:KOR
+			type = dp_taiping_rebellion
+		}
+	}
+}
+
