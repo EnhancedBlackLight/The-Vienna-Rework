@@ -105,19 +105,19 @@
 					}
 				}
 			}
-			triggered_desc = {
-				desc = party_kpl
-				trigger = {
-					exists = c:LUX
-					THIS = c:LUX
-					any_interest_group = {
-						is_powerful = yes
-						leader = {
-							has_ideology = ideology_vanguardist
-						}
-					}
-				}
-			}
+			# triggered_desc = {
+				# desc = party_kpl
+				# trigger = {
+					# exists = c:LUX
+					# THIS = c:LUX
+					# any_interest_group = {
+						# is_powerful = yes
+						# leader = {
+							# has_ideology = ideology_vanguardist
+						# }
+					# }
+				# }
+			# }
 			triggered_desc = {
 				desc = party_bkp
 				trigger = {
@@ -216,6 +216,7 @@
 						OR = {
 							country_has_primary_culture = cu:north_german
 							country_has_primary_culture = cu:south_german
+							country_has_primary_culture = cu:rheinish #DVG
 						}
 						any_interest_group = {
 							is_powerful = yes
@@ -226,23 +227,23 @@
 					}
 				}
 			}
-			triggered_desc = {
-				desc = party_workingmens_party
-				trigger = {
-					AND = {
-						OR = {
-							country_has_primary_culture = cu:yankee
-							country_has_primary_culture = cu:dixie
-						}
-						any_interest_group = {
-							is_powerful = yes
-							leader = {
-								has_ideology = ideology_vanguardist
-							}
-						}
-					}
-				}
-			}
+			# triggered_desc = {
+				# desc = party_workingmens_party
+				# trigger = {
+					# AND = {
+						# OR = {
+							# country_has_primary_culture = cu:yankee
+							# country_has_primary_culture = cu:dixie
+						# }
+						# any_interest_group = {
+							# is_powerful = yes
+							# leader = {
+								# has_ideology = ideology_vanguardist
+							# }
+						# }
+					# }
+				# }
+			# }
 			triggered_desc = {
 				desc = party_cpc
 				trigger = {
@@ -589,17 +590,6 @@
 			add = {
 				value = 3
 				desc = "from_republican"
-			}
-		}
-		if = { #NFM
-			limit = {
-				leader = {
-					has_variable = politically_neutral_var
-				}
-			}
-			add = {
-				value = -10
-				desc = "Politically Neutral"
 			}
 		}
 	}

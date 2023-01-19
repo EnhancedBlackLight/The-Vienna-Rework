@@ -1,5 +1,5 @@
 {
-  "name" : "The Vienna Rework - DEV VERSION",
+  "name" : "Divergences of Vienna",
   "id" : "vr.dev",
   "version" : "1.0.2",
   "supported_game_version" : "1.1.*",
@@ -7,6 +7,20 @@
   "tags" : [],
   "relationships" : [],
   "game_custom_data" : {
-    "multiplayer_synchronized" : true
-  }
+		"multiplayer_synchronized": true,
+		"replace_paths" : [
+			"common/country_creation",
+			"common/country_definitions",
+			"common/country_formation",
+			"common/history/ai",
+			"common/history/characters",
+			"common/history/countries",
+			"common/history/diplomatic_plays",
+			"common/history/interests",
+			"common/history/population",
+			"common/history/production_methods",
+			"common/history/states",
+			"common/history/trade_routes"
+		]
+	}
 }

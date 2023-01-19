@@ -64,18 +64,19 @@ military_party = {
 					country_has_primary_culture = cu:spanish
 				}
 			}
-			triggered_desc = {
-				desc = party_regressivist_party
-				trigger = {
-					country_has_primary_culture = cu:brazilian
-				}
-			}
+			# triggered_desc = {
+				# desc = party_regressivist_party
+				# trigger = {
+					# country_has_primary_culture = cu:brazilian
+				# }
+			# }
 			triggered_desc = {
 				desc = party_national_peoples_party
 				trigger = {
 					OR = {
 						country_has_primary_culture = cu:north_german
 						country_has_primary_culture = cu:south_german
+						country_has_primary_culture = cu:rheinish #DVG
 					}
 				}
 			}
@@ -229,17 +230,6 @@ military_party = {
 			add = {
 				value = 3
 				desc = "from_no_proportional_or_per_capita_tax"
-			}
-		}
-		if = { #NFM
-			limit = {
-				leader = {
-					has_variable = politically_neutral_var
-				}
-			}
-			add = {
-				value = -10
-				desc = "Politically Neutral"
 			}
 		}
 	}

@@ -5,20 +5,20 @@ free_trade_party = {
 	color = { 150 20 20 }
 	name = {
 		first_valid = {
-			triggered_desc = {
-				desc = party_orleanists
-				trigger = {
-					exists = c:FRA
-					THIS = c:FRA
-				}
-			}
-			triggered_desc = {
-				desc = party_peelites
-				trigger = {
-					exists = c:GBR
-					THIS = c:GBR
-				}
-			}
+			# triggered_desc = {
+				# desc = party_orleanists
+				# trigger = {
+					# exists = c:FRA
+					# THIS = c:FRA
+				# }
+			# }
+			# triggered_desc = {
+				# desc = party_peelites
+				# trigger = {
+					# exists = c:GBR
+					# THIS = c:GBR
+				# }
+			# }
 			triggered_desc = {
 				desc = party_historic_party
 				trigger = {
@@ -40,13 +40,13 @@ free_trade_party = {
 					THIS = c:CHI
 				}
 			}
-			triggered_desc = {
-				desc = party_national_party
-				trigger = {
-					exists = c:CHL
-					THIS = c:CHL
-				}
-			}
+			# triggered_desc = {
+				# desc = party_national_party
+				# trigger = {
+					# exists = c:CHL
+					# THIS = c:CHL
+				# }
+			# }
 			triggered_desc = {
 				desc = party_party_of_peaceful_renovation
 				trigger = {
@@ -58,7 +58,7 @@ free_trade_party = {
 			triggered_desc = {
 				desc = party_free_minded_venstre
 				trigger = {
-					country_has_primary_culture = cu:norwegian
+					country_has_primary_culture = cu:scandinavian
 				}
 			}
 			triggered_desc = {
@@ -67,6 +67,7 @@ free_trade_party = {
 					OR = {
 						country_has_primary_culture = cu:north_german
 						country_has_primary_culture = cu:south_german
+						country_has_primary_culture = cu:rheinish #DVG
 					}
 				}
 			}
@@ -355,17 +356,6 @@ free_trade_party = {
 			add = {
 				value = 3
 				desc = "from_lack_of_private_schools"
-			}
-		}
-		if = { #NFM
-			limit = {
-				leader = {
-					has_variable = politically_neutral_var
-				}
-			}
-			add = {
-				value = -10
-				desc = "Politically Neutral"
 			}
 		}
 	}

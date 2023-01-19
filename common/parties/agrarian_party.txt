@@ -77,13 +77,13 @@ agrarian_party = {
 					THIS = c:HUN
 				}
 			}
-			triggered_desc = {
-				desc = party_peoples_party
-				trigger = {
-					exists = c:USA
-					THIS = c:USA
-				}
-			}
+			# triggered_desc = {
+				# desc = party_peoples_party
+				# trigger = {
+					# exists = c:USA
+					# THIS = c:USA
+				# }
+			# }
 			triggered_desc = {
 				desc = party_patrons_of_industry
 				trigger = {
@@ -108,6 +108,7 @@ agrarian_party = {
 					OR = {
 						country_has_primary_culture = cu:north_german
 						country_has_primary_culture = cu:south_german
+						country_has_primary_culture = cu:rheinish
 					}
 				}
 			}
@@ -371,17 +372,6 @@ agrarian_party = {
 			add = {
 				value = -20
 				desc = "from_no_rural_folk_in_party" # this should probably never actually display in game because the party won't exist
-			}
-		}
-		if = { #NFM
-			limit = {
-				leader = {
-					has_variable = politically_neutral_var
-				}
-			}
-			add = {
-				value = -10
-				desc = "Politically Neutral"
 			}
 		}
 	}

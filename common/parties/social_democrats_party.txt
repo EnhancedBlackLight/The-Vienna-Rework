@@ -65,8 +65,10 @@ social_democrat_party = {
 			triggered_desc = {
 				desc = party_belgian_workers_party
 				trigger = {
-					exists = c:BEL
-					THIS = c:BEL
+					exists = c:BLC
+					THIS = c:BLC
+					# exists = c:BEL
+					# THIS = c:BEL
 				}
 			}
 			triggered_desc = {
@@ -125,13 +127,13 @@ social_democrat_party = {
 					THIS = c:MEX
 				}
 			}
-			triggered_desc = {
-				desc = party_confederate_socialist_party
-				trigger = {
-					exists = c:CSA
-					THIS = c:CSA
-				}
-			}
+			# triggered_desc = {
+				# desc = party_confederate_socialist_party
+				# trigger = {
+					# exists = c:CSA
+					# THIS = c:CSA
+				# }
+			# }
 			triggered_desc = {
 				desc = party_seke
 				trigger = {
@@ -142,21 +144,21 @@ social_democrat_party = {
 			triggered_desc = {
 				desc = party_labor_party
 				trigger = {
-					country_has_primary_culture = cu:norwegian
+					country_has_primary_culture = cu:scandinavian
 				}
 			}
-			triggered_desc = {
-				desc = party_socialist_labor_party
-				trigger = {
-					country_has_primary_culture = cu:anglo_canadian
-				}
-			}
-			triggered_desc = {
-				desc = party_labor_party
-				trigger = {
-					country_has_primary_culture = cu:franco_canadian
-				}
-			}
+			# triggered_desc = {
+				# desc = party_socialist_labor_party
+				# trigger = {
+					# country_has_primary_culture = cu:anglo_canadian
+				# }
+			# }
+			# triggered_desc = {
+				# desc = party_labor_party
+				# trigger = {
+					# country_has_primary_culture = cu:franco_canadian
+				# }
+			# }
 			triggered_desc = {
 				desc = party_social_democratic_workers_party
 				trigger = {
@@ -169,6 +171,7 @@ social_democrat_party = {
 					OR = {
 						country_has_primary_culture = cu:north_german
 						country_has_primary_culture = cu:south_german
+						country_has_primary_culture = cu:rheinish #DVG
 					}
 				}
 			}
@@ -178,15 +181,16 @@ social_democrat_party = {
 					OR = {
 						country_has_primary_culture = cu:north_italian
 						country_has_primary_culture = cu:south_italian
+						country_has_primary_culture = cu:corsican #DVG
 					}
 				}
 			}
-			triggered_desc = {
-				desc = party_socialist_party_of_america
-				trigger = {
-					country_has_primary_culture = cu:yankee
-				}
-			}
+			# triggered_desc = {
+				# desc = party_socialist_party_of_america
+				# trigger = {
+					# country_has_primary_culture = cu:yankee
+				# }
+			# }
 			triggered_desc = {
 				desc = party_social_democrats
 				trigger = {
@@ -574,17 +578,6 @@ social_democrat_party = {
 			add = {
 				value = 5
 				desc = "from_slavery"
-			}
-		}
-		if = { #NFM
-			limit = {
-				leader = {
-					has_variable = politically_neutral_var
-				}
-			}
-			add = {
-				value = -10
-				desc = "Politically Neutral"
 			}
 		}
 	}

@@ -28,20 +28,20 @@
         }
     }
 
-    default_clothes = {
+	default_clothes = {
         dna_modifiers = {   
-            accessory = {
-                mode = add
-                gene = outfits
-                template = peasant_outfits
-                range = { 0 1 } # For the randomness to work correctly
-            }
-            accessory = {
-                mode = add
-                gene = legwear
-                template = peasants_legwear
-                range = { 0 1 } # For the randomness to work correctly
-            }
+           # accessory = {
+           #     mode = add
+           #     gene = civilian_coats
+           #     template = all_civilian_coats
+           #     range = { 0 1 } # For the randomness to work correctly
+           # }
+           #accessory = {
+           #    mode = add
+           #    gene = legwear
+           #    template = european_legwear
+           #    range = { 0 1 } # For the randomness to work correctly
+           #}
         }
         weight = {
             base = 1
@@ -498,33 +498,33 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 10000
-                exists = c:CSA
-                OR = {
-                    AND = {
-                        exists = scope:character
-                        scope:character = {
-                            owner = c:CSA
-                            OR = {
-                                has_role = general
-                                monarchy_clothes_trigger = yes
-                                AND = {
-                                    armed_forces_clothes_trigger = yes
-                                    politician_clothes_trigger = yes
-                                }
-                            }
-                        }
-                    }
-                    AND = {
-                        exists = scope:pop
-                        scope:pop = {
-                            is_pop_type = officers
-                            owner = c:CSA
-                        }
-                    }
-                }   
-            }
+            # modifier = {
+                # add = 10000
+                # exists = c:CSA
+                # OR = {
+                    # AND = {
+                        # exists = scope:character
+                        # scope:character = {
+                            # owner = c:CSA
+                            # OR = {
+                                # has_role = general
+                                # monarchy_clothes_trigger = yes
+                                # AND = {
+                                    # armed_forces_clothes_trigger = yes
+                                    # politician_clothes_trigger = yes
+                                # }
+                            # }
+                        # }
+                    # }
+                    # AND = {
+                        # exists = scope:pop
+                        # scope:pop = {
+                            # is_pop_type = officers
+                            # owner = c:CSA
+                        # }
+                    # }
+                # }   
+            # }
         }
     }
 
@@ -545,16 +545,16 @@
         }
         weight = {
             base = 0
-            modifier = {
-                add = 10000
+            # modifier = {
+                # add = 10000
 
-                exists = c:CSA
-                exists = scope:pop
-                scope:pop = {
-                    owner = c:CSA
-                    is_pop_type = soldiers
-                }
-            }
+                # exists = c:CSA
+                # exists = scope:pop
+                # scope:pop = {
+                    # owner = c:CSA
+                    # is_pop_type = soldiers
+                # }
+            # }
         }
     }
 
@@ -744,25 +744,20 @@
             base = 0
             modifier = {
                 add  = 1100
-                OR = {
-                    AND = {
-                        exists = scope:pop
-                        scope:pop = {
-                            culture = cu:japanese
-                        }
-                        OR = {
-                            soldier_clothes_pop_trigger = yes
-                            officers_clothes_pop_trigger = yes
-                        }   
+
+                 AND = {
+                    exists = scope:pop
+                    scope:pop = {
+						OR = {
+							culture = cu:japanese
+							culture = cu:kaiganese #DVG
+						}
                     }
-                    AND = {
-                        exists = scope:character
-                        scope:character = {
-                            has_culture = cu:japanese
-                            monarchy_clothes_trigger = yes
-                        }
-                    }
-                }
+                    OR = {
+                        soldier_clothes_pop_trigger = yes
+                        officers_clothes_pop_trigger = yes
+                    }   
+                }    
             }
         }
     }
@@ -805,8 +800,10 @@
                 add  = 1200
                  AND = {
                     japanese_clothes_trigger = yes
+
                     OR = {
                         military_clothes_trigger = yes
+                        
                         AND = {
                             armed_forces_clothes_trigger = yes
                             politician_clothes_trigger = yes
@@ -883,50 +880,6 @@
 
         }
     }
-    
-    austrian_clothes = {
-        dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = coats
-                template = austrian_coats
-                range = { 0 1 } # For the randomness to work correctly
-            }
-
-            # no aiguillettes because they don't work with double-breasted coats, which is all the Prussians have
-            #accessory = {
-            #    mode = add
-            #    gene = aiguillettes
-            #    template = all_aiguillettes
-            #    range = { 0 1 } # For the randomness to work correctly
-            #}
-
-            accessory = {
-                mode = add
-                gene = legwear
-                template = austrian_legwear
-                range = { 0 1 } # For the randomness to work correctly
-            }
-        }
-
-        weight = {
-            base = 0
-            modifier = {
-                add = 5000
-                exists = scope:character
-                scope:character = {
-                    owner = {
-                        exists = c:AUS
-                        c:AUS = this
-                    }
-                    OR = {
-                        military_clothes_trigger = yes
-                        monarchy_clothes_trigger = yes
-                    }
-                }
-            }
-        }
-    }
 
     prussian_clothes = {
         dna_modifiers = {
@@ -995,7 +948,7 @@
         weight = {
             base = 0
             modifier = {
-                add = 2000
+                add = 1000
                 japanese_imperial_clothes_trigger = yes
             }
         }
@@ -1087,7 +1040,10 @@
                     scope:character = {
                         OR = {
                             AND = {
-                                has_culture = cu:japanese
+								OR = {
+									has_culture = cu:japanese
+									has_culture = cu:kaiganese #DVG
+								}
                                 monarchy_clothes_trigger = no
                             }
                             has_culture = cu:ainu
