@@ -84,7 +84,7 @@ BALUCHISTAN = {
 }
 SOUTH_BENGAL = {
 	color = { 189 251 255 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { bengali }
 	capital = STATE_SOUTH_BENGAL
@@ -2079,7 +2079,7 @@ JAMAICA = {
 }
 ORISSA = {
 	color = { 242 167 93 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { oriya }
 	capital = STATE_ORISSA
@@ -2093,14 +2093,14 @@ SINDH = {
 }
 RAJPUTANA = {
 	color = { 124 254 208 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { rajput }
 	capital = STATE_RAJPUTANA
 }
 CIRCARS = {
 	color = { 144 138 73 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { telegu }
 	capital = STATE_CIRCARS
@@ -2121,21 +2121,21 @@ NAGPUR = {
 }
 MYSORE = {
 	color = { 255 185 12 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { kannada }
 	capital = STATE_MYSORE
 }
 TRAVANCORE = {
 	color = { 233 206 157 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { malayalam }
 	capital = STATE_TRAVANCORE
 }
 MADRAS = {
 	color = { 185 133 14 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { tamil }
 	capital = STATE_MADRAS
@@ -2156,7 +2156,7 @@ HYDERABAD = {
 }
 GUJARAT = {
 	color = { 242 237 190 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { gujarati }
 	capital = STATE_GUJARAT
@@ -2170,7 +2170,7 @@ CENTRAL_INDIA = {
 }
 BOMBAY = {
 	color = { 0 100 0 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { marathi }
 	capital = STATE_BOMBAY
@@ -2205,7 +2205,7 @@ AWADH = {
 }
 DELHI = {
 	color = { 224 189 138 }
-	country_type = decentralized
+	country_type = centralized
 	tier = principality
 	cultures = { avadhi kanauji }
 	capital = STATE_DELHI
