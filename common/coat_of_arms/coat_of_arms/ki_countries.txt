@@ -1974,16 +1974,6 @@ IDA = {
 	}
 }
 
-ARI = {
-	pattern = "pattern_solid.tga"
-	color1 = "blue"
-
-	textured_emblem = {
-		texture = "te_coa_arizona.dds"
-		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
-	}
-}
-
 WSH = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"

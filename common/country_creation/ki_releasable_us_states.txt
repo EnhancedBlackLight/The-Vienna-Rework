@@ -540,14 +540,6 @@ NEV = {
 	ai_will_do = { always = no }
 }
 
-ARI = {
-	states = { 
-		STATE_ARIZONA
-	}
-
-	ai_will_do = { always = no }
-}
-
 WSH = {
 	states = { 
 		STATE_WASHINGTON

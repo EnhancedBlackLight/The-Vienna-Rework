@@ -462,14 +462,6 @@ NEV = {
 	}
 }
 
-ARI = {
-	flag_definition = {
-		coa = ARI
-		subject_canton = ARI
-		priority = 1
-	}
-}
-
 WSH = {
 	flag_definition = {
 		coa = WSH
