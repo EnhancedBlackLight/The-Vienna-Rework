@@ -62,7 +62,7 @@
 		}
 	}
 		s:STATE_ARMENIA = {
-		region_state:CAU = {
+		region_state:RUS = {
 			create_pop = {
 				culture = armenian
 				size = 180996
@@ -91,7 +91,7 @@
 		}
 	}
 	s:STATE_AZERBAIJAN = {
-		region_state:CAU = {
+		region_state:RUS = {
 			create_pop = {
 				culture = azerbaijani
 				size = 172100
@@ -124,7 +124,7 @@
 		}
 	}
 	s:STATE_GREATER_CAUCASUS = {
-		region_state:CAU = {
+		region_state:RUS = {
 			create_pop = {
 				culture = georgian
 				size = 401996

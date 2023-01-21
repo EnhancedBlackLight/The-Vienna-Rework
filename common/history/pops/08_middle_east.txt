@@ -1386,7 +1386,7 @@
 				size = 1400
 			}
 		}
-		region_state:CAU = {
+		region_state:RUS = {
 			create_pop = {
 				culture = azerbaijani
 				size = 17000
