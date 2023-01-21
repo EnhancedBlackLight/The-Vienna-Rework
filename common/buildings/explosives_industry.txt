@@ -25,6 +25,7 @@ building_explosives_industry = {
 	
 	unlocking_technologies = {
 		percussion_cap
+		nitroglycerin
 	}
 	
 	city_type = city
