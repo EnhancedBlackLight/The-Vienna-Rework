@@ -205,20 +205,20 @@ CAR = { # Carolina
 	
 	ai_will_do = { always = no }
 }
-ARC = { # Arctic States
-	states = {
-		STATE_ALASKA
-		STATE_NORTHWEST_TERRITORIES
-		STATE_NUNAVUT
-		STATE_YUKON_TERRITORY
-		STATE_BRITISH_COLUMBIA
-		STATE_ALBERTA
-		STATE_SASKATCHEWAN
-		STATE_MANITOBA
-	}
+# ARC = { # Arctic States
+# 	states = {
+# 		STATE_ALASKA
+# 		STATE_NORTHWEST_TERRITORIES
+# 		STATE_NUNAVUT
+# 		STATE_YUKON_TERRITORY
+# 		STATE_BRITISH_COLUMBIA
+# 		STATE_ALBERTA
+# 		STATE_SASKATCHEWAN
+# 		STATE_MANITOBA
+# 	}
 	
-	ai_will_do = { always = no }
-}
+# 	ai_will_do = { always = no }
+# }
 
 MAI = {
 	states = { 

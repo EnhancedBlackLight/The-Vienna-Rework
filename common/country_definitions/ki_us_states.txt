@@ -148,16 +148,16 @@ CAR = { # Carolina
 	cultures = { dixie }
 	capital = STATE_NORTH_CAROLINA
 }
-ARC = { # Arctic States
-	color = { 93 120 158 }
+# ARC = { # Arctic States
+# 	color = { 93 120 158 }
 	
-	country_type = recognized
+# 	country_type = recognized
 
-	tier = kingdom
+# 	tier = kingdom
 	
-	cultures = { anglo_canadian yankee }
-	capital = STATE_ALBERTA
-}
+# 	cultures = { anglo_canadian yankee }
+# 	capital = STATE_ALBERTA
+# }
 MAI = {
 	color = { 13 29 36 }
 	country_type = recognized

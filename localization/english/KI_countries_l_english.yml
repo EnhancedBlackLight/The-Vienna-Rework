@@ -190,8 +190,8 @@
  dyn_c_new_brittain: "New Brittain"
  dyn_c_thirteen_communes: "Thirteen Communes"
  
- ARC:0 "Arctic States"
- ARC_ADJ:0 "Arctic"
+#  ARC:0 "Arctic States"
+#  ARC_ADJ:0 "Arctic"
  dyn_c_arctic_kindom: "Arctic Kindgom"
  dyn_c_arctic_society: "Arctic Society"
  

@@ -252,20 +252,20 @@ TTC = { # Thirteen Colonies
 	
 	ai_will_do = { always = yes }
 }
-ARC = { # Arctic States
-	states = {
-		STATE_ALASKA
-		STATE_NORTHWEST_TERRITORIES
-		STATE_NUNAVUT
-		STATE_YUKON_TERRITORY
-		STATE_BRITISH_COLUMBIA
-		STATE_ALBERTA
-		STATE_SASKATCHEWAN
-		STATE_MANITOBA
-	}
-	is_major_formation = no
+# ARC = { # Arctic States
+# 	states = {
+# 		STATE_ALASKA
+# 		STATE_NORTHWEST_TERRITORIES
+# 		STATE_NUNAVUT
+# 		STATE_YUKON_TERRITORY
+# 		STATE_BRITISH_COLUMBIA
+# 		STATE_ALBERTA
+# 		STATE_SASKATCHEWAN
+# 		STATE_MANITOBA
+# 	}
+# 	is_major_formation = no
 
-	required_states_fraction = 0.6	
+# 	required_states_fraction = 0.6	
 	
-	ai_will_do = { always = no }
-}
+# 	ai_will_do = { always = no }
+# }

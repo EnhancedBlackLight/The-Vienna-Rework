@@ -134,13 +134,13 @@ TTC = {
 	}
 }
 
-ARC = {
-	flag_definition = {
-		coa = ARC
-		subject_canton = ARC
-		priority = 1
-	}
-}
+# ARC = {
+# 	flag_definition = {
+# 		coa = ARC
+# 		subject_canton = ARC
+# 		priority = 1
+# 	}
+# }
 
 MAI = {
 	flag_definition = {
