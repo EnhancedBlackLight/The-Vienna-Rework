@@ -1,0 +1,6 @@
+# This is executed last among all history
+GLOBAL = {
+	every_country = {
+		effect_starting_explosives = yes
+	}
+}
