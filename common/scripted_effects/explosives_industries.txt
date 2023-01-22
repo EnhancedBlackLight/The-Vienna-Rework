@@ -7,9 +7,6 @@ effect_starting_explosives = {
 			}
 			is_junior_in_customs_union = no
 			is_subject = no
-			NOT = {
-				this = c:USA
-			}
 		}
 		random_scope_state = {
 			limit = {
