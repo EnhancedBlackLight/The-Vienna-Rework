@@ -1,0 +1,23 @@
+﻿pmg_base_building_port = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_anchorage
+		pm_basic_port
+		pm_industrial_port
+		pm_modern_port
+	}
+}
+
+pmg_base_building_port_passenger = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_anchorage_passenger
+		pm_basic_port_passenger
+		pm_industrial_port_passenger
+		pm_modern_port_passenger
+	}
+}
