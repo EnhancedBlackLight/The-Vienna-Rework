@@ -11,6 +11,10 @@
     capped_resources = {
         bg_logging = 4
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 50
+    }
 }
 
 STATE_KUBAN = {
@@ -32,7 +36,7 @@ STATE_KUBAN = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 50
     }
     naval_exit_id = 3036
 }
@@ -112,7 +116,7 @@ STATE_SAMARA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 50
     }
 }
 
@@ -263,6 +267,10 @@ STATE_TURKMENIA = {
     capped_resources = {
         bg_sulfur_mining = 40
         bg_logging = 2
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30
     }
 }
 
