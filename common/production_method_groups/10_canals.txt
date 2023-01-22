@@ -19,5 +19,6 @@ pmg_canal_taxation = {
 		pm_canal_tax_low
 		pm_canal_tax_med
 		pm_canal_tax_high
+		pm_canal_tax_very_high
 	}
 }
