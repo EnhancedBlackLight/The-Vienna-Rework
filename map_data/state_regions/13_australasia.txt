@@ -21,6 +21,10 @@
         depleted_type = "bg_gold_mining"
         undiscovered_amount = 4
     }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 25
+    }
     naval_exit_id = 3122
 }
 STATE_QINGSHUI = {
