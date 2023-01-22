@@ -1,0 +1,146 @@
+SM_increase_autonomy = {
+	requires_approval = no
+    should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+    possible = {
+        is_at_war = no
+    }
+    potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized 
+				is_subject_type = subject_type_protectorate
+				is_subject_type = subject_type_tributary
+				is_subject_type = subject_type_personal_union
+			}
+            is_direct_subject_of = root
+		}
+	}
+    accept_effect = {
+		scope:target_country = {
+			if = {
+				limit = {
+					is_subject_type = subject_type_dominion
+				}
+				change_subject_type = subject_type_protectorate
+			}	
+			else_if = {
+				limit = {
+					is_subject_type = subject_type_puppet
+				}
+				change_subject_type = subject_type_dominion
+			}	
+			else_if = {
+				limit = {
+					is_subject_type = subject_type_vassal
+				}
+				change_subject_type = subject_type_tributary
+			}
+			change_relations = {
+				country = ROOT
+				value = 50
+			}
+		}
+    }
+    ai = {
+        will_propose = {
+            always = no
+        }
+    }
+}
+
+SM_decrease_autonomy = {
+	requires_approval = no
+    should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+    possible = {
+        is_at_war = no
+		scope:target_country.relations:root >= relations_threshold:amicable
+    }
+    potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized 
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_personal_union
+			}
+            is_direct_subject_of = root
+		}
+	}
+    accept_effect = {
+		
+		scope:target_country = {
+			if = {
+				limit = {
+					is_subject_type = subject_type_protectorate
+				}
+				change_subject_type = subject_type_dominion
+			}
+			else_if = {
+				limit = {
+					is_subject_type = subject_type_dominion
+				}
+				change_subject_type = subject_type_puppet
+			}
+			else_if = {
+				limit = {
+					is_subject_type = subject_type_tributary
+				}
+				change_subject_type = subject_type_vassal
+			}
+			change_relations = {
+				country = ROOT
+				value = -50
+			}
+		}
+    }
+    ai = {
+        will_propose = {
+            always = no
+        }
+    }
+}
+
+SM_transfer_subject = {
+	requires_approval = no
+    should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+    possible = {
+        is_at_war = no
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized 
+			}
+			is_at_war = no
+		}
+    }
+    potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized 
+			}
+		}
+		any_subject_or_below = {
+			exists = this
+		}
+	}
+    accept_effect = {
+		scope:target_country = {
+			save_scope_as = SM_transfer_target
+		}
+		trigger_event = {
+			id = SM_subject_autonomy_event.transfer_subject
+			days = 0
+			popup = yes
+		}
+    }
+    ai = {
+        will_propose = {
+            always = no
+        }
+    }
+}
