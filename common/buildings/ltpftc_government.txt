@@ -1,0 +1,39 @@
+﻿############ GOVERNMENT BUILDINGS
+building_port = {
+	building_group = bg_private_infrastructure
+	city_type = port
+	texture = "gfx/interface/icons/building_icons/building_port.dds"
+
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	port = yes
+
+	unlocking_technologies = { navigation }
+
+	production_method_groups = {
+		pmg_base_building_port
+		pmg_base_building_port_passenger
+	}
+
+	required_construction = construction_cost_medium
+
+	terrain_manipulator = urban_port
+	
+	ai_value = 3000 # Ports are important
+	
+	should_auto_expand = {
+		OR = {
+			cash_reserves_ratio > 0.4
+			is_subsidized = yes
+		}
+		state.market_access < 1.1
+		owner.construction_queue_duration < max_autoexpand_queue_weeks
+	}
+	
+	can_build = {
+		error_check = {
+			severity = fail
+			is_coastal = yes
+		}
+	}
+}

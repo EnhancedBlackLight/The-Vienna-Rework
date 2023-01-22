@@ -1,0 +1,9 @@
+﻿building_input_services_add = {
+	good = no
+	percent = no	
+}
+
+building_input_telephones_add = {
+	good = no
+	percent = no	
+}
