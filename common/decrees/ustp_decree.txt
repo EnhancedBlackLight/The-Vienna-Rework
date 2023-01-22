@@ -1,0 +1,476 @@
+﻿#resettle 100 #sack 20
+decree_colony_tax_very_low = {
+	texture = "gfx/interface/icons/decree/decree_colony_tax_very_low.dds"
+	unlocking_technologies = {
+		colonization
+	}
+	valid = {
+		is_incorporated = no
+		NOR = { 
+			has_decree = decree_colony_tax_low
+			has_decree = decree_colony_tax_middle
+			has_decree = decree_colony_tax_high
+			has_decree = decree_colony_tax_very_high
+			has_decree = decree_colony_tax_harsh
+			has_decree = decree_colony_tax_merciless
+		}
+		owner = {
+			OR = {
+				has_law = law_type:law_colonial_resettlement
+				has_law = law_type:law_colonial_exploitation
+				has_law = law_type:law_harsh_colonial_exploitation
+				has_law = law_type:law_merciless_colonial_exploitation
+			}
+		}
+	}
+	modifier = {
+		tax_consumption_add = 0.2
+		tax_income_add = 0.15
+		tax_dividends_add = 0.15
+	    state_radicals_from_discrimination_mult = -0.2
+	    state_radicals_from_sol_change_mult = -0.2
+	}
+	cost = 0
+	
+	ai_weight = {
+		value = 0
+
+		if = {
+			limit = {
+				scope:country = { has_law = law_type:law_colonial_resettlement  } 
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_law = law_type:law_colonial_exploitation
+						has_law = law_type:law_harsh_colonial_exploitation
+						has_law = law_type:law_merciless_colonial_exploitation
+					}
+				}
+			}
+			add = 20
+		}
+		if = {
+			limit = { 
+				is_incorporated = yes
+			}
+			multiply = 0
+		}
+	}
+}
+
+#resettle 120 #sack 40
+decree_colony_tax_low = {
+	texture = "gfx/interface/icons/decree/decree_colony_tax_low.dds"
+	unlocking_technologies = {
+		colonization
+	}
+	valid = {
+		is_incorporated = no
+		NOR = { 
+			has_decree = decree_colony_tax_very_low
+			has_decree = decree_colony_tax_middle
+			has_decree = decree_colony_tax_high
+			has_decree = decree_colony_tax_very_high
+			has_decree = decree_colony_tax_harsh
+			has_decree = decree_colony_tax_merciless
+		}
+		owner = {
+			OR = {
+				has_law = law_type:law_colonial_resettlement
+				has_law = law_type:law_colonial_exploitation
+				has_law = law_type:law_harsh_colonial_exploitation
+				has_law = law_type:law_merciless_colonial_exploitation
+			}
+		}
+	}
+	modifier = {
+		tax_consumption_add = 0.275
+		tax_income_add = 0.20
+		tax_dividends_add = 0.20
+	    state_radicals_from_discrimination_mult = -0.1
+	    state_radicals_from_sol_change_mult = -0.1
+	}
+	cost = 0
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = {
+				scope:country = { has_law = law_type:law_colonial_resettlement  } 
+			}
+			add = 120
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_law = law_type:law_colonial_exploitation
+						has_law = law_type:law_harsh_colonial_exploitation
+						has_law = law_type:law_merciless_colonial_exploitation
+					}
+				}
+			}
+			add = 40
+		}
+		if = {
+			limit = { 
+				is_incorporated = yes
+			}
+			multiply = 0
+		}
+	}
+}
+
+
+#resettle 140 #sack 60
+decree_colony_tax_middle = {
+	texture = "gfx/interface/icons/decree/decree_colony_tax_middle.dds"
+	unlocking_technologies = {
+		colonization
+	}
+	valid = {
+		is_incorporated = no
+		NOR = {
+			has_decree = decree_colony_tax_very_low
+			has_decree = decree_colony_tax_low
+			has_decree = decree_colony_tax_high
+			has_decree = decree_colony_tax_very_high
+			has_decree = decree_colony_tax_harsh
+			has_decree = decree_colony_tax_merciless
+		}
+		owner = {
+			OR = {
+				has_law = law_type:law_colonial_resettlement
+				has_law = law_type:law_colonial_exploitation
+				has_law = law_type:law_harsh_colonial_exploitation
+				has_law = law_type:law_merciless_colonial_exploitation
+			}
+		}
+	}
+	modifier = {
+		tax_consumption_add = 0.35
+		tax_income_add = 0.25
+		tax_dividends_add = 0.25
+	}
+	cost = 0
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = {
+				scope:country = { has_law = law_type:law_colonial_resettlement  } 
+			}
+			add = 140
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_law = law_type:law_colonial_exploitation
+						has_law = law_type:law_harsh_colonial_exploitation
+						has_law = law_type:law_merciless_colonial_exploitation
+					}
+				}
+			}
+			add = 60
+		}
+		if = {
+			limit = { 
+				is_incorporated = yes
+			}
+			multiply = 0
+		}
+	}
+}
+
+#resettle 80 or 100 #sack 140 or 160
+decree_colony_tax_high = {
+	texture = "gfx/interface/icons/decree/decree_colony_tax_high.dds"
+	unlocking_technologies = {
+		colonization
+	}
+	valid = {
+		is_incorporated = no
+		NOR = { 
+			has_decree = decree_colony_tax_very_low
+			has_decree = decree_colony_tax_low
+			has_decree = decree_colony_tax_middle
+			has_decree = decree_colony_tax_very_high
+			has_decree = decree_colony_tax_harsh
+			has_decree = decree_colony_tax_merciless
+		}
+		owner = {
+			OR = {
+				has_law = law_type:law_colonial_resettlement
+				has_law = law_type:law_colonial_exploitation
+				has_law = law_type:law_harsh_colonial_exploitation
+				has_law = law_type:law_merciless_colonial_exploitation
+			}
+		}
+	}
+	modifier = {
+		tax_consumption_add = 0.425
+		tax_income_add = 0.3
+		tax_dividends_add = 0.3
+	    state_radicals_from_discrimination_mult = 0.25
+	    state_radicals_from_sol_change_mult = 0.25
+	}
+	cost = 0
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = {
+				scope:country = { has_law = law_type:law_colonial_resettlement  } 
+			}
+			add = 80
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_law = law_type:law_colonial_exploitation
+						has_law = law_type:law_harsh_colonial_exploitation
+						has_law = law_type:law_merciless_colonial_exploitation
+					}
+				}
+			}
+			add = 140
+		}
+		if = {
+			limit = {
+				any_scope_culture = {
+					NOT = { is_primary_culture_of = root.owner }					
+				}
+			}
+			add = 20
+		}
+		if = {
+			limit = { 
+				turmoil >= 0.5	
+			
+			}
+			multiply = 0
+		}
+		if = {
+			limit = { 
+				is_incorporated = yes
+			}
+			multiply = 0
+		}
+	}
+}
+
+#resettle 60 or 80 #sack 120 or 140
+decree_colony_tax_very_high = {
+	texture = "gfx/interface/icons/decree/decree_colony_tax_very_high.dds"
+	unlocking_technologies = {
+		colonization
+	}
+	valid = {
+		is_incorporated = no
+		NOR = { 
+			has_decree = decree_colony_tax_very_low
+			has_decree = decree_colony_tax_low
+			has_decree = decree_colony_tax_middle
+			has_decree = decree_colony_tax_high
+			has_decree = decree_colony_tax_harsh
+			has_decree = decree_colony_tax_merciless
+		}
+		owner = {
+			OR = {
+				has_law = law_type:law_colonial_resettlement
+				has_law = law_type:law_colonial_exploitation
+				has_law = law_type:law_harsh_colonial_exploitation
+				has_law = law_type:law_merciless_colonial_exploitation
+			}
+		}
+	}
+	modifier = {
+		tax_consumption_add = 0.50
+		tax_income_add = 0.35
+		tax_dividends_add = 0.35
+	    state_radicals_from_discrimination_mult = 0.5
+	    state_radicals_from_sol_change_mult = 0.5
+	}
+	cost = 0
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = {
+				scope:country = { has_law = law_type:law_colonial_resettlement  } 
+			}
+			add = 60
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_law = law_type:law_colonial_exploitation
+						has_law = law_type:law_harsh_colonial_exploitation
+						has_law = law_type:law_merciless_colonial_exploitation
+					}
+				}
+			}
+			add = 120
+		}
+		if = {
+			limit = {
+				any_scope_culture = {
+					NOT = { is_primary_culture_of = root.owner }					
+				}
+			}
+			add = 20
+		}
+		if = {
+			limit = { 
+				turmoil >= 0.4	
+			
+			}
+			multiply = 0
+		}
+		if = {
+			limit = { 
+				is_incorporated = yes
+			}
+			multiply = 0
+		}
+	}
+}
+
+#resettle 0 #sack 100
+decree_colony_tax_harsh = {
+	texture = "gfx/interface/icons/decree/decree_colony_tax_harsh.dds"
+	unlocking_technologies = {
+		colonization
+	}
+	valid = {
+		is_incorporated = no
+		NOR = { 
+			has_decree = decree_colony_tax_very_low
+			has_decree = decree_colony_tax_low
+			has_decree = decree_colony_tax_middle
+			has_decree = decree_colony_tax_high
+			has_decree = decree_colony_tax_very_high
+			has_decree = decree_colony_tax_merciless
+		}
+		owner = {
+			OR = {
+			has_law = law_type:law_colonial_exploitation
+			has_law = law_type:law_harsh_colonial_exploitation
+			has_law = law_type:law_merciless_colonial_exploitation
+			}
+		}
+	}
+	modifier = {
+		tax_consumption_add = 0.6
+		tax_income_add = 0.45
+		tax_dividends_add = 0.45
+	    state_radicals_from_discrimination_mult = 0.75
+	    state_radicals_from_sol_change_mult = 0.75
+	}
+	cost = 0
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_law = law_type:law_colonial_exploitation
+						has_law = law_type:law_harsh_colonial_exploitation
+						has_law = law_type:law_merciless_colonial_exploitation
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = { 
+				turmoil >= 0.3	
+			
+			}
+			multiply = 0
+		}
+		if = {
+			limit = { 
+				is_incorporated = yes
+			}
+			multiply = 0
+		}
+	}
+}
+
+#resettle 0 #sack 80
+decree_colony_tax_merciless = {
+	texture = "gfx/interface/icons/decree/decree_colony_tax_merciless.dds"
+	unlocking_technologies = {
+		colonization
+	}
+	valid = {
+		is_incorporated = no
+		NOR = { 
+			has_decree = decree_colony_tax_very_low
+			has_decree = decree_colony_tax_low
+			has_decree = decree_colony_tax_middle
+			has_decree = decree_colony_tax_high
+			has_decree = decree_colony_tax_very_high
+			has_decree = decree_colony_tax_harsh
+		}
+		owner = {
+			OR = {
+			has_law = law_type:law_colonial_exploitation
+			has_law = law_type:law_harsh_colonial_exploitation
+			has_law = law_type:law_merciless_colonial_exploitation
+			}
+		}
+	}
+	modifier = {
+		tax_consumption_add = 0.70
+		tax_income_add = 0.55
+		tax_dividends_add = 0.55
+	    state_radicals_from_discrimination_mult = 1
+	    state_radicals_from_sol_change_mult = 1
+	}
+	cost = 0
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_law = law_type:law_colonial_exploitation
+						has_law = law_type:law_harsh_colonial_exploitation
+						has_law = law_type:law_merciless_colonial_exploitation
+					}
+				}
+			}
+			add = 80
+		}
+		if = {
+			limit = { 
+				turmoil >= 0.2	
+			
+			}
+			multiply = 0
+		}
+		if = {
+			limit = { 
+				is_incorporated = yes
+			}
+			multiply = 0
+		}
+	}
+}
