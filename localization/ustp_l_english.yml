@@ -1,0 +1,16 @@
+﻿l_english:
+ 
+ decree_colony_tax_very_low:0 "Very Low Unincorporated States Taxes"
+ decree_colony_tax_very_low_desc:0 "It imposes very low taxes on the unincorporated States."
+ decree_colony_tax_low:0 "Low Unincorporated States Taxes"
+ decree_colony_tax_low_desc:0 "It imposes low taxes on the unincorporated States."
+ decree_colony_tax_middle:0 "Normal Unincorporated States Taxes"
+ decree_colony_tax_middle_desc:0 "It imposes normal taxes on the unincorporated States."
+ decree_colony_tax_high:0 "High Unincorporated States Taxes"
+ decree_colony_tax_high_desc:0 "It imposes high taxes on the unincorporated States."
+ decree_colony_tax_very_high:0 "Very High Unincorporated States Taxes"
+ decree_colony_tax_very_high_desc:0 "It imposes very high taxes on the unincorporated States."
+ decree_colony_tax_harsh:0 "Harsh Unincorporated States Taxes"
+ decree_colony_tax_harsh_desc:0 "It imposes harsh taxes on the unincorporated States."
+ decree_colony_tax_merciless:0 "Merciless Unincorporated States Taxes"
+ decree_colony_tax_merciless_desc:0 "It imposes merciless taxes on the unincorporated States."
