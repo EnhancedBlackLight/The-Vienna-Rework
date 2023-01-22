@@ -1,0 +1,8 @@
+﻿l_english:
+ SM_transfer_subject:0 "Transfer Subject"
+ SM_transfer_subject_desc:0 "Select a country to transfer your [concept_subject] to."
+ SM_transfer_subject_action_name:0 "Transfer Subject" 
+ SM_transfer_subject_action_notification_name:0 "New subject"
+ SM_transfer_subject_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] decided to transfer one of their subjects to us."
+ SM_transfer_subject_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetName] transferred their subject"
+ SM_transfer_subject_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] transferred one of their subjects."
