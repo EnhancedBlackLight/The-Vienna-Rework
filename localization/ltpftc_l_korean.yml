@@ -1,0 +1,22 @@
+﻿l_korean:
+
+ pmg_base_building_trade_center_local_loading:0 "지역 운송"
+ pmg_base_building_trade_business_trip:0 "사업 교통편"
+ pmg_base_building_trade_contact:0 "사업 연락"
+ 
+ pm_trade_center_local_loading_horse_carriages:0 "마차"
+ pm_trade_center_local_loading_automobiles:0 "자동차"
+ pm_trade_center__business_trip_trains_and_ports:0 "대중교통"
+ pm_trade_center__business_trip_automobiles:0 "자동차와 대중교통"
+ pm_trade_center_contact_mails:0 "서신"
+ pm_trade_center_contact_telegram:0 "전보"
+ pm_trade_center_contact_telephones:0 "전화"
+ 
+ pmg_base_building_port_passenger:0 "여객 운송"
+ pm_anchorage_passenger:0 "정박지"
+ pm_basic_port_passenger:0 "여객 항구"
+ pm_industrial_port_passenger:0 "증기선 여객 항구"
+ pm_modern_port_passenger:0 "현대 여객 항구"
+ 
+ modifier_building_input_services_add:0 "단계별 @services! 서비스 투입량"
+ modifier_building_input_services_add_desc:0 "건물에서 소비하는 @services! 서비스의 양"
