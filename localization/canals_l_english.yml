@@ -1,0 +1,13 @@
+﻿l_english:
+ pmg_canal_power:0 "Power Method"
+ pmg_canal_taxation:0 "Taxation Amount"
+
+ pm_canal_pwr_none:0 "Not Powered"
+ pm_canal_pwr_coal:0 "Coal Powered"
+ pm_canal_pwr_oil:0 "Oil Powered"
+ pm_canal_pwr_electricity:0  "Electrical Powered"
+ pm_canal_tax_none:0 "No Taxes"
+ pm_canal_tax_low:0 "Low Taxes"
+ pm_canal_tax_med:0 "Medium Taxes"
+ pm_canal_tax_high:0 "High Taxes"
+ pm_canal_tax_very_high:0 "Very High Taxes"

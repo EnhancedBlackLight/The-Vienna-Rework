@@ -30,6 +30,7 @@
 		pm_canal_tax_low
 		pm_canal_tax_med
 		pm_canal_tax_high
+		pm_canal_tax_very_high
 	}
 }
 
@@ -54,6 +55,7 @@ building_panama_canal = {
 
 	production_method_groups = {
 		pmg_canal_power
+		pm_canal_pwr_none
 		pm_canal_pwr_coal
 		pm_canal_pwr_oil
 		pm_canal_pwr_electricity
@@ -63,5 +65,6 @@ building_panama_canal = {
 		pm_canal_tax_low
 		pm_canal_tax_med
 		pm_canal_tax_high
+		pm_canal_tax_very_high
 	}
 }
