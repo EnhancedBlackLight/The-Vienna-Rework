@@ -1,0 +1,126 @@
+﻿BUILDINGS={
+	s:STATE_ANNAM={
+		region_state:DAI={
+			create_building={
+				building="building_Thien_Mu_Pagoda"
+				level=1
+			}
+		}
+	}
+	s:STATE_TONKIN={
+		region_state:DAI={
+			create_building={
+				building="building_ha_long_bay"
+				level=1
+			}
+		}
+	}
+	s:STATE_MEKONG={
+		region_state:DAI={
+			create_building={
+				building="building_po_nagar"
+				level=1
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
