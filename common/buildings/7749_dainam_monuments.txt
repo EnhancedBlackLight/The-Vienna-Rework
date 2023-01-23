@@ -1,0 +1,104 @@
+﻿building_Thien_Mu_Pagoda = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/thien_mu_pagoda.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "Thien_Mu_Pagoda_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_angkorwat_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	
+	}
+	
+	production_method_groups = {
+		pmg_base_building_Thien_Mu_Pagoda
+	}
+	
+	possible = {
+		error_check = {
+			severity = invalid
+			this = {
+				state_region = s:STATE_ANNAM
+			}
+		}
+	}
+
+	
+	required_construction = construction_cost_monument
+}
+
+building_po_nagar = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/po_nagar.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	buildable = no
+	locator = "po_nagar_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_angkorwat_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 5
+	}
+	
+	production_method_groups = {
+		pmg_base_building_po_nagar
+	}
+	
+	required_construction = construction_cost_monument
+	
+	possible = {
+		error_check = {
+			severity = invalid
+			this = {
+				state_region = s:STATE_MEKONG
+			}
+		}
+	}
+}
+
+building_ha_long_bay = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/ha_long_bay.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	locator = "ha_long_bay_locator"
+	
+	entity_not_constructed = {}
+	entity_under_construction = {}
+	entity_constructed = {}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 1
+	}
+	
+	production_method_groups = {
+		pmg_base_building_ha_long_bay
+	}
+	
+	required_construction = construction_cost_monument
+	
+	possible = {
+		error_check = {
+			severity = invalid
+			this = {
+				state_region = s:STATE_TONKIN
+			}
+		}
+	}
+}
+

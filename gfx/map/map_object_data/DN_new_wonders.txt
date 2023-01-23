@@ -1,0 +1,47 @@
+﻿game_object_locator={
+	name="Thien_Mu_Pagoda_locator"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 6538.24 1.98 1898.61 }
+			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+	}
+}
+
+game_object_locator={
+	name="ha_long_bay_locator"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 6530.42 0.000000 1994.28 }
+			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+	}
+}
+
+game_object_locator={
+	name="po_nagar_locator"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 6578.8 0.000000 1811.29 }
+			rotation={ -0.000000 -0.000000 -0.000000 0.000000 }
+			scale={ 1.000000 1.000000 1.000000 }
+		}
+	}
+}
