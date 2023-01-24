@@ -1,0 +1,61 @@
+﻿# Skyscraper Sector 1
+pmg_sector_1_building_skyscraper = {
+	texture = "gfx/interface/icons/generic_icons/pm_skyscraper_office_mixed.png"
+
+	production_methods = {
+		pm_skyscraper_office_management
+	}
+}
+
+# Skyscraper Sector 2
+pmg_sector_2_building_skyscraper = {
+	texture = "gfx/interface/icons/generic_icons/pm_skyscraper_office_mixed.png"
+
+	production_methods = {
+		pm_skyscraper_office_close_sector_2
+		pm_skyscraper_office_education
+		pm_skyscraper_office_election
+		pm_skyscraper_office_interior_affairs
+		pm_skyscraper_office_public_security
+		pm_skyscraper_office_treasury
+	}
+}
+
+# Skyscraper Sector 3
+pmg_sector_3_building_skyscraper = {
+	texture = "gfx/interface/icons/generic_icons/pm_skyscraper_office_mixed.png"
+
+	production_methods = {
+		pm_skyscraper_office_close_sector_3
+		pm_skyscraper_office_colonial
+		pm_skyscraper_office_foreign_affairs
+		pm_skyscraper_office_health
+		pm_skyscraper_office_labor
+		pm_skyscraper_office_welfare
+	}
+}
+
+# Skyscraper Sector 4
+pmg_sector_4_building_skyscraper = {
+	texture = "gfx/interface/icons/generic_icons/pm_skyscraper_office_mixed.png"
+
+	production_methods = {
+		pm_skyscraper_office_close_sector_4
+		pm_skyscraper_office_agriculture
+		pm_skyscraper_office_commerce
+		pm_skyscraper_office_industry
+		pm_skyscraper_office_resource
+		pm_skyscraper_office_transportation
+	}
+}
+
+# Skyscraper Sector 1
+pmg_airship_mooring_post = {
+	texture = "gfx/interface/icons/generic_icons/pm_skyscraper_office_mixed.png"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_airships
+		pm_airship_mooring_post
+	}
+}
