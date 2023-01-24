@@ -1,0 +1,467 @@
+﻿# Skyscraper Sector Close
+pm_skyscraper_office_close_sector_2 = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_close_sector.png"
+}
+
+pm_skyscraper_office_close_sector_3 = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_close_sector.png"
+}
+
+
+pm_skyscraper_office_close_sector_4 = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_close_sector.png"
+}
+
+
+
+# Skyscraper Sector 1
+pm_skyscraper_office_management = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_management.png"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_mult = 0.05 # +5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+		}
+	}
+}
+
+
+
+# Skyscraper Sector 2
+pm_skyscraper_office_education = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_education.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+			country_tech_spread_mult = 0.005 # +0.5
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_education_access_add = 0.025 # +2.5
+			state_assimilation_mult = 0.025 # +2.5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_election = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_election.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+			country_legitimacy_govt_total_votes_add = 0.5 # +0.5
+			country_legitimacy_govt_total_clout_add = 0.5 # +0.5
+			country_legitimacy_ideological_incoherence_mult = -0.005 # -0.5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_interior_affairs = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_interior_affairs.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+			political_movement_radicalism_mult = -0.005 # -0.5
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_radicals_from_sol_change_mult = -0.025 # -2.5
+			state_loyalists_from_sol_change_mult = 0.025 # +2.5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_public_security = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_public_security.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_radicals_from_discrimination_mult = -0.025 # -2.5
+			state_turmoil_effects_mult = -0.025 # -2.5
+			state_mortality_turmoil_mult = -0.01 # -1
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_treasury = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_treasury.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+			country_consumption_tax_cost_mult = -0.005 # -0.5
+			country_minting_add = 500 # +500
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_bureaucracy_population_base_cost_factor_mult = -0.025 # -2.5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+
+
+# Skyscraper Sector 3
+pm_skyscraper_office_colonial = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_colonial.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+			state_colony_growth_creation_mult = 0.005 # +0.5
+			state_migration_pull_unincorporated_mult = 0.005 # +0.5
+			building_unincorporated_throughput_add = 0.005 # +0.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_foreign_affairs = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_foreign_affairs.png"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+			country_infamy_decay_mult = 0.005 # +0.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_health = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_health.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = 0.005 # +0.5
+			state_mortality_mult = -0.005 # -0.5
+			state_working_adult_ratio_add = 0.01 # +1
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_labor = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_labor.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+			state_mortality_mult = -0.005 # -0.5
+			state_working_adult_ratio_add = 0.025 # +2.5
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_laborers_mortality_mult = -0.025 # -2.5
+			state_machinists_mortality_mult = -0.025 # -2.5
+			state_farmers_mortality_mult = -0.025 # -2.5
+			state_peasants_mortality_mult = -0.025 # -2.5
+			building_working_conditions_mult = -0.025 # -2.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_skyscraper_office_welfare = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_welfare.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_authority_add = 20 # +20
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_dependent_wage_mult = 0.025 # +2.5
+			state_working_adult_ratio_add = 0.01 # +1
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+
+
+# Skyscraper Sector 4
+pm_skyscraper_office_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_agriculture.png"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_agriculture_throughput_mult = 0.025 # +2.5
+			building_group_bg_plantations_throughput_mult = 0.025 # +2.5
+			building_group_bg_ranching_throughput_mult = 0.025 # +2.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_farmers_add = 1000
+		}
+	}
+}
+
+pm_skyscraper_office_commerce = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_commerce.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_trade_route_competitiveness_mult = 0.025 # +2.5
+			country_trade_route_quantity_mult = 0.025 # +2.5
+			country_trade_route_cost_mult = -0.025 # -2.5
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_service_throughput_mult = 0.025 # +2.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_capitalists_add = 250
+		}
+	}
+}
+
+pm_skyscraper_office_industry = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_industry.png"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_manufacturing_throughput_mult = 0.025 # +2.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_capitalists_add = 250
+		}
+	}
+}
+
+pm_skyscraper_office_resource = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_resource.png"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_mult = 0.025 # +2.5
+			building_group_bg_oil_extraction_throughput_mult = 0.025 # +2.5
+			building_group_bg_logging_throughput_mult = 0.025 # +2.5
+			building_group_bg_fishing_throughput_mult = 0.025 # +2.5
+			building_group_bg_whaling_throughput_mult = 0.025 # +2.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+		}
+	}
+}
+
+pm_skyscraper_office_transportation = {
+	texture = "gfx/interface/icons/production_method_icons/pm_skyscraper_office_transportation.png"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_trade_route_competitiveness_mult = 0.01 # +1
+			country_trade_route_quantity_mult = 0.01 # +1
+			country_trade_route_cost_mult = -0.01 # -1
+			state_infrastructure_from_population_add = 0.025 # +0.025
+			state_infrastructure_from_population_max_add = 1 # +1
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_railway_throughput_mult = 0.025 # +2.5
+			state_infrastructure_mult = 0.025 # +2.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+		}
+	}
+}
+
+
+
+# Skyscraper Sector Airships Pad
+pm_no_airships = {
+	texture = "gfx/interface/icons/production_method_icons/pm_no_airships.png"
+}
+
+pm_airship_mooring_post = {
+	texture = "gfx/interface/icons/production_method_icons/pm_airship_mooring_post.png"
+	
+	unlocking_technologies = {
+		zeppelins
+	}
+	
+	country_modifiers = {
+		workforce_scaled = { 
+			country_prestige_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_Aeroplanes_add = 5
+		}
+
+		level_scaled = {
+			building_employment_Machinists_add = 500
+		}
+	}
+}

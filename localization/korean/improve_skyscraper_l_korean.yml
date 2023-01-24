@@ -1,0 +1,52 @@
+﻿l_korean:
+# Skyscraper Modifier
+can_build_skyscraper_modifier:0 "마천루 건축 허가"
+max_level_skyscraper_modifier:0 "마천루 최대 단계"
+modifier_state_building_skyscraper_max_level_add:0 "$building_skyscraper$ 건물의 최대 단계에 대한 보너스 또는 불이익"
+
+
+
+# Skyscraper Sector Close
+pm_skyscraper_office_close_sector_2:0 "폐쇄"
+pm_skyscraper_office_close_sector_3:0 "폐쇄"
+pm_skyscraper_office_close_sector_4:0 "폐쇄"
+
+
+
+# Skyscraper Sector 1
+pmg_sector_1_building_skyscraper:0 "1 구역"
+
+pm_skyscraper_office_management:0 "관리사무소"
+
+
+
+# Skyscraper Sector 2
+pmg_sector_2_building_skyscraper:0 "2 구역"
+
+pm_skyscraper_office_education:0 "교육부"
+pm_skyscraper_office_election:0 "선거관리위원회"
+pm_skyscraper_office_interior_affairs:0 "내무부"
+pm_skyscraper_office_public_security:0 "공안부"
+pm_skyscraper_office_treasury:0 "재무부"
+
+
+
+# Skyscraper Sector 3
+pmg_sector_3_building_skyscraper:0 "3 구역"
+
+pm_skyscraper_office_colonial:0 "식민부"
+pm_skyscraper_office_foreign_affairs:0 "외무부"
+pm_skyscraper_office_health:0 "보건부"
+pm_skyscraper_office_labor:0 "노동부"
+pm_skyscraper_office_welfare:0 "복지부"
+
+
+
+# Skyscraper Sector 4
+pmg_sector_4_building_skyscraper:0 "4 구역"
+
+pm_skyscraper_office_agriculture:0 "농업 회의소"
+pm_skyscraper_office_commerce:0 "상업 회의소"
+pm_skyscraper_office_industry:0 "공업 회의소"
+pm_skyscraper_office_resource:0 "자원산업 회의소"
+pm_skyscraper_office_transportation:0 "운송업 회의소"
