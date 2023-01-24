@@ -8,6 +8,7 @@ pm_default_building_eiffel_tower = {
 		workforce_scaled = {
 			country_prestige_add = 100
 			state_urbanization_mult = 0.1
+			state_infrastructure_mult = 0.1
 		}
 	}
 	state_modifiers = {
@@ -38,6 +39,7 @@ pm_default_building_angkor_wat = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
+			building_throughput_mult = 0.05
 			state_migration_pull_mult = 0.1
 		}
 	}
@@ -59,12 +61,13 @@ pm_default_building_big_ben = {
 		workforce_scaled = {
 			country_prestige_add = 50
 			state_urbanization_mult = 0.1
+			state_infrastructure_mult = 0.1
 		}
 	}
 
 	state_modifiers = {
 		workforce_scaled = {
-			building_throughput_mult = 0.01
+			building_throughput_mult = 0.1
 			state_migration_pull_mult = 0.1
 		}
 	}
@@ -129,6 +132,7 @@ pm_default_building_mosque_of_djenne = {
 	country_modifiers = {
 		workforce_scaled = {
 			interest_group_ig_devout_pol_str_mult = 0.1
+			state_conversion_mult = 0.5
 		}
 	}
 	state_modifiers = {
@@ -156,6 +160,7 @@ pm_default_building_saint_basils_cathedral = {
 		workforce_scaled = {
 			interest_group_ig_devout_pol_str_mult = 0.1
 			country_prestige_add = 25
+			state_conversion_mult = 0.6
 			state_urbanization_mult = 0.1
 		}
 	}
@@ -176,8 +181,10 @@ pm_default_building_statue_of_liberty = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 75
-			state_migration_pull_mult = 0.25
+			state_migration_pull_mult = 0.4
 			state_urbanization_mult = 0.1
+			state_infrastructure_mult = 0.1
+			state_turmoil_effects_mult = 0.1
 		}
 	}
 
@@ -198,6 +205,7 @@ pm_default_building_taj_mahal = {
 		workforce_scaled = {
 			country_prestige_add = 35
 			state_urbanization_mult = 0.1
+			country_legitimacy_base_add = 10
 		}
 	}
 
@@ -219,9 +227,11 @@ pm_default_building_vatican_city = {
 	country_modifiers = {
 		workforce_scaled = {
 			interest_group_ig_devout_pol_str_mult = 0.25
-			country_influence_add = 100
-			country_authority_add = 100
+			country_influence_add = 150
+			country_authority_add = 150
 			state_urbanization_mult = 0.1
+			country_legitimacy_base_add = 10
+			country_legitimacy_headofstate_add = 35
 		}
 	}
 
@@ -253,6 +263,10 @@ pm_default_building_white_house = {
 			building_government_administration_throughput_mult = 0.2
 			state_infrastructure_mult = 0.1
 		}
+	}
+
+	state_modifiers = {
+		country_bureaucrats_pol_str_mult = 0.3
 	}
 
 	building_modifiers = {
