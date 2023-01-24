@@ -1,0 +1,52 @@
+﻿l_english:
+# Skyscraper Modifier
+can_build_skyscraper_modifier:0 "Skyscraper Construction Permit"
+max_level_skyscraper_modifier:0 "Skyscraper Maximum Level"
+modifier_state_building_skyscraper_max_level_add:0 "A bonus or penalty to the maximum level of $building_skyscraper$ buildings."
+
+
+
+# Skyscraper Sector Close
+pm_skyscraper_office_close_sector_2:0 "Close"
+pm_skyscraper_office_close_sector_3:0 "Close"
+pm_skyscraper_office_close_sector_4:0 "Close"
+
+
+
+# Skyscraper Sector 1
+pmg_sector_1_building_skyscraper:0 "Sector 1"
+
+pm_skyscraper_office_management:0 "Management Office"
+
+
+
+# Skyscraper Sector 2
+pmg_sector_2_building_skyscraper:0 "Sector 2"
+
+pm_skyscraper_office_education:0 "Department of Education"
+pm_skyscraper_office_election:0 "Election Commission"
+pm_skyscraper_office_interior_affairs:0 "Department of Interior Affairs"
+pm_skyscraper_office_public_security:0 "Department of Public Security"
+pm_skyscraper_office_treasury:0 "Department of Treasury"
+
+
+
+# Skyscraper Sector 3
+pmg_sector_3_building_skyscraper:0 "Sector 3"
+
+pm_skyscraper_office_colonial:0 "Department of Colonial"
+pm_skyscraper_office_foreign_affairs:0 "Department of Foreign Affairs"
+pm_skyscraper_office_health:0 "Department of Health"
+pm_skyscraper_office_labor:0 "Department of Labor"
+pm_skyscraper_office_welfare:0 "Department of Welfare"
+
+
+
+# Skyscraper Sector 4
+pmg_sector_4_building_skyscraper:0 "Sector 4"
+
+pm_skyscraper_office_agriculture:0 "Chamber of Agriculture"
+pm_skyscraper_office_commerce:0 "Chamber of Commerce"
+pm_skyscraper_office_industry:0 "Chamber of Industry"
+pm_skyscraper_office_resource:0 "Chamber of Resource Industry"
+pm_skyscraper_office_transportation:0 "Chamber of Transportation"

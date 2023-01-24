@@ -1,0 +1,8 @@
+﻿can_build_skyscraper_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+}
+
+max_level_skyscraper_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_building_skyscraper_max_level_add = 10
+}

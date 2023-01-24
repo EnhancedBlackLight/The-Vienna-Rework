@@ -1,0 +1,5 @@
+﻿state_building_skyscraper_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
