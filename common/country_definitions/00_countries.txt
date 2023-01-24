@@ -1,4 +1,4 @@
-﻿GER = {
+GER = {
 	color = { 147 130 110 }
 	
 	country_type = recognized
@@ -1072,7 +1072,7 @@ SLO = {
 }
 
 TUR = {
-	color = { 170  206  162 }
+	color = { 115 0 0 }
 	
 	country_type = recognized
 
