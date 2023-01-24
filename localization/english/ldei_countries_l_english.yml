@@ -1,0 +1,15 @@
+﻿l_english:
+
+ dyn_c_indies:0 "United East India Company"
+ dyn_c_indies_adj:0 "East Indies"
+
+dyn_c_indonesia: "[Country.GetOverlord.GetAdjectiveNoFlag] $dyn_c_not_subject_indonesia$"
+dyn_c_indonesia_adj: "$dyn_c_not_subject_indonesia_adj$"
+dyn_c_not_subject_indonesia: "Indonesia"
+dyn_c_not_subject_indonesia_adj: "Indonesian"
+
+dyn_c_india: "[Country.GetOverlord.GetAdjectiveNoFlag] $dyn_c_not_subject_india$"
+dyn_c_india_adj: "$dyn_c_not_subject_india_adj$"
+
+dyn_c_not_subject_india: "India"
+dyn_c_not_subject_india_adj: "Indian"

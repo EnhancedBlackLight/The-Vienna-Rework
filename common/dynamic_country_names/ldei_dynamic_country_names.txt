@@ -1,0 +1,91 @@
+﻿DEI = { #Dutch East Indies
+
+	dynamic_country_name = {
+		name = dyn_c_not_subject_indonesia
+		adjective = dyn_c_not_subject_indonesia_adj
+
+		priority = 2
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				AND = {
+					is_subject = no
+					has_law = law_type:law_multicultural 
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_indonesia
+		adjective = dyn_c_indonesia_adj
+
+		priority = 1
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { has_law = law_type:law_multicultural }
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_indies
+		adjective = dyn_c_indies_adj
+
+		priority = 0
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_subject = no  
+			}
+		}
+	}
+	
+}
+
+BIC = {
+	dynamic_country_name = {
+		name = dyn_c_not_subject_india
+		adjective = dyn_c_not_subject_india_adj
+
+		priority = 2
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				AND = {
+					is_subject = no
+					has_law = law_type:law_multicultural 
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_india
+		adjective = dyn_c_india_adj
+
+		priority = 1
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = { has_law = law_type:law_multicultural }
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_indies
+		adjective = dyn_c_indies_adj
+
+		priority = 0
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				is_subject = no  
+			}
+		}
+	}
+}
