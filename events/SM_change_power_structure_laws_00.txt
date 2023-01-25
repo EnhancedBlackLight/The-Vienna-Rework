@@ -1,0 +1,620 @@
+﻿
+namespace = SM_change_power_structure_laws
+
+SM_change_power_structure_laws.1 = {
+	type = country_event
+	placement = ROOT
+
+    title = SM_change_power_structure_laws.1.t
+    desc = SM_change_power_structure_laws.1.d
+    flavor = SM_change_power_structure_laws.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+    
+	option = {
+		name = lawgroup_governance_principles
+		trigger_event = {
+			id = SM_change_power_structure_laws.2
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_distribution_of_power
+		trigger_event = {
+			id = SM_change_power_structure_laws.3
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_citizenship
+		trigger_event = {
+			id = SM_change_power_structure_laws.4
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_church_and_state
+		trigger_event = {
+			id = SM_change_power_structure_laws.5
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_bureaucracy
+		trigger_event = {
+			id = SM_change_power_structure_laws.6
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_army_model
+		trigger_event = {
+			id = SM_change_power_structure_laws.7
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_internal_security
+		trigger_event = {
+			id = SM_change_power_structure_laws.8
+			days = 0
+			popup = yes
+		}
+	}
+
+}
+SM_change_power_structure_laws.2 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_governance_principles
+    desc = lawgroup_governance_principles
+    flavor = lawgroup_governance_principles_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_chiefdom }
+			}
+		}
+		name = law_chiefdom
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_chiefdom
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_monarchy }
+			}
+		}
+		name = law_monarchy
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_monarchy
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_presidential_republic }
+			}
+		}
+		name = law_presidential_republic
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_presidential_republic
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_parliamentary_republic }
+			}
+		}
+		name = law_parliamentary_republic
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_parliamentary_republic
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_theocracy }
+			}
+		}
+		name = law_theocracy
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_theocracy
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_council_republic }
+			}
+		}
+		name = law_council_republic
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_council_republic
+		}
+	}
+
+}
+
+SM_change_power_structure_laws.3 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_distribution_of_power
+    desc = lawgroup_distribution_of_power
+    flavor = lawgroup_distribution_of_power_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_autocracy }
+			}
+		}
+		name = law_autocracy
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_autocracy
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_oligarchy }
+			}
+		}
+		name = law_oligarchy
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_oligarchy
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_landed_voting }
+			}
+		}
+		name = law_landed_voting
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_landed_voting
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_wealth_voting }
+			}
+		}
+		name = law_wealth_voting
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_wealth_voting
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_census_voting }
+			}
+		}
+		name = law_census_voting
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_census_voting
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_universal_suffrage }
+			}
+		}
+		name = law_universal_suffrage
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_universal_suffrage
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_elder_council }
+			}
+		}
+		name = law_elder_council
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_elder_council
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_anarchy }
+			}
+		}
+		name = law_anarchy
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_anarchy
+		}
+	}
+
+}
+
+SM_change_power_structure_laws.4 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_citizenship
+    desc = lawgroup_citizenship
+    flavor = lawgroup_citizenship_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_ethnostate }
+			}
+		}
+		name = law_ethnostate
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_ethnostate
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_national_supremacy }
+			}
+		}
+		name = law_national_supremacy
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_national_supremacy
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_racial_segregation }
+			}
+		}
+		name = law_racial_segregation
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_racial_segregation
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_cultural_exclusion }
+			}
+		}
+		name = law_cultural_exclusion
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_cultural_exclusion
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_multicultural }
+			}
+		}
+		name = law_multicultural
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_multicultural
+		}
+	}
+
+}
+
+SM_change_power_structure_laws.5 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_church_and_state
+    desc = lawgroup_church_and_state
+    flavor = lawgroup_church_and_state_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_state_religion }
+			}
+		}
+		name = law_state_religion
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_state_religion
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_freedom_of_conscience }
+			}
+		}
+		name = law_freedom_of_conscience
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_freedom_of_conscience
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_total_separation }
+			}
+		}
+		name = law_total_separation
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_total_separation
+		}
+	}
+
+}
+
+SM_change_power_structure_laws.6 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_bureaucracy
+    desc = lawgroup_bureaucracy
+    flavor = lawgroup_bureaucracy_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_hereditary_bureaucrats }
+			}
+		}
+		name = law_hereditary_bureaucrats
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_hereditary_bureaucrats
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_appointed_bureaucrats }
+			}
+		}
+		name = law_appointed_bureaucrats
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_appointed_bureaucrats
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_elected_bureaucrats }
+			}
+		}
+		name = law_elected_bureaucrats
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_elected_bureaucrats
+		}
+	}
+
+}
+
+SM_change_power_structure_laws.7 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_army_model
+    desc = lawgroup_army_model
+    flavor = lawgroup_army_model_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_peasant_levies }
+			}
+		}
+		name = law_peasant_levies
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_peasant_levies
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_national_militia }
+			}
+		}
+		name = law_national_militia
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_national_militia
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_mass_conscription }
+			}
+		}
+		name = law_mass_conscription
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_mass_conscription
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_professional_army }
+			}
+		}
+		name = law_professional_army
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_professional_army
+		}
+	}
+
+}
+
+SM_change_power_structure_laws.8 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_internal_security
+    desc = lawgroup_internal_security
+    flavor = lawgroup_internal_security_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_home_affairs }
+			}
+		}
+		name = law_no_home_affairs
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_home_affairs
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_national_guard }
+			}
+		}
+		name = law_national_guard
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_national_guard
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_secret_police }
+			}
+		}
+		name = law_secret_police
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_secret_police
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_guaranteed_liberties }
+			}
+		}
+		name = law_guaranteed_liberties
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_guaranteed_liberties
+		}
+	}
+
+}

@@ -1,0 +1,18 @@
+﻿l_english:
+ SM_increase_autonomy:0 "Increase Subject Autonomy"
+ SM_increase_autonomy_action_name:0 "Increase Subject Autonomy"
+ SM_increase_autonomy_desc:0 "#header $increase_autonomy$#!\n$TOOLTIP_DELIMITER$\nAn [concept_instant_diplomatic_action] that increases [concept_subject] autonomy."
+ SM_increase_autonomy_action_notification_name:0 "Autonomy increased"
+ SM_increase_autonomy_action_notification_desc:0 "Our autonomy was increased."
+ SM_increase_autonomy_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetName] autonomy increased"
+ SM_increase_autonomy_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] increased autonomy of [TARGET_COUNTRY.GetName]."
+
+ SM_decrease_autonomy:0 "Decrease Subject Autonomy"
+ SM_decrease_autonomy_action_name:0 "Decrease Subject Autonomy"
+ SM_decrease_autonomy_desc:0 "#header $decrease_autonomy$#!\n$TOOLTIP_DELIMITER$\nAn [concept_instant_diplomatic_action] that decreases [concept_subject] autonomy."
+ SM_decrease_autonomy_action_notification_name:0 "Autonomy decreased"
+ SM_decrease_autonomy_action_notification_desc:0 "Our autonomy was decreased."
+ SM_decrease_autonomy_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetName] autonomy decreased"
+ SM_decrease_autonomy_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] decreased autonomy of [TARGET_COUNTRY.GetName]."
+
+ vassal_effect_desc_third:0 "[TARGET_COUNTRY.GetName] becomes a [concept_vassal] of [COUNTRY.GetName]"
