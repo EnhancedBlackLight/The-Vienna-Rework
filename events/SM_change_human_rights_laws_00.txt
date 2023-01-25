@@ -1,0 +1,536 @@
+﻿
+namespace = SM_change_human_rights_laws
+
+SM_change_human_rights_laws.1 = {
+	type = country_event
+	placement = ROOT
+
+    title = SM_change_human_rights_laws.1.t
+    desc = SM_change_human_rights_laws.1.d
+    flavor = SM_change_human_rights_laws.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+    
+	option = {
+		name = lawgroup_free_speech
+		trigger_event = {
+			id = SM_change_human_rights_laws.2
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_labor_rights
+		trigger_event = {
+			id = SM_change_human_rights_laws.3
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_childrens_rights
+		trigger_event = {
+			id = SM_change_human_rights_laws.4
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_rights_of_women
+		trigger_event = {
+			id = SM_change_human_rights_laws.5
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_welfare
+		trigger_event = {
+			id = SM_change_human_rights_laws.6
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_migration
+		trigger_event = {
+			id = SM_change_human_rights_laws.7
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_slavery
+		trigger_event = {
+			id = SM_change_human_rights_laws.8
+			days = 0
+			popup = yes
+		}
+	}
+
+}
+SM_change_human_rights_laws.2 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_free_speech
+    desc = lawgroup_free_speech
+    flavor = lawgroup_free_speech_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_outlawed_dissent }
+			}
+		}
+		name = law_outlawed_dissent
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_outlawed_dissent
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_censorship }
+			}
+		}
+		name = law_censorship
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_censorship
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_right_of_assembly }
+			}
+		}
+		name = law_right_of_assembly
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_right_of_assembly
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_protected_speech }
+			}
+		}
+		name = law_protected_speech
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_protected_speech
+		}
+	}
+
+}
+
+SM_change_human_rights_laws.3 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_labor_rights
+    desc = lawgroup_labor_rights
+    flavor = lawgroup_labor_rights_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_serfdom }
+			}
+		}
+		name = law_serfdom
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_serfdom
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_serfdom_banned }
+			}
+		}
+		name = law_serfdom_banned
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_serfdom_banned
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_regulatory_bodies }
+			}
+		}
+		name = law_regulatory_bodies
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_regulatory_bodies
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_worker_protections }
+			}
+		}
+		name = law_worker_protections
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_worker_protections
+		}
+	}
+
+}
+
+SM_change_human_rights_laws.4 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_childrens_rights
+    desc = lawgroup_childrens_rights
+    flavor = lawgroup_childrens_rights_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_child_labor_allowed }
+			}
+		}
+		name = law_child_labor_allowed
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_child_labor_allowed
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_restricted_child_labor }
+			}
+		}
+		name = law_restricted_child_labor
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_restricted_child_labor
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_compulsory_primary_school }
+			}
+		}
+		name = law_compulsory_primary_school
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_compulsory_primary_school
+		}
+	}
+
+}
+
+SM_change_human_rights_laws.5 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_rights_of_women
+    desc = lawgroup_rights_of_women
+    flavor = lawgroup_rights_of_women_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_womens_rights }
+			}
+		}
+		name = law_no_womens_rights
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_womens_rights
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_women_own_property }
+			}
+		}
+		name = law_women_own_property
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_women_own_property
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_women_in_the_workplace }
+			}
+		}
+		name = law_women_in_the_workplace
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_women_in_the_workplace
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_womens_suffrage }
+			}
+		}
+		name = law_womens_suffrage
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_womens_suffrage
+		}
+	}
+
+}
+
+SM_change_human_rights_laws.6 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_welfare
+    desc = lawgroup_welfare
+    flavor = lawgroup_welfare_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_social_security }
+			}
+		}
+		name = law_no_social_security
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_social_security
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_poor_laws }
+			}
+		}
+		name = law_poor_laws
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_poor_laws
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_wage_subsidies }
+			}
+		}
+		name = law_wage_subsidies
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_wage_subsidies
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_old_age_pension }
+			}
+		}
+		name = law_old_age_pension
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_old_age_pension
+		}
+	}
+
+}
+
+SM_change_human_rights_laws.7 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_migration
+    desc = lawgroup_migration
+    flavor = lawgroup_migration_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_migration_controls }
+			}
+		}
+		name = law_no_migration_controls
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_migration_controls
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_migration_controls }
+			}
+		}
+		name = law_migration_controls
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_migration_controls
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_closed_borders }
+			}
+		}
+		name = law_closed_borders
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_closed_borders
+		}
+	}
+
+}
+
+SM_change_human_rights_laws.8 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_slavery
+    desc = lawgroup_slavery
+    flavor = lawgroup_slavery_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_slavery_banned }
+			}
+		}
+		name = law_slavery_banned
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_slavery_banned
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_debt_slavery }
+			}
+		}
+		name = law_debt_slavery
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_debt_slavery
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_slave_trade }
+			}
+		}
+		name = law_slave_trade
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_slave_trade
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_legacy_slavery }
+			}
+		}
+		name = law_legacy_slavery
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_legacy_slavery
+		}
+	}
+
+}
