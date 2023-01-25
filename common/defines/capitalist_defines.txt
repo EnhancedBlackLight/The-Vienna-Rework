@@ -1,0 +1,17 @@
+﻿NEconomy = {
+	PRICE_RANGE = 0.95									#商品价格浮动上、下限
+	BUILDING_INIT_PROFIT_TARGET_MIN = 0.5 				# 在初始化期间，希望获得最低利润（原版10%）将为此降低工资
+	BUILDING_INIT_PROFIT_TARGET_MAX = 1 				# 在初始化期间，达到预期利润（原版20%）会给工人涨薪
+	EMPLOYMENT_PROPORTIONALITY_LIMIT = 0.25				# 建筑物内任何两个职业的充分就业比率之差不得超过此限制
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 3			# 利润达到（原版20%）会给工人涨薪
+	BUILDING_WEEKS_BETWEEN_PAY_RAISES = 52				# 加薪之间的冷却周（原版26）
+	MIN_RAISE_TO_HIRE = 0.30							# 跳槽需要的涨薪幅度（原版0.1）
+	BUILDING_INITIAL_WAGE_WEEKS = 2				    	# 一座建筑在其存在的这么多周内不会首次调整其工资
+	MAX_WAGE_STEP_CHANGE = 0.05					   	 	# 工资率每周最多变化幅度（原版10%）
+	BUILDING_LAYOFFS_DECREASE_BY = 0.2					# 裁员力度（原版0.15）
+	MINIMUM_WAGE_RATE = 1								#最低工资（原版10）
+	SUBSISTENCE_OUTPUT_AVERAGE_WAGE_RATE_FACTOR = 130 	# 在设定正常工资时，每1.0的最低生活产出都算作这个工资率
+	PEASANT_STARTING_WAGE_RATE_FACTOR = 0.001			# 为了计算起薪的正常工资，把自给农看作有这种流行的工资乘数
+	STARTING_WAGE_RATE_MULTIPLIER = 1					# 起薪率乘以这个(便于平衡)
+	BUILDING_CASH_RESERVES_STATUS_QUO_THRESHOLD = 0.6	# 储备金低于60%开始裁员降薪（原版50%）
+}
