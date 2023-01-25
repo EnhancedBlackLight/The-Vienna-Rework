@@ -1,0 +1,790 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types outliner_panel_types
+{
+	type outliner_panel = default_block_window {
+		name = "outliner_panel"
+		
+		blockoverride "animation_state_block" {
+			state = {
+				name = _show
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/outliner"
+				}
+				on_start = "[GetVariableSystem.Set( 'outliner_tabs', 'outliner' )]"
+			}
+
+			state = {
+				name = _hide
+			}
+		}
+
+		blockoverride "window_header_name" {
+			text = "OUTLINER"
+		}
+		blockoverride "fixed_top"
+		{
+			tab_buttons = {
+				# Outliner
+				blockoverride "first_button" {
+					text = "Outliner"
+				}
+				blockoverride "first_button_click" {
+					onclick = "[GetVariableSystem.Set( 'outliner_tabs', 'outliner' )]"
+				}
+				blockoverride "first_button_visibility" {
+					visible = "[GetVariableSystem.HasValue( 'outliner_tabs', 'outliner' )]"
+				}
+				blockoverride "first_button_visibility_checked" {
+					visible = "[Not(GetVariableSystem.HasValue( 'outliner_tabs', 'outliner' ))]"
+				}
+				blockoverride "first_button_selected" {
+					text = "#Bold Outliner#!"
+				}
+				blockoverride "first_button_name" {
+					name = "Outliner"
+				}
+				# Graphs
+				blockoverride "second_button" {
+					text = "Graphs"
+				}
+				blockoverride "second_button_click" {
+					onclick = "[GetVariableSystem.Set( 'outliner_tabs', 'graphs' )]"
+				}
+				blockoverride "second_button_visibility" {
+					visible = "[GetVariableSystem.HasValue( 'outliner_tabs', 'graphs' )]"
+				}
+				blockoverride "second_button_visibility_checked" {
+					visible = "[Not(GetVariableSystem.HasValue( 'outliner_tabs', 'graphs' ))]"
+				}
+				blockoverride "second_button_selected" {
+					text = "#Bold Graphs#!"
+				}
+				blockoverride "second_button_name" {
+					name = "Graphs"
+				}
+			}
+		}
+		blockoverride "entire_scrollarea" {
+			scrollarea = {
+				layoutpolicy_vertical = preferred
+				layoutpolicy_horizontal = preferred
+
+				scrollbarpolicy_horizontal = always_off
+				
+				scrollbar_vertical = {
+					using = vertical_scrollbar		
+				}
+
+				scrollwidget = {
+					container = {
+						container = {
+							visible = "[GetVariableSystem.HasValue( 'outliner_tabs', 'outliner' )]"
+							parentanchor = hcenter
+							
+							state = {
+								name = show
+								duration = 0.2
+								alpha = 1
+								using = Animation_Curve_Default
+							}
+							state = {
+								name = hide
+								duration = 0
+								alpha = 0
+							}
+							
+							flowcontainer = {
+								visible = "[GetVariableSystem.HasValue( 'outliner_tabs', 'outliner' )]"
+								margin_top = 20
+								direction = vertical
+								parentanchor = hcenter
+								spacing = 20
+								
+								textbox = {
+									parentanchor = hcenter
+									max_width = @panel_width_minus_10
+									multiline = yes
+									autoresize = yes
+									align = left|nobaseline
+									text = "OUTLINER_PANEL_DESCRIPTION"
+									margin = { 10 0 }
+								}
+
+								divider_clean = {
+									block "divider_size" {
+										size = { @panel_width 2 }
+									}
+									parentanchor = hcenter
+								}
+
+								flowcontainer = {
+									direction = vertical
+									parentanchor = hcenter
+
+									### Regular
+									outliner_interest_groups = {}
+									outliner_commanders = {}
+									outliner_markets = {}
+									outliner_colonies = {}
+									outliner_states = {}
+									outliner_players = {}
+								}
+							}
+						}
+						container = {
+							visible = "[GetVariableSystem.HasValue( 'outliner_tabs', 'graphs' )]"
+							state = {
+								name = show
+								duration = 0.2
+								alpha = 1
+								using = Animation_Curve_Default
+							}
+							state = {
+								name = hide
+								duration = 0
+								alpha = 0
+							}
+							flowcontainer = {
+								visible = "[GetVariableSystem.HasValue( 'outliner_tabs', 'graphs' )]"
+								margin_top = 5
+								direction = vertical
+								spacing = 20
+								position = { 5 0 }
+								flowcontainer = {
+									datacontext = "[GetPlayer]"
+									direction = vertical
+									mod_v3_plotline_gdp = {}
+									mod_v3_plotline_population = {}
+									mod_v3_plotline_prestige = {}
+									mod_v3_plotline_sol = {
+										visible = "[Country.Exists]"
+									}
+									mod_v3_plotline_sol_lower = {}
+									mod_v3_plotline_sol_middle = {}
+									mod_v3_plotline_sol_upper = {}
+									# Minting
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_budget_minting]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetMintingTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetMintingTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetMintingTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetMintingTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetMintingTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetMintingTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetMintingTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Diplo Income
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_budget_diplomatic_pacts]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetDiplomaticPactsIncomeTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetDiplomaticPactsIncomeTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetDiplomaticPactsIncomeTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetDiplomaticPactsIncomeTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetDiplomaticPactsIncomeTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetDiplomaticPactsIncomeTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetDiplomaticPactsIncomeTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Investment Pool
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_investment_pool]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetInvestmentFundTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetInvestmentFundTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetInvestmentFundTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetInvestmentFundTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetInvestmentFundTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetInvestmentFundTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetInvestmentFundTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Total Income
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "NATIONAL_REVENUE"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetTotalIncomeTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetTotalIncomeTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetTotalIncomeTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetTotalIncomeTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetTotalIncomeTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetTotalIncomeTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetTotalIncomeTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+								}
+							}
+							flowcontainer = {
+								visible = "[GetVariableSystem.HasValue( 'outliner_tabs', 'graphs' )]"
+								margin_top = 5
+								direction = vertical
+								spacing = 20
+								position = { 277 0 }
+								flowcontainer = {
+									datacontext = "[GetPlayer]"
+									direction = vertical
+									# Radicals
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "RADICALS"
+										}
+
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetRadicalsTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetRadicalsTrend, '(CFixedPoint)0', GetMax(Country.GetRadicalsTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(Country.GetRadicalsTrend)|K]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(Country.GetRadicalsTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(Country.GetRadicalsTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[And(EqualTo_CFixedPoint(GetMin(Country.GetRadicalsTrend), '(CFixedPoint)0'), EqualTo_CFixedPoint(GetMax(Country.GetRadicalsTrend), '(CFixedPoint)0'))]"
+										}
+										blockoverride "empty_state_text" {
+											text = "NO_RADICALS"
+										}
+									}
+									# Loyalists
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "LOYALISTS"
+										}
+
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(Country.GetLoyalistsTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(Country.GetLoyalistsTrend, '(CFixedPoint)0', GetMax(Country.GetLoyalistsTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(Country.GetLoyalistsTrend)|K]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(Country.GetLoyalistsTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(Country.GetLoyalistsTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[And(EqualTo_CFixedPoint(GetMin(Country.GetLoyalistsTrend), '(CFixedPoint)0'), EqualTo_CFixedPoint(GetMax(Country.GetLoyalistsTrend), '(CFixedPoint)0'))]"
+										}
+										blockoverride "empty_state_text" {
+											text = "NO_LOYALISTS"
+										}
+									}
+									# Balance
+									v3_plotline = {
+										visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "BALANCE"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsDynTrendEmpty(GetPlayer.GetBalanceTrend))]"
+											plotpoints = "[GetDynTrendPlotPoints(GetPlayer.GetBalanceTrend, GetDynTrendMin(GetPlayer.GetBalanceTrend), GetDynTrendMax(GetPlayer.GetBalanceTrend))]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetDynTrendMax(GetPlayer.GetBalanceTrend)|K+=]"
+										}
+										blockoverride "minvalue" {
+											text = "[GetDynTrendMin(GetPlayer.GetBalanceTrend)|K+=]"
+										}
+										blockoverride "startdate" {
+											text = "[CalcDynTrendOldestDate(GetPlayer.GetBalanceTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[CalcDynTrendLatestDate(GetPlayer.GetBalanceTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "extra_plotlines" {
+											plotline = {
+												visible = "[And(GreaterThan_CFixedPoint(GetDynTrendMax(GetPlayer.GetBalanceTrend), '(CFixedPoint)0'), LessThan_CFixedPoint(GetDynTrendMin(GetPlayer.GetBalanceTrend), '(CFixedPoint)0'))]"
+												size = { 100% 100% }
+												using = plot_line
+												width = 3.5
+												color = { 0 0 0 0.5 }
+												plotpoints = "[GetPlayer.GetZeroBalancePlotPoints]"
+											}
+										}
+										blockoverride "empty_state_visibility" {
+											visible = "[IsDynTrendEmpty(GetPlayer.GetBalanceTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Gold Reserves
+									v3_plotline = {
+										visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "MONEY"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsDynTrendEmpty(GetPlayer.GetGoldReservesTrend))]"
+											plotpoints = "[GetDynTrendPlotPoints(GetPlayer.GetGoldReservesTrend, Negate_CFixedPoint(GetPlayer.GetMaxCredit), GetDynTrendMax( GetPlayer.GetGoldReservesTrend ))]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetDynTrendMax(GetPlayer.GetGoldReservesTrend)|K]"
+										}
+										blockoverride "minvalue" {
+											text = "[Negate_CFixedPoint(GetPlayer.GetMaxCredit)|K]"
+										}
+										blockoverride "startdate" {
+											text = "[CalcDynTrendOldestDate(GetPlayer.GetGoldReservesTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[CalcDynTrendLatestDate(GetPlayer.GetGoldReservesTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "extra_plotlines" {
+											plotline = {
+												visible = "[GreaterThan_CFixedPoint(GetDynTrendMax(GetPlayer.GetGoldReservesTrend), '(CFixedPoint)0')]"
+												size = { 100% 100% }
+												using = plot_line
+												width = 3.5
+												color = { 0 0 0 0.5 }
+												plotpoints = "[GetPlayer.GetZeroMoneyPlotPoints]"
+											}
+										}
+										blockoverride "empty_state_visibility" {
+											visible = "[IsDynTrendEmpty(GetPlayer.GetGoldReservesTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Income Taxes
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_budget_income_taxes]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetTaxIncomeTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetTaxIncomeTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetTaxIncomeTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetTaxIncomeTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetTaxIncomeTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetTaxIncomeTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetTaxIncomeTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Poll Taxes
+									v3_plotline = {
+										using = default_list_position
+										position = { 0 15 }
+										blockoverride "header" {
+											text = "[concept_budget_poll_taxes]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetPollTaxTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetPollTaxTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetPollTaxTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetPollTaxTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetPollTaxTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetPollTaxTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetPollTaxTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Consumption Taxes
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_budget_consumption_taxes]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetConsumptionTaxTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetConsumptionTaxTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetConsumptionTaxTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetConsumptionTaxTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetConsumptionTaxTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetConsumptionTaxTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetConsumptionTaxTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Dividends Taxes
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_budget_dividends_taxes]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetDividendsTaxTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetDividendsTaxTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetDividendsTaxTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetDividendsTaxTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetDividendsTaxTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetDividendsTaxTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetDividendsTaxTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Additional Income
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_budget_additional_income]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetAdditionalIncomeTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetAdditionalIncomeTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetAdditionalIncomeTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetAdditionalIncomeTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetAdditionalIncomeTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetAdditionalIncomeTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetAdditionalIncomeTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Tariffs
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "[concept_tariffs]"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetTariffTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetTariffTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetTariffTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetTariffTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetTariffTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetTariffTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetTariffTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+									# Total Expenses
+									v3_plotline = {
+										using = default_list_position
+
+										blockoverride "header" {
+											text = "NATIONAL_EXPENSES"
+										}
+										blockoverride "line_color" {
+											color = { .9 .9 .9 1.0 }
+										}
+										blockoverride "size" {
+											size = { 180 100 }
+										}
+										blockoverride "line_plotpoints" {
+											visible = "[Not(IsEmpty(GetPlayer.GetTotalExpensesTrend))]"
+											plotpoints = "[GetTrendPlotPointsNormalized(GetPlayer.GetTotalExpensesTrend, '(CFixedPoint)0', GetMax(GetPlayer.GetTotalExpensesTrend) )]"
+										}
+										blockoverride "maxvalue" {
+											text = "[GetMax(GetPlayer.GetTotalExpensesTrend)|D]"
+										}
+										blockoverride "minvalue" {
+											text = "0"
+										}
+										blockoverride "startdate" {
+											text = "[GetOldestDate(GetPlayer.GetTotalExpensesTrend)]"
+										}
+										blockoverride "enddate" {
+											text = "[GetLatestDate(GetPlayer.GetTotalExpensesTrend)]"
+										}
+										blockoverride "multiitem" {}
+
+										blockoverride "empty_state_visibility" {
+											visible = "[IsEmpty(GetPlayer.GetTotalExpensesTrend)]"
+										}
+										blockoverride "empty_state_text" {
+											text = "GRAPH_NOT_INITIALIZED"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
