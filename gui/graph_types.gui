@@ -1,0 +1,272 @@
+types dementive_graph_types
+{
+	# These are all copied from politics_panel_types
+	# The only changes made to them is the size blockoverride
+	type mod_v3_plotline_gdp = v3_plotline {
+		using = default_list_position
+		blockoverride "header" {
+			text = "WEEKLY_GDP"
+		}
+		blockoverride "size" {
+			size = { 180 100 }
+		}
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetGDPTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetGDPTrend, '(CFixedPoint)0', GetMax(Country.GetGDPTrend) )]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetGDPTrend)|K]"
+		}
+		blockoverride "minvalue" {
+			text = "0"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetGDPTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetGDPTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[EqualTo_string(GetOldestDate(Country.GetGDPTrend), GetLatestDate(Country.GetGDPTrend))]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+
+	type mod_v3_plotline_population = v3_plotline {
+		using = default_list_position
+
+		blockoverride "header" {
+			text = "POPULATION"
+		}
+
+		blockoverride "size" {
+			size = { 180 100 }
+		}
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetPopulationTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetPopulationTrend, '(CFixedPoint)0', GetMax(Country.GetPopulationTrend) )]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetPopulationTrend)|K]"
+		}
+		blockoverride "minvalue" {
+			text = "0"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetPopulationTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetPopulationTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[IsEmpty(Country.GetPopulationTrend)]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+
+	type mod_v3_plotline_prestige = v3_plotline {
+		using = default_list_position
+
+		blockoverride "header" {
+			text = "PRESTIGE"
+		}
+
+		blockoverride "size" {
+			size = { 180 100 }
+		}
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetPrestigeTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetPrestigeTrend, '(CFixedPoint)0', GetMax(Country.GetPrestigeTrend) )]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetPrestigeTrend)|K]"
+		}
+		blockoverride "minvalue" {
+			text = "0"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetPrestigeTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetPrestigeTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[IsEmpty(Country.GetPrestigeTrend)]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+	type mod_v3_plotline_sol = v3_plotline {
+		using = default_list_position
+
+		blockoverride "header" {
+			text = "AVG_STANDARD_OF_LIVING"
+		}
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "size" {
+			size = { 180 100 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetAverageSoLByPopulationTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetAverageSoLByPopulationTrend, '(CFixedPoint)0', GetMax(Country.GetAverageSoLByPopulationTrend) )]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetAverageSoLByPopulationTrend)|1]"
+		}
+		blockoverride "minvalue" {
+			text = "0"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetAverageSoLByPopulationTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetAverageSoLByPopulationTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[IsEmpty(Country.GetAverageSoLByPopulationTrend)]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+	type mod_v3_plotline_sol_lower = v3_plotline {
+		using = default_list_position
+
+		blockoverride "header" {
+			text = "Lower Strata [concept_sol]"
+			fontsize = 15
+		}
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "size" {
+			size = { 180 102 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetAverageSoLLowerTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetAverageSoLLowerTrend, '(CFixedPoint)0', GetMax(Country.GetAverageSoLLowerTrend) )]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetAverageSoLLowerTrend)|1]"
+		}
+		blockoverride "minvalue" {
+			text = "0"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetAverageSoLLowerTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetAverageSoLLowerTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[IsEmpty(Country.GetAverageSoLLowerTrend)]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+
+	type mod_v3_plotline_sol_middle = v3_plotline {
+		using = default_list_position
+
+		blockoverride "header" {
+			text = "Middle Strata [concept_sol]"
+			fontsize = 14
+		}
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "size" {
+			size = { 180 104 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetAverageSoLMiddleTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetAverageSoLMiddleTrend, '(CFixedPoint)0', GetMax(Country.GetAverageSoLMiddleTrend) )]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetAverageSoLMiddleTrend)|1]"
+		}
+		blockoverride "minvalue" {
+			text = "0"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetAverageSoLMiddleTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetAverageSoLMiddleTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[IsEmpty(Country.GetAverageSoLMiddleTrend)]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+
+	type mod_v3_plotline_sol_upper = v3_plotline {
+		using = default_list_position
+
+		blockoverride "header" {
+			text = "Upper Strata [concept_sol]"
+			fontsize = 14
+		}
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "size" {
+			size = { 180 104 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetAverageSoLUpperTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetAverageSoLUpperTrend, '(CFixedPoint)0', GetMax(Country.GetAverageSoLUpperTrend) )]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetAverageSoLUpperTrend)|1]"
+		}
+		blockoverride "minvalue" {
+			text = "0"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetAverageSoLUpperTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetAverageSoLUpperTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[IsEmpty(Country.GetAverageSoLUpperTrend)]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+}
