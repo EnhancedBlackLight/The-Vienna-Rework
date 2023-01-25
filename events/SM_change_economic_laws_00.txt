@@ -1,0 +1,483 @@
+﻿
+namespace = SM_change_economic_laws
+
+SM_change_economic_laws.1 = {
+	type = country_event
+	placement = ROOT
+
+    title = SM_change_economic_laws.1.t
+    desc = SM_change_economic_laws.1.d
+    flavor = SM_change_economic_laws.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+    
+	option = {
+		name = lawgroup_economic_system
+		trigger_event = {
+			id = SM_change_economic_laws.2
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_trade_policy
+		trigger_event = {
+			id = SM_change_economic_laws.3
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_colonization
+		trigger_event = {
+			id = SM_change_economic_laws.4
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_policing
+		trigger_event = {
+			id = SM_change_economic_laws.5
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_education_system
+		trigger_event = {
+			id = SM_change_economic_laws.6
+			days = 0
+			popup = yes
+		}
+	}
+
+	option = {
+		name = lawgroup_health_system
+		trigger_event = {
+			id = SM_change_economic_laws.7
+			days = 0
+			popup = yes
+		}
+	}
+
+}
+SM_change_economic_laws.2 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_economic_system
+    desc = lawgroup_economic_system
+    flavor = lawgroup_economic_system_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_traditionalism }
+			}
+		}
+		name = law_traditionalism
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_traditionalism
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_agrarianism }
+			}
+		}
+		name = law_agrarianism
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_agrarianism
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_command_economy }
+			}
+		}
+		name = law_command_economy
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_command_economy
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_laissez_faire }
+			}
+		}
+		name = law_laissez_faire
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_laissez_faire
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_interventionism }
+			}
+		}
+		name = law_interventionism
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_interventionism
+		}
+	}
+
+}
+
+SM_change_economic_laws.3 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_trade_policy
+    desc = lawgroup_trade_policy
+    flavor = lawgroup_trade_policy_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_free_trade }
+			}
+		}
+		name = law_free_trade
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_free_trade
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_protectionism }
+			}
+		}
+		name = law_protectionism
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_protectionism
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_isolationism }
+			}
+		}
+		name = law_isolationism
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_isolationism
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_mercantilism }
+			}
+		}
+		name = law_mercantilism
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_mercantilism
+		}
+	}
+
+}
+
+SM_change_economic_laws.4 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_colonization
+    desc = lawgroup_colonization
+    flavor = lawgroup_colonization_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_colonial_affairs }
+			}
+		}
+		name = law_no_colonial_affairs
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_colonial_affairs
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_colonial_resettlement }
+			}
+		}
+		name = law_colonial_resettlement
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_colonial_resettlement
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_colonial_exploitation }
+			}
+		}
+		name = law_colonial_exploitation
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_colonial_exploitation
+		}
+	}
+
+}
+
+SM_change_economic_laws.5 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_policing
+    desc = lawgroup_policing
+    flavor = lawgroup_policing_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_police }
+			}
+		}
+		name = law_no_police
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_police
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_local_police }
+			}
+		}
+		name = law_local_police
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_local_police
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_dedicated_police }
+			}
+		}
+		name = law_dedicated_police
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_dedicated_police
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_militarized_police }
+			}
+		}
+		name = law_militarized_police
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_militarized_police
+		}
+	}
+
+}
+
+SM_change_economic_laws.6 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_education_system
+    desc = lawgroup_education_system
+    flavor = lawgroup_education_system_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_schools }
+			}
+		}
+		name = law_no_schools
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_schools
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_religious_schools }
+			}
+		}
+		name = law_religious_schools
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_religious_schools
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_private_schools }
+			}
+		}
+		name = law_private_schools
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_private_schools
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_public_schools }
+			}
+		}
+		name = law_public_schools
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_public_schools
+		}
+	}
+
+}
+
+SM_change_economic_laws.7 {
+	type = country_event
+	placement = ROOT
+
+    title = lawgroup_health_system
+    desc = lawgroup_health_system
+    flavor = lawgroup_health_system_desc
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_no_health_system }
+			}
+		}
+		name = law_no_health_system
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_no_health_system
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_charitable_health_system }
+			}
+		}
+		name = law_charitable_health_system
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_charitable_health_system
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_private_health_insurance }
+			}
+		}
+		name = law_private_health_insurance
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_private_health_insurance
+		}
+	}
+
+	option = {
+		trigger = {
+			scope:SM_change_laws_target = {
+				NOT = { has_law = law_type:law_public_health_insurance }
+			}
+		}
+		name = law_public_health_insurance
+		scope:SM_change_laws_target = {
+			activate_law = law_type:law_public_health_insurance
+		}
+	}
+
+}

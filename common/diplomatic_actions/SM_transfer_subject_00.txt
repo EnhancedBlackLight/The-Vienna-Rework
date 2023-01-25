@@ -1,0 +1,41 @@
+﻿
+SM_transfer_subject = {
+	requires_approval = no
+    should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+    possible = {
+        is_at_war = no
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized 
+			}
+			is_at_war = no
+		}
+    }
+    potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized 
+			}
+		}
+		any_subject_or_below = {
+			exists = this
+		}
+	}
+    accept_effect = {
+		scope:target_country = {
+			save_scope_as = SM_transfer_target
+		}
+		trigger_event = {
+			id = SM_transfer_subject.1
+			days = 0
+			popup = yes
+		}
+    }
+    ai = {
+        will_propose = {
+            always = no
+        }
+    }
+}
