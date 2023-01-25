@@ -53,7 +53,7 @@
 	accept_effect = {}
 
 	pact = {
-		cost = 150
+		cost = 50
 
 		is_defensive_pact = yes
 		is_two_sided_pact = no
