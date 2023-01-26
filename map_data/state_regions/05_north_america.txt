@@ -9,7 +9,7 @@
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_fishing = 1
-        bg_monuments = 1
+        bg_monuments = 5
     }
     naval_exit_id = 3067
 }
@@ -56,7 +56,7 @@ STATE_NEW_YORK = {
         bg_logging = 20
         bg_whaling = 5
         bg_fishing = 6
-        bg_monuments = 1
+        bg_monuments = 5
     }
     naval_exit_id = 3067
 }

@@ -281,7 +281,7 @@ STATE_LAZIO = {
     capped_resources = {
         bg_logging = 11
         bg_fishing = 7
-        bg_monuments = 1
+        bg_monuments = 5
     }
     naval_exit_id = 3032
 }
@@ -694,7 +694,7 @@ STATE_EASTERN_THRACE = {
         bg_iron_mining = 18
         bg_logging = 4
         bg_fishing = 10
-        bg_monuments = 1
+        bg_monuments = 5
     }
     naval_exit_id = 3035
 }

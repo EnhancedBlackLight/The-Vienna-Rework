@@ -166,7 +166,7 @@ STATE_BEIJING = {
         bg_lead_mining = 15
         bg_logging = 2
         bg_fishing = 3
-        bg_monuments = 1
+        bg_monuments = 5
     }
     naval_exit_id = 3057
 }
@@ -693,7 +693,7 @@ STATE_CAMBODIA = {
         bg_iron_mining = 30
         bg_logging = 20
         bg_fishing = 5
-        bg_monuments = 1
+        bg_monuments = 5
     }
     resource = {
         type = "bg_rubber"

@@ -2,7 +2,7 @@
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/thien_mu_pagoda.dds"
 	expandable = no
-	buildable = no
+	buildable = yes
 	downsizeable = no
 	unique = yes
 	locator = "Thien_Mu_Pagoda_locator"
@@ -40,7 +40,7 @@ building_po_nagar = {
 	expandable = no
 	downsizeable = no
 	unique = yes
-	buildable = no
+	buildable = yes
 	locator = "po_nagar_locator"
 	
 	entity_not_constructed = { }
@@ -72,7 +72,7 @@ building_ha_long_bay = {
 	building_group = bg_monuments
 	texture = "gfx/interface/icons/building_icons/ha_long_bay.dds"
 	expandable = no
-	buildable = no
+	buildable = yes
 	downsizeable = no
 	unique = yes
 	locator = "ha_long_bay_locator"

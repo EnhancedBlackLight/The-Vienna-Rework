@@ -67,7 +67,7 @@ STATE_DELHI = {
     capped_resources = {
         bg_iron_mining = 45
         bg_logging = 23
-        bg_monuments = 1
+        bg_monuments = 5
     }
 }
 
