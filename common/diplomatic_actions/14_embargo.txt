@@ -27,7 +27,8 @@
 		custom_tooltip = {
 			text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS
 			scope:target_country.relations:root <= relations_threshold:poor
-		}		
+		}
+		NOT = { has_law = law_type:law_free_trade }
 	}
 
 	accept_effect = {}
@@ -94,20 +95,23 @@
 		
 		will_break = { 
 			OR = {
-				has_attitude = {
-					who = scope:target_country
-					attitude = conciliatory
-				}				
-				NOR = {
-					scope:target_country.relations:root <= relations_threshold:hostile	
-					scope:target_country.infamy >= infamy_threshold:pariah
-					scope:target_country = {
-						has_diplomatic_pact = {
-							who = root
-							type = embargo
-						}				
+				has_law = law_type:law_free_trade
+				OR = {
+					has_attitude = {
+						who = scope:target_country
+						attitude = conciliatory
 					}				
-				}			
+					NOR = {
+						scope:target_country.relations:root <= relations_threshold:hostile	
+						scope:target_country.infamy >= infamy_threshold:pariah
+						scope:target_country = {
+							has_diplomatic_pact = {
+								who = root
+								type = embargo
+							}				
+						}				
+					}			
+				}
 			}
 		}			
 	}
