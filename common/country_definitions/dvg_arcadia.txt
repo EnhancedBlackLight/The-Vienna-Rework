@@ -175,7 +175,7 @@ RHN = { #Rohnnst
 KKN = { #Kita Kaigan
 	color = { 117  168  95 }
 
-	country_type = unrecognized
+	country_type = colonial
 
 	tier = principality
 	

@@ -2,11 +2,11 @@
 	c:JAP = {
 		create_diplomatic_pact = {
 			country = c:KKN
-			type = vassal
+			type = puppet
 		}
 		create_diplomatic_pact = {
 			country = c:AIN
-			type = vassal
+			type = puppet
 		}
 	}
 	c:VEN = {
