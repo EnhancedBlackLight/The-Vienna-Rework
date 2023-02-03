@@ -24,6 +24,7 @@ base_values = {
 	country_revolution_secession_speed_add = 0.05
 	
 	state_education_access_wealth_add = 0.02
+	state_mortality_wealth_mult = -0.03
 	
 	country_minting_add = 250
 
