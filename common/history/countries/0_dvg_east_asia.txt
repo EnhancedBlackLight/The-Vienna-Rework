@@ -117,6 +117,7 @@
 		add_journal_entry = {
 			type = je_china_reunification
 		}
+		add_modifier = dvg_modifier_china_unification
 	}
 	
 	c:NAN = { #Nanjing Regency
@@ -156,6 +157,7 @@
 		add_journal_entry = {
 			type = je_china_reunification
 		}
+		add_modifier = dvg_modifier_china_unification
 	}
 	
 	c:FRS = { #Tungning
@@ -196,6 +198,7 @@
 		add_journal_entry = {
 			type = je_china_reunification
 		}
+		add_modifier = dvg_modifier_china_unification
 	}
 	
 	c:TPG = { #Taiping
@@ -210,6 +213,8 @@
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_serfdom
+
+		add_modifier = dvg_modifier_china_unification
 		
 		set_ruling_interest_groups = {
 			ig_landowners

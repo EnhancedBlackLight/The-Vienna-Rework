@@ -51,6 +51,7 @@ NMilitary = {
 
 NDiplomacy = {
 	SWAY_OFFER_WARGOAL_MANEUVERS_COST_RETURN_STATE = 5
+	WAR_GOAL_INFAMY_ANNEX_COUNTRY = 1.0
 }
 
 ### Pop Growth Constants
