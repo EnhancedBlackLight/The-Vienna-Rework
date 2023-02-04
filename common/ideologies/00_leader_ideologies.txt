@@ -44,37 +44,37 @@
 		}
 		if = { #makes moderates less likely as more society techs related to politics are researched
 			limit = {
-				has_technology_researched = nationalism
+				owner = {has_technology_researched = nationalism}
 			}
 			multiply = 0.9
 		}
 		if = {
 			limit = {
-				has_technology_researched = egalitarianism
+				owner = {has_technology_researched = egalitarianism}
 			}
 			multiply = 0.9
 		}
 		if = {
 			limit = {
-				has_technology_researched = labor_movement
+				owner = {has_technology_researched = labor_movement}
 			}
 			multiply = 0.9
 		}
 		if = {
 			limit = {
-				has_technology_researched = socialism
+				owner = {has_technology_researched = socialism}
 			}
 			multiply = 0.9
 		}
 		if = {
 			limit = {
-				has_technology_researched = philosophical_pragmatism
+				owner = {has_technology_researched = philosophical_pragmatism}
 			}
 			multiply = 0.9
 		}
 		if = {
 			limit = {
-				has_technology_researched = political_agitation
+				owner = {has_technology_researched = political_agitation}
 			}
 			multiply = 0.9
 		}
