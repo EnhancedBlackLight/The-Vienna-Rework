@@ -1,3 +1,6 @@
 ﻿NCharacters = {
 	MAX_CHARACTER_HEALTH = 10.0
 }
+NDiplomacy = {
+	WAR_GOAL_INFAMY_ANNEX_COUNTRY = 1.0
+}
