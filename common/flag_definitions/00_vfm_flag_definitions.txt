@@ -214,85 +214,85 @@ AFG = { # Afghanistan
 	}		
 }
 
-AFS = {
-	flag_definition = {
-		coa = AFS
-		subject_canton = AFS
-		allow_overlord_canton = no
-		priority = 100
-		trigger = {
-			scope:actor = {
-				any_state = {
-					owner = c:AFS
-					region = sr:region_congo
-				}
-			}
-		}
-	}
+# AFS = {
+# 	flag_definition = {
+# 		coa = AFS
+# 		subject_canton = AFS
+# 		allow_overlord_canton = no
+# 		priority = 100
+# 		trigger = {
+# 			scope:actor = {
+# 				any_state = {
+# 					owner = c:AFS
+# 					region = sr:region_congo
+# 				}
+# 			}
+# 		}
+# 	}
 
-	flag_definition = {
-		coa = AFS_orange
-		subject_canton = AFS
-		allow_overlord_canton = no
-		priority = 100
-		trigger = {
-			scope:actor = {
-				any_state = {
-					owner = c:AFS
-					region = sr:region_southern_africa
-				}
-			}
-		}
-	}
+# 	flag_definition = {
+# 		coa = AFS_orange
+# 		subject_canton = AFS
+# 		allow_overlord_canton = no
+# 		priority = 100
+# 		trigger = {
+# 			scope:actor = {
+# 				any_state = {
+# 					owner = c:AFS
+# 					region = sr:region_southern_africa
+# 				}
+# 			}
+# 		}
+# 	}
 
-	flag_definition = {
-		coa = AFS_zambezi
-		subject_canton = AFS
-		allow_overlord_canton = no
-		priority = 100
-		trigger = {
-			scope:actor = {
-				any_state = {
-					owner = c:AFS
-					region = sr:region_zanj
-				}
-			}
-		}
-	}
+# 	flag_definition = {
+# 		coa = AFS_zambezi
+# 		subject_canton = AFS
+# 		allow_overlord_canton = no
+# 		priority = 100
+# 		trigger = {
+# 			scope:actor = {
+# 				any_state = {
+# 					owner = THIS
+# 					region = sr:region_zanj
+# 				}
+# 			}
+# 		}
+# 	}
 
-	flag_definition = {
-		coa = AFS_nile
-		subject_canton = AFS
-		allow_overlord_canton = no
-		priority = 100
-		trigger = {
-			scope:actor = {
-				any_state = {
-					owner = c:AFS
-					region = sr:region_nile_basin
-				}
-			}
-		}
-	}
+# 	flag_definition = {
+# 		coa = AFS_nile
+# 		subject_canton = AFS
+# 		allow_overlord_canton = no
+# 		priority = 100
+# 		trigger = {
+# 			scope:actor = {
+# 				any_state = {
+# 					owner = THIS
+# 					region = sr:region_nile_basin
+# 				}
+# 			}
+# 		}
+# 	}
 
-	flag_definition = {
-		coa = AFS_niger
-		subject_canton = AFS
-		allow_overlord_canton = no
-		priority = 100
-		trigger = {
-			scope:actor = {
-				any_state = {
-					owner = c:AFS
-					OR = {
-						region = sr:region_niger
-						region = sr:region_senegal
-					}
-				}
-			}
-		}
-	}
-}
+# 	flag_definition = {
+# 		coa = AFS_niger
+# 		subject_canton = AFS
+# 		allow_overlord_canton = no
+# 		priority = 100
+# 		trigger = {
+# 			scope:actor = {
+# 				any_state = {
+# 					owner = THIS
+# 					OR = {
+# 						region = sr:region_niger
+# 						region = sr:region_senegal
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 ALB = { # Albania
 	flag_definition = {
