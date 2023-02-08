@@ -19,14 +19,19 @@ law_traditionalism = {
 	}
 	
 	modifier = {
+		country_institution_private_construction_max_investment_add = 1
+
 		state_capitalists_investment_pool_efficiency_mult = -0.50
 		state_aristocrats_investment_pool_efficiency_mult = -0.25	
 		state_bureaucracy_population_base_cost_factor_mult = -0.25
 		state_tax_capacity_mult = -0.25
-		country_private_construction_allocation_mult = 0.25
 		
 		country_subsidies_bg_infrastructure = yes
 		country_subsidies_bg_trade = yes
+	}
+	institution = institution_private_construction
+	institution_modifier = {
+		country_private_construction_allocation_mult = -0.05
 	}
 	
 	possible_political_movements = {
@@ -61,12 +66,21 @@ law_interventionism = {
 	}
 	
 	modifier = {
+		country_institution_private_construction_max_investment_add = 4
+
 		state_aristocrats_investment_pool_contribution_add = 0.1
 		state_capitalists_investment_pool_contribution_add = 0.35
 		state_bureaucrats_investment_pool_contribution_add = 0.90
 
 		country_subsidies_all = yes
-		country_private_construction_allocation_mult = 0.5
+		country_private_construction_allocation_mult = 0.25
+	}
+
+	institution = institution_private_construction
+	institution_modifier = {
+		state_capitalists_investment_pool_efficiency_mult = 0.1
+		state_aristocrats_investment_pool_efficiency_mult = 0.05
+		country_private_construction_allocation_mult = -0.1
 	}
 
 	build_from_investment_pool = {
@@ -106,13 +120,16 @@ law_agrarianism = {
 	}
 	
 	modifier = {
+		country_institution_private_construction_max_investment_add = 2
+
 		state_aristocrats_investment_pool_contribution_add = 0.25
+		state_farmers_investment_pool_contribution_add = 0.15
 		state_bureaucrats_investment_pool_contribution_add = 0.90
 
 		state_aristocrats_investment_pool_efficiency_mult = 0.5
 		state_farmers_investment_pool_efficiency_mult = 0.5
 		state_capitalists_investment_pool_efficiency_mult = -0.25
-		country_private_construction_allocation_mult = 0.5
+		country_private_construction_allocation_mult = 0.15
 
 		country_subsidies_bg_agriculture = yes
 		country_subsidies_bg_ranching = yes
@@ -121,6 +138,13 @@ law_agrarianism = {
 		country_subsidies_bg_trade = yes
 		
 		
+	}
+
+	institution = institution_private_construction
+	institution_modifier = {
+		state_aristocrats_investment_pool_efficiency_mult = 0.2
+		state_farmers_investment_pool_efficiency_mult = 0.2
+		country_private_construction_allocation_mult = -0.125
 	}
 
 	build_from_investment_pool = {
@@ -165,6 +189,7 @@ law_laissez_faire = {
 	}
 	
 	modifier = {
+		country_institution_private_construction_max_investment_add = 3
 		country_loan_interest_rate_mult = -0.25
 		
 		state_capitalists_investment_pool_contribution_add = 0.6
@@ -178,7 +203,13 @@ law_laissez_faire = {
 		country_subsidies_bg_trade = yes
 		country_private_buildings_protected = yes
 		
-		
+	}
+
+	institution = institution_private_construction
+	institution_modifier = {
+		state_shopkeepers_investment_pool_efficiency_mult = 0.15	
+		state_capitalists_investment_pool_efficiency_mult = 0.2
+		country_private_construction_allocation_mult = -0.2
 	}
 
 	build_from_investment_pool = {
@@ -220,13 +251,22 @@ law_cooperative_ownership = {
 	}
 	
 	modifier = {
-		state_bureaucrats_investment_pool_contribution_add = 0.90
+		country_institution_private_construction_max_investment_add = 3
+		
 		state_machinists_investment_pool_contribution_add = 0.35
 		state_laborers_investment_pool_contribution_add = 0.35
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
 		state_farmers_investment_pool_efficiency_mult = 0.25
-		country_private_construction_allocation_mult = 0.35
+
+		country_private_construction_allocation_mult = -0.2
 	}
+
+	institution = institution_private_construction
+	institution_modifier = {
+		state_bureaucrats_investment_pool_efficiency_mult = 0.2
+	}
+
+	
 	
 	build_from_investment_pool = {
 		bg_manufacturing
@@ -275,7 +315,6 @@ law_corporatist_economy = { #NEW
 
     disallowing_laws = {
         law_serfdom
-        law_corporotocracy
     }
 
     unlocking_technologies = {
@@ -306,6 +345,8 @@ law_corporatist_economy = { #NEW
 
         state_poor_expected_sol = 2
         state_middle_expected_sol = 2
+
+		country_private_construction_allocation_mult = 0.1
     }
 
     tax_modifier_very_low = {
@@ -505,6 +546,7 @@ law_collectivized_economy = { #NEW
 
 		state_poor_expected_sol = 3
 		state_middle_expected_sol = 3
+		country_private_construction_allocation_mult = -0.3
     }
 
     build_from_investment_pool = {

@@ -1,0 +1,5 @@
+﻿l_english:
+  institution_private_construction: "Private Construction"
+  institution_private_construction_desc: "How much control does our government exert over our economy's expansion" 
+  modifier_country_institution_private_construction_max_investment_add: "Max $institution_private_construction$ [concept_institution] Investment"
+  modifier_country_institution_private_construction_max_investment_add_desc: "A bonus or penalty to the maximum investment level of the $institution_private_construction$ [concept_institution]"

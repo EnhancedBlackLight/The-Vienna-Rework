@@ -5,7 +5,7 @@
 # Scales with country GDP / COUNTRY_GDP_MODIFIER_DIVISOR
 country_gdp = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_minting_add = 0.1
+	country_minting_add = 1
 }
 #default unless stated otherwise
 base_values = {
@@ -46,7 +46,8 @@ base_values = {
 	state_farmers_investment_pool_contribution_add = 0.05
 	state_shopkeepers_investment_pool_contribution_add = 0.05
 	state_aristocrats_investment_pool_contribution_add = 0.10
-	state_capitalists_investment_pool_contribution_add = 0.20	
+	state_capitalists_investment_pool_contribution_add = 0.20
+	country_private_construction_allocation_mult = 0.25
 }
 
 #reportedly breaking for an unknown reason so its going to be disabled
@@ -66,4 +67,26 @@ legislative_efficiency = { # Excess AUT reduces enactment time by -50% at 2x pro
 #may tweak discrimination to still allow for some political participation for pops of discriminated cultures if they are a significant amount of the population
 discrimination = {
 	state_political_strength_from_discrimination_mult = -0.1
+}
+
+state_turmoil = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_tax_waste_add = 0.25
+	state_migration_pull_mult = -0.5
+	state_infrastructure_mult = -0.35
+}
+
+state_turmoil_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_tax_waste_add = 0.5
+	state_migration_pull_mult = -0.75
+	state_infrastructure_mult = -0.5
+}
+
+# Applied if state is above 'extreme turmoil' threshold
+state_turmoil_extreme = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_tax_waste_add = 1.0
+	state_migration_pull_mult = -1.0
+	state_infrastructure_mult = -0.65
 }
