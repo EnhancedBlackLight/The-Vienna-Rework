@@ -292,21 +292,6 @@ AFS = {
 			}
 		}
 	}
-
-	flag_definition = {
-		coa = AFS_sahara
-		subject_canton = AFS
-		allow_overlord_canton = no
-		priority = 100
-		trigger = {
-			scope:actor = {
-				any_state = {
-					owner = c:AFS
-					region = sr:region_north_africa
-				}
-			}
-		}
-	}
 }
 
 ALB = { # Albania
