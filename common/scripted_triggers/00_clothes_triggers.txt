@@ -474,24 +474,6 @@ european_clothes_trigger = {
 		culture = {
 			has_discrimination_trait = european_heritage
 		}
-		NOT = {
-			culture = cu:circassian
-		}
-		NOT = {
-			AND = { # Albanian characters serving either the Ottomans or Egyptians should wear that country's clothing.
-				culture = cu:albanian
-				OR = {
-					owner = {
-						exists = c:TUR
-						c:TUR = this
-					}
-					owner = {
-						exists = c:EGY
-						c:EGY = this
-					}
-				}
-			}
-		}
 	}
 }
 
