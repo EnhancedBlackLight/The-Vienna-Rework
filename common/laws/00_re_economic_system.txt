@@ -73,14 +73,14 @@ law_interventionism = {
 		state_bureaucrats_investment_pool_contribution_add = 0.90
 
 		country_subsidies_all = yes
-		country_private_construction_allocation_mult = 0.25
+		country_private_construction_allocation_mult = 0.20
 	}
 
 	institution = institution_private_construction
 	institution_modifier = {
 		state_capitalists_investment_pool_efficiency_mult = 0.1
 		state_aristocrats_investment_pool_efficiency_mult = 0.05
-		country_private_construction_allocation_mult = -0.1
+		country_private_construction_allocation_mult = -0.05
 	}
 
 	build_from_investment_pool = {
@@ -144,7 +144,7 @@ law_agrarianism = {
 	institution_modifier = {
 		state_aristocrats_investment_pool_efficiency_mult = 0.2
 		state_farmers_investment_pool_efficiency_mult = 0.2
-		country_private_construction_allocation_mult = -0.125
+		country_private_construction_allocation_mult = -0.05
 	}
 
 	build_from_investment_pool = {
@@ -197,7 +197,7 @@ law_laissez_faire = {
 
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
 		state_capitalists_investment_pool_efficiency_mult = 0.5
-		country_private_construction_allocation_mult = 0.75
+		country_private_construction_allocation_mult = 0.5
 		
 		country_subsidies_bg_infrastructure = yes
 		country_subsidies_bg_trade = yes
@@ -209,7 +209,7 @@ law_laissez_faire = {
 	institution_modifier = {
 		state_shopkeepers_investment_pool_efficiency_mult = 0.15	
 		state_capitalists_investment_pool_efficiency_mult = 0.2
-		country_private_construction_allocation_mult = -0.2
+		country_private_construction_allocation_mult = -0.125
 	}
 
 	build_from_investment_pool = {
@@ -257,8 +257,6 @@ law_cooperative_ownership = {
 		state_laborers_investment_pool_contribution_add = 0.35
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
 		state_farmers_investment_pool_efficiency_mult = 0.25
-
-		country_private_construction_allocation_mult = -0.2
 	}
 
 	institution = institution_private_construction
@@ -322,6 +320,8 @@ law_corporatist_economy = { #NEW
     }
 
     modifier = {
+		country_institution_private_construction_max_investment_add = 4
+
         state_bureaucrats_investment_pool_contribution_add = 0.35
         state_capitalists_investment_pool_contribution_add = 0.25
         state_laborers_investment_pool_contribution_add = 0.10
@@ -346,8 +346,13 @@ law_corporatist_economy = { #NEW
         state_poor_expected_sol = 2
         state_middle_expected_sol = 2
 
-		country_private_construction_allocation_mult = 0.1
+		country_private_construction_allocation_mult = 0.6
     }
+
+	institution = institution_private_construction
+	institution_modifier = {
+		country_private_construction_allocation_mult = -0.1
+	}
 
     tax_modifier_very_low = {
 		tax_dividends_add = 0.45
@@ -418,8 +423,8 @@ law_command_economy = {
 	
 	disallowing_laws = {
 		law_serfdom
-		law_anarchy #NEW
-		law_corporotocracy #NEW
+		# law_anarchy #NEW
+		# law_corporotocracy #NEW
 	}
 	
 	unlocking_technologies = {
@@ -518,7 +523,7 @@ law_collectivized_economy = { #NEW
 
     disallowing_laws = {
         law_serfdom
-        law_corporotocracy
+        # law_corporotocracy
     }
 
     unlocking_laws = {
@@ -546,7 +551,6 @@ law_collectivized_economy = { #NEW
 
 		state_poor_expected_sol = 3
 		state_middle_expected_sol = 3
-		country_private_construction_allocation_mult = -0.3
     }
 
     build_from_investment_pool = {
